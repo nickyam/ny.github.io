@@ -1,493 +1,468 @@
 <!DOCTYPE html>
-
-
-  <html class="light page-post">
-
-
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <title>xDAI 工具汇总 | 涯木笔谈</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-    <meta name="keywords" content="区块链,以太坊," />
-  
-
-  <meta name="description" content="前些日子，Brightid对于前期使用者和捐助者发空投。我在deadline最后一天做完认证，也领到了一些代币。因为金额很小，所以最终我选择了 xDai链 作为 claim 的通道，而不是 ETH 。不然可能连以太坊的矿工费都不够付。 因为xDai由以太坊链上衍生出来，并且目前上面的用例还没有以太坊上多，xDai也主要用于分担以太坊上溢出的交易，有附属的性质，因此很多人称xDai为以太坊的姊妹链、">
-<meta property="og:type" content="article">
-<meta property="og:title" content="xDAI 工具汇总">
-<meta property="og:url" content="http://www.nickyam.com/other/xDAI%20Note.html">
-<meta property="og:site_name" content="涯木笔谈">
-<meta property="og:description" content="前些日子，Brightid对于前期使用者和捐助者发空投。我在deadline最后一天做完认证，也领到了一些代币。因为金额很小，所以最终我选择了 xDai链 作为 claim 的通道，而不是 ETH 。不然可能连以太坊的矿工费都不够付。 因为xDai由以太坊链上衍生出来，并且目前上面的用例还没有以太坊上多，xDai也主要用于分担以太坊上溢出的交易，有附属的性质，因此很多人称xDai为以太坊的姊妹链、">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-09-28T12:25:00.000Z">
-<meta property="article:modified_time" content="2021-10-08T05:00:28.000Z">
-<meta property="article:author" content="虞侃">
-<meta property="article:tag" content="区块链">
-<meta property="article:tag" content="以太坊">
-<meta name="twitter:card" content="summary">
-
-  
-
-  
-    <link rel="icon" href="/favicon.ico">
-  
-
-  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
-
-
-  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="涯木笔谈，是专注于科技IT、博客建站、工作生活和读书思考等领域的原创博客，作者虞侃。">
+    <meta name="author" content="Keep Team">
     
-<link rel="stylesheet" href="/css/personal-style.css">
+    <title>
+        
+            xDAI 工具汇总 |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
-  
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
 
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"www.nickyam.com","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
   </script>
-
-
-
-  
-    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  
-
-  
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
+
 <body>
+<div class="progress-bar-container">
+    
 
-
-  
-    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
-  
-
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">主页</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/archives"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            博客
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/category"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            分类
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/tag"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            标签
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/link"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/about"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/search"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-
-
+    
 </div>
 
 
+<main class="page-container">
 
-
-<div class="content content-post CENTER">
-   <article id="post-xDAI Note" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">xDAI 工具汇总</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2021.09.28</span>
-      </span>
-
-      
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>虞侃</span>
-        </span>
-      
-
-      
-  <span class="article-category">
-    <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/other/">⓺其他</a>
-  </span>
-
-
-
-      
-        <span>
-          <i class="icon-comment"></i>
-          <a target="_blank" rel="noopener" href="https://nickyam.github.io/other/xDAI%20Note.html#disqus_thread"></a>
-        </span>
-      
-
-      
-      <i class="fa fa-eye"></i> 
-        <span id="busuanzi_container_page_pv">
-           &nbsp热度 <span id="busuanzi_value_page_pv">
-           <i class="fa fa-spinner fa-spin"></i></span>℃
-        </span>
-      
-
-      
-      
-    </div>
-  </header>
-
-  <div class="article-content">
     
-      <p>前些日子，Brightid对于前期使用者和捐助者发空投。我在deadline最后一天做完认证，也领到了一些代币。因为金额很小，所以最终我选择了 xDai链 作为 claim 的通道，而不是 ETH 。不然可能连以太坊的矿工费都不够付。</p>
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">xDAI 工具汇总</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Keep Team</span>
+                            
+                                <span class="author-label">Lv7</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2021-09-28 20:25:00</span>
+        <span class="mobile">2021-09-28 20:25</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2021-10-08 13:00:28</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/other/">⓺其他</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Blockchain/">区块链</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Ethereum/">以太坊</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>前些日子，Brightid对于前期使用者和捐助者发空投。我在deadline最后一天做完认证，也领到了一些代币。因为金额很小，所以最终我选择了 xDai链 作为 claim 的通道，而不是 ETH 。不然可能连以太坊的矿工费都不够付。</p>
 <p>因为xDai由以太坊链上衍生出来，并且目前上面的用例还没有以太坊上多，xDai也主要用于分担以太坊上溢出的交易，有附属的性质，因此很多人称xDai为以太坊的姊妹链、侧链。</p>
 <p>之后我了解了 xDai 这条链的相关工具情况，具体如下，供大家参考使用。</p>
-<p>1、提取xDai可以使用 <a target="_blank" rel="noopener" href="https://ascendex.com/">ascendex 交易所</a> 。</p>
+<p>1、提取xDai可以使用 <a class="link"   target="_blank" rel="noopener" href="https://ascendex.com/" >ascendex 交易所<i class="fas fa-external-link-alt"></i></a> 。</p>
 <p>2、基础设施汇总：</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://xdai-omnibridge.web.app/bridge">Omni Bridge</a> 是ETH、BSC、xDai之间的ERC20代币转换桥，目前也支持ETH、xDai之间的ERC-721和ERC-1155代币转换。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://xdai-omnibridge.web.app/bridge" >Omni Bridge<i class="fas fa-external-link-alt"></i></a> 是ETH、BSC、xDai之间的ERC20代币转换桥，目前也支持ETH、xDai之间的ERC-721和ERC-1155代币转换。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://dai-bridge.poa.network/">xDai Bridge</a> 是以太坊上的Dai和xDai上的xDai之间的转换桥。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://dai-bridge.poa.network/" >xDai Bridge<i class="fas fa-external-link-alt"></i></a> 是以太坊上的Dai和xDai上的xDai之间的转换桥。</p>
 </li>
-<li><p>xDai 与 wxDai 互转：<a target="_blank" rel="noopener" href="https://wrapeth.com/">https://wrapeth.com/</a></p>
+<li><p>xDai 与 wxDai 互转：<a class="link"   target="_blank" rel="noopener" href="https://wrapeth.com/" >https://wrapeth.com/<i class="fas fa-external-link-alt"></i></a></p>
 </li>
-<li><p>xDai 的区块链浏览器：<a target="_blank" rel="noopener" href="https://blockscout.com/xdai/mainnet/">https://blockscout.com/xdai/mainnet/</a></p>
+<li><p>xDai 的区块链浏览器：<a class="link"   target="_blank" rel="noopener" href="https://blockscout.com/xdai/mainnet/" >https://blockscout.com/xdai/mainnet/<i class="fas fa-external-link-alt"></i></a></p>
 </li>
-<li><p>xDai 的 uniswap：<a target="_blank" rel="noopener" href="https://app.honeyswap.org/#/swap">https://app.honeyswap.org/#/swap</a></p>
+<li><p>xDai 的 uniswap：<a class="link"   target="_blank" rel="noopener" href="https://app.honeyswap.org/#/swap" >https://app.honeyswap.org/#/swap<i class="fas fa-external-link-alt"></i></a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://app.hop.exchange/">Hop Bridge</a> 实现了ETH、Polygon、xDai之间USDC的转移。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://app.hop.exchange/" >Hop Bridge<i class="fas fa-external-link-alt"></i></a> 实现了ETH、Polygon、xDai之间USDC的转移。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://streamr.network/">Steamr</a> 是去中心化实时数据平台。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://streamr.network/" >Steamr<i class="fas fa-external-link-alt"></i></a> 是去中心化实时数据平台。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://origintrail.io/">Origin Trail</a> 致力于实现通用、协作和可信的数据交易，使全球供应链协同工作。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://origintrail.io/" >Origin Trail<i class="fas fa-external-link-alt"></i></a> 致力于实现通用、协作和可信的数据交易，使全球供应链协同工作。</p>
 </li>
 </ul>
 <p>3、DeFi相关</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://ramp.network/">Ramp Network</a> 是P2P法币与加密货币交易协议。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://ramp.network/" >Ramp Network<i class="fas fa-external-link-alt"></i></a> 是P2P法币与加密货币交易协议。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.perp.fi/">Perpetual Protocol</a> 是AMM，并支持每种资产的去中心化永续合约交易协议。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://www.perp.fi/" >Perpetual Protocol<i class="fas fa-external-link-alt"></i></a> 是AMM，并支持每种资产的去中心化永续合约交易协议。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://unicrypt.network/">Unicrypt</a> 提供多链去中心化服务，包括农耕、LP代币锁定、质押、去中心化Launchpad等。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://unicrypt.network/" >Unicrypt<i class="fas fa-external-link-alt"></i></a> 提供多链去中心化服务，包括农耕、LP代币锁定、质押、去中心化Launchpad等。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://p.network/">pNetwork</a> 是支持跨链功能的资产发行平台。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://p.network/" >pNetwork<i class="fas fa-external-link-alt"></i></a> 是支持跨链功能的资产发行平台。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://deus.finance/">Deus Finance</a> 允许用户将加密资产、传统金融资产合成为ERC-20代币进行交易。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://deus.finance/" >Deus Finance<i class="fas fa-external-link-alt"></i></a> 允许用户将加密资产、传统金融资产合成为ERC-20代币进行交易。</p>
 </li>
 </ul>
 <p>4、NFT和游戏：</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://fraction.art/">Fraction</a> 是专注于碎片化NFT艺术品的众筹平台。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://fraction.art/" >Fraction<i class="fas fa-external-link-alt"></i></a> 是专注于碎片化NFT艺术品的众筹平台。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://realitycards.io/">Reality Cards</a> 是首个基于NFT的预测市场。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://realitycards.io/" >Reality Cards<i class="fas fa-external-link-alt"></i></a> 是首个基于NFT的预测市场。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://unifty.io/">Unifty</a> 是用于发行、流动性挖矿、桥接的跨链NFT平台，支持ETH、xDai、Polygon、BSC、Celo等区块链。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://unifty.io/" >Unifty<i class="fas fa-external-link-alt"></i></a> 是用于发行、流动性挖矿、桥接的跨链NFT平台，支持ETH、xDai、Polygon、BSC、Celo等区块链。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://zkga.me/">Dark Forest</a> 是在以太坊和xDai上通过zk-SNARK构建的一款去中心化即时战略游戏。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://zkga.me/" >Dark Forest<i class="fas fa-external-link-alt"></i></a> 是在以太坊和xDai上通过zk-SNARK构建的一款去中心化即时战略游戏。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://galleass.io/">Galleass</a> 是一款去中心化资源管理游戏。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://galleass.io/" >Galleass<i class="fas fa-external-link-alt"></i></a> 是一款去中心化资源管理游戏。</p>
 </li>
 </ul>
 <p>5、DAO和社区治理：</p>
 <ul>
-<li><p><a target="_blank" rel="noopener" href="https://daohaus.club/">DAOhaus</a> 是一个无代码的DAO发布和运行平台。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://daohaus.club/" >DAOhaus<i class="fas fa-external-link-alt"></i></a> 是一个无代码的DAO发布和运行平台。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.daosquare.io/">DAOSquare</a> 是Web3孵化器。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://www.daosquare.io/" >DAOSquare<i class="fas fa-external-link-alt"></i></a> 是Web3孵化器。</p>
 </li>
-<li><p>通过 <a target="_blank" rel="noopener" href="https://powerpool.finance/">PowerPool</a>，代币持有者可以在基于以太坊的协议中借出、汇集、借用治理代币，以赚取收入，积累治理能力。</p>
+<li><p>通过 <a class="link"   target="_blank" rel="noopener" href="https://powerpool.finance/" >PowerPool<i class="fas fa-external-link-alt"></i></a>，代币持有者可以在基于以太坊的协议中借出、汇集、借用治理代币，以赚取收入，积累治理能力。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://www.akropolis.io/">Akropolis</a> 旨在创建一个由所有金融组织团体组成的分布式金融网络协议，并提供独立于政府、银行或其他传统金融机构的基本金融服务（储蓄、投资、社会保险）。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://www.akropolis.io/" >Akropolis<i class="fas fa-external-link-alt"></i></a> 旨在创建一个由所有金融组织团体组成的分布式金融网络协议，并提供独立于政府、银行或其他传统金融机构的基本金融服务（储蓄、投资、社会保险）。</p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://lexdao.github.io/HUB/">LexDAO</a> 为法律组织提供了一个工作框架，让他们使用以太坊、区块链、智能合约和DAO，以一种无需信任的方式工作。</p>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://lexdao.github.io/HUB/" >LexDAO<i class="fas fa-external-link-alt"></i></a> 为法律组织提供了一个工作框架，让他们使用以太坊、区块链、智能合约和DAO，以一种无需信任的方式工作。</p>
 </li>
 </ul>
 
-    
+            </div>
 
-            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/other/xDAI Note.html" target="_blank" title="xDAI 工具汇总">xDAI 工具汇总</a></b>，本文链接为<b><a href="/other/xDAI Note.html" target="_blank" title="xDAI 工具汇总">http://www.nickyam.com/other/xDAI Note.html</a></b>.</div><! -- 添加版权信息 -->
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Blockchain/">#区块链</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Ethereum/">#以太坊</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/tech/Google%20Play%E5%BA%94%E7%94%A8%E4%B8%8B%E8%BD%BD.html"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">Google Play 应用下载</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/other/%E6%96%B0%E6%89%8B%E6%92%B8%E7%BE%8A%E6%AF%9B%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">新手撸羊毛必备工具推荐</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
 
         
-  </div>
-</article>
-
-
-
-
-   
-  <div class="text-center donation">
-    <div class="inner-donation">
-      <span class="btn-donation">打赏支持</span>
-      <div class="donation-body">
-        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
-        <ul class="theme.donation.items.length">
-        
-          <li class="item">
-            <img src="/images/qr-wechat.png" alt="">
-          </li>
-        
-          <li class="item">
-            <img src="/images/qr-alipay.png" alt="">
-          </li>
-        
-        </ul>
-      </div>
     </div>
-  </div>
-
-
-   
-  <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/other/%E6%96%B0%E6%89%8B%E6%92%B8%E7%BE%8A%E6%AF%9B%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html">
-        <i class="icon icon-angle-left"></i>
-    </a>
-    <a class="show pull-right" href="/tech/Google%20Play%E5%BA%94%E7%94%A8%E4%B8%8B%E8%BD%BD.html">
-        <i class="icon icon-angle-right"></i>
-    </a>
-  </div>
-
-
-
-
-</div>
-
-<!-- ad start -->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({
-google_ad_client: "ca-pub-7114121088728794",
-enable_page_level_ads: true
-});
-</script>
-
-<!-- ad end -->
-
-
-
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
-
-
-
-
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">关闭</span>
-    </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/archives"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              博客
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/category"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              分类
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/tag"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              标签
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/link"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/about"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/search"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
-        
-      </ul>
-
-    </div>
-  </div>
 </div>
 
 
+                
+            </div>
 
-  
-      <div class="fexo-comments comments-post">
-    
-  <section class="disqus-comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
     </div>
-  </section>
+</footer>
 
-  <script>
-    var disqus_shortname = 'www-nickyam-com';
-    
-    var disqus_url = 'http://www.nickyam.com/other/xDAI%20Note.html';
-    
-    (function(){
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-
-  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
-
-
+        </div>
+    </div>
 
     
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
 
 
 
 
-  </div>
+<script src="/js/utils.js"></script>
 
-  
+<script src="/js/main.js"></script>
 
-  <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
+<script src="/js/header-shrink.js"></script>
 
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
+<script src="/js/back2top.js"></script>
 
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
+<script src="/js/dark-light-toggle.js"></script>
 
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
-</script>
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
 
 </body>
 </html>
