@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>secd进程导致Mac卡机的简单处理 | 涯木笔谈</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="苹果,Mac," />
+  
+
+  <meta name="description" content="第一时间我更新了 MacOS High Sierra ，而且没有什么重大的bug。但是自从7月13日更新以来，基本上用不到10分钟就会无故卡机，并且重启无效。我以为等系统下一次更新就好，暂时用下双系统Windows吧。但是不知不觉中，我已经习惯了苹果的系统，总觉得微软的系统有些别扭。所以最后只好硬着头皮来尝试解决这个问题。 我在 istat  留意到我有两个进程经常飙升到100%甚至以上，然后就是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="secd进程导致Mac卡机的简单处理">
+<meta property="og:url" content="http://www.nickyam.com/secd-on-mac/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="第一时间我更新了 MacOS High Sierra ，而且没有什么重大的bug。但是自从7月13日更新以来，基本上用不到10分钟就会无故卡机，并且重启无效。我以为等系统下一次更新就好，暂时用下双系统Windows吧。但是不知不觉中，我已经习惯了苹果的系统，总觉得微软的系统有些别扭。所以最后只好硬着头皮来尝试解决这个问题。 我在 istat  留意到我有两个进程经常飙升到100%甚至以上，然后就是">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-07-23T07:21:00.000Z">
+<meta property="article:modified_time" content="2019-03-12T09:23:01.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="苹果">
+<meta property="article:tag" content="Mac">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-secd-on-mac" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">secd进程导致Mac卡机的简单处理</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.07.23</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/tech/">⓶科技</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/secd-on-mac/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>第一时间我更新了 <code>MacOS High Sierra</code> ，而且没有什么重大的bug。但是自从7月13日更新以来，基本上用不到10分钟就会无故卡机，并且重启无效。我以为等系统下一次更新就好，暂时用下双系统Windows吧。但是不知不觉中，我已经习惯了苹果的系统，总觉得微软的系统有些别扭。所以最后只好硬着头皮来尝试解决这个问题。</p>
+<p>我在 <code>istat </code> 留意到我有两个进程经常飙升到100%甚至以上，然后就是死机。一个进程是 <code>secd</code> ，另一个是 <code>mds</code> 。通过百度发现，这两个进程的功能很独立，前者是<code>icloud</code>的钥匙串功能；后者是 <code>spotlight</code> 索引功能。</p>
+<p>我忽然意识到这些都是有先兆的。我更新系统以后我的在线密码就不见了，钥匙串里面空空如也；然后我最近又在大量同步之前的照片到<code>icloud</code>，导致<code>spotlight</code>一直在索引。</p>
+<p>所以我就在设置关闭了钥匙串功能，然后重启，一下子，我的cpu降到10%以下。并且因为我的照片基本同步完成，我也不去处理<code>mds</code>了下次苹果更新beta版，应该会修复吧。</p>
+<p>所以轻轻松松搞定，又可以用<code>macOS</code>看文献写课题了。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/secd-on-mac/" target="_blank" title="secd进程导致Mac卡机的简单处理">secd进程导致Mac卡机的简单处理</a></b>，本文链接为<b><a href="/secd-on-mac/" target="_blank" title="secd进程导致Mac卡机的简单处理">http://www.nickyam.com/secd-on-mac/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/Realhumans/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/stock-back/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/secd-on-mac/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

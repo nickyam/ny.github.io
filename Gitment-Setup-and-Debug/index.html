@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo博客 Maupassant 主题设置 Gitment 评论功能 | 涯木笔谈</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="GitHub,Hexo," />
+  
+
+  <meta name="description" content="因为博客的评论系统不太完善，第三方系统不是被Q就是容易关停，所以很长一段时间，我都没有加载评论模块。当然也因为博客访客较少的缘故。今天心血来潮，还是把博客搞得完整一些，选来选去看中了 Gitment 这一 GitHub 生态的东西，应该稍微靠谱一些。 Gitment 是基于 GitHub Issues 的评论系统。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客 Maupassant 主题设置 Gitment 评论功能">
+<meta property="og:url" content="http://www.nickyam.com/Gitment-Setup-and-Debug/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="因为博客的评论系统不太完善，第三方系统不是被Q就是容易关停，所以很长一段时间，我都没有加载评论模块。当然也因为博客访客较少的缘故。今天心血来潮，还是把博客搞得完整一些，选来选去看中了 Gitment 这一 GitHub 生态的东西，应该稍微靠谱一些。 Gitment 是基于 GitHub Issues 的评论系统。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-03-12T11:09:00.000Z">
+<meta property="article:modified_time" content="2019-03-12T14:28:37.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Gitment"><span class="toc-text">安装 Gitment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9D%97"><span class="toc-text">安装模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B3%E8%AF%B7%E5%BA%94%E7%94%A8"><span class="toc-text">申请应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E9%85%8D%E7%BD%AE"><span class="toc-text">博客配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E9%80%9A%E8%AF%84%E8%AE%BA"><span class="toc-text">开通评论</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB"><span class="toc-text">问题汇总</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Error-Not-Found%E9%97%AE%E9%A2%98"><span class="toc-text">Error: Not Found问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Error-Comments-Not-Initialized"><span class="toc-text">Error: Comments Not Initialized</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Error%EF%BC%9Avalidation-failed"><span class="toc-text">Error：validation failed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Error%EF%BC%9A-object-ProgressEvent"><span class="toc-text">Error：[object ProgressEvent]</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Gitment-Setup-and-Debug" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Hexo博客 Maupassant 主题设置 Gitment 评论功能</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2019.03.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/tech/">⓶科技</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/Gitment-Setup-and-Debug/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>因为博客的评论系统不太完善，第三方系统不是被Q就是容易关停，所以很长一段时间，我都没有加载评论模块。当然也因为博客访客较少的缘故。今天心血来潮，还是把博客搞得完整一些，选来选去看中了 Gitment 这一 GitHub 生态的东西，应该稍微靠谱一些。</p>
+<p>Gitment 是基于 GitHub Issues 的评论系统。支持在前端直接引入，不需要任何后端代码。可以在页面进行登录、查看、评论、点赞等操作，同时有完整的 Markdown &#x2F; GFM 和代码高亮支持。尤为适合各种基于 GitHub Pages 的静态博客或项目页面。</p>
+<h1 id="安装-Gitment"><a href="#安装-Gitment" class="headerlink" title="安装 Gitment"></a>安装 Gitment</h1><h2 id="安装模块"><a href="#安装模块" class="headerlink" title="安装模块"></a>安装模块</h2><ul>
+<li>在blog的根目录安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save gitment</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="申请应用"><a href="#申请应用" class="headerlink" title="申请应用"></a>申请应用</h2><p>首先去<a target="_blank" rel="noopener" href="https://github.com/settings/applications/new">New OAuth App</a> 为你的博客申请密钥。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Application name: 自行确定</span><br><span class="line">Homepage URL: 你的博客地址 #如 https://www.nickyam.com</span><br><span class="line">Application description: 应用描述</span><br><span class="line">Authorization callback URL: 这个必须写你的博客地址 #如 https://www.nickyam.com</span><br></pre></td></tr></table></figure>
+<p>申请完成点注册,生成ClientID和Client Secret，设置的时候需要填写。</p>
+<h2 id="博客配置"><a href="#博客配置" class="headerlink" title="博客配置"></a>博客配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Gitment</span><br><span class="line"># Introduction: https://imsun.net/posts/gitment-introduction/</span><br><span class="line">gitment:</span><br><span class="line">  enable: true</span><br><span class="line">  github_user: &#123;你的 GitHub ID&#125; #可以是你的GitHub用户名，也可以是github id，建议直接用GitHub用户名就可以。</span><br><span class="line">  github_repo: &#123;存储评论的 github repo&#125; #这个是你要存储评论内容的仓库名，可以与博客下的仓库，也可以新建一个仓库专门存储评论内容的。</span><br><span class="line">  client_id: &#123;刚才申请的ClientID&#125;</span><br><span class="line">  client_secret: &#123;刚才申请的Client Secret&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="开通评论"><a href="#开通评论" class="headerlink" title="开通评论"></a>开通评论</h2><p>将配置上传到 GitHub 后，刷新博客已经能够显示评论模块。博主需要登陆 GitHub 账号，手动初始化每篇博客的评论功能。</p>
+<h1 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h1><p>在折腾的过程中，可能碰到的一些问题，在这里记录和大家分享。</p>
+<h2 id="Error-Not-Found问题"><a href="#Error-Not-Found问题" class="headerlink" title="Error: Not Found问题"></a>Error: Not Found问题</h2><ul>
+<li>owner或者repo配置错误了，注意名字和仓库名字的大小写。</li>
+</ul>
+<h2 id="Error-Comments-Not-Initialized"><a href="#Error-Comments-Not-Initialized" class="headerlink" title="Error: Comments Not Initialized"></a>Error: Comments Not Initialized</h2><ul>
+<li>在注册OAuth Application步骤中，给Authorization callback URL指定的地址错误。</li>
+<li>未在网页的 Gitment 评论区登陆 GitHub 账号</li>
+</ul>
+<h2 id="Error：validation-failed"><a href="#Error：validation-failed" class="headerlink" title="Error：validation failed"></a>Error：validation failed</h2><p>因为issue的标签label有长度限制，最大长度限制是50个字符。因为id太长，导致初始化失败，用文章的时间，这样长度是保证在50个字符内，完美解决！</p>
+<p>如果你使用的是 Maupassant 主题，则在 comments.pug 文件中找到，</p>
+<p>并添加<code>id: &#39;#&#123; page.date &#125;&#39;,</code>字段，最终如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var gitment = new Gitment(&#123;</span><br><span class="line">  id: &#x27;#&#123; page.date &#125;&#x27;,  #新增部分</span><br><span class="line">  owner: &#x27;#&#123;theme.gitment.owner&#125;&#x27;,</span><br><span class="line">  repo: &#x27;#&#123;theme.gitment.repo&#125;&#x27;,</span><br><span class="line">  oauth: &#123;</span><br><span class="line">    client_id: &#x27;#&#123;theme.gitment.client_id&#125;&#x27;,</span><br><span class="line">    client_secret: &#x27;#&#123;theme.gitment.client_secret&#125;&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line">gitment.render(&#x27;container&#x27;)</span><br></pre></td></tr></table></figure>
+<h2 id="Error：-object-ProgressEvent"><a href="#Error：-object-ProgressEvent" class="headerlink" title="Error：[object ProgressEvent]"></a>Error：[object ProgressEvent]</h2><p>在母版中调用的js文件中，有访问 gitment 作者的服务器代码，而作者的服务器不好使了。需要自己搭建一个服务器或采用网上现成的服务。所以需要修改 <code>comments.pug</code> 的另一段，最终如下（下面的服务暂时可用）。如需了解最新情况，可访问 <a target="_blank" rel="noopener" href="https://github.com/imsun/gitment/issues/170">issue</a>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">if theme.gitment.enable == true</span><br><span class="line">    #container</span><br><span class="line">    link(rel=&#x27;stylesheet&#x27;, href=&#x27;https://jjeejj.github.io/css/gitment.css&#x27;)</span><br><span class="line">    script(src=&#x27;https://jjeejj.github.io/js/gitment.js&#x27;)</span><br><span class="line">    script.</span><br><span class="line">      var gitment = new Gitment(&#123;</span><br><span class="line">        id: &#x27;#&#123; page.date &#125;&#x27;,</span><br><span class="line">        owner: &#x27;#&#123;theme.gitment.owner&#125;&#x27;,</span><br><span class="line">        repo: &#x27;#&#123;theme.gitment.repo&#125;&#x27;,</span><br><span class="line">        oauth: &#123;</span><br><span class="line">          client_id: &#x27;#&#123;theme.gitment.client_id&#125;&#x27;,</span><br><span class="line">          client_secret: &#x27;#&#123;theme.gitment.client_secret&#125;&#x27;,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">      gitment.render(&#x27;container&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>以上设置后，博客的评论系统就正式上线了。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/Gitment-Setup-and-Debug/" target="_blank" title="Hexo博客 Maupassant 主题设置 Gitment 评论功能">Hexo博客 Maupassant 主题设置 Gitment 评论功能</a></b>，本文链接为<b><a href="/Gitment-Setup-and-Debug/" target="_blank" title="Hexo博客 Maupassant 主题设置 Gitment 评论功能">http://www.nickyam.com/Gitment-Setup-and-Debug/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/Hexo-Category-List/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/About-the-dividend-difference-up-and-tax-exemption-etc/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/Gitment-Setup-and-Debug/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
