@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>推荐WordPress插件导出静态网站 | 涯木笔谈</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Wordpress," />
+  
+
+  <meta name="description" content="之前建站初入门的时候，一般都是Wordpress，一有问题网上基本都能找到解决方法，而且主题丰富且漂亮。但是因为Wordpress是动态网站页面，性能消耗较大，而作为个人博客，需要的只是一个完全静态的网站。 什么是静态网站？完全静态的网站只有html文件，对服务器资源消耗极低，可以免费托管在 Github Page 等。对于学生等个人站长而言，运行成本非常低。此外，静态网站安全性很好，几乎没有什么">
+<meta property="og:type" content="article">
+<meta property="og:title" content="推荐WordPress插件导出静态网站">
+<meta property="og:url" content="http://www.nickyam.com/tech/WordPress-Exports-Fully-Static-Websites/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="之前建站初入门的时候，一般都是Wordpress，一有问题网上基本都能找到解决方法，而且主题丰富且漂亮。但是因为Wordpress是动态网站页面，性能消耗较大，而作为个人博客，需要的只是一个完全静态的网站。 什么是静态网站？完全静态的网站只有html文件，对服务器资源消耗极低，可以免费托管在 Github Page 等。对于学生等个人站长而言，运行成本非常低。此外，静态网站安全性很好，几乎没有什么">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-11-09T12:19:00.000Z">
+<meta property="article:modified_time" content="2019-03-12T09:23:01.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="Wordpress">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-WordPress-Exports-Fully-Static-Websites" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">推荐WordPress插件导出静态网站</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2018.11.09</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/tech/">⓶科技</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/tech/WordPress-Exports-Fully-Static-Websites/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>之前建站初入门的时候，一般都是Wordpress，一有问题网上基本都能找到解决方法，而且主题丰富且漂亮。但是因为Wordpress是动态网站页面，性能消耗较大，而作为个人博客，需要的只是一个完全静态的网站。</p>
+<p>什么是静态网站？完全静态的网站只有html文件，对服务器资源消耗极低，可以免费托管在 Github Page 等。对于学生等个人站长而言，运行成本非常低。此外，静态网站安全性很好，几乎没有什么可攻击的漏洞，即使恶意访问量很大，静态网站也可以很好地支撑。所以不少站长选择从 Wordpress 转移到 静态网站。</p>
+<p>那么，如何将一个 Wordpress 网站完全静态化呢？其实 Wordpress 给我们提供了很好的工具。</p>
+<ul>
+<li><p>文章页静态化：在Wordpress“设置”-“固定连接”里，将固定链接设置为“自定义结构”，文章的标题结尾增加.html。此时，目录和标签还是动态页面。</p>
+</li>
+<li><p>关闭评论功能，在“设置”-“讨论”里，选择“自动关闭发布1天后的文章上的评论功能”。</p>
+</li>
+<li><p>安装Simply Static插件生成静态网站。如果文章数量上千，则容易报错，原因是一般的网站服务器会在php上设置了超时和内存限制。可在本地搭建php环境，修改php超时时间和内存大小，例如对于Windows系统来说，可以选择安装<a target="_blank" rel="noopener" href="https://www.bt.cn/">宝塔面板</a>，快速配置WAMP环境，修改环境里php超时时间和内存大小即可。</p>
+</li>
+<li><p>采用 WP2Static 插件。如果你对生成静态网站的时间要求较高，则建议采用该插件，并修改Crawl Increment 的数量为100以上的数值。</p>
+</li>
+</ul>
+<p>如果你有更好的插件或方法，也请通过 <a href=mailto:nickyam@163.com>nickyam@163.com</a> 告诉我，谢谢！</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/tech/WordPress-Exports-Fully-Static-Websites/" target="_blank" title="推荐WordPress插件导出静态网站">推荐WordPress插件导出静态网站</a></b>，本文链接为<b><a href="/tech/WordPress-Exports-Fully-Static-Websites/" target="_blank" title="推荐WordPress插件导出静态网站">http://www.nickyam.com/tech/WordPress-Exports-Fully-Static-Websites/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/tech/The-negative-evolution-of-information-on-Internet/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/tech/Appstore-Refund/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/tech/WordPress-Exports-Fully-Static-Websites/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

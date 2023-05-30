@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>动力电池之Pack &amp; BMS 简介 | 涯木笔谈</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="留存," />
+  
+
+  <meta name="description" content="动力电池PACK成品由三部分构成，即电池模组、BMS和固定架外壳（涵盖了热管理、结构设计、高压控制、安全管理等内容）。其中，BMS被称为电动汽车动力电池系统的“大脑”，与动力电池、整车控制系统共同构成了电动汽车的三大核心技术。 电池模组锂电池模组是由几颗到数百颗电池芯经由并联及串联所组成的多个模组，除了机构设计部分，再加上电池管理系统和热管理系统就可组成一个较完整的锂电池包系统。 一般而言，不管是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动力电池之Pack &amp; BMS 简介">
+<meta property="og:url" content="http://www.nickyam.com/work/%E5%8A%A8%E5%8A%9B%E7%94%B5%E6%B1%A0%E4%B9%8BPack%20&%20BMS%20%E7%AE%80%E4%BB%8B/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="动力电池PACK成品由三部分构成，即电池模组、BMS和固定架外壳（涵盖了热管理、结构设计、高压控制、安全管理等内容）。其中，BMS被称为电动汽车动力电池系统的“大脑”，与动力电池、整车控制系统共同构成了电动汽车的三大核心技术。 电池模组锂电池模组是由几颗到数百颗电池芯经由并联及串联所组成的多个模组，除了机构设计部分，再加上电池管理系统和热管理系统就可组成一个较完整的锂电池包系统。 一般而言，不管是">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-06-16T11:31:07.000Z">
+<meta property="article:modified_time" content="2020-07-25T15:40:30.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="留存">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%B5%E6%B1%A0%E6%A8%A1%E7%BB%84"><span class="toc-text">电池模组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BMS"><span class="toc-text">BMS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PACK"><span class="toc-text">PACK</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-动力电池之Pack &amp; BMS 简介" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">动力电池之Pack &amp; BMS 简介</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.06.16</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/work/">⓹工作</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/work/%E5%8A%A8%E5%8A%9B%E7%94%B5%E6%B1%A0%E4%B9%8BPack%20&amp;%20BMS%20%E7%AE%80%E4%BB%8B/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>动力电池PACK成品由三部分构成，即电池模组、BMS和固定架外壳（涵盖了热管理、结构设计、高压控制、安全管理等内容）。其中，BMS被称为电动汽车动力电池系统的“大脑”，与动力电池、整车控制系统共同构成了电动汽车的三大核心技术。</p>
+<h2 id="电池模组"><a href="#电池模组" class="headerlink" title="电池模组"></a>电池模组</h2><p>锂电池模组是由几颗到数百颗电池芯经由并联及串联所组成的多个模组，除了机构设计部分，再加上电池管理系统和热管理系统就可组成一个较完整的锂电池包系统。</p>
+<p>一般而言，不管是软包、方形、圆柱还是18650型电池，模组的自动化组装工艺流程都是从电芯上料开始。来料可以是原供应商提供的包装，也可以是厂家经过检测后统一整理好的专用托盘。上料过程可以是人工操作，也可以通过传送带自动上料，然后通过机器人经由抓手抓取。上料的同时还会进行电芯的读码(采集单个电芯的身份数据信息)、电芯极性检测(有无放反方向)、电芯分选及配组，并将不良品剔除。来料通过初检和分选之后，根据模组和工艺要求的不同会分别进行诸如<strong>激光清洁-涂胶-电芯堆叠-电池盒组装-极耳裁切整形-模组壳激光焊接-模组激光打码-打螺丝-模组检测-连接片激光焊接-BMS系统连接-模组终检测-模组下料</strong>等。</p>
+<h2 id="BMS"><a href="#BMS" class="headerlink" title="BMS"></a>BMS</h2><p>BMS具有防止过充、避免过放、温度控制、保持电池组件电压和温度平衡、预测电池的剩余电量和剩余行驶里程等功能。</p>
+<p>同时，BMS还具备实时监控并调整电池管理状态的能力、与多个平行子系统同步协调工作的能力。</p>
+<p>透过BMS能准确量测电池组使用状况，保护电池不至于过度充放电，平衡电池组中每一颗电池的电量，以及分析计算电池组的电量并转换为可理解的续航力信息，确保动力电池安全运作。</p>
+<blockquote>
+<p>乘用车使用的BMS系统约占10%-16%，商用车的约占3%-5%，届时国内电动车用BMS的市场规模将达170亿元。</p>
+</blockquote>
+<ol>
+<li><p>基于温度传感器（每个小的模块都有温度传感器）和烟雾传感器，判断电池的异常，及时给驾驶员发出报警信号，然后切断车辆的高压系统。</p>
+</li>
+<li><p>检测动力电池的异常电阻，当检测到回路电阻异常变化的时候（接插件松动&#x2F;螺丝松动产生&#x2F;电池异常），及时给驾驶员发动警报，切断高压。</p>
+</li>
+<li><p>远程监控系统，会根据传输的参数及经验模型判断电池状态，及时的反馈给终端系统。</p>
+</li>
+</ol>
+<h2 id="PACK"><a href="#PACK" class="headerlink" title="PACK"></a>PACK</h2><p>PACK是包装、封装、装配的意思，其工序分为加工、组装、包装三大部分。PACK产线一般只需要承担两个功能：传送和检测。目前，各厂家普遍应用了半自动的PACK组装产线，主要用于PACK的上线、下线、检测、厂内传输和包装。</p>
+<ol>
+<li><p>在单体的选择比较重要，由于公司是独立的PACK制造企业，电池单体可以灵活的选择国内外使用量大的，并且安全性好，不易发生着火及爆炸的电池。</p>
+</li>
+<li><p>增加自动灭火器，检测到火源产生的时候，自动灭火。</p>
+</li>
+<li><p>电池箱体增加卸压阀，防止压力的累积。</p>
+</li>
+<li><p>箱体及模块材料选择耐高温阻燃材料。</p>
+</li>
+<li><p>针对每一款电池，都会做模块的燃烧测试，确保在高温灼烧的时候不会起火及爆炸。</p>
+</li>
+<li><p>对电池箱进行CAE热设计，设计良好的热管理系统，防止电池箱体在高温使用环境下过热。</p>
+</li>
+<li><p>选择使用防松动的螺栓。</p>
+</li>
+</ol>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/work/动力电池之Pack & BMS 简介/" target="_blank" title="动力电池之Pack &amp; BMS 简介">动力电池之Pack &amp; BMS 简介</a></b>，本文链接为<b><a href="/work/动力电池之Pack & BMS 简介/" target="_blank" title="动力电池之Pack &amp; BMS 简介">http://www.nickyam.com/work/动力电池之Pack & BMS 简介/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/investment/stock-201706/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/work/%E5%85%A8%E6%B5%81%E7%A8%8B%E8%B5%84%E9%87%91%E6%B5%8B%E7%AE%97%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/work/%E5%8A%A8%E5%8A%9B%E7%94%B5%E6%B1%A0%E4%B9%8BPack%20&amp;%20BMS%20%E7%AE%80%E4%BB%8B/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
