@@ -1,24 +1,653 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  if page.category
-    title= page.category + ' | ' + config.title
-  if page.tag
-    title= page.tag + ' | ' + config.title
-  if page.archive
-    title= __('archive') + ' | ' + config.title
-block content
-  if page.category || page.tag
-    h1.label-title=  __('reading_label', page.category || page.tag)
-  .post
-    .post-archive
-      - var allposts = page.posts.toArray().reduce((r, v, i, a, k = -v.date.format('YYYY')) => ((r[k] || (r[k] = [])).push(v), r), {})
-      each posts, year in allposts
-        h2= -year
-        ul.listing
-          for post in posts
-            li
-              span.date= post.date.format(config.date_format)
-              a(href=url_for(post.path), title=post.title)
-                +title(post)
-  include _partial/paginator.pug
+
+  <html class="light page-archives">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives | 涯木笔谈</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="investment,bitcoin,cfa,股票,比特币" />
+  
+
+  <meta name="description" content="涯木笔谈，是专注于科技IT、博客建站、工作生活和读书思考等领域的原创博客，作者虞侃。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="涯木笔谈">
+<meta property="og:url" content="http://www.nickyam.com/archives/page/3/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="涯木笔谈，是专注于科技IT、博客建站、工作生活和读书思考等领域的原创博客，作者虞侃。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="虞侃">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="content content-archive">
+  <div class="page-header">
+
+  
+    <div class="breadcrumb">
+      <div class="location">博客</div>
+      <i class="icon-location"></i>
+    </div>
+  
+
+  
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
+  <div class="box-blog-info">
+    <a class="avatar" href="/">
+      <img src="/images/avatar.jpg" alt="" />
+    </a>
+    <div class="info">
+      <h3 class="name" style="font-family: calligraffittiregular">
+        Nick Yam
+      </h3>
+      <div class="slogan">
+        Work @ ICBC, Investment Banking Associate Blogging
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="post-list-box archive-body">
+    <ul class="list-post">  <li class="item-year item item-title item-title-0">
+    <a href="/archives/2020" class="text-year">
+      2020
+      <i class="icon-shu"></i>
+      
+    </a>
+  </li>
+<li class="item-post item">
+  <span class="post-date">02-20</span>
+
+  
+  <a class="post-title" href="/2020/02/20/google-pin-code-second-time/">Google Adsense 输错三次 Pin 码后的记录</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-15</span>
+
+  
+  <a class="post-title" href="/2020/02/15/add-blog-to-archive-org/">个人博客存入互联网博物馆Archive.org</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-07</span>
+
+  
+  <a class="post-title" href="/2020/02/07/how-to-add-google-sitemap/">怎样为blogspot博客添加sitemap功能</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-07</span>
+
+  
+  <a class="post-title" href="/2020/02/07/my-page-to-be-Reference-link/">记一次手动发现自己的页面被其他站长引用</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-02</span>
+
+  
+  <a class="post-title" href="/2020/02/02/hexo-add-music-and-movie/">Hexo博客中插入图片、音乐和视频的方法</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-29</span>
+
+  
+  <a class="post-title" href="/2020/01/29/adsense-pin-number/">Google Adsense提示Pin码验证地址之记录</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-22</span>
+
+  
+  <a class="post-title" href="/2020/01/22/plague-of-wuhan/">新型冠状病毒2019-nCoV相关信息汇总</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-17</span>
+
+  
+  <a class="post-title" href="/2020/01/17/conjunctivitis/">突发眼疾之始末小记</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-06</span>
+
+  
+  <a class="post-title" href="/2020/01/06/Capitalization-of-borrowing-costs/">借款费用资本化辨析</a>
+
+
+</li>
+  <li class="item-year item item-title item-title-4">
+    <a href="/archives/2019" class="text-year">
+      2019
+      <i class="icon-zhu"></i>
+      
+    </a>
+  </li>
+<li class="item-post item">
+  <span class="post-date">12-28</span>
+
+  
+  <a class="post-title" href="/2019/12/28/LPR-loan-interest-rate-conversion/">存量浮动利率贷款挂钩LPR政策及利率转换解读</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">12-20</span>
+
+  
+  <a class="post-title" href="/2019/12/20/zhongjieneng-debt-for-equity-swap/">浙江工行落地中节能实业债转股20亿元</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">12-16</span>
+
+  
+  <a class="post-title" href="/2019/12/16/cmbc-creditcard-88vip/">民生88vip精英白金卡申请、开卡及使用记录</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">12-16</span>
+
+  
+  <a class="post-title" href="/2019/12/16/how-to-get-rid-of-any-search/">Mac劫持插件any search（TotalSearchToolbox）删除的处理方法</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">11-08</span>
+
+  
+  <a class="post-title" href="/2019/11/08/a-tour-in-nanning/">南宁行记</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-12</span>
+
+  
+  <a class="post-title" href="/2019/10/12/icbc-chuanhua-group-zhaizhuangu-finish/">浙江工行落地民营企业传化集团债转股10亿元</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-05</span>
+
+  
+  <a class="post-title" href="/2019/10/05/A-way-to-get-cleanmymac/">如何正确获取CleanMyMac 4.4.7</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-04</span>
+
+  
+  <a class="post-title" href="/2019/10/04/Save-my-mac-from-update-failure/">macOS beta更新提示空间不足，无限循环重启问题解决</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">07-21</span>
+
+  
+  <a class="post-title" href="/2019/07/21/start-of-cook/">一悟一什</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-31</span>
+
+  
+  <a class="post-title" href="/2019/03/31/Wanxiang-group's-debt-for-equity-swap/">工商银行牵手万向集团，浙江省单笔金额最大债转股项目落地</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-23</span>
+
+  
+  <a class="post-title" href="/2019/03/23/I-received-a-bitcoin-blackmail-scam/">我收到一封比特币勒索邮件</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-22</span>
+
+  
+  <a class="post-title" href="/2019/03/22/About-the-dividend-difference-up-and-tax-exemption-etc/">关于债转股业务的分红、差补及免税等的问题</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-12</span>
+
+  
+  <a class="post-title" href="/2019/03/12/Gitment-Setup-and-Debug/">Hexo博客 Maupassant 主题设置 Gitment 评论功能</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-11</span>
+
+  
+  <a class="post-title" href="/2019/03/11/Hexo-Category-List/">Hexo博客设置分类顺序</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-22</span>
+
+  
+  <a class="post-title" href="/2019/02/22/lost-iphone-location/">苹果手机丢失后如何保证能够被定位</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-21</span>
+
+  
+  <a class="post-title" href="/2019/02/21/Overdue-mortgage-repayment-of-minsheng-bank/">民生银行房贷二次扣款避免逾期影响征信</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-17</span>
+
+  
+  <a class="post-title" href="/2019/02/17/rain-snow/">小雨天·大雪夜</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-04</span>
+
+  
+  <a class="post-title" href="/2019/02/04/WeChat-blessing-2019/">2019年微信祝福集锦</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-29</span>
+
+  
+  <a class="post-title" href="/2019/01/29/Github-Page-Add-Shenma-Site-Verification/">Github Page 添加神马搜索网站验证</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-27</span>
+
+  
+  <a class="post-title" href="/2019/01/27/hexo-multi-tags/">Hexo 多标签及分级目录设置方法举例</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-26</span>
+
+  
+  <a class="post-title" href="/2019/01/26/Chairman-of-the-Securities-Regulatory-Commission-YiHuiman/">从工行董事长易会满执掌证监会消息看公信力</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-25</span>
+
+  
+  <a class="post-title" href="/2019/01/25/Agency-of-Estate/">某某特色的不动产权证办理</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-18</span>
+
+  
+  <a class="post-title" href="/2019/01/18/hexo-maupassant-archives-show-all-in-one-page/">Hexo 博客 Maupassant 主题下归档页显示的高级设置</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-13</span>
+
+  
+  <a class="post-title" href="/2019/01/13/hexo-generate-rss-atom/">Hexo博客安装rss插件生成atom.xml文件</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-12</span>
+
+  
+  <a class="post-title" href="/2019/01/12/jd-service-bad/">京东到家订单bug及客服问题</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-12</span>
+
+  
+  <a class="post-title" href="/2019/01/12/hexo-set-google-adsense/">Hexo博客maupassant主题添加Google Adsense广告</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-01</span>
+
+  
+  <a class="post-title" href="/2019/01/01/hexo-add-tencent-404-page/">Hexo博客添加腾讯404公益页面</a>
+
+
+</li>
+  <li class="item-year item item-title item-title-3">
+    <a href="/archives/2018" class="text-year">
+      2018
+      <i class="icon-gou"></i>
+      
+    </a>
+  </li>
+<li class="item-post item">
+  <span class="post-date">12-31</span>
+
+  
+  <a class="post-title" href="/2018/12/31/hexo-generate-sitemap/">Hexo生成sitemap步骤及duplicated mapping key 问题解决</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">12-29</span>
+
+  
+  <a class="post-title" href="/2018/12/29/Appstore-Refund/">Appstore误点内购服务申请退款成功</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">11-09</span>
+
+  
+  <a class="post-title" href="/2018/11/09/WordPress-Exports-Fully-Static-Websites/">推荐WordPress插件导出静态网站</a>
+
+
+</li>
+</ul>
+  </div>
+
+  <div class="archive-footer">
+    
+  <div class="pagination">
+    <nav class="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/page/2/">&lt;i class&#x3D;&quot;icon-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/8/">8</a><a class="extend next" rel="next" href="/archives/page/4/">&lt;i class&#x3D;&quot;icon-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    </nav>
+  </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

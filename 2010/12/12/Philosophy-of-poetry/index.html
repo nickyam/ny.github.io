@@ -1,58 +1,445 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>诗之哲 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="阅读,文学," />
+  
+
+  <meta name="description" content="古有六经，而《诗》为首。《乐》佚矣，《诗》不绝。同为儒学之圭臬，何其所终之别如斯哉！予以为，《诗》之哲，盖其万世流芳之缘由也。子曰：”诗三百，一言以蔽之，曰’思无邪’。”又曰：”兴于诗，立于礼，成于乐。”子之于《诗》，亦重矣，堪比学《易》之韦编三绝者。 今论修身，必始于理也，四书也，五经也。此法中规。周国平近日于清华讲演，有言曰，有志于哲学者，须求索于中外经典，而非其注其解其心得者。经典，主人也；">
+<meta property="og:type" content="article">
+<meta property="og:title" content="诗之哲">
+<meta property="og:url" content="http://www.nickyam.com/2010/12/12/Philosophy-of-poetry/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="古有六经，而《诗》为首。《乐》佚矣，《诗》不绝。同为儒学之圭臬，何其所终之别如斯哉！予以为，《诗》之哲，盖其万世流芳之缘由也。子曰：”诗三百，一言以蔽之，曰’思无邪’。”又曰：”兴于诗，立于礼，成于乐。”子之于《诗》，亦重矣，堪比学《易》之韦编三绝者。 今论修身，必始于理也，四书也，五经也。此法中规。周国平近日于清华讲演，有言曰，有志于哲学者，须求索于中外经典，而非其注其解其心得者。经典，主人也；">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2010-12-12T13:45:15.000Z">
+<meta property="article:modified_time" content="2019-12-30T13:53:03.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="阅读">
+<meta property="article:tag" content="文学">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Philosophy-of-poetry" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">诗之哲</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2010.12.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2010/12/12/Philosophy-of-poetry/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>古有六经，而《诗》为首。《乐》佚矣，《诗》不绝。同为儒学之圭臬，何其所终之别如斯哉！予以为，《诗》之哲，盖其万世流芳之缘由也。子曰：”诗三百，一言以蔽之，曰’思无邪’。”又曰：”兴于诗，立于礼，成于乐。”子之于《诗》，亦重矣，堪比学《易》之韦编三绝者。</p>
+<p>今论修身，必始于理也，四书也，五经也。此法中规。周国平近日于清华讲演，有言曰，有志于哲学者，须求索于中外经典，而非其注其解其心得者。经典，主人也； 注疏，其仆也。或爱主人，但为捷径而求爱于仆者，盖贻笑大方耳。当时众皆大笑。倚重经典，可也，必也。然则人于四书五经之内，亦有所偏。于哲学于修身，《诗》不复为人所重矣。但有好诗者，溯唐诗宋词元曲而上，或达于《诗》。叹叹！</p>
+<p>古语云：”近朱者赤，近墨者黑。”或曰：”近朱者未必赤，近墨者未必黑。”近世辩之久矣。予亦不能取其一。然予以为，修身者，非一己之私也。人生于国、长于家、成于天下，若不为隐者，何其不为远近所化！夫欲免于后 天之化，难于上青天耳。且同窗平日所论所苦，必叹世风之日下，己之不能免。故欲修身，须究天人之际，探古今之微。向者儒有言曰：穷则独善其身，达则兼济天 下。亦曰：修身齐家治国平天下。予窥今人所汲汲者，名利权钱而已。以西方达尔文所言考之，今人之聪慧当勿疑也，然则观众人之面相，却如黄山谷所言之面目可憎！今日所缺，非义理也，非主义也；风化也，信仰也。</p>
+<p> 修身，情也，理也。二者不可偏废。理乃当世之长，情则此生之短也。世人猜忌讹诈，用不知共情也。共者，互相也；情者，纯情也。子曰：”己所不欲，勿施于人。”盍此义也！《诗》，华夏之先声也，先秦之风化也。圣人传之于后世。幸甚！</p>
+<p>予读《诗》，非默读之，乃吟之，诵之。</p>
+<p>“关关雎鸠，在河之洲。窈窕淑女，君子好逑。”《诗》之开篇即缠绵相思之曲。其后随之《蒹葭》，继之《硕人》之属，不一而足。此格乃《诗》之体也。情爱乃人 伦之大，故不以为耻，不以为淫。子曰：”关睢，乐而不淫，哀而不伤。”食色性也。近世西学东渐，有运动美曰”性解放”。诚然，中土之千载，性趋于禁，非合 于造化也。然则西学之性，倡肉欲甚盈，而于柏拉图式之神交则亏也。予观之，乃鱼虫鸟兽之交也。曰：人者，天使与魔鬼皆居于其内。人之为人，当不限于区区肉 欲。”蒹葭苍苍，白露为霜。所谓伊人，在水一方。”世人但知秦人之用，可知此诗亦属秦耶？意蕴绵长，檀口生香。性，欲也。理弗能禁之；而情能道之。《诗 经》，真性情也。《柏舟》之苦闷、《二子》之心忧、《相鼠》之愤慨、《黍离》之怅然、《君子于役》之孤独、《羔裘》之正气、《无衣》之勇武……仪态万方之 众生相，无怪乎思无邪！</p>
+<p>世云：中土乃礼仪之邦也。美誉之可掬，其理哉，抑或礼哉！礼者，非今日之礼貌也，乃古之风气。近世诗隐矣，阳春白雪束之于高阁。幸乐之兴也，则其词可鉴。靡靡如郑音，乐而淫矣，哀而伤矣。道之哉，道之哉！</p>
+<p>《诗》 当不限于此。诗者，亦史也者。大雅、小雅、周颂、商颂、鲁颂，存其礼保其制，而今人观之谓之史。国风之中，民心之所向，民心之所想，亦史也。史能见当世。 子曰：”小子何莫学夫诗？诗，可以兴，可以观，可以群，可以怨。迩之事父，远之事君，多识于鸟兽草木之名。””子所雅言，诗、书、执礼，皆雅言也。”不学诗，无以言。故圣人责其子鲤学之。后《传》《策》之所志，足见诗之合纵连横也。故诗，修身也，齐家也，治国也，平天下也。</p>
+<p>《诗》也者，非《论语》《孟子》也，其精义思之不可得也。唯诵之久矣，方能了然于心也。五柳先生曰：”此中有真意，欲辨已忘言。”如斯夫！</p>
+<p>友求教于我：何能静心？ 答曰：读《诗》。</p>
+<p>友再求于我：何能修身？ 答曰：读《诗》。</p>
+<p>友惑而疑之，予不禁莞尔。取《诗经》于枕，示之。曰：读之方能解惑也。</p>
+<p>钟书先生曾有文，今人乃人类之成人也，而古人乃人类之顽童。然则顽童之欢愉、少年之智慧，于今亦无价矣。予以为，读《诗》，返璞归真之幽径也。</p>
+<p>吾侪共勉之！</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2010/12/12/Philosophy-of-poetry/" target="_blank" title="诗之哲">诗之哲</a></b>，本文链接为<b><a href="/2010/12/12/Philosophy-of-poetry/" target="_blank" title="诗之哲">http://www.nickyam.com/2010/12/12/Philosophy-of-poetry/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2010/11/21/Into-the-woods-not-only-musical/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2010/12/31/city-of-life-and-death/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2010/12/12/Philosophy-of-poetry/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

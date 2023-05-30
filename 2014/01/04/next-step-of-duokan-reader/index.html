@@ -1,58 +1,437 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>多看阅读的下一步 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="思考,阅读," />
+  
+
+  <meta name="description" content="微信之外，在国产的app当中，我最喜欢的当属多看阅读，最离不开的也是多看阅读。在我眼中，多看阅读UI简单美观，操作方便，功能实用，内容丰富。现在我90%以上的阅读都是在多看上完成的，另外还有10%是pocket。我属于IT上“崇洋媚外”分子，总觉得国内的都是山寨货，而且不安全，说不定哪天就没了，以至于直至今日，我依然忍受着evernote时时抽风也不用印象笔记，原因就在于服务器所在地的差别。最早的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多看阅读的下一步">
+<meta property="og:url" content="http://www.nickyam.com/2014/01/04/next-step-of-duokan-reader/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="微信之外，在国产的app当中，我最喜欢的当属多看阅读，最离不开的也是多看阅读。在我眼中，多看阅读UI简单美观，操作方便，功能实用，内容丰富。现在我90%以上的阅读都是在多看上完成的，另外还有10%是pocket。我属于IT上“崇洋媚外”分子，总觉得国内的都是山寨货，而且不安全，说不定哪天就没了，以至于直至今日，我依然忍受着evernote时时抽风也不用印象笔记，原因就在于服务器所在地的差别。最早的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2014-01-04T11:50:00.000Z">
+<meta property="article:modified_time" content="2019-03-12T09:23:01.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="思考">
+<meta property="article:tag" content="阅读">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-next-step-of-duokan-reader" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">多看阅读的下一步</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.01.04</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/tech/">⓶科技</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2014/01/04/next-step-of-duokan-reader/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>微信之外，在国产的app当中，我最喜欢的当属多看阅读，最离不开的也是多看阅读。在我眼中，多看阅读UI简单美观，操作方便，功能实用，内容丰富。现在我90%以上的阅读都是在多看上完成的，另外还有10%是pocket。我属于IT上“崇洋媚外”分子，总觉得国内的都是山寨货，而且不安全，说不定哪天就没了，以至于直至今日，我依然忍受着evernote时时抽风也不用印象笔记，原因就在于服务器所在地的差别。最早的时候，我使用亚马逊的kindle看书。亚马逊的kindle是国外老牌的电子书了。第一次接触多看阅读的时候是在同事的iPad上面。我对多看阅读早有耳闻，当时没怎么当回事儿。因为在我的印象中，国内的电子书app有很多，看看言情、武侠、修真等等还凑和，如果要看专业的pdf或者做做笔记什么的，恐怕顿时就集体无能了。但凡事都有一个例外，比如说多看阅读。</p>
+<p>多看最吸引我的一点是笔记功能。能够书摘，能够批注，能够字典。而我最喜欢的导出功能，可以把笔记导出到evernote。这是一个比亚马逊kindle实用的功能。虽然kindle也能够同步笔记，但是必须插在字里行间，没有整理成条目的笔记可以导出。接着我喜欢上了多看的排版功能，能够把文字版的pdf排版（当然图片格式的还是不行）。这一点在我的认知中至今没被超越。这两点对于一个严肃的工具类app来说已经出类拔萃了。但是要想在竞争激烈的app市场上长期保持领先地位，还远远不够。Winamp就是一个极好例子，曾经风光无限，如今改嫁比利时。单纯的沦为某一领域工具是危险的。工具是可以山寨的，可以改进的，但是内容则没有那么简单。所以itunes活的越来越滋润，亚马逊也是。所有的商业行为最后都归结于内容——或者是实物，或者是服务。</p>
+<p>在互联网这个大时代，纸媒或者说印刷出版业一夜之间成为了夕阳产业，同时一大批虚拟出版商也在崛起。其中多看就是。多看阅读用精美的排版构建了一个虚拟的电子书店，用几乎零成本销售这些byte。在书店服务的外围，还有云空间存储电子书。这样的服务提升了多看阅读的地位，让多看阅读的账号（也是现在的小米账号）镀上了一层金，有了更高的价值。但这样就够了么？我想未必。</p>
+<p>多看下一步要做的是巩固高端受众。高端受众是哪一类人群呢？愿意为电子书买单的人，有品位的人。毕竟读书的人都希望自己是有品位的人。如果多看能够持续吸引高端人群，那么多看的品牌就是电子书界的高端品牌。多看已经营造了一个虚拟书店和虚拟图书交流会，还需要成为阅读者的知识库，阅读者的第二大脑，完成从提供图书，分享知识到沉淀智慧的转变。为什么成立没几年的evernote敢说自己要做百年企业？因为他的定位就是人的外挂大脑。人在，大脑就在。多看能不能成为阅读者的外挂大脑呢？有潜力，而且多看也在做，至少收藏笔记和云空间迈出了一小步，但是整合的不是很好。至少从使用体验上来说，不是很统一和方便。比如我购买了大量的图书，但是没有有效的分类；我做了很多笔记，笔记按照图书分类，但是同类型书籍中的笔记或许可以互相印证，但是没有tag来连接，等等。这需要一个观念的革新，不能一味模仿纸质书，要引领阅读者更好的利用电子书的特点来整理自己的知识结构。这一点如果做得好，多看就比kindle走的更快。也就更加能够推动整个电子书行业的发展了。</p>
+<p>还有一个关键点，多看需要解决图书的借阅活动的虚拟化。虽然借阅活动会降低多看图书的购买量，但是可以通过设定一定的条件或者地理门槛，来减少其影响。从长远来说，做好这一步能够吸引更多的阅读者进入多看书城，交流图书交流心得。ireader（同类型的一款阅读软件）已经开始基于地理看其他阅读者的书架，之后会不会有大手笔呢？不得而知，但是至少我认为方向是对的。希望多看在该领域也要尽快发力。</p>
+<p>看到这里，如果有人还说，这篇文章是多看阅读的软文，那我也无话可说了。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2014/01/04/next-step-of-duokan-reader/" target="_blank" title="多看阅读的下一步">多看阅读的下一步</a></b>，本文链接为<b><a href="/2014/01/04/next-step-of-duokan-reader/" target="_blank" title="多看阅读的下一步">http://www.nickyam.com/2014/01/04/next-step-of-duokan-reader/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2013/12/06/Sincere-service-to-maintain-customers/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2014/01/09/My-opinion-on-how-retail-banks-go-i/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2014/01/04/next-step-of-duokan-reader/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

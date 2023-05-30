@@ -1,58 +1,434 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>凯特王妃的旧大衣 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="思考," />
+  
+
+  <meta name="description" content="英国威廉王子和未婚妻凯特·米德尔顿本月24日在威尔士出席一场救生艇启用仪式，这是自去年10月订婚后首次共同公开亮相。英国媒体和民众对这次“准王妃”的首秀普遍表示满意。本博客不是八卦杂志，但是认为这次英国王室的准王妃身上的一个细节值得我们细说。那就是王妃身上的旧大衣。 凯特24日当天身着米色大衣，穿棕色羊皮短靴，戴黑色围巾，头发扎起，配以羽毛发饰。凯特此前经常喜欢披肩长发示人，很少扎起头发。眼尖的英">
+<meta property="og:type" content="article">
+<meta property="og:title" content="凯特王妃的旧大衣">
+<meta property="og:url" content="http://www.nickyam.com/2011/02/26/Kate's-old-coat/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="英国威廉王子和未婚妻凯特·米德尔顿本月24日在威尔士出席一场救生艇启用仪式，这是自去年10月订婚后首次共同公开亮相。英国媒体和民众对这次“准王妃”的首秀普遍表示满意。本博客不是八卦杂志，但是认为这次英国王室的准王妃身上的一个细节值得我们细说。那就是王妃身上的旧大衣。 凯特24日当天身着米色大衣，穿棕色羊皮短靴，戴黑色围巾，头发扎起，配以羽毛发饰。凯特此前经常喜欢披肩长发示人，很少扎起头发。眼尖的英">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2011-02-26T12:12:47.000Z">
+<meta property="article:modified_time" content="2019-12-25T14:03:53.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Kate&#39;s-old-coat" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">凯特王妃的旧大衣</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2011.02.26</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2011/02/26/Kate&#39;s-old-coat/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>英国威廉王子和未婚妻凯特·米德尔顿本月24日在威尔士出席一场救生艇启用仪式，这是自去年10月订婚后首次共同公开亮相。英国媒体和民众对这次“准王妃”的首秀普遍表示满意。本博客不是八卦杂志，但是认为这次英国王室的准王妃身上的一个细节值得我们细说。那就是王妃身上的旧大衣。</p>
+<p>凯特24日当天身着米色大衣，穿棕色羊皮短靴，戴黑色围巾，头发扎起，配以羽毛发饰。凯特此前经常喜欢披肩长发示人，很少扎起头发。眼尖的英国媒体发现，凯特所穿的米色大衣乃平价旧大衣，伦敦本地设计师凯瑟琳·胡克出品，价值700英镑（在英国，买个什么纸质笔记本之类的都要五六英镑），更重要的是，这件大衣颇有历史，至少已穿过5年了，2006年，凯特就曾穿着它亮相，不过，这位准王妃很聪明，把原本长过膝的大衣改短，让人得以一瞥大衣里面的棕红色裙子，更成功地秀出了纤细的美腿，衬得她骨骼纤细让人爱怜。</p>
+<p>如果换成是一个中国的名人或者精英，在重要场合他或者她会穿一件旧大衣么？有人会说，这是一种作秀。是的，中国的作秀已经非常发达，就连有人自愿入籍钓鱼岛都被说成是作秀，当然不会理解真正的亲民。也有人会说，因为金融危机英国变穷了，富有的中国没有必要这样。但是生活或者人生绝对不是仅仅富有就可以了。这一点我在前面的博文《贵族的精致生活》一文就提到过。在中国，谁还会把旧衣服改一下，在这么重要的场合穿？而且改的这么艺术，这么有效果？现在的中国更像是一个爆发户，而欧洲依然是一个贵族。当然，我们也不能完全说是中国的精英的心态问题。中国的记者们也并非完全没有责任。他们往往更加关注一些婚外情，艳照门之类的事情，而不会引导一种正确的艺术风气。在中国，什么都是新的。这是老外来中国最大的感受。我们可以把这看成是老外的赞叹。但是旧的，未必不如新的。有时候，经典更加迷人。</p>
+<p>每天穿梭在清华园，清华的建筑可谓是相当经典，每年来参观校园的人是络绎不绝。今年是清华百年校庆。身在清华，不能说为了百年校庆，学校基础建设如何如何。但是我所担心的是——百年校庆没有让我看到更多的内在变革。 不知道除了从娱乐角度看待王妃的旧外套之外，我们能不能有一些更加深入的思考？上文仅仅是抛砖引玉 而已。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2011/02/26/Kate's-old-coat/" target="_blank" title="凯特王妃的旧大衣">凯特王妃的旧大衣</a></b>，本文链接为<b><a href="/2011/02/26/Kate's-old-coat/" target="_blank" title="凯特王妃的旧大衣">http://www.nickyam.com/2011/02/26/Kate's-old-coat/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2011/02/22/The-last-struggle-of-reality-paper/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2011/03/01/Historical-traversing-is-hot/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2011/02/26/Kate&#39;s-old-coat/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

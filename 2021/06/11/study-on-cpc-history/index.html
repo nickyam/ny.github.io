@@ -1,58 +1,438 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>党史学习感悟（0605-0611） | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="思考," />
+  
+
+  <meta name="description" content="有句话说的好，一切历史都是现时史。学习党史能更深刻理解把握我们所处的当下，推动现实朝着更有力的方向发展。对照历史上的今天，本周现时发生了三件我比较关注的事情，具体学习感悟如下: 6月6日、7日，新华社连续发表《社会主义没有辜负中国》和《中国没有辜负社会主义》，前者重在论史，荡气回肠;后者重在论理，层层递进。文中指出，对共产主义的信仰，对中国特色社会主义的信念，是共产党人的政治灵魂，是共产党人经受住">
+<meta property="og:type" content="article">
+<meta property="og:title" content="党史学习感悟（0605-0611）">
+<meta property="og:url" content="http://www.nickyam.com/2021/06/11/study-on-cpc-history/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="有句话说的好，一切历史都是现时史。学习党史能更深刻理解把握我们所处的当下，推动现实朝着更有力的方向发展。对照历史上的今天，本周现时发生了三件我比较关注的事情，具体学习感悟如下: 6月6日、7日，新华社连续发表《社会主义没有辜负中国》和《中国没有辜负社会主义》，前者重在论史，荡气回肠;后者重在论理，层层递进。文中指出，对共产主义的信仰，对中国特色社会主义的信念，是共产党人的政治灵魂，是共产党人经受住">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-11T12:27:23.000Z">
+<meta property="article:modified_time" content="2021-06-13T14:15:39.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-study-on-cpc-history" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">党史学习感悟（0605-0611）</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2021.06.11</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2021/06/11/study-on-cpc-history/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>有句话说的好，一切历史都是现时史。学习党史能更深刻理解把握我们所处的当下，推动现实朝着更有力的方向发展。对照历史上的今天，本周现时发生了三件我比较关注的事情，具体学习感悟如下:</p>
+<p><strong>6月6日、7日，新华社连续发表《社会主义没有辜负中国》和《中国没有辜负社会主义》，前者重在论史，荡气回肠;后者重在论理，层层递进。</strong>文中指出，对共产主义的信仰，对中国特色社会主义的信念，是共产党人的政治灵魂，是共产党人经受住任何考验的精神支柱，强调党的百年奋斗历程和伟大成就，是我们增强道路自信、理论自信、制度自信、文化自信最坚持的基础。“什么是社会主义?怎样建设社会主义?”这个回荡在中国上空的历史之问，中国共产党人从未停止作答。从深刻揭示社会主义建设和社会主义改造的“十大关系”，到及时作出我国社会主要矛盾已经转变成“先进的社会主义制度同落后的社会生产力之间的矛盾”的重要论断，到鲜明提出正确处理人民内部矛盾，无不是宝贵的探索、艰难的行进。</p>
+<p>1944年6月5日中共六届七中全会通过毛泽东起草的《中共中央关于城市工作的指示》。1980年6月5日邓小平在会见美国和加拿大社论撰写人访华团时，谈到中国现代化建设的目标，认为中国人口众多，基础薄弱，决定了四个现代化的目标要切合实际。2005年6月6日-7日温家宝在全国农村税费改革试点工作会议强调，农村税费改革将进入新的阶段，巩固农村税费改革成果，积极稳妥推进以乡镇机构、农村义务教育和县乡财政体制为主要内容的综合改革试点，次年废止《中华人民共和国农业税条例》。2008年6月8日中共中央、国务院印发《关于全面推进集体林权制度改革的意见》，规定林地的承包期为70年。2014年6月6日习近平主持召开中央全面深化改革领导小组第三次会议强调，改革要着眼于解决发展中存在的突出矛盾和问题，把有利于稳增长、调结构、防风险、惠民生的改革举措往前排。<strong>上述历史上的今天都是我党在各个历史阶段对社会主义的积极探索。</strong></p>
+<p><strong>6月9日，人民银行发布关于印发《银行业金融机构绿色金融评价方案》。</strong> 方案规定，绿色金融评价指标包括定量和定性两类，其中定量指标权重80%，定性指标权重20%;绿色金融评价结果纳入央行金融机构评级等中国人民银行政策和审慎管理工具。2020年9月，习近平主席在第75届联合国大会提出我国2030年前碳达峰、2060年前碳中和目标。2021年初以来银行间交易商协会试点碳中和债，并于3月发布《关于明确碳中和相关机制的通知》进一步细化相关机制。这次《评价方案》的出台将进一步促进后续承销发行绿色债券及推荐绿色债券投资。<strong>作为“两山”理论的发源地，我们尤其要做好绿色金融服务配套。</strong></p>
+<p>在本周的党史中，2007年6月8日胡锦涛就曾经在八国集团同发展中国家领导人对话会议上提出中国对气候变化问题的原则立场。2018年6月9日-10日习近平在上海合作组织青岛峰会上也强调要提倡创新、协调、<strong>绿色</strong>、开放、共享的发展观。</p>
+<p><strong>6月10日，《中共中央国务院关于支持浙江高质量发展建设共同富裕示范区》发布，赋予了浙江重要示范改革任务。</strong> 21世纪以来，我省在对发展的探索上成绩斐然:青山绿水就是青山绿水就是金山银山;千村示范、万村整治;最多跑一次;特色小镇;山海协作工程等等，上述探索无一不着眼于人民群众的切身幸福。有些探索直接被复制到全国各地，有些则在国家层面获得了升华。本次中央专门出台文件支持浙江建设示范区也是前所未有的重大机遇，文件落款520也体现了中央对浙江深化改革寄予厚望。</p>
+<p>在本次建设示范区，为全国人民实现共同富裕摸索出一条可实现的路径的过程中，我们可以重温1988年6月7日邓小平关于深化改革的论述:中国正在深化改革，为今后的发展创造更好的条件，要同人民一起商量着办事，决心要坚定，步骤要稳妥，还要及时总结经验，改正不妥当的方案和步骤，不使小的错误发展成为大的错误。在此过程中，作为有责任有担当的国有大行，我们也要利用好共同富裕示范区这块金字招牌，创新性地做好区域内的金融服务，通过投行手段更好地引导省外金融资源建设更加美好的浙江。</p>
+<p>以上为本人基于本周党史学习和思考的内容，请各位领导同事批评指正!</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2021/06/11/study-on-cpc-history/" target="_blank" title="党史学习感悟（0605-0611）">党史学习感悟（0605-0611）</a></b>，本文链接为<b><a href="/2021/06/11/study-on-cpc-history/" target="_blank" title="党史学习感悟（0605-0611）">http://www.nickyam.com/2021/06/11/study-on-cpc-history/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2021/05/13/choose-road-in-rainday/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2021/06/19/%E4%BA%B2%E5%8E%86%E5%81%87%E5%86%92%E5%B8%81%E5%AE%89%E5%AE%A2%E6%9C%8D%E7%94%B5%E8%AF%9D%E8%AF%88%E9%AA%97/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2021/06/11/study-on-cpc-history/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

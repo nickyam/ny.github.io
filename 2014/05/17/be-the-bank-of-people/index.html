@@ -1,58 +1,438 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>永远做人民的银行 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="金融,思考," />
+  
+
+  <meta name="description" content="开这个博本是写写自己的东西，无奈基层工作太忙。偶尔要求写政治任务，发上来凑数，勿怪。  中国工商银行位列中国四大国有银行之首，也是全球首屈一指的大银行，故被坊间戏称为宇宙第一大行。庞大的企业，复杂的架构，往往会让公司换上大企业病。然而工商银行无论头顶多少头衔，工行人都知道，我们永远都是中国人民自己的银行，因此我们首要考虑的是如何让人民满意。三声服务、微笑服务都让我们的客户享受宾至如归的感受。但是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="永远做人民的银行">
+<meta property="og:url" content="http://www.nickyam.com/2014/05/17/be-the-bank-of-people/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="开这个博本是写写自己的东西，无奈基层工作太忙。偶尔要求写政治任务，发上来凑数，勿怪。  中国工商银行位列中国四大国有银行之首，也是全球首屈一指的大银行，故被坊间戏称为宇宙第一大行。庞大的企业，复杂的架构，往往会让公司换上大企业病。然而工商银行无论头顶多少头衔，工行人都知道，我们永远都是中国人民自己的银行，因此我们首要考虑的是如何让人民满意。三声服务、微笑服务都让我们的客户享受宾至如归的感受。但是">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2014-05-17T12:25:11.000Z">
+<meta property="article:modified_time" content="2020-03-01T07:32:07.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="金融">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-be-the-bank-of-people" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">永远做人民的银行</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.05.17</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/work/">⓹工作</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2014/05/17/be-the-bank-of-people/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <blockquote>
+<p>开这个博本是写写自己的东西，无奈基层工作太忙。偶尔要求写政治任务，发上来凑数，勿怪。</p>
+</blockquote>
+<p>中国工商银行位列中国四大国有银行之首，也是全球首屈一指的大银行，故被坊间戏称为宇宙第一大行。庞大的企业，复杂的架构，往往会让公司换上大企业病。然而工商银行无论头顶多少头衔，工行人都知道，我们永远都是中国人民自己的银行，因此我们首要考虑的是如何让人民满意。三声服务、微笑服务都让我们的客户享受宾至如归的感受。但是我觉得这仅仅是让人民满意的第一步。我们还有很多工作需要做。让广大员工集思广益，群策群力，才能够离“人民满意银行”更进一步。为什么要听听基层员工的建议呢？因为基层员工离客户、离人民最近，最了解他们的需求。认真整合基层员工的意见和建议，在以后的工作中，逐步完善相关的规章制度和流程，才能为人民提供高效、便捷和个性化的金融服务。</p>
+<p>在基层支行工作大半年，我深刻体会到和以前专业部门工作的不同。在内控和运管方面，明知道是为了控制风险，但切身感受到基层工作的很多不便。我相信，在基层工作多年的老员工比我们更加有发言权。而我想说的是，在专业部门工作的同事应该更多的深入基层。这不仅仅是调研和考察那么简单，而是真真实实在基层工作一段时间。我们常常说，要 设身处地或者换位思考。尽管如此，如果没有亲身经历，很多考虑往往还是比较肤浅的。即使是思路是对的，最终的结果也未必尽如人意。最典型的就是三个一交易凭证打印。在最初的设计中，我们知道柜面业务效率需要提高，所以就设计对于同一个客户办的业务在一个凭证上打印，这样就可以只签一个字。辛辛苦苦开发出来，在柜员当中不受欢迎；客户也很不理解，需要大堂经理解释。那么在实际操作中出了什么问题呢？首先是一个客户来柜面，有自己名下的业务，也有代办业务，这时候三个一失效了；其次即使是同一个客户的几笔业务，他也喜欢一笔一清；同样柜员也喜欢一笔一清，万一反交易就比较麻烦。实际上，这些都是很容易想到的，但是我们的流程开发可能因为没有深切的基层经历，所以奔着简洁高效的目标，却最终没有达到预期的效果。还有一种情况，因为没有基层的工作经历，导致在流程执行中过于严格死板。基层员工往往会说专业部门的同事不了解下面的情况，而专业部室的同事则觉得自己也有严格把关的苦衷。两边都有道理，但是我倾向于理解前者。不少时候，如果专业部室的同事，如果有基层的工作经历，就能在把握风险目标不放松的同时，让流程适当简化或者流畅；在另一些时候也能更好识别基层上报材料中的风险。所以，我提出的比较笼统的建议是，让专业部门的同事尽可能的在担任重要岗位之前在基层切切实实的工作一段时间，这样不仅对自己和同事将来的工作，也对客户体验都有好处。</p>
+<p>我想，“永远做人民的银行”中的人民，不仅仅包括我们的客户，也包括工行的广大员工。基层工作真的很辛苦，但是广大员工任劳任怨。在市场经济观念根深蒂固的当今社会，在跳槽换工作被视为家常便饭的今天，工行员工还是以行为家，任劳任怨，有着强烈的归属感和自豪感。但是我也看到少数员工面对不尽如人意的工作环境，有些灰心气馁。我想，我们至少要让我们的员工得付出与得到的回报相匹配。曾有柜面的师傅和我说，因为工作几十年，这位师傅每年的年三十都依然在工作岗位上，不能陪家人；导致她女儿长大以后才知道，其他单位年三十是放假的。现在的媒体往往报道银行的暴利，却鲜有对银行工作人员的付出做正面的报道。基层员工的内心只能互相取暖，他们需要我们这个大家庭的关心和互帮互助。</p>
+<p>工行的路很长，也会越走越宽。这需要所有工行人一起的努力。而首先需要理解基层的银行运作和基层员工的工作，然后考虑怎样提供让人民满意的金融服务才有意义和可行性。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2014/05/17/be-the-bank-of-people/" target="_blank" title="永远做人民的银行">永远做人民的银行</a></b>，本文链接为<b><a href="/2014/05/17/be-the-bank-of-people/" target="_blank" title="永远做人民的银行">http://www.nickyam.com/2014/05/17/be-the-bank-of-people/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2014/03/08/service-things/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2014/08/01/Lobby-Manager-Tang-Xiaoseng/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2014/05/17/be-the-bank-of-people/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,58 +1,438 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>从“花呗”谈起 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="金融,思考," />
+  
+
+  <meta name="description" content="刚在天猫下单，买了一件NIKE PRO COMBAT。没有用借记卡，没有用信用卡，没有用支付宝余额，没有用余额宝。网购一族听到这里，就知道笔者说的是马云继余额宝之后推出的“花呗”这一赊账消费方式了。大家都知道，阿里和金融很早就想推出类信用卡服务，但是由于种种原因，一拖再拖，最后迂回地用“白条”和“花呗”这样富有互联网草根色彩的词汇把网络赊销的概念践行了。在大多数人的观念中，这是第三方支付对银行信用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从“花呗”谈起">
+<meta property="og:url" content="http://www.nickyam.com/2015/03/10/talk-about-huabei/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="刚在天猫下单，买了一件NIKE PRO COMBAT。没有用借记卡，没有用信用卡，没有用支付宝余额，没有用余额宝。网购一族听到这里，就知道笔者说的是马云继余额宝之后推出的“花呗”这一赊账消费方式了。大家都知道，阿里和金融很早就想推出类信用卡服务，但是由于种种原因，一拖再拖，最后迂回地用“白条”和“花呗”这样富有互联网草根色彩的词汇把网络赊销的概念践行了。在大多数人的观念中，这是第三方支付对银行信用">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-03-10T10:35:13.000Z">
+<meta property="article:modified_time" content="2020-03-01T06:33:54.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="金融">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-talk-about-huabei" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">从“花呗”谈起</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2015.03.10</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2015/03/10/talk-about-huabei/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>刚在天猫下单，买了一件NIKE PRO COMBAT。没有用借记卡，没有用信用卡，没有用支付宝余额，没有用余额宝。网购一族听到这里，就知道笔者说的是马云继余额宝之后推出的“花呗”这一赊账消费方式了。大家都知道，阿里和金融很早就想推出类信用卡服务，但是由于种种原因，一拖再拖，最后迂回地用“白条”和“花呗”这样富有互联网草根色彩的词汇把网络赊销的概念践行了。在大多数人的观念中，这是第三方支付对银行信用卡的一次进攻。笔者以前也是这么认为，但是经过一段时间的使用以后，我更加愿意相信，这是第三方支付对传统信用卡的一种改造。笔者没有用过“白条”，所以下面就用“花呗”举例。</p>
+<p>首先，你可以把花呗理解成一张有一定信用额度的阿里虚拟信用卡。它没有实体的卡片，而且目前只限于在阿里系电商等有限的场景中消费使用。如果仅仅是这样的话，它的目标群体是什么呢？是被银行抛弃的不符合银行系信用卡申办条件的低信用人士。当然，这里所谓的低信用人士，并没有冒犯之意，仅仅是从银行所掌握的数据来看，可能不具备相应的条件。而阿里则可以通过分析这些人在自己的平台上的交易记录，确定一定的信用额度。所以花呗首先可以覆盖这部分被银行溢出的群体，让他们也可以享受类信用卡的赊销服务。</p>
+<p>那么，对于已经拥有不止一张信用卡的人来说，花呗有没有独特的魅力呢？就我个人而言，我的答案是肯定的。这就要从老掉牙的信用卡的起源说起了。众所周知，最早的信用卡并不是银行发行的。1950年，美国商人弗兰克·麦克纳马拉在纽约招待客人用餐，就餐后发现忘带了钱包，十分尴尬，所幸的是饭店允许他记帐。由此麦克纳马拉产生了要设计一种能够证明身份及具有支付功能的卡片的想法。于是，他与其商业伙伴在纽约创立了大来俱乐部(Diners Club)，即大来信用卡公司的前身，并发行了世纪上第一张以塑料制成的信用卡——大来卡。所以我们现在使用的信用卡是从特定的消费场景中抽象出来的。如今我们有了在线的消费场景，赊销的场景也有了细微的区别。在线下消费的时候，我们可以选择现金（借记卡、消费卡等不具有赊账功能的支付工具）和贷记卡（通俗的信用卡）。在支付（赊账）一定金额之后，我们就可以获得购买的物品或者服务。那么在线上消费，很多时候支付（赊账）到享受服务或者获得物品之间往往有一个时间差。马云最开始意识到买卖双方的信用问题，所以创造了支付宝这个第三方的信用担保工具：在交易达成之后到物品到达买家之前，货款由支付宝保管。随着买家多次通过支付宝购买商品，支付宝就可以给买家一个信用额度，也就是虚拟信用卡了（在另一方面，支付宝也可以对卖家的交易记录做一定的评估，从而可以据此发放小额贷款，但是这不是本文的重点。）亮点出现了——普通的信用卡在线上消费，遵循的是线下的交易逻辑，交易达成时银行就从信用卡中扣除信用额度（因为服务和货物这时候已经交付）；而花呗则把扣除信用额度放在了买家确认货物或者服务的时点（也就是考虑了快递等不确定因素），尽可能的保护花呗的使用者不受不必要的经济损失或者退款退货的麻烦。其实在传统的贸易融资业务中，银行对商品流、单据流、资金流的各方面考虑而形成了诸如信用证、保函、订单融资、发票融资等业务。也是这个道理。</p>
+<p>正因为这个小小的创新，我才真正喜欢上了花呗。只要在阿里系电商购物，能用花呗一定用花呗。有一天我向同事推荐花呗，同事并不接受。她的理由是，信用卡消费有积分，而花呗有么。最早的时候我没有注意过这个问题，而最近花呗开始提醒我消费一定金额可以获得集分宝（集分宝可以直接作为现金使用），这应该是积分的变种吧。我相信，信用卡的很多花哨功能，只要政策允许，对于互联网公司来说实现并不是难事。特别是支付宝推出了芝麻信用，让我看到了花呗的成熟体。（这里插一句，我一直认为每个银行只需要给客户一个贷方账户和一个借方账户，所有的不同特权的金融服务都可以用各种电脑标识来进行区分，而不是一家银行就给一个用户发N张不同权利的借记卡和贷记卡。这样不仅给客户造成困扰，也极大的浪费了资源。）再说芝麻信用的应用，目前有基于信用的租车服务和酒店入住服务等等。随着信用评定的越来越成熟，以及使用场景的丰富，我相信，一个有高信用值的人，走遍天下都不怕！</p>
+<p>再说说宇宙行最近很高调，融e购、融e联和融e行三大互联网金融的平台布局初步完成，彰显了这个金融巨无霸对于互联网金融的锐意进取和志在必得。宇宙行拥有银行业一流的科技实力和资金实力，如果是“互联网+”金融的代码编写，那完全不是难事。但是融e购之上有阿里系、京东、苏宁等综合电商和美丽说、蘑菇街等专业垂直网站，融e联之上有微信、陌陌、易信等专业IM，融e行在银行系内部也并非首创，更不是宇宙行的强项。如果说这三大平台有什么优势，那么最多就是协同效应，而目前看来却并不明显。管中窥豹，可见一斑。整个银行系高调进军互联网其实是苍白的以攻为守，实际上却很被动，在互联网企业背后亦步亦趋，毫无还手之力。</p>
+<p>挑个和本篇关系密切的产品，宇宙行的e支付。e支付就是第三方支付快捷支付的翻版，主打安全牌。其实完全可以借鉴花呗的经验，首先在融e购试点货物到达或享受服务后的赊账服务。如果e支付有了信用功能，那么很多有小额信用需求的人就不必申请信用卡，更何况银行有时候虽然签发了信用卡，但是额度低的令人发指。如果试点成功，那么就尝试和广大中小型电商合作e支付。这样宇宙行就可以获得实实在在的交易数据，进一步充实自己的数据库。而电商们也能够在支付环节不再依赖支付宝或者微信支付，而获得更加专业的银行金融服务。</p>
+<p>有人举起手，提出之后一个问题：那么银行内部是不是又会有一场腥风血雨？我的回答是肯定的，先开发，先进入的选手肯定有先发优势。但是后期的服务、价格等更方面也会有一定影响。当然我想，无论如何，我们的消费者都是这场金融互联网竞争的最大受益者。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2015/03/10/talk-about-huabei/" target="_blank" title="从“花呗”谈起">从“花呗”谈起</a></b>，本文链接为<b><a href="/2015/03/10/talk-about-huabei/" target="_blank" title="从“花呗”谈起">http://www.nickyam.com/2015/03/10/talk-about-huabei/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2015/03/08/passby-the-park/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2015/04/05/Spiritual-Light-from-the-Underground/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2015/03/10/talk-about-huabei/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

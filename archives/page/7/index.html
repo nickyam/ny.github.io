@@ -1,24 +1,660 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  if page.category
-    title= page.category + ' | ' + config.title
-  if page.tag
-    title= page.tag + ' | ' + config.title
-  if page.archive
-    title= __('archive') + ' | ' + config.title
-block content
-  if page.category || page.tag
-    h1.label-title=  __('reading_label', page.category || page.tag)
-  .post
-    .post-archive
-      - var allposts = page.posts.toArray().reduce((r, v, i, a, k = -v.date.format('YYYY')) => ((r[k] || (r[k] = [])).push(v), r), {})
-      each posts, year in allposts
-        h2= -year
-        ul.listing
-          for post in posts
-            li
-              span.date= post.date.format(config.date_format)
-              a(href=url_for(post.path), title=post.title)
-                +title(post)
-  include _partial/paginator.pug
+
+  <html class="light page-archives">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives | 涯木笔谈</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="investment,bitcoin,cfa,股票,比特币" />
+  
+
+  <meta name="description" content="涯木笔谈，是专注于科技IT、博客建站、工作生活和读书思考等领域的原创博客，作者虞侃。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="涯木笔谈">
+<meta property="og:url" content="http://www.nickyam.com/archives/page/7/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="涯木笔谈，是专注于科技IT、博客建站、工作生活和读书思考等领域的原创博客，作者虞侃。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="虞侃">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="content content-archive">
+  <div class="page-header">
+
+  
+    <div class="breadcrumb">
+      <div class="location">博客</div>
+      <i class="icon-location"></i>
+    </div>
+  
+
+  
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
+  <div class="box-blog-info">
+    <a class="avatar" href="/">
+      <img src="/images/avatar.jpg" alt="" />
+    </a>
+    <div class="info">
+      <h3 class="name" style="font-family: calligraffittiregular">
+        Nick Yam
+      </h3>
+      <div class="slogan">
+        Work @ ICBC, Investment Banking Associate Blogging
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="post-list-box archive-body">
+    <ul class="list-post">  <li class="item-year item item-title item-title-1">
+    <a href="/archives/2011" class="text-year">
+      2011
+      <i class="icon-tu"></i>
+      
+    </a>
+  </li>
+<li class="item-post item">
+  <span class="post-date">02-22</span>
+
+  
+  <a class="post-title" href="/2011/02/22/The-last-struggle-of-reality-paper/">现实的最后挣扎——纸张</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-08</span>
+
+  
+  <a class="post-title" href="/2011/02/08/Real-great-man/">真实的伟人——毛泽东</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-29</span>
+
+  
+  <a class="post-title" href="/2011/01/29/just-a-web-page/">Just a web page</a>
+
+
+</li>
+  <li class="item-year item item-title item-title-0">
+    <a href="/archives/2010" class="text-year">
+      2010
+      <i class="icon-hu"></i>
+      
+    </a>
+  </li>
+<li class="item-post item">
+  <span class="post-date">12-31</span>
+
+  
+  <a class="post-title" href="/2010/12/31/What's-the-point-of-living/">人活着有什么意义</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">12-31</span>
+
+  
+  <a class="post-title" href="/2010/12/31/city-of-life-and-death/">南京！南京！</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">12-12</span>
+
+  
+  <a class="post-title" href="/2010/12/12/Philosophy-of-poetry/">诗之哲</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">11-21</span>
+
+  
+  <a class="post-title" href="/2010/11/21/Into-the-woods-not-only-musical/">Into the woods——not only musical</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-04</span>
+
+  
+  <a class="post-title" href="/2010/10/04/Be-or-not-to-Be/">Be or not to Be——人类的结局</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">09-23</span>
+
+  
+  <a class="post-title" href="/2010/09/23/Mid-autumn-essay/">中秋随笔</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">07-13</span>
+
+  
+  <a class="post-title" href="/2010/07/13/The-experiment-in-the-university-is-like-this/">大学里的实验是这样的</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">07-09</span>
+
+  
+  <a class="post-title" href="/2010/07/09/World-Expo-France-Pavilion/">世博行之法国馆</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">04-25</span>
+
+  
+  <a class="post-title" href="/2010/04/25/Tsinghua-School-Research-Institute/">清华学校研究院</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-04</span>
+
+  
+  <a class="post-title" href="/2010/01/04/Blather-in-dormitory/">宅了一天，胡言乱语</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-01</span>
+
+  
+  <a class="post-title" href="/2010/01/01/new-year-fancy/">新年随想</a>
+
+
+</li>
+  <li class="item-year item item-title item-title-4">
+    <a href="/archives/2009" class="text-year">
+      2009
+      <i class="icon-niu"></i>
+      
+    </a>
+  </li>
+<li class="item-post item">
+  <span class="post-date">11-04</span>
+
+  
+  <a class="post-title" href="/2009/11/04/A-Brief-Talk-on-the-Ageing-Problem-in-Rural-Areas/">浅谈农村老龄化问题</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">11-01</span>
+
+  
+  <a class="post-title" href="/2009/11/01/The-First-Heavy-Snow-in-Beijing/">北京的首场大雪</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-23</span>
+
+  
+  <a class="post-title" href="/2009/10/23/Hair-Cut-at-THU/">理发</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-15</span>
+
+  
+  <a class="post-title" href="/2009/10/15/poetry-of-xian/">西安撷诗</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-12</span>
+
+  
+  <a class="post-title" href="/2009/10/12/China-Tennis-Open/">记中国网球公开赛志愿者经历</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-06</span>
+
+  
+  <a class="post-title" href="/2009/10/06/China-Tennis-Open-Log/">中网日志</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-04</span>
+
+  
+  <a class="post-title" href="/2009/10/04/Busy-Mid-Autumn-Festival-in-China-Tennis-Open/">中秋忙碌在中国网球公开赛</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">09-26</span>
+
+  
+  <a class="post-title" href="/2009/09/26/Volunteer-Training-in-China-Tennis-Open/">中国网球公开赛志愿者培训记录</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">09-15</span>
+
+  
+  <a class="post-title" href="/2009/09/15/All-the-way-westward-to-Shaanxi/">一路向西之陕西行</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">08-20</span>
+
+  
+  <a class="post-title" href="/2009/08/20/After-Reading-The-Troubles-of-Young-Witt/">读《少年维特之烦恼》之后</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">08-17</span>
+
+  
+  <a class="post-title" href="/2009/08/17/Metalworking-practice-in-thu/">金工实习</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">06-02</span>
+
+  
+  <a class="post-title" href="/2009/06/02/running-on-the-road/">奔跑在路上</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">04-23</span>
+
+  
+  <a class="post-title" href="/2009/04/23/Zhou-enlai-elegance/">青年周恩来的风采</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-29</span>
+
+  
+  <a class="post-title" href="/2009/03/29/Feeling-on-Reading-Zhuangzi's-Qiwulun/">读庄子《齐物论》有感</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-29</span>
+
+  
+  <a class="post-title" href="/2009/03/29/Beijing-snow-in-March/">三月的北京，三月的雪</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-25</span>
+
+  
+  <a class="post-title" href="/2009/03/25/Farewell-to-the-beard-of-youth/">告别青春之须</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-21</span>
+
+  
+  <a class="post-title" href="/2009/02/21/The-establishment-of-the-song-dynasty/">水獭精与宋朝的建立</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">02-02</span>
+
+  
+  <a class="post-title" href="/2009/02/02/The-ultimate-in-Platonic-love/">精神恋爱的极致——读《呼啸山庄》有感</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">01-29</span>
+
+  
+  <a class="post-title" href="/2009/01/29/The-last-three-Wolf-skins/">最后三张狼皮</a>
+
+
+</li>
+  <li class="item-year item item-title item-title-3">
+    <a href="/archives/2008" class="text-year">
+      2008
+      <i class="icon-shu"></i>
+      
+    </a>
+  </li>
+<li class="item-post item">
+  <span class="post-date">12-30</span>
+
+  
+  <a class="post-title" href="/2008/12/30/Mozart-and-Beethoven-music-spiritual-quest/">大师的对话——莫扎特与贝多芬音乐精神探寻</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">12-18</span>
+
+  
+  <a class="post-title" href="/2008/12/18/unsung-hero/">无名英雄</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">12-09</span>
+
+  
+  <a class="post-title" href="/2008/12/09/Biomechanics-Exploration/">生物力学探微</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">11-16</span>
+
+  
+  <a class="post-title" href="/2008/11/16/smiling-proud-of-youth/">笑傲青春</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-22</span>
+
+  
+  <a class="post-title" href="/2008/10/22/autumn-in-beijing/">京秋</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">10-22</span>
+
+  
+  <a class="post-title" href="/2008/10/22/motto-me/">高中三年天天看的几句话</a>
+
+
+</li>
+</ul>
+  </div>
+
+  <div class="archive-footer">
+    
+  <div class="pagination">
+    <nav class="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/page/6/">&lt;i class&#x3D;&quot;icon-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/archives/page/8/">8</a><a class="extend next" rel="next" href="/archives/page/8/">&lt;i class&#x3D;&quot;icon-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    </nav>
+  </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,58 +1,446 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>婚姻的第二次伦理 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="情感," />
+  
+
+  <meta name="description" content="在当今这个闪婚的年代，我们该如何看待婚姻呢？特别是还没有步入婚姻殿堂的年轻人，该如何选择自己的另一半呢？ 爷爷奶奶说：孩子，要找一个健康的媳妇回来。爸爸妈妈说：孩子，找个好一点的媳妇，最好漂亮一点。朋友说：你和他（她）谈得来么？ 其实婚姻是讲求伦理的。自从医学开始发展，生物学家开始关注人的血缘关系和后代的健康程度之间的关系开始，伦理一直是凌驾于婚姻之上的。当然这指的是生理上的伦理。 而我想谈的是另">
+<meta property="og:type" content="article">
+<meta property="og:title" content="婚姻的第二次伦理">
+<meta property="og:url" content="http://www.nickyam.com/2011/11/11/The-Second-Ethics-of-Marriage/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="在当今这个闪婚的年代，我们该如何看待婚姻呢？特别是还没有步入婚姻殿堂的年轻人，该如何选择自己的另一半呢？ 爷爷奶奶说：孩子，要找一个健康的媳妇回来。爸爸妈妈说：孩子，找个好一点的媳妇，最好漂亮一点。朋友说：你和他（她）谈得来么？ 其实婚姻是讲求伦理的。自从医学开始发展，生物学家开始关注人的血缘关系和后代的健康程度之间的关系开始，伦理一直是凌驾于婚姻之上的。当然这指的是生理上的伦理。 而我想谈的是另">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2011-11-11T03:11:11.000Z">
+<meta property="article:modified_time" content="2020-03-15T06:40:10.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="情感">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-The-Second-Ethics-of-Marriage" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">婚姻的第二次伦理</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2011.11.11</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2011/11/11/The-Second-Ethics-of-Marriage/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>在当今这个闪婚的年代，我们该如何看待婚姻呢？特别是还没有步入婚姻殿堂的年轻人，该如何选择自己的另一半呢？</p>
+<p>爷爷奶奶说：孩子，要找一个健康的媳妇回来。爸爸妈妈说：孩子，找个好一点的媳妇，最好漂亮一点。朋友说：你和他（她）谈得来么？</p>
+<p>其实婚姻是讲求伦理的。自从医学开始发展，生物学家开始关注人的血缘关系和后代的健康程度之间的关系开始，伦理一直是凌驾于婚姻之上的。当然这指的是生理上的伦理。</p>
+<p>而我想谈的是另一类伦理，是精神上的伦理。有人会说，精神什么时候也出现伦理了！</p>
+<p>且听我慢慢分析：第一种伦理与第二种伦理是有相通之处的。</p>
+<p>首先，我们假设男性的精神状态和女性的精神状态是有本质差别的。这一点肯定已经有人反对了。因为在当代社会，Gay的现象已经是公开的，所以同性之间的精神 状态是可以有本质差别的。那好，我们假设一对同性恋A和B。在两人的恋爱中，A和B肯定是有一阴一阳两种分工不同的角色扮演。假设A是阳性的，B是阴性 的，那么对应到男女之间就是男性和女性两种不同的精神特质。所以男性和女性的精神状态是有本质差异的，我们不能单单从生理角度考虑。所以即使是同性恋，只 要两人有角色上的分工，那么从精神角度来说，依然是不违背伦理的。</p>
+<p>看到这里，有人会说，既然男性和女性是不同的精神状态，而同性恋也有永久的或者暂时的性别角色扮演，那么精神层面的两性关系是不可能出现乱伦之类的生理层面常常发生的事情。不！如果按照你这样的逻辑，那么本质上两个不同的个体，何来与生俱来的关系，导致伦理失常呢？</p>
+<p>男性和女性两种精神状态虽然有本质差别，还都是从属于人的范畴，所以我们需要考虑两个集合的交集，关于人的共性方面的交集。在这里，交集部分可以是共同的兴 趣，共同的习惯，一致的世界观和方法论等等。比如两个人都很宅，那么他们的社交圈即使加在一起也是很小的；比如两个人都大大咧咧，那么即使很简单的事情也 可能毛手毛脚至于一波三折；比如……有人冒出来说，你举的例子都是两个人的坏习惯，那么如果是正面的积极的呢？ 好，如果是两个人都乐于助人，那么可能会跳 进一些陷阱做好事；如果两个人都是事业上的成功人士，那么两人的共有时间就会很有限，那么两个人的感情就没有了基础。</p>
+<p>所以，好的精神气质加在一起会由于变得超出现实而过于理想；反面的精神气质则会使两人更加极端。</p>
+<p>两个精神特质相近的人就好比两个近亲结婚，在心灵上难以产生健壮的后代，不是大头儿子就是小头爸爸。生活会随着时间的流失而渐渐乏味的。即使两个人其乐融融，但是孩子会因为过分熏陶于这种理想化的环境中而对现实产生了不切实际的幻觉。</p>
+<p>两个精神特质相差很远的人就好比两个不同的物种，根本就产生不了后代。当然婚姻也是失败的。即使有了孩子，孩子也会对自己的父母的精神特质无所适从，而导致心理畸形。<br>因此，生理层面的伦理失常会导致孩子的生理不幸，而精神层面的伦理失常会导致孩子的精神不幸。</p>
+<p>又有人反驳，比如说钱钟书和杨绛先生，他们都爱好文学，走在一起，风风雨雨，多好！是的，但是这和我的上文并不矛盾。其实，从精神层面上来说，每个人都是一 个怪物。两个人有一定的共同特质，代表的是同一物种，所以钱钟书和杨绛先生的结合，是基于精神上的同物种原理（即都爱好文学），其次两者在侧重点上更有差 异，能够互补。具体如何互补，请读者自己查阅相关传记、</p>
+<p>所以婚姻的第二次伦理，是很难处理的。最般配的是精神气质的互补性。就像远方的两个恋人生下的孩子比普通人聪明一点一样。这样两个人都能从婚姻生活中得到快乐和收获。孩子也能健康的成长。</p>
+<p>希望大家都能重视精神层面的伦理。</p>
+<p>恋爱是随性而发的，这是两个人的事情，唯情而已；但是婚姻，真的不是两个人的事情，于国于家都是。在这个开放的年代，不提倡恋爱就要结婚。怎么说也要在年轻 的时候轰轰烈烈的爱一场，一起看日出；但是还要找一个人能够陪着自己走到人生的尽头，一起看看日落。尽管，这两个人往往不是同一个人……</p>
+<p>这就是人生——C’est La Vie!</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2011/11/11/The-Second-Ethics-of-Marriage/" target="_blank" title="婚姻的第二次伦理">婚姻的第二次伦理</a></b>，本文链接为<b><a href="/2011/11/11/The-Second-Ethics-of-Marriage/" target="_blank" title="婚姻的第二次伦理">http://www.nickyam.com/2011/11/11/The-Second-Ethics-of-Marriage/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2011/11/01/From-Turkish-March/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2011/11/17/Peel-the-vegetable-root-Pepsi-can-do/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2011/11/11/The-Second-Ethics-of-Marriage/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

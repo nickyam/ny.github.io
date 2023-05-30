@@ -1,58 +1,451 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>盛大校园招聘清华宣讲会感想 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="记录,经历," />
+  
+
+  <meta name="description" content="我是比较欣赏盛大的，它从游戏公司成功转型成为一家互动娱乐媒体公司。所以我在九月底的时候投了简历。 昨天盛大来清华宣讲，给我的感觉却不尽如人意。有几个细节可以分享： 1.有些同学6点左右就来到了会场。海报宣传中说前200名到场的可以领取小礼品。但是现场工作人员说，6点20时才开始领取。于是不少同学就提前坐在现场，等待6点20分。之后工作人员说，让我们退场到楼下排队，因为只有本校可以参加，要检查学生证">
+<meta property="og:type" content="article">
+<meta property="og:title" content="盛大校园招聘清华宣讲会感想">
+<meta property="og:url" content="http://www.nickyam.com/2011/10/12/Campus-Recruitment-shengda/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="我是比较欣赏盛大的，它从游戏公司成功转型成为一家互动娱乐媒体公司。所以我在九月底的时候投了简历。 昨天盛大来清华宣讲，给我的感觉却不尽如人意。有几个细节可以分享： 1.有些同学6点左右就来到了会场。海报宣传中说前200名到场的可以领取小礼品。但是现场工作人员说，6点20时才开始领取。于是不少同学就提前坐在现场，等待6点20分。之后工作人员说，让我们退场到楼下排队，因为只有本校可以参加，要检查学生证">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2011-10-12T13:03:00.000Z">
+<meta property="article:modified_time" content="2019-03-12T17:54:43.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="记录">
+<meta property="article:tag" content="经历">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Campus-Recruitment-shengda" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">盛大校园招聘清华宣讲会感想</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2011.10.12</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/work/">⓹工作</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2011/10/12/Campus-Recruitment-shengda/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>我是比较欣赏盛大的，它从游戏公司成功转型成为一家互动娱乐媒体公司。所以我在九月底的时候投了简历。</p>
+<p>昨天盛大来清华宣讲，给我的感觉却不尽如人意。有几个细节可以分享：</p>
+<p>1.有些同学6点左右就来到了会场。海报宣传中说前200名到场的可以领取小礼品。但是现场工作人员说，6点20时才开始领取。于是不少同学就提前坐在现场，等待6点20分。之后工作人员说，让我们退场到楼下排队，因为只有本校可以参加，要检查学生证。在早到的同学的建议下在会场中检查，没有退场。而会场外有同学在排队，对于会场内的同学为什么可以早早就座感到不满。我想，盛大在这个环节事先没有计划好，环节中没有调度好，做的不专业。</p>
+<p>2.现场几个视频一直在播放，但是没有明显的逻辑。不像开场的DV，作为一家互联网文化企业来说，我只是割裂的看到盛大钱很多，所以在做微电影等等的尝试。在正式宣讲会中没有视频只有ppt让人不无遗憾。</p>
+<p>3.宣讲会没有明确的主持，首先出场的是一位清华的师兄，自己说不是主持，来串场。之后马上进入盛大创新院的陆博分享自己职场经历。陆博一直讲苹果的故事，如果这时候有人闯进来，不看横幅一定不知道是盛大宣讲会，可能是乔布斯的纪念会。更何况是宣讲会的第一个环节。 然后才是HR对盛大和校园招聘的介绍。后来的环节似乎有一个校招的负责人充当了主持。总之，整体来说，不伦不类，结构混乱。</p>
+<p>4.最大的一点是盛大在宣讲会中没有表现出一点点娱乐文化媒体的特点和个性！</p>
+<p>当然，盛大的宣讲会还是有特点的：</p>
+<ol>
+<li><p>小礼品不用说了，但是只是说明财大气粗，或者变相广告自己的产品。属于锦上添花类型而不是雪中送炭。</p>
+</li>
+<li><p>盛大的游戏化管理模式我是第一次听到，所以是一大收获吧。</p>
+</li>
+<li><p>面试金卡环节的问题是“从清华到盛大，你会选择怎样的交通工具？”随即选了四位同学，但是戏剧性的事情发生了，他们都不是清华本校的，后来有加了一个清华女生。一个选择天宫一号，一个选择过山车，一个选择WFW,两个选择步行。后来HR在两个walker中选择了一个非清华的男生。这是一个好问题，但是我觉得回答却不够精彩。天宫一号有点意思，过山车也体现了某种态度，WFW更多的是无奈，而步行者的踏实却能用在任何公司。其实他们回答的内容都可以用在“从大学到xx公司”这样一个模式下面。 这可能就是中国教育的产物吧。</p>
+</li>
+</ol>
+<p>我当时也想了一个答案，自己也不认为怎么样，但是自己私下认为却很少有人会这样去想：</p>
+<p>如果有这样一种交通工具，我一定选他：闭上眼睛，我就从清华出发；等我睁开眼，我就来到了盛大。</p>
+<p>这种交通工具可能存在于小说，也可能存在于游戏。所以这种交通工具属于盛大，我坐着盛大的专列来到盛大！</p>
+<p>还有一种解释是这样的，心有多大，世界就有多大。在闭眼和睁眼的过程中，我完成一个大学生到一个职场人的心境变化，这样能够更好的适应职场。所以这种交通工具，不仅从时空上让我来到了盛大，还让我从心态上来到了盛大。</p>
+<p>不管怎么说，我对于这次宣讲会，失望更多一些。盛大，是否有志大才疏之嫌？</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2011/10/12/Campus-Recruitment-shengda/" target="_blank" title="盛大校园招聘清华宣讲会感想">盛大校园招聘清华宣讲会感想</a></b>，本文链接为<b><a href="/2011/10/12/Campus-Recruitment-shengda/" target="_blank" title="盛大校园招聘清华宣讲会感想">http://www.nickyam.com/2011/10/12/Campus-Recruitment-shengda/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2011/09/27/near-changan-gumiao/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2011/10/13/Campus-Recruitment-360/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2011/10/12/Campus-Recruitment-shengda/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,58 +1,442 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>Into the woods——not only musical | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="音乐," />
+  
+
+  <meta name="description" content="喜欢经典，所以喜欢传统音乐剧——完整的情节、习惯的构架；不用太多的动脑，就能欣赏，就能消遣。然而不否认反传统的概念音乐剧的成绩。就像文学史上二十世纪如雨后春笋般的流派一样，概念音乐剧给我们一种创新的现代性。很莫名，桑坦的Into the woods 是我很喜欢的一部概念音乐剧。可能是因为它是由童话改编的缘故吧，至少有些基础了，容易理解嘛。也可能是因为这部剧还不是很晦涩，有传统的影子吧。 百老汇著名">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Into the woods——not only musical">
+<meta property="og:url" content="http://www.nickyam.com/2010/11/21/Into-the-woods-not-only-musical/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="喜欢经典，所以喜欢传统音乐剧——完整的情节、习惯的构架；不用太多的动脑，就能欣赏，就能消遣。然而不否认反传统的概念音乐剧的成绩。就像文学史上二十世纪如雨后春笋般的流派一样，概念音乐剧给我们一种创新的现代性。很莫名，桑坦的Into the woods 是我很喜欢的一部概念音乐剧。可能是因为它是由童话改编的缘故吧，至少有些基础了，容易理解嘛。也可能是因为这部剧还不是很晦涩，有传统的影子吧。 百老汇著名">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2010-11-21T12:18:32.000Z">
+<meta property="article:modified_time" content="2020-01-04T15:00:05.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="音乐">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Into-the-woods-not-only-musical" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Into the woods——not only musical</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2010.11.21</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2010/11/21/Into-the-woods-not-only-musical/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>喜欢经典，所以喜欢传统音乐剧——完整的情节、习惯的构架；不用太多的动脑，就能欣赏，就能消遣。然而不否认反传统的概念音乐剧的成绩。就像文学史上二十世纪如雨后春笋般的流派一样，概念音乐剧给我们一种创新的现代性。很莫名，桑坦的Into the woods 是我很喜欢的一部概念音乐剧。可能是因为它是由童话改编的缘故吧，至少有些基础了，容易理解嘛。也可能是因为这部剧还不是很晦涩，有传统的影子吧。</p>
+<p>百老汇著名导演、剧作家及词曲作者斯科特·米勒（Scott Miller）说过：“我们去看桑坦的音乐剧，因为那会让我们更加了解这个世界以及周遭的人们。”桑坦自己在谈到他的代表作之一《伙伴们》时也说过：“我们希望人们看完能大吃一惊。希望台下的观众会开怀大笑两个小时，回到家却发现自己睡不着觉。”或许这才是桑坦之所以伟大的最本质的原因。</p>
+<p>但是，过分关注周遭的黑暗的艺术，不论价值有多高，还是让大众有些不愉快；但是若从童话的角度，在人们普遍追忆起童年的生活的时候，在不经意中就打开了观众的心灵之窗，让观众在潜移默化中渐渐接受剧情里的严肃思考，这实在是一种很巧妙的策略。这就是Into the woods在音乐剧之外的魅力。就像文章的题目所说的，Into the woods真的not only musical——</p>
+<p>Once upon a time是许多童话故事的开头，I wish则是许多童话故事的起源。在童话故事里，所有的wishes最后都以happy ending作为结尾。而 Into the woods 则呈现了happy ending以后的故事。桑坦将灰姑娘、小红帽、杰克和魔豆、长发姑娘等四部大家耳熟能详的格林童话故事重新阐发，说的是’wish’和’maturity’。前半部分是带给观众的是一种全新的童话体验。而后半部分则是各位主人公的梦想成真之后的故事——灰姑娘变成了公主，面包师夫妇有了孩子，杰克从巨人那里偷来的钱使他富有，小红帽平安回家，长发公主也和王子私奔了，巫婆也得到了青春美丽。但是故事并没有结束。就像许多孩子听完童话故事后会发出的疑问：这之后呢？王子跟公主在一起了以后呢？桑坦的世界里，更关注的就是这故事后的故事！</p>
+<p>音乐剧一开始，一个讲故事的人（Narrator）开始叙述他们的故事，而各个主角们也同时叙述他们各自的愿望：Cinderella想到宫殿去参加连续三夜的舞会，Jack希望Milky-White能挤出些牛奶来，面包师和他的太太则是希望能有个孩子。舞台布局非常独特，他们从雕塑般的静止中神奇般的恢复活动，这本身给观众一种童话里才有的独特感受。按照中国传统的说法，叫做先发制人，也有西方的音乐剧评论家说，音乐剧若能在前十分钟营造出核心的气氛，那么观众就很容易接受后来的情节和思想。那么桑坦的Into the woods 无疑做到了。</p>
+<p>概念音乐剧的宗旨是通过情节的烘托来表达作者一个明确的思想或者观点，而不去管情节的连贯性和完整性。这一点是我不怎么欣赏的。音乐剧是在时间和空间的四维中的艺术表现，应该体现时间和空间的特性，而不是纯粹的论说文，应该更有人性。人性的概念，不是纯粹了逻辑，应该是在原有的音乐剧的基础上强化理性，而不是为了理性而抛却原有的东西。这样的音乐剧所体现的人性是不完整的。虽然Into the woods是一部概念音乐剧，但是它的故事是完整而且巧妙的，当然其中某些不合理性被它本身的童话性质而掩盖了。我们看概念音乐剧，就好像上帝看我们一样。没有直线的因果，一切都很错综复杂。如果你想体验上帝的视角，那就看一看概念音乐剧吧。（这是我的个人体会。不知道准不准确，自以为有些道理，至少揭示了概念音乐剧的某些特质）</p>
+<p>在原来格林童话里的完全不相干的人物在泰坦的笔下则产生了紧密的联系，而且一点都不牵强，反而符合童话的奇妙性。前半部中，虽然大家到森林里去的动机不同，故事线索很多，但是一点也不觉得乱。如果硬是要故意挖掘一下，也可以说泰坦在剧的前半部分主要说明了世界是普遍联系的。在世界上，和你发生联系或者即将发生联系的人远比你下你干的多。而且每个人付出了自己的一些东西，与别人交换，从而换取了自己更需要的东西，从而得到了快乐。只想得到而不愿失去的人，不会幸福。当然，在细节方面，也是有寓意的。比如说，小红帽和大灰狼的故事，象征着女孩在成长过程中，对外界社会特别是对异性的认识的发展，非常有启发性。当面包师太太独立获得了金色的头发的时候，面包师才认识到一个家，不管是自己一个人的，更是两个人共同努力，才能经营得井井有条。——这是泰坦的现代家庭观念，值得我们反思。女巫得到了青春，但是失去了女儿和魔法——诠释者得失的哲理。女巫和Rapunzel的关系就是代沟越来越明显的现代社会中，家长们最苦恼最矛盾的心理，也是儿女们最不解而反抗的表现的典型。总体来说，上半部的故事是喜剧的，是童话的。</p>
+<p>而我更喜欢后半部，现实的后半部。因为有了前半部童话般的铺垫，观众已经进入了欣赏的最佳状态。女巨人的出现，就如同一声惊雷，造成了一个全剧的大转折。观众们的美好的思路一个急刹车，在紧张中更急于知道后续的事件。而当一个个人物从幸福跌到贫病死亡中去的时候，童话消失殆尽了，眼前是一个真实的世界。面包师的家被毁了，小红帽无家可归了；女巫要把杰克交给巨人，而面包师夫妇和小红帽却决定保护他；两位王子变心了——得到的东西总是不如得不到的——人的一大致命弱点；面包师太太和王子的邂逅……大家在巨人（在剧中应该表示一种灾难吧）面前，人性中的阴暗面得到了充分的表现，由于童话的特质似乎还表现的很集中。但是最终，在亲人朋友的逝去中，尚存者们开始意识到大家要团结起来，才能战胜困难。最后终于杀死了巨人，但是后半部给人的感觉确实沉重的，因为它说到了人的心坎上。</p>
+<p>概念音乐剧的灵魂是思想，我已经说的差不多了，再来谈谈音乐吧。我觉得Into the woods 里的音乐很好听，又很符合人物个性。充分体现了泰坦早年在词曲方面的苦工与造诣。在这些音乐中，Hello, Little Girl和女巫在面包师家里的那段唱词都很好听。No One Is Alone则意味深长，余音绕梁。其实我对音乐是一窍不通的，只能这么感性地谈一谈。可能这个音乐剧中的音乐拿出来单独听未必好听，但是在剧中你无法否认它的独一无二的恰当。这也就是桑坦的魅力了。法国的音乐剧可以把音乐拿出来，但是桑坦的音乐，却和剧情联系十分紧密，使得音乐剧不能够完全被单纯的音乐代替。</p>
+<p>Cinderella这个角色我很喜欢，独立、自信、坚强的女孩，从寒门嫁入王室之后，一肩挑起政务的重担，表现出远胜于夫婿的胆识和才智。在得知王子的无能和不忠之后，毅然放弃王妃的富贵荣华，向平凡中追寻属于自己真正的幸福。相比之下那软弱的神经质的Rapunzel就真的不值一提。</p>
+<p>这部音乐剧还有一个明显的特点。那就是前后两部分鲜明的对比，不论是音乐方面还是唱词方面。但是这一切又都是为唯一的理性内核所服务的。从上半部的ACT到下半部的THINK和LISTEN的转变，诠释着一个真实的人生。</p>
+<p>最后说一点，这部音乐剧和大多数百老汇的风格一样，轻松，愉快。各种爆笑的对话往往让人忍俊不禁。在幽默的气氛中，将道理慢慢渗透入人心。百老汇，我总算有些了解并且有了一定的爱好了，这是这学期最大的收获。INTO THE WOODS我还将继续看下去，因为它很深刻，就像一本耐人寻味的书一样。当然啦，它也是我能够理解的一部概念音乐剧。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2010/11/21/Into-the-woods-not-only-musical/" target="_blank" title="Into the woods——not only musical">Into the woods——not only musical</a></b>，本文链接为<b><a href="/2010/11/21/Into-the-woods-not-only-musical/" target="_blank" title="Into the woods——not only musical">http://www.nickyam.com/2010/11/21/Into-the-woods-not-only-musical/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2010/10/04/Be-or-not-to-Be/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2010/12/12/Philosophy-of-poetry/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2010/11/21/Into-the-woods-not-only-musical/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

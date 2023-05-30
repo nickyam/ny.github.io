@@ -1,24 +1,401 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  if page.category
-    title= page.category + ' | ' + config.title
-  if page.tag
-    title= page.tag + ' | ' + config.title
-  if page.archive
-    title= __('archive') + ' | ' + config.title
-block content
-  if page.category || page.tag
-    h1.label-title=  __('reading_label', page.category || page.tag)
-  .post
-    .post-archive
-      - var allposts = page.posts.toArray().reduce((r, v, i, a, k = -v.date.format('YYYY')) => ((r[k] || (r[k] = [])).push(v), r), {})
-      each posts, year in allposts
-        h2= -year
-        ul.listing
-          for post in posts
-            li
-              span.date= post.date.format(config.date_format)
-              a(href=url_for(post.path), title=post.title)
-                +title(post)
-  include _partial/paginator.pug
+
+  <html class="light page-archives2016">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Archives: 2016 | 涯木笔谈</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="investment,bitcoin,cfa,股票,比特币" />
+  
+
+  <meta name="description" content="涯木笔谈，是专注于科技IT、博客建站、工作生活和读书思考等领域的原创博客，作者虞侃。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="涯木笔谈">
+<meta property="og:url" content="http://www.nickyam.com/archives/2016/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="涯木笔谈，是专注于科技IT、博客建站、工作生活和读书思考等领域的原创博客，作者虞侃。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="虞侃">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="content content-archive">
+  <div class="page-header">
+
+  
+    <div class="breadcrumb">
+      <div class="location">博客</div>
+      <i class="icon-location"></i>
+    </div>
+  
+
+  
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
+  <div class="box-blog-info">
+    <a class="avatar" href="/">
+      <img src="/images/avatar.jpg" alt="" />
+    </a>
+    <div class="info">
+      <h3 class="name" style="font-family: calligraffittiregular">
+        Nick Yam
+      </h3>
+      <div class="slogan">
+        Work @ ICBC, Investment Banking Associate Blogging
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="post-list-box archive-body">
+    <ul class="list-post">  <li class="item-year item item-title item-title-1">
+    <a href="/archives/2016" class="text-year">
+      2016
+      <i class="icon-hou"></i>
+      
+    </a>
+  </li>
+<li class="item-post item">
+  <span class="post-date">11-18</span>
+
+  
+  <a class="post-title" href="/2016/11/18/luoshi-quanmian-zhidang/">落实全面从严治党</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">08-09</span>
+
+  
+  <a class="post-title" href="/2016/08/09/tomb-adventure/">这是你心目中的瓶邪么</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">06-11</span>
+
+  
+  <a class="post-title" href="/2016/06/11/Piark-v/">Piark V</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">05-10</span>
+
+  
+  <a class="post-title" href="/2016/05/10/Piark-iv/">Piark IV</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">04-25</span>
+
+  
+  <a class="post-title" href="/2016/04/25/Piark-iii/">Piark III</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">04-10</span>
+
+  
+  <a class="post-title" href="/2016/04/10/Piark-ii/">Piark II</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">04-09</span>
+
+  
+  <a class="post-title" href="/2016/04/09/spark/">星火</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-15</span>
+
+  
+  <a class="post-title" href="/2016/03/15/Piark-i/">Piark I</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-12</span>
+
+  
+  <a class="post-title" href="/2016/03/12/silent-thought/">静耶思</a>
+
+
+</li>
+<li class="item-post item">
+  <span class="post-date">03-07</span>
+
+  
+  <a class="post-title" href="/2016/03/07/Ice-Fire/">冰火</a>
+
+
+</li>
+</ul>
+  </div>
+
+  <div class="archive-footer">
+    
+
+  </div>
+</div>
+
+
+
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,58 +1,440 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>Piark I | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="情感,小说," />
+  
+
+  <meta name="description" content="浩瀚的汪洋之上有一个圆形的小岛，准确的说是两个半圆，因为一条虞河笔直地贯穿南北。小岛中心虞河两岸分别有两棵树，他们的枝丫伸向对方，在空中缠绵，搭建了一座桥。传说他们是亚当和夏娃幻化而成，传说如果审判日来临，用这两棵树就可以再造方舟。这两棵树就是有名的arktree，他们的形状就好像数学上的Pi，特别是夏娃幻化的那一株还垫着脚，非常可爱。久而久之，这个小岛被叫做Pi-ark。 岛上有一只大猫，她说自">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Piark I">
+<meta property="og:url" content="http://www.nickyam.com/2016/03/15/Piark-i/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="浩瀚的汪洋之上有一个圆形的小岛，准确的说是两个半圆，因为一条虞河笔直地贯穿南北。小岛中心虞河两岸分别有两棵树，他们的枝丫伸向对方，在空中缠绵，搭建了一座桥。传说他们是亚当和夏娃幻化而成，传说如果审判日来临，用这两棵树就可以再造方舟。这两棵树就是有名的arktree，他们的形状就好像数学上的Pi，特别是夏娃幻化的那一株还垫着脚，非常可爱。久而久之，这个小岛被叫做Pi-ark。 岛上有一只大猫，她说自">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-03-15T13:18:10.000Z">
+<meta property="article:modified_time" content="2020-01-13T14:50:05.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="情感">
+<meta property="article:tag" content="小说">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Piark-i" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Piark I</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.03.15</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2016/03/15/Piark-i/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>浩瀚的汪洋之上有一个圆形的小岛，准确的说是两个半圆，因为一条虞河笔直地贯穿南北。小岛中心虞河两岸分别有两棵树，他们的枝丫伸向对方，在空中缠绵，搭建了一座桥。传说他们是亚当和夏娃幻化而成，传说如果审判日来临，用这两棵树就可以再造方舟。这两棵树就是有名的arktree，他们的形状就好像数学上的Pi，特别是夏娃幻化的那一株还垫着脚，非常可爱。久而久之，这个小岛被叫做Pi-ark。</p>
+<p>岛上有一只大猫，她说自己是岛主，说这个小岛就是以她命名的，难道她叫Pi？她又说不是，继续让大伙儿猜。大伙儿猜不中，没了兴致，最后就叫她大猫了。大猫很神气，成天坐在Ark桥上坐北朝南，颇有君临天下的气势。岛民们也没有什么企图心，也就承认她的岛主地位了。</p>
+<p>大猫当上岛主的第二年，虞河里热闹了起来。从汪洋上飘来一个瓶子，瓶子上趴着一只大螃蟹。瓶子不是普通的瓶子，他是一个精灵。他们自称是一对，但有些岛民并不看好他们。虞河里还游来两条怪鱼，他们都有两个脑袋。他们也是一对，因为他们对上眼。大家都觉得他们很配。当然岛上还来了一些牛羊。那时候大猫也很幸福，因为有一个射手守护着她。她看着这些新子民，洋洋得意。</p>
+<p>几年过去，瓶子安顿了下来，螃蟹在里面做了窝。吐着泡泡，透过玻璃，她看到的是他看到的世界。她很安心，因为这里没有风雨，她很幸福，因为有阳光的时候折射出彩虹。当别人开他玩笑的时候，她总是真心地维护他。但是作为精灵的瓶子是怎么想的，岛民们不得而知。大家都觉得他们越来越般配了。只是不知道在她的梦里有没有青草和牛虻….</p>
+<p>两条怪鱼却遇到了麻烦，虽然能够对上眼，特别是八目相对，热情似火，但是却对不上嘴，总是吻不到一块儿。于是他偷偷跑开，找了一条正常的鱼想尝试一下不一样的生活。结果她发现了，一气之下不告而别。岛民们一致看好的CP就这样在叹息声中散了。有头牛去河边饮水的时候经常会和她聊聊天，但是单身的他体会不了她的心。</p>
+<p>其实老牛刚到岛上的时候就看到了在ARK桥上神气的大猫，顿时两眼放光。然后又瞅了瞅她身边的骑士，摇摇尾巴走开了。有一次老牛回虞河喝水，结果发现骑士不见了。他在ARK桥边睡了三天三夜，听着大猫孤单的呓语，终于明白大猫落单了。他开始在桥边吃草，关注着她的一举一动。如果她高兴的时候，也会和他聊聊天。大猫很聪明，她看出了他的用心，但是她觉得这样不好。老牛却有牛脾气，没有离去，但是也不敢再进一步。</p>
+<p>这个神奇的Piark小岛也有自己的生日。在这个日子里，岛民们会狂欢，情侣们会互表爱意。瓶子送给螃蟹一束花，螃蟹很开心，涨红了脸。老牛也为她高兴，因为她曾经说过他从来没送过花。虽然说的很简单，老牛却听出了她的失望。不远处的大猫却品评说，瓶子的品味有点差。螃蟹不干了，自觉维护瓶子。大猫在ARK桥上跳了几下，忙说自己是开玩笑的。</p>
+<p>老牛本来也想送花给大猫的，但是怕大猫收到以后在岛民们面前尴尬；也想在草地上啃出LOVE的，最后也没干。虽然大猫知道老牛的心思，但是老牛却完全不知道大猫怎么想的。特别是一早起来大猫伸着懒腰说的几句话虽然没有直接针对老牛，老牛心里却充满了疑虑，直接打了退堂鼓。</p>
+<p>生日结束了，万籁俱寂。老牛想想自己来Piark岛的日子，又完成涂鸦一篇。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2016/03/15/Piark-i/" target="_blank" title="Piark I">Piark I</a></b>，本文链接为<b><a href="/2016/03/15/Piark-i/" target="_blank" title="Piark I">http://www.nickyam.com/2016/03/15/Piark-i/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/03/12/silent-thought/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/04/09/spark/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2016/03/15/Piark-i/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,58 +1,437 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>水獭精与宋朝的建立 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="小说," />
+  
+
+  <meta name="description" content="话说五代十国那个金戈铁马逐鹿中原的时代。中原有一个大户人家，姓赵。女儿天生丽质，百里闻名。由于他的父亲一心想利用女儿高攀，因此那如花的闺女迟迟未嫁。她那美丽的容颜如莲花的开落，心中的郁闷可想而知。 一日夜晚，赵家闺女正卧于自己的红罗帐内春思。窗吱呀一声开了。一阵风过，姑娘掀开红罗帐，看见一位美少年正瞅着自己笑呢！姑娘脸一红，却不声张。因为那少年确实品貌出众，不待人不爱。美少年向姑娘问候，介绍自己因">
+<meta property="og:type" content="article">
+<meta property="og:title" content="水獭精与宋朝的建立">
+<meta property="og:url" content="http://www.nickyam.com/2009/02/21/The-establishment-of-the-song-dynasty/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="话说五代十国那个金戈铁马逐鹿中原的时代。中原有一个大户人家，姓赵。女儿天生丽质，百里闻名。由于他的父亲一心想利用女儿高攀，因此那如花的闺女迟迟未嫁。她那美丽的容颜如莲花的开落，心中的郁闷可想而知。 一日夜晚，赵家闺女正卧于自己的红罗帐内春思。窗吱呀一声开了。一阵风过，姑娘掀开红罗帐，看见一位美少年正瞅着自己笑呢！姑娘脸一红，却不声张。因为那少年确实品貌出众，不待人不爱。美少年向姑娘问候，介绍自己因">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2009-02-21T15:02:33.000Z">
+<meta property="article:modified_time" content="2019-03-15T15:17:36.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="小说">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-The-establishment-of-the-song-dynasty" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">水獭精与宋朝的建立</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2009.02.21</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2009/02/21/The-establishment-of-the-song-dynasty/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>话说五代十国那个金戈铁马逐鹿中原的时代。中原有一个大户人家，姓赵。女儿天生丽质，百里闻名。由于他的父亲一心想利用女儿高攀，因此那如花的闺女迟迟未嫁。她那美丽的容颜如莲花的开落，心中的郁闷可想而知。</p>
+<p>一日夜晚，赵家闺女正卧于自己的红罗帐内春思。窗吱呀一声开了。一阵风过，姑娘掀开红罗帐，看见一位美少年正瞅着自己笑呢！姑娘脸一红，却不声张。因为那少年确实品貌出众，不待人不爱。美少年向姑娘问候，介绍自己因为仰慕姑娘，冒险毛遂自荐来约会。两人言语投机，彼此倾慕，当晚就同宿于红罗帐中。颇似《西厢记》情节，但谁又能否认古今中外爱情不是一致的吗？就这样两人来往了数月。</p>
+<p>赵员外那会儿纳闷：原来女儿总是来找自己，想早点有个归宿。最近怎么没了动静！一日，赵员外偷偷地跑到女儿闺房外偷听。不期真的听到里面有个男子的声音。赵员外气得脸都发青了，砰砰敲起门来。一听见外面有声音，里面登时没了动静。员外急切地叫女儿开门。过了好一会儿，女儿才衣衫不整地出来。员外气冲冲地闯进去，二话没说就搜查。但是什么也没有。姑娘自知父亲听见了少年的声音，自己做的又是见不得人的事，便一声不吭立在旁边。自此员外就每日在闺房外偷听。但是少年的声音却不再出现。</p>
+<p>事情似乎就这么了结了，但谁也没有想到赵家小姐肚子却一天天大起来了。家丑那里藏得住呢?赵员外常常感叹，家门不幸啊!并且发誓说，若在遇见那小兔崽子，定然宰了他。女儿听得这话，不禁替那少年捏了一把汗。心里暗暗祝天，即使自己再也见不到他，他也不能冒这个风险回来。十月怀胎，娃娃呱呱坠地。是一个漂亮的小男孩，眼睛滴溜溜地转，似乎很通人情世故。若不是私生子，赵员外或许会喜欢上这个小娃娃，但是一想到他的出生，赵员外不禁皱了皱眉头。这天晚上，赵员外突发灵感觉得今天那个小兔崽子回来了。于是她就早早地躲在了女儿的房里，手拿一柄朴刀。夜幕降临了，外面风声大起。女儿为那少年捏了一把汗，因为他知道，这是少年来的一种信号。果然，一个英俊的少年从窗外跳入。员外一时性起，便手起刀落，斩了那少年。怎知那少年竟化为一只水獭。女儿找着实吓了一跳，员外的刀也光的一声，掉在了地上，这究竟是怎么一回事？员外甚至怀疑自己的眼花了。但定睛一看，确实是一只水獭，原来女儿与一只水獭精勾搭上了，在看女儿，她也早吓得瘫倒在床上。她怎么也想不到自己朝思暮想的竟然是一个妖精。与自己同床共枕的是一个畜牲。</p>
+<p>这还像话吗？赵员外当晚就煮了那只水獭，咬牙切齿地把它吃了。不管女儿的再三请求。最后，她得到的只是员外吃剩的骨头。无情的员外甚至不管女儿分娩才一天，就把她给赶出去了。甚至这样说，我没有与畜牲通奸的女儿。哦，天哪！女儿没有办法，只好收拾简单的行李，离开了家，当然没有忘记抱上自己的亲骨肉。她走呀走，可是远近的人们早听说了这事，怎么也不肯收留她们母子。直到很远很远，一户姓杨的人家收留了他们。赵家千金开始当起了另一个大家庭的用人。</p>
+<p>时间过得很快。赵小姐那朵美丽的莲花早已经凋谢了。而她的儿子长得一表人才。每每看到儿子，她总会想起多年前与她相爱的水獭精。日子很是平静。一日，儿子外出海边，看到了一条饥饿的巨龙在海上兴风作浪。回来以后，他告诉了母亲。母亲叫他不要声张，但是杨家的人还是知道了这件异事。杨奶奶吩咐赵家儿子拿着一袋神秘的东西去喂龙。赵家儿子把这事说与母亲听，母亲说这袋一定是杨家祖辈的遗骨，喂龙能够给后代带来真命天子的机会。</p>
+<p>儿子一听母亲这么说，就向她索要父亲的遗骸。赵妈妈便从枕边取出一个袋子递给儿子。但是杨家规矩很严，怎么能不让他们知道呢?赵妈妈想了个主意，把骨头磨成粉，混在面粉里做成面食，作为儿子的干粮。几天后，儿子又到了那海边，同上次一样，龙又在那里咆哮。儿子小心翼翼地把自己的面食投向龙，龙张开血盆大口便吞了下去。但是他似乎突然发现不对，又咆哮起来。儿子把杨家的骨殖丢进海里时，龙一下子冲过来，把它挑在龙角上。它甚至发怒地要想撕咬儿子。突然，天上神仙出现了。他说：赵家王，杨家将。于是龙就安静了。这一切，儿子并没有听到。几十年后，赵家为王，建立了宋朝。而杨家将也名震一时。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2009/02/21/The-establishment-of-the-song-dynasty/" target="_blank" title="水獭精与宋朝的建立">水獭精与宋朝的建立</a></b>，本文链接为<b><a href="/2009/02/21/The-establishment-of-the-song-dynasty/" target="_blank" title="水獭精与宋朝的建立">http://www.nickyam.com/2009/02/21/The-establishment-of-the-song-dynasty/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2009/02/02/The-ultimate-in-Platonic-love/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2009/03/25/Farewell-to-the-beard-of-youth/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2009/02/21/The-establishment-of-the-song-dynasty/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

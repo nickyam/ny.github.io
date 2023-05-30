@@ -1,58 +1,453 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>浅谈农村老龄化问题 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="中国,思考," />
+  
+
+  <meta name="description" content="导言随着改革开放的力度不断加大，社会经济迅猛发展，中国社会面临着“未富先老”的巨大风险，社会整体提前进入老龄化阶段已经几乎无可避免。社会各阶层对老龄化 及其所引起的问题的关注度不断提高。笔者发现，不仅80后和90后的城乡差距比较明显；老年人中也存在着类似的现象。相对来说，城市老年人普遍享有稳定的 养老金，社会福利制度和公共设施以及医疗条件都较好，而且子女在身边的居多。空巢现象不明显。而这几点城市老">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈农村老龄化问题">
+<meta property="og:url" content="http://www.nickyam.com/2009/11/04/A-Brief-Talk-on-the-Ageing-Problem-in-Rural-Areas/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="导言随着改革开放的力度不断加大，社会经济迅猛发展，中国社会面临着“未富先老”的巨大风险，社会整体提前进入老龄化阶段已经几乎无可避免。社会各阶层对老龄化 及其所引起的问题的关注度不断提高。笔者发现，不仅80后和90后的城乡差距比较明显；老年人中也存在着类似的现象。相对来说，城市老年人普遍享有稳定的 养老金，社会福利制度和公共设施以及医疗条件都较好，而且子女在身边的居多。空巢现象不明显。而这几点城市老">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2009-11-04T12:45:00.000Z">
+<meta property="article:modified_time" content="2019-03-12T09:22:23.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="中国">
+<meta property="article:tag" content="思考">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%BC%E8%A8%80"><span class="toc-text">导言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E6%96%87"><span class="toc-text">正文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-text">结论</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-A-Brief-Talk-on-the-Ageing-Problem-in-Rural-Areas" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">浅谈农村老龄化问题</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2009.11.04</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2009/11/04/A-Brief-Talk-on-the-Ageing-Problem-in-Rural-Areas/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h1><p>随着改革开放的力度不断加大，社会经济迅猛发展，中国社会面临着“未富先老”的巨大风险，社会整体提前进入老龄化阶段已经几乎无可避免。社会各阶层对老龄化 及其所引起的问题的关注度不断提高。笔者发现，不仅80后和90后的城乡差距比较明显；老年人中也存在着类似的现象。相对来说，城市老年人普遍享有稳定的 养老金，社会福利制度和公共设施以及医疗条件都较好，而且子女在身边的居多。空巢现象不明显。而这几点城市老年人的优势恰恰是农村中同代人所无法企及的。 笔者认为关注中国老龄化问题，就不能避开农村老人的生活问题，特别是农村空巢老人的生活和心理。据 了解，全国有70%以上的老年人分布在农村，农村老龄化问题尤为突出。因此笔者决定对这个问题做自己力所能及的调查和分析。在春节的闲暇时间，笔者利用互 联网查询了该问题的已有观点与看法。由于家乡是个小地方，而我关注的该问题则具有普遍性，所以在讨论中没有刻意局限于我们当地。当然，在春节期间，笔者利 用回农村老家走亲访友之际了解到了09年发生在老家的空巢老人的事情和农村中大家对这种现象的真实看法，促使笔者深入思考该问题并且提出相关解决的方案。</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>通常，空巢老人是指身边无子女共同生活的老年人，其中包括无子女的老人，与子女分开居住的老人。近年来，随着劳动力转移和城市化步伐加快，农村留在家中独居 的老人不断增多，成为“空巢”老人。笔者老家地处长三角地区的浙东沿海农村。虽然整个长三角经济较为发达，但是城乡差距依然较大，所以镇上的青壮年都习惯 去临近大城市打工创业。这当中年龄较轻的那些是与笔者年纪相仿的20岁左右的青年。听村里长辈说，平日里在村里基本看不到青年在田间地头劳作。</p>
+<p>表面上看，这是由于随着工业化发展和城市化进程加速，农村劳动力流动加快，农村青壮年多在城市打工，不能长期陪伴在老人身边造成的。而从政策层面分析，独生 子女政策有效地控制了人口增长，但同时也带来了中国社会的老龄化。进入二十一世纪第二个十年，独生子女政策的负面效应不断显现。而更深入地研究，则隐藏着 体制问题。转移到城市中的人员由于户籍制度等因素，和经济条件有限，无法将父母从农村接往城市同住。而农村的养老制度远没有城市发达和完善，更加剧了这一现象。</p>
+<p>然而在具体事例中，我们能够看到更多内容——在春节的时候，我在我们村了解到09年发生的几起空巢老人的悲剧：</p>
+<p>一位84岁的老太独自居住在老房子里，子女都在杭州、上海发展打拼。一次洗澡，突然心脏病发作，结果倒在浴缸里了。但是她并没有断气——早上邻居过来串门的 时候才发现了老太。老太还有微弱的呼吸，但是在送往医院的途中不幸过世。（在这里，我们看到邻居不能完全代替亲人的照顾。如果及早发现，应该就不会发生悲 剧了。）另一件事是发生在一个喜欢抽烟的老太身上。这年冬天她在被子里抽烟，结果不幸失火。由于行动不便，又没有亲人在身边，不幸葬身火海。等到大火把火 扑灭的时候发现的是一具烧焦的尸体（姿势依然在挣扎，让人心酸）。我们村就有这么两起，我想，若是推广到全国，数字应该不小。另外在田间地头，老人们从事 着超负荷的劳动，其次还要带孙辈生活。还有一点我们常常会忽略，老人们的精神世界也很空虚，他们的心理也需要我们去关心。我认为农村空巢老人们的生活存在 着很多的隐患，亟待我们思考并且妥善解决。</p>
+<p>为了解决农村空巢老人的问题，我认为这几点可以考虑。</p>
+<ol>
+<li><p>加强新农村建设，使部分青年在农村得到一定的发展。当今社会过分注重通过城市的扩张实现城市化，但是另一方面造成的日益荒废的农村却成为了中国社会全面发展 的软肋。虽然新农村口号一直喊得很高，中央每年的一号文件也涉及农村问题，但是地方的实际作为不多，大多数措施仅仅是改善农村群众的生活条件，而对于当地 的经济没有太多创新。最近几年我们当地做的比较好——我们上虞市有精细化工园区，地点设在海涂，吸引了一批青年在本地工作。这不仅发展了我们当地的经济， 还缓解了农村老龄化的压力。青年可以既照顾家里亲人和地，还有固定的工作。历来我们的城市化道路都是城市向农村的扩展。但是我认为农村主动城镇化也是一条 非常值得尝试的道路。</p>
+</li>
+<li><p>完善农村的养老制度。家庭养老依然是现阶段农民养老的主要方式。家庭养老实际上是以终身积累为基础，在家庭内部进行代际交换的“反哺式”养老。但是家庭规模 趋向小型化、核心化，这使家庭养老负担加重，再加上农村收入水平较低，致使部分年轻人负担过重。这就要求社会化养老的普及和加强。社会化养老的细节我不做 讨论，因为这个问题比较专业。但是我有一个想法，要善于挖掘老年人力资源，利用老年人年龄的层次性，实现互助养老。老年人中有低龄和高龄的差距，可以鼓励 低龄的健康老人为高龄老年人服务。</p>
+</li>
+<li><p>当然户籍制度的适当改革也能让更多的家庭住在一块。我们村有一位大爷的三个女儿分别在香港、上海和杭州，如果户籍流动更顺畅，大爷就能更多的享受到天伦之乐，而不是像现在我们看到的在农村独守着子女们为他造的三层小别墅。</p>
+</li>
+<li><p>对于老人们的心理关心，我们需要考虑重塑家庭的概念和孝道这一中华民族的传统美德。老人们最喜欢的不是钱和好的物质生活条件，而是歌里唱的那样“常回家看 看”。受访的老人们一年到头最期盼的是子女们多回来看看，和自己过几天。当然我们还应该拓开农村的业余文化生活，让老人们平时有乐子。除了电视广播，老人 们喜欢大家聚在一块唠嗑，回忆往事，谈论子女。这一点也是我们关心空巢老人时需要看到的。</p>
+</li>
+</ol>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>农村老龄化现状及存在的隐患值得我们持续的关注。我们应该看到这一现象的深层次问题，而不是停留在表面。户籍制度和养老制度都是我们需要改革的深层次措施。 在调研分析之余，我觉得独生子女政策产生了一个“囚徒困境”——对于13亿甚至14亿的人口基数而言，我们需要继续执行并且贯彻这一政策（尽管西方认为它 侵犯了人权）；但是中国未富先老的现状却让人不禁希望继续“人口红利”，所以呼吁放开二胎。但是即使有人口红利，对于80后的独生子女而言，上有四位老 人，下有两个小孩，负担太重也不是个办法。更何况就可持续发展而言，我们应该追求高级的“质量人口红利”而非“数量人口红利”。所以关于独生子女政策和老 龄化的讨论会一直继续下去，笔者能力有限，只能讨论到这里了。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2009/11/04/A-Brief-Talk-on-the-Ageing-Problem-in-Rural-Areas/" target="_blank" title="浅谈农村老龄化问题">浅谈农村老龄化问题</a></b>，本文链接为<b><a href="/2009/11/04/A-Brief-Talk-on-the-Ageing-Problem-in-Rural-Areas/" target="_blank" title="浅谈农村老龄化问题">http://www.nickyam.com/2009/11/04/A-Brief-Talk-on-the-Ageing-Problem-in-Rural-Areas/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2009/11/01/The-First-Heavy-Snow-in-Beijing/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2010/01/01/new-year-fancy/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2009/11/04/A-Brief-Talk-on-the-Ageing-Problem-in-Rural-Areas/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

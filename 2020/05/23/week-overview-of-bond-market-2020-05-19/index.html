@@ -1,58 +1,447 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>2020债券市场一周概览（0519-0522） | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="金融," />
+  
+
+  <meta name="description" content="一、一周债市概况 上周央行未开展逆回购操作，因无逆回购到期，实现零投放和零回笼，政府工作报告发布后，市场交投活跃，现券利率快速下行，带动信用买盘情绪高涨。整体资金面总量宽松，央妈无公开市场操作。 上周一级市场方面，总体情绪呈现先抑后扬的趋势。上半周投标情绪较为冷清，买盘谨慎，追低意愿不强。下半周债市利好，买盘开始重新变得积极。上周发行量环比大幅增加，短融中票共计规模2112.7亿。 发行数量上，超">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020债券市场一周概览（0519-0522）">
+<meta property="og:url" content="http://www.nickyam.com/2020/05/23/week-overview-of-bond-market-2020-05-19/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="一、一周债市概况 上周央行未开展逆回购操作，因无逆回购到期，实现零投放和零回笼，政府工作报告发布后，市场交投活跃，现券利率快速下行，带动信用买盘情绪高涨。整体资金面总量宽松，央妈无公开市场操作。 上周一级市场方面，总体情绪呈现先抑后扬的趋势。上半周投标情绪较为冷清，买盘谨慎，追低意愿不强。下半周债市利好，买盘开始重新变得积极。上周发行量环比大幅增加，短融中票共计规模2112.7亿。 发行数量上，超">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-23T12:01:11.000Z">
+<meta property="article:modified_time" content="2020-05-31T08:17:45.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="金融">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-week-overview-of-bond-market-2020-05-19" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">2020债券市场一周概览（0519-0522）</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2020.05.23</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/work/">⓹工作</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2020/05/23/week-overview-of-bond-market-2020-05-19/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p><strong>一、一周债市概况</strong></p>
+<p>上周央行未开展逆回购操作，因无逆回购到期，实现零投放和零回笼，政府工作报告发布后，市场交投活跃，现券利率快速下行，带动信用买盘情绪高涨。整体资金面总量宽松，央妈无公开市场操作。</p>
+<p>上周一级市场方面，总体情绪呈现先抑后扬的趋势。上半周投标情绪较为冷清，买盘谨慎，追低意愿不强。下半周债市利好，买盘开始重新变得积极。上周发行量环比大幅增加，短融中票共计规模2112.7亿。</p>
+<p>发行数量上，超短和短融123支，中票（含永续）64支，取消发行8支，大多因价格不满意取消，基金和银行资管为投标主力。机构追价较为理智，投资人倾向于3年内品种。</p>
+<p><strong>二、机构主要观点</strong></p>
+<p><strong>1、中金固收</strong></p>
+<p>经济预期差出现，债券市场在利空因素集中释放后，收益率将再度回落，曲线有望牛市变平。两会的政府工作报告显示整体财政刺激规模并没有超预期，甚至特别国债的发行量低于预期，这种情况下，市场又开始出现了一种反向预期差，从而导致收益率开始回落，周五当天国债期货大涨。</p>
+<p>在接下来的1-2个月，可能有更多的反向预期差出现，从而使得对债券市场的利空因素转化为利多因素，引导收益率曲线重新回落，尤其是中长端利率可能回落的更快，曲线出现牛市变平的机会。</p>
+<p><strong>2、江海证券</strong></p>
+<p>不设增长目标是对债市最大的利好。财政赤字率，地方债，特别国债均低于市场预期，意味着此前带动利率上升的债券供给压力的缓和。1万亿特别国债还是会对市场发行。毕竟从法律上，央行无法直接购买特别国债。但在推动利率下行的政策方针下，相信央行还是会通过流动性投放或者其他的方式来对冲特别国债的发行压力。因此，后期的供给压力将明显的缓和，对债券利好。</p>
+<p><strong>3、华泰固收</strong></p>
+<p>两会前政策不确定性影响债市，政府工作报告为后市提供指引。经济强刺激担忧消退，宽财政必要但有节制，宽信用明确，宽货币保持。我们曾判断十年国债在2.7%-2.8%可以博弈经济重启不畅、中美摩擦、货币持续宽松等，30年国债在3.5%对保险机构具备了配置价值，后续外需冲击、降准等落地是潜在兑现获利时机。疫情、经济、政策三周期拐点仍较为明确，加上机构资产负债成本倒挂、供给压力制约，前期低点成为阻力位，近期预计在2.46-2.8%之间徘徊。宽信用下非标和贷款利率仍将继续下行，城投、地产、龙头民企适度下沉仍是主流操作，评级间利差保持较宽水平。</p>
+<p>基本面来看，4月以来高频数据显示经济活动持续改善，与此同时欧美疫情渡过高点，海外经济也逐步进入重启、复苏阶段。中国经济自一季度底部逐季改善趋势有望延续。但外需压力仍是中国经济的重要扰动因素，5-6月份外需风险值得警惕，同时从两会定调来看，经济强力反弹概率降低，有助于缓解债市的担忧。利率债供给来看，年内预计达到十万亿，后续供给压力仍然存在，好在5月份之后单月供给高峰即将过去，特别国债可能导致个别月份供给压力进一步放大。资金面有望延续宽松，但最宽松的时点可能已经过去。</p>
+<p><strong>4、国君固收</strong></p>
+<p>本轮债券牛市已经结束，建议有序撤退。债市在经历一轮暴跌暴涨后，市场分歧明显加大。虽然多空双方各执一端，但核心还是因为春节以来的“疫情”主线近期持续弱化，欧美疫情已跨过拐点，新兴市场国家疫情超预期程度有限。参考历史，进入夏季以后，全球新冠疫情缓和趋势将会被强化。此外，还有一个很明显的证据证明疫情主线已被逆转，就是本轮美股反弹已创历史熊市反弹纪录。</p>
+<p>之前判断长端利率向下空间非常有限，那么相应当前债市就始终无法排除转熊的风险。参考历史，小熊市期间10年国债利率的平均调整幅度50bp，这也就意味着，下一阶段10年国债利率向上可能会回到2.9<del>3.0%左右，相对上周五收盘点位，有30</del>40bp的潜在调整空间。</p>
+<p>在板块方面，财政政策落地，市县城投或受益更多。2020年赤字率拟按3.6%以上安排，财政赤字规模比2019年增加1万亿元至3.76万亿，同时发行1万亿元抗疫特别国债，上述２万亿元全部转给地方,资金直达市县基层。地方债的大幅扩容有效缓解地方政府财政收支矛盾，项目建设资金来源得到较好保障，对城投来说无疑是利好。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2020/05/23/week-overview-of-bond-market-2020-05-19/" target="_blank" title="2020债券市场一周概览（0519-0522）">2020债券市场一周概览（0519-0522）</a></b>，本文链接为<b><a href="/2020/05/23/week-overview-of-bond-market-2020-05-19/" target="_blank" title="2020债券市场一周概览（0519-0522）">http://www.nickyam.com/2020/05/23/week-overview-of-bond-market-2020-05-19/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2020/05/16/week-overview-of-bond-market-2020-05-15/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2020/05/28/ICBC-supports-Tongkun-to-issue-SCP-successfully-and-set-the%20lowest-coupon-rate/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2020/05/23/week-overview-of-bond-market-2020-05-19/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

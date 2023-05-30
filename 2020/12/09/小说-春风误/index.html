@@ -1,58 +1,516 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>春风误 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="转载," />
+  
+
+  <meta name="description" content="三月来，春风剪菱窗。 江南的落梨镇，亭台酒榭相衔相接，沿江密布、两岸林立。江流的尽头，淡淡的树荫笼罩着小小的酒肆，青石板的罅隙中溢满湿漉漉的苔痕，梨花摇曳飘落在地堆砌成雪，晨露惊醒了百年的枯木，在闹市中密密匝匝地围出一片宁静。 酒肆有个很好听的名字，叫“栖风阁”。春风总是从繁密分叉的枝叶间吹过，又从屋顶的开阔处流走，静静的无声。外面喧嚣的街道显得如此虚无缥缈，像是两个毫无交集的世界。 在这个人间的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="春风误">
+<meta property="og:url" content="http://www.nickyam.com/2020/12/09/%E5%B0%8F%E8%AF%B4-%E6%98%A5%E9%A3%8E%E8%AF%AF/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="三月来，春风剪菱窗。 江南的落梨镇，亭台酒榭相衔相接，沿江密布、两岸林立。江流的尽头，淡淡的树荫笼罩着小小的酒肆，青石板的罅隙中溢满湿漉漉的苔痕，梨花摇曳飘落在地堆砌成雪，晨露惊醒了百年的枯木，在闹市中密密匝匝地围出一片宁静。 酒肆有个很好听的名字，叫“栖风阁”。春风总是从繁密分叉的枝叶间吹过，又从屋顶的开阔处流走，静静的无声。外面喧嚣的街道显得如此虚无缥缈，像是两个毫无交集的世界。 在这个人间的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-09T15:16:00.000Z">
+<meta property="article:modified_time" content="2021-11-22T09:13:56.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="转载">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-小说-春风误" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">春风误</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2020.12.09</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/other/">⓺其他</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2020/12/09/%E5%B0%8F%E8%AF%B4-%E6%98%A5%E9%A3%8E%E8%AF%AF/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>三月来，春风剪菱窗。</p>
+<p>江南的落梨镇，亭台酒榭相衔相接，沿江密布、两岸林立。江流的尽头，淡淡的树荫笼罩着小小的酒肆，青石板的罅隙中溢满湿漉漉的苔痕，梨花摇曳飘落在地堆砌成雪，晨露惊醒了百年的枯木，在闹市中密密匝匝地围出一片宁静。</p>
+<p>酒肆有个很好听的名字，叫“栖风阁”。春风总是从繁密分叉的枝叶间吹过，又从屋顶的开阔处流走，静静的无声。外面喧嚣的街道显得如此虚无缥缈，像是两个毫无交集的世界。</p>
+<p>在这个人间的云梦泽里，一位客人喝得微醺。他大抵觉得头疼，半眯着眼颓然放下酒杯，把脸贴在微微发凉的木桌上，发梢松散的垂落下来，摇摇欲坠在酒污中。他一手握住袖中的剑，听着酒馆外绵绵的春雨，显得有些恍惚。</p>
+<p>不知多少年过去了，江边的这家酒肆还如当年所见的那般，冷冷清清，有风长吟，老板仍是那个清丽绝伦的女子，连家酿米酒的醇香都和多年前一样。</p>
+<p>客人迷糊的晃动着手中的酒杯，看杯中近乎透明的淡淡液体模糊倒映出他的脸，泛着琥珀的微光。透过酒杯这面镜子，他静静看着身后的女子轻手轻脚地收拾着桌上的碗筷，有风吹过她的鬓发，碧色的耳坠颤巍巍地摇晃。</p>
+<p>一切仿佛都没有变化，只是坐在这里的他，已不再是当年意气风发，鲜衣怒马的少年。</p>
+<p>压抑的雷声碾过酒肆外，震得天地微微颤抖。</p>
+<p>多年前那个漆黑漫长的夜晚，也下着和今夜一样凄凄的冷雨，有少年踏马而来，马蹄溅起萧瑟飘摇的尘土和雨水。</p>
+<p>女子替他斟了斛杏花酿。眼里含着笑，氤氲了潋滟的湖光。</p>
+<p>客人把粗糙木质的酒盏拢在指尖轻轻摩挲着，低头看着杯子里清冽的散发着淡淡花香的酒，露出疲倦的旅人的笑容。</p>
+<p>只是短暂的瞬间，他满是风尘的脸上一晃而过孩子的天真，明亮的笑容像一朵嫩黄的迎春，仿佛千万思绪如海潮般翻涌，一排心迹的浪冲过冬春边缘的岸崖。</p>
+<p>客人在突然之间想起很多事，想要开口去问她，却无从去问。</p>
+<p>“这酒在杏花树根下埋了很多年了吧，温热后暖得沁心。”他这么说着，并没有抬头。</p>
+<p>女子把杯里的酒饮尽了，苍白的脸红润了起来：“十多年前埋下的了，有一个少年，说要去闯荡江湖，他走之前埋的。”</p>
+<p>客人的心里有闪电长驱直入，映照的有如白昼，呼吸不可抑制瑟瑟，似脆弱的莎草。</p>
+<p>“你在等那个少年吗？”他抬起头来，轻轻问。</p>
+<p>命运仿佛就此被攫取。</p>
+<p>她狐媚的眼闪过灵动狡黠的光，他知道那是她警惕生人时的神色。多年前也是这样，她惊疑而思索的时候眼中就会飘忽闪过这样的光。</p>
+<p>“是又如何？”她轻轻笑着说。</p>
+<p>苑子里的水池在午后的暖阳下泛起隐隐的水光，客人推开门，就看见女子在池边种花，看见他便微微一笑，她一直很喜欢花。</p>
+<p>“是莲花吗？”他指着近处池中雪白的一簇。</p>
+<p>“嗯……莲花”，女子喜欢和别人讨论花的事情，谈到花，话就不自觉多了起来：“晋北养花的人说，蔷薇是侠客之香，其香锐利，远播千里。而莲花是国士之香，不欲人知，自有风骨，说得极有理。不像我们落梨镇，说夜来香才是名士之香，纵使长夜漫漫，自有人闻香而来。这样的说法，叫人笑话呢。”</p>
+<p>“那夜来香是什么香？”</p>
+<p>“自然是暗娼之香，夜愈深，香愈盛，说起来就入不得正品。”她有些不好意思却也有些骄傲地微微笑起来，“客人是云游四海的侠士，竟不知吗？”</p>
+<p> “腥风血雨的日子，闻不着花香”，他摇了摇头：“你等的那个人，怕是也不知道呢。”</p>
+<p>她沉默了一会儿，轻轻笑了：“是啊，那个人也不知道。他什么都不知道，就像这个镇上几乎所有的人都知道我会一直等着他，只有他不知道……”</p>
+<p>客人的心中隐隐痛了起来。</p>
+<p>“如若他回不来了，你还要等下去吗？你已经等了十几年了，要一直等下去吗？你一辈子就想这样？”</p>
+<p>他那样一个平静不起波澜的人，竟然有点激动的口无遮拦起来。大概小住了几日，以为自己和女子熟了起来，就肆无忌惮了吧。</p>
+<p>真是个大胆而从不会为对方考虑的人啊。</p>
+<p>“一辈子……”她淡淡重复，也不生气。</p>
+<p>“看着园子里的莲花开了，我常常会想，我大概和她们一样，一生就开那么一度。我开花的时候，他恰好踏着马蹄寻香而来，那也就是我的一生了。镇外的世界，那片偌大的江湖，一辈子又有多长，我都不关心。怎样都好，总有一天他会回来的。”</p>
+<p>日影渐渐行过天心，客人咬了咬唇，什么都没说出口，只是替她扶起了花锄。抬眸便瞥见女子淡淡的笑容，她一笑，就像晚来的春雨打落满树的花，点点滴滴都是画不尽的春情。</p>
+<p>可那样一个藏匿天晴的笑容，又渗透着一种难以摹状的凄凉。</p>
+<p>女子和衣而卧。屋檐外的月光很明亮，广阔的夜幕上没有一颗半点的星子，竹帘之影丝丝分明地投影在斑驳的墙壁上。屋檐下的灯笼晦暗不明，她的酒肆在江的尽头，江水滔滔， 使她又无可避免的想起了往事的烟波万丈。</p>
+<p>她与少年的相遇实在是平凡，无非和戏文里唱的一般，少年路过女子的酒肆躲雨，顺道讨了杯薄酒。有缘千里来相会，相仿的年纪，无话不谈，这两个时辰的躲雨，也就熟了。</p>
+<p>之后，他们一起去偷过枣子，放过风筝，跳过板子，还听过很多次寺庙的编钟声……她记得编钟的声音动听宛若绝唱，钟声脆脆如玉珠滚地，在微凉的夜里传出很远，桃花池上水波潋滟，一轮月影荡漾开来。</p>
+<p>他还带她去听说书，听说那夜雨淋漓的快哉江湖，那打叶穿林的翩翩剑仙。</p>
+<p>她记起那灯火通明的殿厅，轰然而起的掌声，有孩子尖锐地打着呼哨。说书先生从后堂不紧不缓地踱步而来，捧着一张古琴置于腿上，翩然一洒衣袖，端坐于幕布后。</p>
+<p>“春秋兴亡，风雨飘摇，霸业宏图，说与山鬼听！”</p>
+<p>“说过了乱世沙场，咱们再说一说晋州百年的苍茫江湖，说一说悲欢无情长啸巍峨的白衣剑仙……”<br>先生拨弦，侃侃而谈，声音沙沙作响如秋叶扫落，似乎有一种穿透人心的魔力。她痴痴的听，满心想着白衣蹁跹的剑客执一柄伞在夜雨中好整以暇静候凌波而来的脚步。</p>
+<p>幕后的鼓声由轻而重，由缓而急，先生说到数百敌手不动声色在夜幕中悄然围住剑客时，便有乌云压顶的意味。</p>
+<p>薄薄的幕布后，先生的双眉紧蹙，指尖在琴弦上如蓝蝶翻飞，鼓声再起，剑道万古如长夜，便见白衣颂般若般，低喝：“剑来——”</p>
+<p>她屏住呼吸，侧过脸看了一眼身边的他。他的脸上满是孩子的急切和渴望，眸子里盛满了星光……<br>多年后，她已记不清说书人的那个故事了。</p>
+<p>只记得当时醒木已收，鼓声中的先生忽的起身，回了后堂，叫好声如潮水般掀起。她呆呆的站在人群中，不曾回神。</p>
+<p>直到身边的少年微微笑着拉了拉她。</p>
+<p>那次听书，她也向往剑仙那如风般的生活了。她知道少年迟早要走，那个始终嚷嚷着要“靖平天下安定苍生”的少年，他的心中有来去无踪的风。</p>
+<p>落梨镇太小了，他说过的，他要携烈酒一壶，仗剑天涯。</p>
+<p>她又想起了他离去的那个夜晚，月光和今夜一样明亮。她与他在月光下默默对望，她低头看着自己的脚尖。</p>
+<p>“我等你”，许久许久，她抬起头坚定地说，他应该早就知晓她的心意。</p>
+<p>少年摸了摸她的头，笑了笑：“别等啦，我可不知道自己什么时候能回来。” </p>
+<p>他踏马绝尘而去。</p>
+<p>微风拂过，一树的花纷纷扬扬地洒落下来，落在少年的利刃和长衫上，落在女子的头发和裙裾上，像是染上了，再不落下。</p>
+<p>“莫说我穷得叮当响，大袖揽清风。莫笑我困时无处眠，天地做床被。莫笑我渴时无美酒，江湖来做壶……”微尘里残留着他扯着嗓子吼过的歌声，那是说书人唱过的。</p>
+<p>她的手从衣袖中滑出，指尖是散发着淡淡清香的精致荷包，针脚密密麻麻，流转跌宕着晴空万里。她凝视着荷包上的鸳鸯，再抬头看向青石街道的尽头，那个背影已经不在了。</p>
+<p>他没有回头，她也没有挽留。东风吹着雨后竹林，江水也波光粼粼。</p>
+<p>想着想着她就累了，终于睡去。留下朔风孤独而苍劲地刮着头顶的瓦片。</p>
+<p>“客人是江湖侠士，不知可愿意与奴家说说剑道呢？”</p>
+<p>她坐在“栖风阁”苑角一树梨花下的石桌旁，日光中飞舞着飞尘，她遥遥的向他招手，碧色的耳坠悠悠晃着。</p>
+<p>这是女子第一次主动和客人说话。</p>
+<p>他微微一愣，旋即道：“我为你舞剑吧。”</p>
+<p>说罢，他双目一凛，一抹光华从指尖一闪而过，倾城日光也难掩那抹光辉四射的碧色，那是他挽起的漂亮剑花。</p>
+<p>暖阳，清风，她坐在梨树下，看着一袭白衣的剑客长剑划过天际，旋即变换的剑芒是绝世清锋，颤落一树的梨花漫天。</p>
+<p>而他静静站在树下回头，日光洒落在他刚毅的侧脸，镀上一层淡淡的光华。</p>
+<p>他沙哑着声开口：“我想留下来，为了你。”</p>
+<p>“客人说笑了，你们这样的剑客，生来就该是来去自由的风，栖风阁也拴不住你们的脚。”女子微笑。</p>
+<p>“以前我在滇南的时候，听说过这样的话‘或许不知是梦的缘故，流离之人追逐幻影’——何必要追逐回不来的幻影呢？春暖花开的时候到了，累了的话，一切都可以重新开始。”</p>
+<p>女子不笑了，低下头：“园子里的莲花，一生只开一度啊。”</p>
+<p>乌云蔽日，无风的夜，雨绵绵的下着。江水孤寂，闪烁着忧悒清远的气韵，是遥远的不可触及的微云孤月。</p>
+<p>江尽头的酒肆内，一位客人喝得微醺。他大抵觉得头疼，半眯着眼颓然放下酒杯，把脸贴在微微发凉的木桌上，发梢松散的垂落下来，摇摇欲坠在酒污中。他一手握住袖中的剑，听着酒馆外绵绵的春雨，显得有些恍惚。</p>
+<p>不知多少年过去了，江边的这家酒肆还如当年所见的那般，冷冷清清，有风长吟，老板仍是那个清丽绝伦的女子，连家酿米酒的醇香都和多年前一样。</p>
+<p>客人迷糊的晃动着手中的酒杯，看杯中近乎透明的淡淡液体模糊倒映出他的脸，泛着琥珀的微光。透过酒杯这面镜子，他静静看着身后的女子轻手轻脚地收拾着桌上的碗筷，有风吹过她的鬓发，碧色的耳坠颤巍巍地摇晃。</p>
+<p>一切仿佛都没有变化，只是坐在这里的他，已不再是当年意气风发，鲜衣怒马的少年。</p>
+<p>今夜，他就要走了，折剑听雨落，阴谋与诡计，魔障与人心，江湖的路，前行如履薄冰。</p>
+<p>他执伞遮半面涟漪，翻身上马，听得她在背后遥遥道了声再会。</p>
+<p>“生平所幸皆历历，微尘白雪何留名。春风渡与春风客，思君思至老白头……”微尘里飘忽而过寂寂寥寥的歌声，如薄云淡月轻旋走。</p>
+<p>无风的夜，青石长街的尽头，马蹄声清脆，路无归。逆流而上的时空中，就如第一次离去时那般，他不曾回头，她也不曾挽留。</p>
+<p>当他踏着哒哒的马蹄，从落日熔金的塞北行至春风沉醉的江南，怀揣着满心的惴惴不安推开“栖风阁”虚掩的门，邀她一同饮酒时，她没有认出他就是那个多年前在她的酒肆下躲雨的少年。</p>
+<p>很奇怪，命运似乎不经意和他们开了个残酷的玩笑，可他并不打算解释。解释是徒劳而苍白无力的，谁又能把当初那个嚷嚷着要“靖平天下安定苍生”的无畏少年同现在的自己联系在一起呢。</p>
+<p>淋漓的江湖，被诅咒的剑锋。她梦中的那个少年，已经死在了他长袖善舞的熊熊野心中，如履薄冰的逐浪飞花里。</p>
+<p>一入江湖，命运的桎梏如影随行，一切都变得身不由己。多少个如约而赴的夜雨，晚风倜傥吹拂过悬于锋刃下血魅般的水珠，银光从善如流抹向谁的咽喉。</p>
+<p>他只是在某个嘈嘈切切的雨夜感受到了无尽的孤独，突然之间就很想回来看一眼她，寻一片温暖。<br>可是她的孤独呢?那一道房梁刻满了风霜，而她刻着漫长的时光，她折了柳枝，她数着渡船，过尽了千帆，她背对着夕阳……晓看天色暮看云，行也思君，坐也思君。她的孤独又该被谁温暖啊，他吗？<br>他从不曾是那个温暖她的人啊，他与她的相逢，从头至尾不过一场错误。</p>
+<p>三月远，霜满月。</p>
+<p>————————————————————————</p>
+<p>作者：王易炜，毕业于温州大学人文学院16中本一班。如有侵权请联系删除。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2020/12/09/小说-春风误/" target="_blank" title="春风误">春风误</a></b>，本文链接为<b><a href="/2020/12/09/小说-春风误/" target="_blank" title="春风误">http://www.nickyam.com/2020/12/09/小说-春风误/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2020/12/08/%E5%AF%B9%E4%BA%8E%E6%B0%B8%E7%BB%AD%E5%80%BA%E7%9A%84%E6%A2%B3%E7%90%86%E4%B8%8E%E6%80%9D%E8%80%83/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2020/12/15/%E5%B0%8F%E8%AF%B4-%E6%97%A0%E7%9B%B8/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2020/12/09/%E5%B0%8F%E8%AF%B4-%E6%98%A5%E9%A3%8E%E8%AF%AF/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

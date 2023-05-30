@@ -1,58 +1,452 @@
-extends base
+<!DOCTYPE html>
 
-block title
-  title= page.title + ' | ' + config.title
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format(config.date_format)
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-      if theme.wordcount == true
-        include _partial/wordcount.pug
-    if theme.disqus.enable == true
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if theme.changyan
-      a.ds-thread-count(href=url_for(page.path) + '#SOHUCS')
-        span#changyan_count_unit(style='font-size: 15px; color: #6E7173;') 0
-        span= ' ' + __('Comment')
-      script(src='https://assets.changyan.sohu.com/upload/plugins/plugins.count.js', async)
-    if theme.valine.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#vcomment')
-        span.valine-comment-count(data-xid=url_for(page.path))
-        span= ' ' + __('Comment')
-    if theme.waline.enable == true
-      a.disqus-comment-count(href=url_for(page.path) + '#waline')
-        span.waline-comment-count(id=url_for(page.path))
-        span= ' ' + __('Comment')
-    if page.toc
-      .clear
-        #toc.toc-article
-          .toc-title= __('contents')
-          != toc(page.content, {list_number: theme.toc_number})
-    .post-content
-      != page.content
-    if theme.donate.enable == true && page.donate != false
-      include _widget/donate.pug
+  <html class="light page-post">
 
-    if theme.post_copyright.enable == true && page.copyright != false
-      include _widget/copyright.pug
 
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __('shareto')
+<head>
+  <meta charset="utf-8">
+  
+  <title>知乎网的前世今生 | 涯木笔谈</title>
 
-    include _partial/tag.pug
-    include _partial/post_nav.pug
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    if page.comments
-      include _partial/comments.pug
+  
+    <meta name="keywords" content="记录," />
+  
+
+  <meta name="description" content="今天是笔者的农历生日，意外收到知乎网大佬的邀请码。于是就去知乎网转了一圈。强人对知乎网已经有很多分析，我就整理了一些文字和大家分享，当然，这些文字是我所认同的。 域名来源知乎作为一个本土化的QUARO问答，域名的本土化显然是相当成功的。“知乎（ZhiHu）”一词本意“你知道么”，不仅生动的体现了其问答属性，而且取词文言文，古典优雅，大方得体。据工信部ICP备案信息与115查询，ZhiHu.com域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知乎网的前世今生">
+<meta property="og:url" content="http://www.nickyam.com/2011/05/11/The-past-and-present-life-of-zhihu/index.html">
+<meta property="og:site_name" content="涯木笔谈">
+<meta property="og:description" content="今天是笔者的农历生日，意外收到知乎网大佬的邀请码。于是就去知乎网转了一圈。强人对知乎网已经有很多分析，我就整理了一些文字和大家分享，当然，这些文字是我所认同的。 域名来源知乎作为一个本土化的QUARO问答，域名的本土化显然是相当成功的。“知乎（ZhiHu）”一词本意“你知道么”，不仅生动的体现了其问答属性，而且取词文言文，古典优雅，大方得体。据工信部ICP备案信息与115查询，ZhiHu.com域">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2011-05-11T11:44:52.000Z">
+<meta property="article:modified_time" content="2019-12-22T14:37:50.000Z">
+<meta property="article:author" content="虞侃">
+<meta property="article:tag" content="记录">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">主页</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">主页</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E6%9D%A5%E6%BA%90"><span class="toc-text">域名来源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A5%E4%B9%8E%E5%9B%A2%E9%98%9F"><span class="toc-text">知乎团队</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A5%E4%B9%8E%E7%89%B9%E8%89%B2"><span class="toc-text">知乎特色</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A5%E4%B9%8E%E7%9A%84%E6%9C%AA%E6%9D%A5"><span class="toc-text">知乎的未来</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-The-past-and-present-life-of-zhihu" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">知乎网的前世今生</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2011.05.11</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>虞侃</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/essay/">⓵随笔</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a target="_blank" rel="noopener" href="https://nickyam.github.io/2011/05/11/The-past-and-present-life-of-zhihu/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>今天是笔者的农历生日，意外收到知乎网大佬的邀请码。于是就去知乎网转了一圈。强人对知乎网已经有很多分析，我就整理了一些文字和大家分享，当然，这些文字是我所认同的。</p>
+<h1 id="域名来源"><a href="#域名来源" class="headerlink" title="域名来源"></a>域名来源</h1><p>知乎作为一个本土化的QUARO问答，域名的本土化显然是相当成功的。“知乎（ZhiHu）”一词本意“你知道么”，不仅生动的体现了其问答属性，而且取词文言文，古典优雅，大方得体。据工信部ICP备案信息与115查询，ZhiHu.com域名注册于2007年6月，2007年~2010年10月此域名隶属于上海知乎书坊；其后某一天，域名转向现任知乎CEO周源（Victor Zhou）。至于域名收购金额，还是一个未知数。</p>
+<blockquote>
+<p>援引：9 月 13 日，下午 6 点过，我正在三里屯找晚饭果腹，一条知乎团队啦啦队长张亮的短信跳进我的手机：「如果围绕『知之』这俩字呢？」几分钟后，他的第二条短信又跳了进来：「知乎者.com？」这个名字在我的大脑里盘旋了几小时后，我给所有人都发了一条短信，上面只有两个字「知乎」。 BY 周源</p>
+</blockquote>
+<h1 id="知乎团队"><a href="#知乎团队" class="headerlink" title="知乎团队"></a>知乎团队</h1><p>知乎是一个典型的创业公司，他并不像千橡集团当初推出校内网那样财大气粗，但是知乎显然吸引了相当数目的优秀成员。</p>
+<p>001号周源，知乎联合创始人，知乎CEO；周源原先是Meta.cn搜索创始人、产品经理，曾任《IT经理世界》记者。</p>
+<p>002号李申申，知乎联合创始人，知乎CTO；李申申原先也就职于Meta.cn搜索。</p>
+<p>003号王电轻，知乎后端工程师；网名般若电，其余资料不详。</p>
+<p>004号胡维，知乎运营，知乎编辑；胡维原先是Apple4.us联合发起人与主笔人。</p>
+<p>008号奚衡，知乎后端工程师；奚衡原先就职千尺无限，网名海盗河马。</p>
+<p>009号黄海均，知乎产品经理；黄海均原先为网易微博产品经理。</p>
+<h1 id="知乎特色"><a href="#知乎特色" class="headerlink" title="知乎特色"></a>知乎特色</h1><p>1.在知乎的每一个注册用户都有一个PR（Person Rank），你的每一个操作都将直接影响你个人的PR值。在回答的时候，答案顺序按赞同票数排序，赞同票数相同的情况下按个人PR值排序，同时隐藏被认为无效的答案。这在一定程度上过滤了相当的垃圾信息。</p>
+<p>2.知乎如今依然坚持严格的邀请制度，一来是为了确保用户准实名身份的真实性，二来避免产生过多的垃圾信息而沦为百度知道第二。准实名可以方便用户有的放矢的向你感兴趣的人提出疑问，这是百度知道无法实现的。当初韩寒流产的《独唱团》中有一个相当有意思的栏目，“所有人问所有人”，换句话说，这就是现实版的知乎。同时，知乎严格的邀请制度也使知乎笼罩着浓郁的严谨氛围，以keso为代表，不言则已，一言服人。以信用为基础的 SNS关系。可能单纯作为SNS与问答的整合，国内人人网应该更能快速发展；但是正如前文所说，严格的邀请制度，排斥了相当一部分无效信息；如果人人网亦推出社会化问答，那必然会整合你原先的好友，而这部分好友显然不可能都是对你的关注点感兴趣的人。这也几乎否定了任何大型互联网公司进军Quaro类问答的可能性。因为大型互联网公司受众普遍广泛，而Quora类问答并不是单纯以人气为基础的，而是价值信息比（价值信息&#x2F;总信息量），也就是精英信息产生量。不过千橡旗下目前低调推出经纬网，作为垂直SNS聚集了相当数目的职业人，倘若千橡以此为契合点，整合类Quaro问答，还是相当有潜力的。</p>
+<h1 id="知乎的未来"><a href="#知乎的未来" class="headerlink" title="知乎的未来"></a>知乎的未来</h1><p>虽然作为国内首家本土化的社会化问答网站，但是和Quaro一样，依然存在不少危机。</p>
+<p>1、如何保持知乎网高质量的问答。此问答在知乎上已经很多人提问了，但是意思基本上都是培养好初始氛围和种子用户。 且不说用户存在流失，知乎一旦开放，一日之内增加几倍的用户量该如何去引导？即使种子用户在努力维持知乎严谨氛围，但是是否真的能够以一人敌百？单纯的依靠知乎的编辑，能够使多少劣质提问转为值得关注的提问？过多的垃圾信息会不会使努力培养的种子用户产生反感而不断流失？尽管知乎存在着dig机制和准实名制度确保着垃圾信息的过滤，但是擦边球如何过滤？ 或许有人认为可以将知乎分区，但是分区的分类又是个恼人的问题。将优质用户分离显然对知乎的发展有害无利。 不过话说回来，知乎未来发展还是极有可能朝区域分离的方向发展的，同时控制用户数与质量的平衡；高质量回答是知乎宝贵的资源，一旦缺失，其品牌价值也随之流失。</p>
+<p>2、知乎如何盈利？ 比如Quaro至今未曾探索出有效的盈利模式；知乎上keso虽然解释说一个好的产品并不是以盈利为初衷的，但是VC显然不是傻子，没有一个明确的计划是很难说服风险投资大动干戈的。个人认为，可能存在以下两种可能：一是知乎随着信息量的增大，发展自身的搜索引擎业务。通过竞价排名获取费用。 二是知乎是一个以共同话题为基础的SNS问答社区。因此可以根据个人兴趣不同，定点投放不同的广告。比如XX集团招聘。</p>
+
+    
+
+            <! -- 添加版权信息 --><div style="color:#555; text-align:left ; font-size:12px; ">本文由<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>创作和发表丨如未注明，均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权，转载请注明作者及出处。<br/>本文作者为<b><a href="/index.html" target="_blank" title="虞侃">虞侃</a></b>,本文标题为<b><a href="/2011/05/11/The-past-and-present-life-of-zhihu/" target="_blank" title="知乎网的前世今生">知乎网的前世今生</a></b>，本文链接为<b><a href="/2011/05/11/The-past-and-present-life-of-zhihu/" target="_blank" title="知乎网的前世今生">http://www.nickyam.com/2011/05/11/The-past-and-present-life-of-zhihu/</a></b>.</div><! -- 添加版权信息 -->
+
+        
+  </div>
+</article>
+
+
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏支持</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持 Nick Yam</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2011/05/06/If-you-want-someone-else-to-fall-in-love-with-you/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2011/05/13/The-refined-life-of-aristocrats/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+<!-- ad start -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({
+google_ad_client: "ca-pub-7114121088728794",
+enable_page_level_ads: true
+});
+</script>
+
+<!-- ad end -->
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'www-nickyam-com';
+    
+    var disqus_url = 'http://www.nickyam.com/2011/05/11/The-past-and-present-life-of-zhihu/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//www-nickyam-com.disqus.com/count.js" async></script>
+
+
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
