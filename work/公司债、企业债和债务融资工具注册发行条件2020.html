@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="涯木笔谈，是专注于科技IT、博客建站、工作生活和读书思考等领域的原创博客，作者虞侃。">
-    <meta name="author" content="虞侃">
+    <meta name="author" content="Nick Yam">
     
     <title>
         
@@ -17,33 +17,31 @@
 <link rel="stylesheet" href="/css/style.css">
 
     <link rel="shortcut icon" href="/images/logo.svg">
-    
-<link rel="stylesheet" href="/font/css/fontawesome.min.css">
-
-    
-<link rel="stylesheet" href="/font/css/regular.min.css">
-
-    
-<link rel="stylesheet" href="/font/css/solid.min.css">
-
-    
-<link rel="stylesheet" href="/font/css/brands.min.css">
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/brands.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"www.nickyam.com","root":"/","language":"zh-CN","path":"search.xml"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.hexo_config = {"hostname":"www.nickyam.com","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":true},"scroll":{"progress_bar":true,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
   </script>
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="涯木笔谈" type="application/atom+xml">
+</head>
 
 
 <body>
 <div class="progress-bar-container">
     
+        <span class="scroll-progress-bar"></span>
+    
 
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
     
 </div>
 
@@ -90,10 +88,48 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               target="_blank" rel="noopener" href="https://nav.nickyam.com/"
+                            >
+                                导航
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/links"
+                            >
+                                友链
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -113,6 +149,26 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       target="_blank" rel="noopener" href="https://nav.nickyam.com/">导航</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
                 </li>
             
         </ul>
@@ -145,7 +201,7 @@
                     </div>
                     <div class="info">
                         <div class="author">
-                            <span class="name">虞侃</span>
+                            <span class="name">Nick Yam</span>
                             
                                 <span class="author-label">Lv7</span>
                             
@@ -197,7 +253,19 @@
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>9.6k 字</span>
+        </span>
     
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>32 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
@@ -496,8 +564,36 @@
             
             <!-- 在适当的位置插入谷歌广告代码 -->
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+            <iframe data-aa='2218236' src='//acceptable.a-ads.com/2218236' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
 
 
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">本文标题</span>：<span class="content">公司债、企业债和债务融资工具注册发行条件2020</span>
+        </li>
+        <li class="post-author">
+            <span class="type">本文作者</span>：<span class="content">Nick Yam</span>
+        </li>
+        <li class="post-time">
+            <span class="type">创建时间</span>：<span class="content">2021-01-14 19:01:42</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">work/公司债、企业债和债务融资工具注册发行条件2020.html</span>
+        </li>
+        <li class="post-license">
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
             
 
             
@@ -555,6 +651,15 @@
         </div>
 
         
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%85%AC%E5%BC%80%E5%8F%91%E8%A1%8C%E5%85%AC%E5%8F%B8%E5%80%BA%EF%BC%88%E5%A4%A7%E5%85%AC%E5%8B%9F%E3%80%81%E5%B0%8F%E5%85%AC%E5%8B%9F%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">一、公开发行公司债（大公募、小公募）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%B3%95%E8%A7%84%E4%BE%9D%E6%8D%AE"><span class="nav-number">1.1.</span> <span class="nav-text">（一）法规依据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8F%91%E8%A1%8C%E4%B8%BB%E4%BD%93"><span class="nav-number">1.2.</span> <span class="nav-text">（二）发行主体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%8F%91%E8%A1%8C%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text">（三）发行条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E7%A6%81%E6%AD%A2%E6%80%A7%E6%83%85%E5%BD%A2"><span class="nav-number">1.4.</span> <span class="nav-text">（四）禁止性情形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E4%BA%A4%E6%98%93%E5%9C%BA%E6%89%80"><span class="nav-number">1.5.</span> <span class="nav-text">（五）交易场所</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E5%8F%91%E8%A1%8C%E6%B3%A8%E5%86%8C%E6%B5%81%E7%A8%8B"><span class="nav-number">1.6.</span> <span class="nav-text">（六）发行注册流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%9D%9E%E5%85%AC%E5%BC%80%E5%8F%91%E8%A1%8C%E5%85%AC%E5%8F%B8%E5%80%BA"><span class="nav-number">2.</span> <span class="nav-text">二、非公开发行公司债</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%B3%95%E8%A7%84%E4%BE%9D%E6%8D%AE-1"><span class="nav-number">2.1.</span> <span class="nav-text">（一）法规依据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8F%91%E8%A1%8C%E4%B8%BB%E4%BD%93%E5%8F%8A%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">（二）发行主体及条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%8A%95%E8%B5%84%E8%80%85%E9%80%82%E5%BD%93%E6%80%A7%E7%AE%A1%E7%90%86"><span class="nav-number">2.3.</span> <span class="nav-text">（三）投资者适当性管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BA%A4%E6%98%93%E5%9C%BA%E6%89%80"><span class="nav-number">2.4.</span> <span class="nav-text">（四）交易场所</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E5%8F%91%E8%A1%8C%E5%A4%87%E6%A1%88%E6%B5%81%E7%A8%8B"><span class="nav-number">2.5.</span> <span class="nav-text">（五）发行备案流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%88%BF%E5%9C%B0%E4%BA%A7%E4%BC%81%E4%B8%9A%E5%85%AC%E5%8F%B8%E5%80%BA"><span class="nav-number">3.</span> <span class="nav-text">三、房地产企业公司债</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E5%8F%91%E8%A1%8C%E4%B8%BB%E4%BD%93%E6%A0%87%E5%87%86"><span class="nav-number">3.1.</span> <span class="nav-text">（一）发行主体标准</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8B%9F%E9%9B%86%E8%B5%84%E9%87%91%E7%94%A8%E9%80%94"><span class="nav-number">3.2.</span> <span class="nav-text">（二）募集资金用途</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%8F%8C%E5%88%9B%E5%80%BA"><span class="nav-number">4.</span> <span class="nav-text">四、双创债</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BA%BE%E5%9B%B0%E4%B8%93%E9%A1%B9%E5%80%BA"><span class="nav-number">5.</span> <span class="nav-text">五、纾困专项债</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%BB%E4%BD%93%E8%B5%84%E8%B4%A8"><span class="nav-number">5.1.</span> <span class="nav-text">（一）主体资质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8B%9F%E9%9B%86%E8%B5%84%E9%87%91%E7%94%A8%E9%80%94-1"><span class="nav-number">5.2.</span> <span class="nav-text">（二）募集资金用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%AE%A1%E6%A0%B8%E8%A6%81%E6%B1%82"><span class="nav-number">5.3.</span> <span class="nav-text">（三）审核要求</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%BC%81%E4%B8%9A%E5%80%BA"><span class="nav-number">6.</span> <span class="nav-text">六、企业债</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%B3%95%E8%A7%84%E4%BE%9D%E6%8D%AE-2"><span class="nav-number">6.1.</span> <span class="nav-text">（一）法规依据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E7%9B%91%E7%AE%A1%E6%9C%BA%E6%9E%84"><span class="nav-number">6.2.</span> <span class="nav-text">（二）监管机构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E7%9B%91%E7%AE%A1%E6%96%B9%E5%BC%8F"><span class="nav-number">6.3.</span> <span class="nav-text">（三）监管方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E5%8F%91%E8%A1%8C%E4%B8%BB%E4%BD%93"><span class="nav-number">6.4.</span> <span class="nav-text">（四）发行主体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E5%8F%91%E8%A1%8C%E6%9D%A1%E4%BB%B6"><span class="nav-number">6.5.</span> <span class="nav-text">（五）发行条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E7%94%B3%E6%8A%A5%E6%B5%81%E7%A8%8B"><span class="nav-number">6.6.</span> <span class="nav-text">（六）申报流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%83%EF%BC%89%E6%89%B9%E6%96%87%E6%9C%89%E6%95%88%E6%9C%9F"><span class="nav-number">6.7.</span> <span class="nav-text">（七）批文有效期</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E9%9D%9E%E9%87%91%E8%9E%8D%E4%BC%81%E4%B8%9A%E5%80%BA%E5%8A%A1%E8%9E%8D%E8%B5%84%E5%B7%A5%E5%85%B7"><span class="nav-number">7.</span> <span class="nav-text">七、非金融企业债务融资工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%B3%95%E8%A7%84%E4%BE%9D%E6%8D%AE-3"><span class="nav-number">7.1.</span> <span class="nav-text">（一）法规依据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E7%9B%91%E7%AE%A1%E6%9C%BA%E6%9E%84-1"><span class="nav-number">7.2.</span> <span class="nav-text">（二）监管机构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%AE%A1%E6%89%B9%E6%9C%BA%E6%9E%84"><span class="nav-number">7.3.</span> <span class="nav-text">（三）审批机构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E5%8F%91%E5%80%BA%E4%B8%BB%E4%BD%93"><span class="nav-number">7.4.</span> <span class="nav-text">（四）发债主体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E5%8F%91%E8%A1%8C%E6%9D%A1%E4%BB%B6-1"><span class="nav-number">7.5.</span> <span class="nav-text">（五）发行条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E9%A2%9D%E5%BA%A6"><span class="nav-number">7.6.</span> <span class="nav-text">（六）额度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%83%EF%BC%89%E5%8B%9F%E9%9B%86%E8%B5%84%E9%87%91%E7%94%A8%E9%80%94"><span class="nav-number">7.7.</span> <span class="nav-text">（七）募集资金用途</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E6%9D%83%E7%9B%8A%E5%87%BA%E8%B5%84%E5%9E%8B%E7%A5%A8%E6%8D%AE"><span class="nav-number">8.</span> <span class="nav-text">八、权益出资型票据</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E4%BA%A7%E5%93%81"><span class="nav-number">8.1.</span> <span class="nav-text">（一）产品</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%A8%E9%80%94"><span class="nav-number">8.2.</span> <span class="nav-text">（二）用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%9C%9F%E9%99%90"><span class="nav-number">8.3.</span> <span class="nav-text">（三）期限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E9%87%91%E9%A2%9D"><span class="nav-number">8.4.</span> <span class="nav-text">（四）金额</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%9D%90%E6%96%99"><span class="nav-number">8.5.</span> <span class="nav-text">（五）材料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E6%B5%81%E7%A8%8B"><span class="nav-number">8.6.</span> <span class="nav-text">（六）流程</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
     </div>
 </div>
 
@@ -577,19 +682,36 @@
         <div class="copyright-info info-item">
             &copy;
             
-                <span>2020</span> -
+                <span>2006</span> -
             
             2023
             
                 &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">虞侃</a>
+                &nbsp;<a href="/">Nick Yam</a>
             
         </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
         
         <div class="theme-info info-item">
             由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
         </div>
         
+        
+            <div class="deploy-info info-item">
+                
+                    本站由 <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                
+            </div>
         
     </div>
 </footer>
@@ -602,6 +724,10 @@
             <div class="post-tools-container">
     <ul class="tools-list">
         <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
         
 
         <!-- go comment -->
@@ -629,11 +755,16 @@
 
         <!-- rss -->
         
-
-        
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
             </li>
+        
+
         
 
         <li class="tools-item tool-scroll-to-bottom flex-center">
@@ -646,6 +777,11 @@
             <i class="fas fa-cog fa-spin"></i>
         </li>
         
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
     </ul>
 </div>
 
@@ -657,40 +793,99 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 </main>
 
 
 
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/main.js"></script>
-
-<script src="/js/header-shrink.js"></script>
-
-<script src="/js/back2top.js"></script>
-
-<script src="/js/dark-light-toggle.js"></script>
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
 
 
 
 
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/local-search.js"></script>
 
 
 
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
 
 
 
-<div class="post-scripts">
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
     
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
         
-<script src="/js/post-helper.js"></script>
-
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
         
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
         
     
 </div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
 
 
 

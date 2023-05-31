@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>涯木笔谈</title>
+  
+  <subtitle>黑而不暗，生而求之</subtitle>
+  <link href="http://www.nickyam.com/atom.xml" rel="self"/>
+  
+  <link href="http://www.nickyam.com/"/>
+  <updated>2023-05-28T13:58:23.758Z</updated>
+  <id>http://www.nickyam.com/</id>
+  
+  <author>
+    <name>虞侃</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>特斯拉车机召回更新记录(2023.12.09)</title>
+    <link href="http://www.nickyam.com/other/tesla-model-3-update-2023-12-09.html"/>
+    <id>http://www.nickyam.com/other/tesla-model-3-update-2023-12-09.html</id>
+    <published>2023-05-28T10:15:00.000Z</published>
+    <updated>2023-05-28T13:58:23.758Z</updated>
+    
+    <content type="html"><![CDATA[<p>5月12日，特斯拉发出了召回通知，笔者的Model 3也在召回之列。这次召回是OTA升级，其中一大特色是把能量回收的选择权交还到用户手中，不少大V欢呼这是特斯拉对刹车事故的认错，而笔者认为是特斯拉对客户需求的开放态度。<br><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/00739f9a679e648fd91ea.jpg"                                     ></p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/8ae5da15785d3e4cbda9a.jpg"                                     ></p><p>近期特斯拉开始分批向车主们推送了2023.12.9车机系统更新，今天笔者也进行了OTA升级。</p><h1 id="一、增加低动能回收选项"><a href="#一、增加低动能回收选项" class="headerlink" title="一、增加低动能回收选项"></a>一、增加低动能回收选项</h1><p>在低能量回收制动模式下，松开电门后，车辆会滑行更长距离，这也就是大家关注的油车模式。这一功能可以防止部分新车主一时无法适应标准的动能回收，降低学习成本。<br><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/291c08475ec0f57ef2a33.jpg"                                     ><br>作为一名2年多的老车主，笔者已经习惯了原来的模式，标准的动能回收可以大幅减少踩刹车踏板的次数和力度；通过电机反转降速，减少刹车盘的使用，提高刹车盘的使用寿命。而既然特斯拉把选择权交给了车主，之前发生的误把电门当刹车的事情就是车主自己对自己驾驶技术的判断，没办法甩锅给企业了。<br><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/ed1131ae385d7a33d1763.jpg"                                     ></p><h1 id="二、自定义方向盘左滚轮功能"><a href="#二、自定义方向盘左滚轮功能" class="headerlink" title="二、自定义方向盘左滚轮功能"></a>二、自定义方向盘左滚轮功能</h1><p>之前，物理按键上只有左滚轮的长按选项是空着的，这次也算是物尽其用了。长按左滚轮可以设置一个固定的功能，也可以选择每次长按后出来十个选项让您选择，分别是：空调温度、风量、显示亮度、保存行车记录仪、加速模式、方向盘加热、摄像头、除霜、顶灯、手套箱。<br><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/b7326d8ac419d7dc995b7.jpg"                                     ></p><h1 id="三、换档蜂鸣提示"><a href="#三、换档蜂鸣提示" class="headerlink" title="三、换档蜂鸣提示"></a>三、换档蜂鸣提示</h1><p>本次更新后，每次切换档位时都会有显示的声音提醒，包括：前进、后退、空档、P档。笔者是不太习惯，所以手动把它关闭了。</p><h1 id="四、其他可自行探索"><a href="#四、其他可自行探索" class="headerlink" title="四、其他可自行探索"></a>四、其他可自行探索</h1><ol><li>接打电话新增禁用麦克风选项</li><li>增加菜单选项搜索</li><li>界面文字可调大小</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;5月12日，特斯拉发出了召回通知，笔者的Model 3也在召回之列。这次召回是OTA升级，其中一大特色是把能量回收的选择权交还到用户手中，不少大V欢呼这是特斯拉对刹车事故的认错，而笔者认为是特斯拉对客户需求的开放态度。&lt;br&gt;&lt;img  
+                 </summary>
+      
+    
+    
+    
+    <category term="⓺其他" scheme="http://www.nickyam.com/categories/other/"/>
+    
+    
+    <category term="特斯拉" scheme="http://www.nickyam.com/tags/tesla/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UBI项目 GoodDollar ：使用区块链对抗贫穷</title>
+    <link href="http://www.nickyam.com/tech/good-dollar-project.html"/>
+    <id>http://www.nickyam.com/tech/good-dollar-project.html</id>
+    <published>2023-05-27T11:19:00.000Z</published>
+    <updated>2023-05-27T13:53:17.061Z</updated>
+    
+    <content type="html"><![CDATA[<p>近期， 区块链项目 <a href="https://www.nickyam.com/tech/good-dollar-project.html">GoodDollar</a> 从 Fuse 网络扩展到了更为普及的 Celo 网络。之前笔者在 Fuse 网络的 G$ 代币一直无法 bridge 到主流网络，而现在 Celo 的参与使得这一切成为可能。该项目的现实价值得到提升。</p><p>GoodDollar是一个基于区块链技术的项目，旨在通过分发全球通用的基本收入（UBI）来解决全球贫困问题，通过创新的区块链技术和基本收入概念来推动社会公正和减少全球贫困。它提供了一种可持续且包容性的方式，让人们能够在全球范围内获得经济支持和金融包容性。具体特点如下：</p><ol><li><p>基本收入概念：基本收入是指向每个人提供固定金额的资金支持，而无需履行特定的条件或工作。GoodDollar通过区块链技术实现了这一概念，向全球的参与者分发数字资产。</p></li><li><p>货币系统：GoodDollar创建了一种名为GoodDollar（G$）的数字货币，每天产生的GoodDollar供应量与全球人口数量成比例增长。这种货币系统旨在确保可持续、公平和包容性。</p></li><li><p>通用基本收入：GoodDollar项目通过每天向参与者分发GoodDollar来实现全球通用的基本收入。每个人可以注册并获得一定数量的GoodDollar，这些数字资产可以用于交易、存储或转移给其他人。</p></li><li><p>社区建设：GoodDollar鼓励社区参与和贡献，以推动项目的发展和扩展。社区成员可以通过参与学习、开发工具和参与治理等方式来支持项目的发展。</p></li></ol><p>注册该项目以后，你可以获得一个0x开头的区块链钱包地址，每天在 Fuse 网络和 Celo 网络均可以领取 G$ 代币，每个网络均可以领导50个左右的代币。目前价值不高，但如果后续项目成功，可能会有意外的收获。</p><p>而通过这个项目，你也可以0成本熟悉区块链中swap、gas等概念和操作。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/d7c7d6378a985ee2e5314.jpg"                                     ></p><p>如果你相信经济包容性和为所有人分配繁荣，那么我邀请你注册GoodDollar，并开始收集每日的数字通用基本收入（UBI）。使用我的邀请链接，你将额外获得250 G$的奖励：<a class="link"   href="https://wallet.gooddollar.org/?inviteCode=3wfnYEWgba&campaign=celo" >https://wallet.gooddollar.org?inviteCode=3wfnYEWgba&campaign=celo<i class="fas fa-external-link-alt"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;近期， 区块链项目 &lt;a href=&quot;https://www.nickyam.com/tech/good-dollar-project.html&quot;&gt;GoodDollar&lt;/a&gt; 从 Fuse 网络扩展到了更为普及的 Celo 网络。之前笔者在 Fuse 网络的 G$ 代币一</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="区块链" scheme="http://www.nickyam.com/tags/Blockchain/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>有了这款chrome插件，就没有存不下来的图</title>
+    <link href="http://www.nickyam.com/tech/download-picture-by-chrome.html"/>
+    <id>http://www.nickyam.com/tech/download-picture-by-chrome.html</id>
+    <published>2023-05-26T04:20:00.000Z</published>
+    <updated>2023-05-26T07:16:57.110Z</updated>
+    
+    <content type="html"><![CDATA[<p>做外贸的J同学问我，The Home Depot 网站怎么无法访问，显示为 access denied 。我使用了一点小魔法以后，页面立刻就 load 出来了。</p><p>她浏览了一会儿又问，商品的图片如何保存。我凑上去看了下，传统的右键保存技能对这个网站无效。</p><p>第一时间，我想到了 F12 功能，也就是开发者功能。通过按 F12 进入开发者模式后，点击 Network 的标签，选择 img 子标签，就可以看到这个网页上的图片。如果显示不全，可以按 F5 刷新。接着选择右键打开就可以按照传统技能简单的保存了。</p><p>但对于女生来说，这样的开发者模式还是不够友好。于是我选择推荐了第二个方法，也就是本文的主角，<strong>chrome 插件——Image Assistant（图片助手）</strong>。</p><p>安装好插件以后，只需要在网页空白处单击右键，点击 「图片助手」-「提取本页图片」。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/6bd3631822ec756dda044.png"                                     ></p><p>奇迹出现了，原来无法下载的图片们规规矩矩地排好队等着你的召唤了。如果网页上的图片非常多，你还可以根据图片的尺寸、格式进行筛选，只显示符合要求的图片。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/01d0c1166d05babd37c43.png"                                     ></p><p>选中自己需要的图片后，点击「下载选中」，选择「继续下载」，图片就会自动保存到以网址为命名的文件夹里了。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/9c42cc622df9d54ce1531.png"                                     ></p><p>资源：</p><ul><li><p>chrome应用商店(推荐): <a class="link"   href="https://chrome.google.com/webstore/detail/dbjbempljhcmhlfpfacalomonjpalpko" >https://chrome.google.com/webstore/detail/dbjbempljhcmhlfpfacalomonjpalpko<i class="fas fa-external-link-alt"></i></a></p></li><li><p>Edge应用商店(推荐): <a class="link"   href="https://microsoftedge.microsoft.com/addons/detail/odphnbhiddhdpoccbialllejaajemdio" >https://microsoftedge.microsoft.com/addons/detail/odphnbhiddhdpoccbialllejaajemdio<i class="fas fa-external-link-alt"></i></a></p></li><li><p>Firefox应用商店(推荐): <a class="link"   href="https://addons.mozilla.org/addon/ia-batch-image-downloader" >https://addons.mozilla.org/addon/ia-batch-image-downloader<i class="fas fa-external-link-alt"></i></a></p></li><li><p>360浏览器应用商店: <a class="link"   href="https://ext.se.360.cn/webstore/detail/dbjbempljhcmhlfpfacalomonjpalpko" >https://ext.se.360.cn/webstore/detail/dbjbempljhcmhlfpfacalomonjpalpko<i class="fas fa-external-link-alt"></i></a></p></li><li><p>官网：<a class="link"   href="http://www.pullywood.com/ImageAssistant/dbjbempljhcmhlfpfacalomonjpalpko_main_v1.66.6.crx" >http://www.pullywood.com/ImageAssistant/dbjbempljhcmhlfpfacalomonjpalpko_main_v1.66.6.crx<i class="fas fa-external-link-alt"></i></a></p></li></ul><p>因为猎豹浏览器、百度浏览器、UC浏览器等众多定制的浏览器都是采用了 chrome 的内核，所以理论上也可以安装上述插件使用，请大家自行测试。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;做外贸的J同学问我，The Home Depot 网站怎么无法访问，显示为 access denied 。我使用了一点小魔法以后，页面立刻就 load 出来了。&lt;/p&gt;
+&lt;p&gt;她浏览了一会儿又问，商品的图片如何保存。我凑上去看了下，传统的右键保存技能对这个网站无效。&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="Google" scheme="http://www.nickyam.com/tags/Google/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pug 文件如何添加 HTML 广告代码</title>
+    <link href="http://www.nickyam.com/tech/add-html-code-into-pug.html"/>
+    <id>http://www.nickyam.com/tech/add-html-code-into-pug.html</id>
+    <published>2023-05-25T04:00:00.000Z</published>
+    <updated>2023-05-25T07:04:33.548Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近，笔者想在自己的独立博客网站添加一段广告代码。</p><p>我的博客是建立在 Github Page 上的静态页面，采用的是 Hexo 方案，前端模版使用的是 Pug 引擎。</p><p>Pug（以前被称为 Jade ）是一种高性能的模板引擎，用于将简洁的文本模板转换为 HTML 、XML 或其他格式的输出。它具有简洁的语法和强大的功能，使得在构建 Web 应用程序和生成动态内容时更加便捷和可读性更高。以下是一些 Pug 的主要特点和优势：</p><ol><li><p><strong>简洁的语法</strong>: Pug 使用缩进和标签的层次结构来表示HTML结构，而不是使用传统的封闭标签。这样可以减少代码量和视觉噪声，提高代码的可读性。</p></li><li><p><strong>嵌入式 JavaScript</strong>: Pug 允许你在模板中嵌入 JavaScript 代码，以进行动态内容的生成和逻辑控制。你可以在模板中使用变量、循环、条件语句等功能，使模板更加灵活和功能丰富。</p></li><li><p><strong>模板继承</strong>: Pug 支持模板继承，可以定义一个父模板，然后在子模板中扩展和重写部分内容。这样可以实现模板的复用和分层管理，提高代码的可维护性。</p></li><li><p><strong>混入（Mixins）</strong>: Pug 的混入功能允许你定义可重用的代码块，类似于函数。你可以定义一个混入，并在需要的地方使用它，避免重复编写相同的代码。</p></li><li><p><strong>过滤器（Filters）</strong>: Pug 支持过滤器，可以将文本通过特定的过滤器进行处理，例如Markdown、CoffeeScript等。这使得在模板中处理不同类型的内容变得更加方便。</p></li><li><p><strong>动态属性</strong>: Pug 允许你在属性中使用动态表达式，从而使属性值可以根据运行时的数据进行动态计算。这使得生成动态和可定制的HTML属性变得更加容易。</p></li><li><p><strong>扩展性</strong>: Pug 可以与 Express、Koa等流行的Node.js框架无缝集成，使得在Web应用程序中使用模板更加方便和高效。</p></li></ol><p>因此，在 Pug 文件中添加 HTML 代码非常简单。Pug 使用缩进和特定的语法来表示 HTML 结构，关键是根据 Pug 的缩进规则，确保缩进正确，使其成为父元素的子元素。</p><p>本案例具体操作如下：</p><p> 我的 <strong>post.pug</strong> 文件中部分代码如下：</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">if theme.shareto == true</span><br><span class="line">  script(type=&#x27;text/javascript&#x27;, src=url_for(theme.js) + &#x27;/share.js&#x27; + &#x27;?v=&#x27; + theme.version, async)</span><br><span class="line">  a.article-share-link(data-url=page.permalink, data-id=page._id, data-qrcode=qrcode(page.permalink))= __(&#x27;shareto&#x27;)</span><br><span class="line"></span><br><span class="line">if theme.donate.enable == true</span><br><span class="line">  iframe(src=&#x27;/donate/?AliPayQR=&#x27; + theme.donate.alipay_qr + &#x27;&amp;WeChatQR=&#x27; + theme.donate.wechat_qr + &#x27;&amp;GitHub=&#x27; + theme.donate.github + &#x27;&amp;BTCQR=&#x27; + theme.donate.btc_qr + &#x27;&amp;BTCKEY=&#x27;+ theme.donate.btc_key + &#x27;&amp;PayPal=&#x27; + theme.donate.paypal_url, style=&#x27;overflow-x:hidden; overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;&#x27;, frameborder=&#x27;0&#x27;, scrolling=&#x27;no&#x27;)</span><br><span class="line"></span><br><span class="line">include _partial/tag.pug</span><br><span class="line">include _partial/post_nav.pug</span><br><span class="line"></span><br><span class="line">if page.comments</span><br><span class="line">  include _partial/comments.pug</span><br></pre></td></tr></table></figure><p>考虑到最常用的谷歌广告联盟支付方式传统，需要通过电汇途径很麻烦，我选择了一家加密货币广告联盟，从而有机会获得一些加密货币。</p><p>注册账户后，我生成了一个广告单元，代码如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe data-aa=&#x27;2218236&#x27; src=&#x27;//acceptable.a-ads.com/2218236&#x27; style=&#x27;border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;&#x27;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure><p>上面这段广告代码可以插入到 <strong>post.pug</strong> 的 <code>if theme.shareto == true</code> 、<code>if theme.donate.enable == true</code>、<code>if page.comments</code> 之前，也可以直接放到文档最末即可。</p><p><code>&lt;iframe&gt;&lt;/iframe&gt;</code> 这个框架需要稍微处理后，如下所示：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 插入 &lt;iframe&gt; 代码</span><br><span class="line">   iframe(data-aa=&#x27;2218236&#x27; src=&#x27;//acceptable.a-ads.com/2218236&#x27; style=&#x27;border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;&#x27;)</span><br></pre></td></tr></table></figure><p>保存 post.pug 文件并重新渲染网站以后，就可以看到目标广告页面了。Bingo！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近，笔者想在自己的独立博客网站添加一段广告代码。&lt;/p&gt;
+&lt;p&gt;我的博客是建立在 Github Page 上的静态页面，采用的是 Hexo 方案，前端模版使用的是 Pug 引擎。&lt;/p&gt;
+&lt;p&gt;Pug（以前被称为 Jade ）是一种高性能的模板引擎，用于将简洁的文本模板转</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="Hexo" scheme="http://www.nickyam.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在中国，脱口秀还有未来吗？</title>
+    <link href="http://www.nickyam.com/essay/does-talkshow-have-future-in-china.html"/>
+    <id>http://www.nickyam.com/essay/does-talkshow-have-future-in-china.html</id>
+    <published>2023-05-17T05:07:25.000Z</published>
+    <updated>2023-05-18T09:20:27.243Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近笑果和House因连续两场线下脱口秀而备受争议。他们在稿子过审以后重新加上了自己的私料演出，还连续演出两场，可能是以为禁止观众录音录像就可以圈地自萌。但就像罗翔老师说的，脱口秀不是法外之地。讨论艺术的开放和多样性应该在遵守法律之后进行。而这次事件中，笑果和House毫无疑问是违法了的。</p><p>而从情感上来说，主流民意也已经说明了一切。我在网上看到一段话，非常有代表性：</p><blockquote><p>现在是市场经济，用钱可以解决大多数问题，但买不来军人的视死如归和勇于牺牲。作为一名退役老兵，我很清楚战士们斗志昂扬的精神所在，是因为他们知道自己被人民爱戴着，所有的奉献牺牲都会被人民铭记。如果他们发现，自己居然被人嘲讽着，甚至引来所保卫人们的哄堂大笑，信念就垮了……这是刨根基的大事。</p></blockquote><p>简单地说完这次事件本身，笔者试着思考了脱口秀这种表现形式本身。</p><p>为什么美国的英语脱口秀如此搞笑呢？首先，基础的幽默就是拿自己开涮，尤其是演员拿自己的族群开玩笑，而对别人的开涮则需要拿捏得非常准确。很多人开涮的时候真的像戏子上身，他们灵活切换口音和动作，花活很多。在美国，最简单也最常见的笑料来源是不同文化和地域之间的碰撞和冲突。这需要长期观察、模仿和积累素材。</p><p>如果类似的手法放在中国，就好比一个北京的脱口秀演员讲述自己与全国各地人交流的经历，利用不同地域文化的碰撞制造笑料和误会。演员在这个过程中不断切换口音、动作和眼神，扮演不同的人物。演北京人的时候一口京片子，上海人的时候就阿拉阿拉，广东人就一口广普，岛上的人就真的假的这样的啦，然后讲述不同情境下各自的行为方式，比如在新年给孩子压岁钱时、谈生意时、在酒桌上的表现，甚至是如何哄女生等等。这样的表演岂不比追逐松鼠的狗搞笑有趣得多？</p><p>此外，为什么脱口秀艺人被称为”演员”呢？脱口秀，一半靠内容，另一半靠表演。因为他们真的要扮演角色，几乎相当于一个人扮演多个角色的独角戏。而笑果这些人主要靠一些有争议的内容迎合部分观众，戳一下小众的爽点。而看看崔娃的表演能力、模仿能力、对生活的观察能力以及控场节奏的能力，笑果这些人完全不没往这个方面去努力和演绎？</p><p>当然，如果你不擅长表演，那就需要追求更高层次的幽默，就像黄西（特指他的英语脱口秀）那样。黄西虽然话不多，但他的话题稍加思考就能让人捧腹大笑，能引发人们的思考，让老外也了解什么叫”你懂的”。比如他对一群美国观众说：“大家知道我是个移民，而美国是移民的国家，所以我在这里呼吁你们离开我的国家，请立即离开，因为我们现在有零容忍政策。”这话冒犯吗？非常冒犯；但问题是这句话是一个中国移民说的，这件事对他们来说本身就很搞笑，你不明白我们才是美国的主人；再想想美国的历史，他说的实际上很有道理，我们不都是移民或移民后代吗？再联系现实，我靠，这家伙是个讽刺天才。</p><p>当然，对于那些笑果这群人来说，这种水平要求实在太高了。</p><p>幽默并不意味着冒犯，如果冒犯了还能让对方开怀大笑，那才是冒犯的艺术；否则只是单纯的冒犯而已。如果冒犯了对方，对方不高兴，然后你再来一句“我只是开玩笑，你怎么就生气了呢”，那就更糟糕了，那就是耍流氓了。</p><p>当前中国脱口秀界很少涉及讽刺西式双标和无脑政治正确等内容。这些话题似乎成为禁区，即使它们是大多数民众喜闻乐见的，也是流量密码。出现这种现象的解释可能是脱口秀的内容本土化的停滞，希望讲述这类话题的脱口秀演员逐渐被边缘化。</p><p>所以在笔者看来，这次事件并不是中国脱口秀界的毁灭性灾难，而是在推翻了相对集中的权威代表（如笑果）之后，迎来了脱口秀界话题多元化的可能性。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近笑果和House因连续两场线下脱口秀而备受争议。他们在稿子过审以后重新加上了自己的私料演出，还连续演出两场，可能是以为禁止观众录音录像就可以圈地自萌。但就像罗翔老师说的，脱口秀不是法外之地。讨论艺术的开放和多样性应该在遵守法律之后进行。而这次事件中，笑果和House毫无</summary>
+      
+    
+    
+    
+    <category term="⓵随笔" scheme="http://www.nickyam.com/categories/essay/"/>
+    
+    
+    <category term="思考" scheme="http://www.nickyam.com/tags/think/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记爱回收上卖iPhone XR</title>
+    <link href="http://www.nickyam.com/tech/%E8%AE%B0%E7%88%B1%E5%9B%9E%E6%94%B6%E4%B8%8A%E5%8D%96iphone.html"/>
+    <id>http://www.nickyam.com/tech/%E8%AE%B0%E7%88%B1%E5%9B%9E%E6%94%B6%E4%B8%8A%E5%8D%96iphone.html</id>
+    <published>2023-05-06T05:11:02.000Z</published>
+    <updated>2023-05-06T05:52:45.407Z</updated>
+    
+    <content type="html"><![CDATA[<p>前几天，我在家里整理东西，想把闲置的iPhone XR卖了，于是就挂在闲鱼上。因为是电子产品，也因为之前我有寄到外地的不好经历，所以就指定要自提。而自提的受众非常小，所以一直没成交。</p><p>我在闲鱼上用高价回收测试了一下，跳出来能卖1147元。因为我的心里价位是1000元以上。所以我就欣然预约了第二天工程师上门来看机子。我约的是9点-12点，工程师是12点左右才姗姗来迟。工程师主要看的是外观，看完说我的屏幕有细小划痕和机身有大于3mm的磕碰。最后估价840元。这样的砍价太厉害了，最终没有成交。</p><p>昨天，我在京东上看也有二手回收，送了我加价券130元。我想这样我怎么也能够卖到1000元吧。按照闲鱼检查出来的问题，我输入以后测出来是860元，加上加价券能卖990元，基本可以接受。所以我果断又预约了一次。</p><p>今天中午，工程师如约上门，我才知道京东合作的是爱回收。首先，工程师向我宣读了回收的相关注意事项，接着除了检查外观以外，工程师还现场在我的手机上安装了一个app，检测内部性能，幸好没有任何隐伤。最终成交价为990元，直接打款到我在京东绑定的银行卡。前后不超过10分钟。</p><p>两相比较，闲鱼的工程师不管是流程、话术、设备都远远不及爱回收的专业。如果下次还要卖电子产品，我会选择后者。当然，也希望京东能够继续补贴我加价券。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;前几天，我在家里整理东西，想把闲置的iPhone XR卖了，于是就挂在闲鱼上。因为是电子产品，也因为之前我有寄到外地的不好经历，所以就指定要自提。而自提的受众非常小，所以一直没成交。&lt;/p&gt;
+&lt;p&gt;我在闲鱼上用高价回收测试了一下，跳出来能卖1147元。因为我的心里价位是10</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="苹果" scheme="http://www.nickyam.com/tags/apple/"/>
+    
+    <category term="iPhone" scheme="http://www.nickyam.com/tags/iPhone/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>淘宝店铺售前说明</title>
+    <link href="http://www.nickyam.com/tech/Apple%20ID.html"/>
+    <id>http://www.nickyam.com/tech/Apple%20ID.html</id>
+    <published>2022-12-31T04:12:12.000Z</published>
+    <updated>2023-05-05T14:32:13.986Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>人工客服：201588715（QQ）</strong></p><p>淘宝店铺地址：<a class="link"   href="https://nickyam.taobao.com/" >https://nickyam.taobao.com<i class="fas fa-external-link-alt"></i></a></p><p>关于苹果手机的软件，如果本地应用商店找不到，极有可能是其他地区的。 </p><p>本店提供“苹果商店ID”共享美区账号服务，供学习研究： </p><blockquote><p>账号：<a class="link"   href="mailto:&#121;&#x61;&#109;&#115;&#116;&#114;&#101;&#x65;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;" >&#121;&#x61;&#109;&#115;&#116;&#114;&#101;&#x65;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#x6d;<i class="fas fa-external-link-alt"></i></a></p><p>密码：Mqzh123456</p><p>验证码：请联系客服下单后获取。 </p></blockquote><p>只要不退出账号，可长期使用。</p><p>淘宝限制账号交易，为防止违规，建议联系人工客服201588715（QQ）详细交流。 </p><p><strong>免责申明：</strong></p><ul><li>本店所有“资源”均收集于网络公开渠道，版权归属于版权方所有。本店不对所涉及的版权问题负法律责任。如果侵犯了您的合法权益，请来信息告知，我们会第一时间删除处理，但不赔偿。 </li><li>本店收取费用为人工“网络整理资源”费用，仅供阅读、参考、学习、娱乐之用，不能用于其他任何违法、非法用途，商用请联系版权方购买版权。 </li><li>严禁任何个人和公司使用软件从事违法犯罪等活动，一旦违法行为由购买者额自行承担，与本店无关。特此申明。</li></ul><p><strong>特别说明：</strong></p><ol><li>本店不出售任何破网软件（包括但不限于：vpn、加速器等），涉及app需要使用外网网络的，请自行解决。</li><li>本店所有APP只有安装包，不提供黄赌毒、破网、外挂、破解等违法软件。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;人工客服：201588715（QQ）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;淘宝店铺地址：&lt;a class=&quot;link&quot;   href=&quot;https://nickyam.taobao.com/&quot; &gt;https://nickyam.taobao.com&lt;i clas</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="苹果" scheme="http://www.nickyam.com/tags/apple/"/>
+    
+    <category term="Mac" scheme="http://www.nickyam.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>美区Apple ID保姆级注册教程</title>
+    <link href="http://www.nickyam.com/tech/%E7%BE%8E%E5%8C%BAApple%20ID%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B.html"/>
+    <id>http://www.nickyam.com/tech/%E7%BE%8E%E5%8C%BAApple%20ID%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B.html</id>
+    <published>2022-10-22T02:22:00.000Z</published>
+    <updated>2023-05-17T07:18:23.782Z</updated>
+    
+    <content type="html"><![CDATA[<p>众所周知，不同区的苹果应用商店有不同的app政策。如果在学习研究中需要用到美区账号的时候，有人会在网上找一些共享账号，也有人会在某宝购买相应的服务。但其实你自己就可以很方便地注册。</p><p>本教程会教你如何注册一个全新的苹果ID，长久稳定。注册无特别要求，只要一个未注册过的邮箱和一个手机号（无地区限制），不需要信用卡，不封号且耐用，废话不多说直接开始。</p><p>1.首先打开<a class="link"   href="https://appleid.apple.com/" >苹果官网<i class="fas fa-external-link-alt"></i></a>，并点击创建你的apple ID。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/142bd63e1fcc90ea25a31.png"                                     ></p><p>2.输入你的姓和名，国家或地区选择美国，出生日期设置大于18周岁即可，邮箱用一个没注册过的，然后确认密码。手机号可以选择自己的大陆卡，无限制。然后输入验证码后继续。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/75cb2d8e4431ee16365b7.png"                                     ><br><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/14bb18cd18dbbf91ba310.png"                                     ></p><p>3.在录入的邮箱中查收一封邮件并点击继续。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/a21d592cdcff2e7a9295e.png"                                     ></p><p>4.输入手机收到的验证码并点击继续。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/f039b31c8c69788b1443d.png"                                     ></p><p>5.注册成功以后点击付款方式，继续点击添加付款方式。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/62a5f574d7045d370330c.png"                                     ></p><p>6.进入后，国家或地区选择美国，付款方式选择无。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/9ea9d703e082fa39db988.png"                                     ></p><p>7.打开<a class="link"   href="https://www.fakepersongenerator.com/Random1/generate_identity" >美国身份免费生成器<i class="fas fa-external-link-alt"></i></a>，选择阿拉斯加州(或其他免税州)，生成个人信息。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/1da7d28561ec456e26947.png"                                     ></p><p>8.把对应的信息填写进去即可。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/426a8f53f27dfa26188f5.png"                                     ></p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/015a08010ac75d092405c.png"                                     ></p><p>9.下滑到配送地址，直接勾选拷贝账单地址，继续点击更新。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/9b71aae62497fce9e4d75.png"                                     ></p><p>10.账号注册完成后打开手机App Store，点击右上角头像，滑到最下面，退出原本的账号输入你刚才注册的ID账号和密码进行登录。第一次登录需要手机验证码，收到验证码填写即可。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/882eb36359e7c2f055229.png"                                     ></p><p>11.输入验证码以后弹出检查或取消，我们继续点击检查。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/b7a236acd3548f5e35926.png"                                     ></p><p>12.继续点击同意条款与条件，继续点击下一页。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/48c276a497d4508f5569a.png"                                     ></p><p>13.继续点击下一页。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/ec4dd498d056f6890bb58.png"                                     ></p><p>14.最后跳出下图表示成功注册了属于你自己的ID账号，就可以愉快地学习研究了。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/0fcef6b29911766cf739c.png"                                     ></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;众所周知，不同区的苹果应用商店有不同的app政策。如果在学习研究中需要用到美区账号的时候，有人会在网上找一些共享账号，也有人会在某宝购买相应的服务。但其实你自己就可以很方便地注册。&lt;/p&gt;
+&lt;p&gt;本教程会教你如何注册一个全新的苹果ID，长久稳定。注册无特别要求，只要一个未注</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="苹果" scheme="http://www.nickyam.com/tags/apple/"/>
+    
+    <category term="Mac" scheme="http://www.nickyam.com/tags/Mac/"/>
+    
+    <category term="iPhone" scheme="http://www.nickyam.com/tags/iPhone/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>适用于Mac的最佳免费VPN推荐</title>
+    <link href="http://www.nickyam.com/tech/Free-VPNs-on-Mac.html"/>
+    <id>http://www.nickyam.com/tech/Free-VPNs-on-Mac.html</id>
+    <published>2022-05-13T01:04:00.000Z</published>
+    <updated>2023-05-23T14:32:36.587Z</updated>
+    
+    <content type="html"><![CDATA[<p>互联网是一个巨大的信息空间，其中的信息纷繁复杂，而VPN提供了一个保护层，确保在登录网络时保护个人隐私或在不安全的wifi网络上浏览网站。VPN建立安全和加密的连接不仅可以帮助您保护数据，还可以使浏览匿名。你在市场上可以买到很多VPN服务，用于学习和研究。其实，对于大多数人而言，有些优秀的免费VPN服务也是够用的。另外，在你免费使用一段时间以后，可以再考虑转为相应的高级服务。</p><p>因为笔者是一个彻头彻尾的果粉，所以接下来的推荐完全是基于Mac系统环境的。当然，很多VPN服务如果适配了Mac系统，往往也会适配Windows、Android和iOS等其他主流操作系统。</p><p>怎样评判一个VPN是好是坏呢？笔者认为，优质的VPN（虚拟私人网络）应具备以下标准：</p><ol><li><p>隐私保护：优质的VPN应该提供强大的隐私保护功能，包括加密数据传输和隐藏用户的真实IP地址。这确保您的在线活动不会被监视或跟踪。</p></li><li><p>安全性：VPN应该具备高级的安全性措施，如使用强大的加密算法（如AES-256），以确保您的数据在传输过程中得到保护。</p></li><li><p>无日志政策：VPN提供商应该采用严格的无日志政策，不会记录用户的在线活动或个人信息。这确保您的隐私得到最大程度的保护。</p></li><li><p>快速稳定：一个优质的VPN应该提供快速稳定的连接，以确保您能够顺畅地进行在线活动，如浏览网页、流媒体、下载等。</p></li><li><p>多服务器位置：VPN应该拥有广泛的服务器网络，位于多个地理位置。这样可以提供更多的选择性，并允许您绕过地理限制。</p></li><li><p>跨平台支持：VPN应该兼容各种设备和操作系统，包括计算机、智能手机和平板电脑等。</p></li><li><p>客户端易用性：VPN的客户端应该简单易用，提供直观的界面和方便的连接选项，让用户能够轻松地使用和配置VPN连接。</p></li><li><p>客户支持：优质的VPN提供商应该提供可靠的客户支持，以帮助用户解决问题或解答疑问。</p></li></ol><p>而本篇文章所推荐的VPN由于是免费的，所以不可能面面俱到。各位可以根据自己的需求选择。</p><p>1.<a class="link"   href="https://www.tunnelbear.com/" >TunnelBear<i class="fas fa-external-link-alt"></i></a></p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/bef4f1f4b87268c8b4825.jpg"                                     ></p><p>TunnelBear 是适用于 macOS 的初学者应用程序。内置了Kill switch功能，它被命名为 Vigilant Mode，它的策略使您的活动或数据是完全匿名&#x2F;未记录的。</p><p>它提供了2GB的免费流量，连接速度非常快。</p><p>2.<a class="link"   href="https://windscribe.com/" >Windscribe<i class="fas fa-external-link-alt"></i></a><br><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/6fbb53cb55264e1dd5ba9.png"                                     ></p><p>每月向用户提供 10GB 的免费数据，并使用 10 位加密来保护数据和隐私,还包含一个Kill开关和DNS泄漏保护。</p><p>3.<a class="link"   href="https://hide.me/en/" >Hide.me<i class="fas fa-external-link-alt"></i></a><br><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/d5de0daf9ae9d799defd8.jpg"                                     ></p><p>Hide me为数据保护提供2gb的免费数据和256位AES加密。</p><p>它还包括一个无日志记录策略和一个IP泄漏保护，即使出现问题也可以使您的IP隐藏。 </p><p>它每月提供 2GB 数据，允许您流式传输，但不能像看电影等一样长时间传输。</p><p>它与macOS，Linux，Windows，浏览器，Android和iOS兼容。</p><p>4.<a class="link"   href="https://nordvpn.com/" >NordVPN<i class="fas fa-external-link-alt"></i></a><br><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/5d18dea9f576e9fc7371b.jpg"                                     ></p><p>NordVPN不是免费的VPN，但可提供30天的免费试用版。</p><p>它提供了免费和无限的数据和带宽并使用256位AES加密。，包括广告拦截器恶意软件保护，以阻止避免任何类型的中断。可同时连接 6 台设备。</p><p>其他还有一些无限免费数据流的VPN，不再一一展开，如<a class="link"   href="https://protonvpn.com/" >ProtonVPN<i class="fas fa-external-link-alt"></i></a> 、<a class="link"   href="https://speedify.com/" >Speedify<i class="fas fa-external-link-alt"></i></a>、<a class="link"   href="https://www.betternet.co/" >Betternet<i class="fas fa-external-link-alt"></i></a>、<a class="link"   href="https://www.vpnbook.com/" >VPNBook<i class="fas fa-external-link-alt"></i></a>。</p><p>上述这些VPN服务介绍仅供学习和研究，且其服务内容与优惠情况均会发生变化，请读者以官网公告为准。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;互联网是一个巨大的信息空间，其中的信息纷繁复杂，而VPN提供了一个保护层，确保在登录网络时保护个人隐私或在不安全的wifi网络上浏览网站。VPN建立安全和加密的连接不仅可以帮助您保护数据，还可以使浏览匿名。你在市场上可以买到很多VPN服务，用于学习和研究。其实，对于大多数人</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="苹果" scheme="http://www.nickyam.com/tags/apple/"/>
+    
+    <category term="Mac" scheme="http://www.nickyam.com/tags/Mac/"/>
+    
+    <category term="VPN" scheme="http://www.nickyam.com/tags/VPN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MacBook苹果电脑如何查看WI-FI密码</title>
+    <link href="http://www.nickyam.com/tech/MacBook%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8BWI-FI%E5%AF%86%E7%A0%81.html"/>
+    <id>http://www.nickyam.com/tech/MacBook%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8BWI-FI%E5%AF%86%E7%A0%81.html</id>
+    <published>2021-12-06T12:11:02.000Z</published>
+    <updated>2021-12-09T05:04:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近有个常连接的Wi-Fi，不记得密码了。碰巧有个新设备需要关联，所以就想通过已连接设备是否可以获知Wi-Fi密码。我们都知道，小米手机可以把已连接的Wi-Fi通过二维码的形式共享给新设备。但是我的老设备都是苹果系列的，那么iPhone和MacBook是否有相应的功能呢？</p><p>一开始我想求助于一些第三方软件，结果不是要收费就是不靠谱，还有就是安全性存疑。</p><p>经过一番折腾，终于找到如下解决方式：</p><p>1、在屏幕下方的程序坞中打开 launchpad 。</p><p>2、在 launchpad 中打开 “其他” 文件夹。（如果你没有整理过软件的排序）</p><p>3、在该文件夹中打开 “钥匙串访问”。</p><p>4、在该软件中点击左侧的“系统”，在右侧选择“密码”，在右下区块找到相应的 Wi-Fi 名称，双击打开。</p><p>5、点击 “显示密码”，按照提示开机密码。</p><p>6、再次输入开机用户名和开机密码，即可显示对应的 Wi-Fi 密码。</p><p><strong>注意事项：</strong></p><p>如果此前只有iPhone连接过该 Wi-Fi ，也可以在 MacBook 上使用同一个 Apple ID 登陆同步，之后就可以用上述步骤查看该 Wi-Fi 密码了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近有个常连接的Wi-Fi，不记得密码了。碰巧有个新设备需要关联，所以就想通过已连接设备是否可以获知Wi-Fi密码。我们都知道，小米手机可以把已连接的Wi-Fi通过二维码的形式共享给新设备。但是我的老设备都是苹果系列的，那么iPhone和MacBook是否有相应的功能呢？&lt;</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="苹果" scheme="http://www.nickyam.com/tags/apple/"/>
+    
+    <category term="Mac" scheme="http://www.nickyam.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google Play 应用下载</title>
+    <link href="http://www.nickyam.com/tech/Google%20Play%E5%BA%94%E7%94%A8%E4%B8%8B%E8%BD%BD.html"/>
+    <id>http://www.nickyam.com/tech/Google%20Play%E5%BA%94%E7%94%A8%E4%B8%8B%E8%BD%BD.html</id>
+    <published>2021-09-30T06:09:00.000Z</published>
+    <updated>2021-09-30T06:34:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>近些年，国内外形势风云突变。反映在手机上，国产手机对 Google 的相关服务支持越来越严格，以前还能自己一键安装谷歌套装，现在的新手机出厂设置已经特意禁止了这样的行为。那么如何如何下载国产手机的内置商城没有的app呢？</p><p>经过长期积累，笔者整理出了国外几个自动生成Google Play应用直链地址，帮助我们轻松下载安装App，供大家交流学习。</p><p>1、<a class="link"   href="http://apkleecher.com/" >http://apkleecher.com/<i class="fas fa-external-link-alt"></i></a></p><p>2、<a class="link"   href="http://apk-dl.com/" >http://apk-dl.com/<i class="fas fa-external-link-alt"></i></a></p><p>3、<a class="link"   href="http://apps.evozi.com/apk-downloader/" >http://apps.evozi.com/apk-downloader/<i class="fas fa-external-link-alt"></i></a></p><p>4、<a class="link"   href="http://globalapk.com/" >http://globalapk.com/<i class="fas fa-external-link-alt"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;近些年，国内外形势风云突变。反映在手机上，国产手机对 Google 的相关服务支持越来越严格，以前还能自己一键安装谷歌套装，现在的新手机出厂设置已经特意禁止了这样的行为。那么如何如何下载国产手机的内置商城没有的app呢？&lt;/p&gt;
+&lt;p&gt;经过长期积累，笔者整理出了国外几个自动</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="Google" scheme="http://www.nickyam.com/tags/Google/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>xDAI 工具汇总</title>
+    <link href="http://www.nickyam.com/other/xDAI%20Note.html"/>
+    <id>http://www.nickyam.com/other/xDAI%20Note.html</id>
+    <published>2021-09-28T12:25:00.000Z</published>
+    <updated>2021-10-08T05:00:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前些日子，Brightid对于前期使用者和捐助者发空投。我在deadline最后一天做完认证，也领到了一些代币。因为金额很小，所以最终我选择了 xDai链 作为 claim 的通道，而不是 ETH 。不然可能连以太坊的矿工费都不够付。</p><p>因为xDai由以太坊链上衍生出来，并且目前上面的用例还没有以太坊上多，xDai也主要用于分担以太坊上溢出的交易，有附属的性质，因此很多人称xDai为以太坊的姊妹链、侧链。</p><p>之后我了解了 xDai 这条链的相关工具情况，具体如下，供大家参考使用。</p><p>1、提取xDai可以使用 <a class="link"   href="https://ascendex.com/" >ascendex 交易所<i class="fas fa-external-link-alt"></i></a> 。</p><p>2、基础设施汇总：</p><ul><li><p><a class="link"   href="https://xdai-omnibridge.web.app/bridge" >Omni Bridge<i class="fas fa-external-link-alt"></i></a> 是ETH、BSC、xDai之间的ERC20代币转换桥，目前也支持ETH、xDai之间的ERC-721和ERC-1155代币转换。</p></li><li><p><a class="link"   href="https://dai-bridge.poa.network/" >xDai Bridge<i class="fas fa-external-link-alt"></i></a> 是以太坊上的Dai和xDai上的xDai之间的转换桥。</p></li><li><p>xDai 与 wxDai 互转：<a class="link"   href="https://wrapeth.com/" >https://wrapeth.com/<i class="fas fa-external-link-alt"></i></a></p></li><li><p>xDai 的区块链浏览器：<a class="link"   href="https://blockscout.com/xdai/mainnet/" >https://blockscout.com/xdai/mainnet/<i class="fas fa-external-link-alt"></i></a></p></li><li><p>xDai 的 uniswap：<a class="link"   href="https://app.honeyswap.org/#/swap" >https://app.honeyswap.org/#/swap<i class="fas fa-external-link-alt"></i></a></p></li><li><p><a class="link"   href="https://app.hop.exchange/" >Hop Bridge<i class="fas fa-external-link-alt"></i></a> 实现了ETH、Polygon、xDai之间USDC的转移。</p></li><li><p><a class="link"   href="https://streamr.network/" >Steamr<i class="fas fa-external-link-alt"></i></a> 是去中心化实时数据平台。</p></li><li><p><a class="link"   href="https://origintrail.io/" >Origin Trail<i class="fas fa-external-link-alt"></i></a> 致力于实现通用、协作和可信的数据交易，使全球供应链协同工作。</p></li></ul><p>3、DeFi相关</p><ul><li><p><a class="link"   href="https://ramp.network/" >Ramp Network<i class="fas fa-external-link-alt"></i></a> 是P2P法币与加密货币交易协议。</p></li><li><p><a class="link"   href="https://www.perp.fi/" >Perpetual Protocol<i class="fas fa-external-link-alt"></i></a> 是AMM，并支持每种资产的去中心化永续合约交易协议。</p></li><li><p><a class="link"   href="https://unicrypt.network/" >Unicrypt<i class="fas fa-external-link-alt"></i></a> 提供多链去中心化服务，包括农耕、LP代币锁定、质押、去中心化Launchpad等。</p></li><li><p><a class="link"   href="https://p.network/" >pNetwork<i class="fas fa-external-link-alt"></i></a> 是支持跨链功能的资产发行平台。</p></li><li><p><a class="link"   href="https://deus.finance/" >Deus Finance<i class="fas fa-external-link-alt"></i></a> 允许用户将加密资产、传统金融资产合成为ERC-20代币进行交易。</p></li></ul><p>4、NFT和游戏：</p><ul><li><p><a class="link"   href="https://fraction.art/" >Fraction<i class="fas fa-external-link-alt"></i></a> 是专注于碎片化NFT艺术品的众筹平台。</p></li><li><p><a class="link"   href="https://realitycards.io/" >Reality Cards<i class="fas fa-external-link-alt"></i></a> 是首个基于NFT的预测市场。</p></li><li><p><a class="link"   href="https://unifty.io/" >Unifty<i class="fas fa-external-link-alt"></i></a> 是用于发行、流动性挖矿、桥接的跨链NFT平台，支持ETH、xDai、Polygon、BSC、Celo等区块链。</p></li><li><p><a class="link"   href="https://zkga.me/" >Dark Forest<i class="fas fa-external-link-alt"></i></a> 是在以太坊和xDai上通过zk-SNARK构建的一款去中心化即时战略游戏。</p></li><li><p><a class="link"   href="https://galleass.io/" >Galleass<i class="fas fa-external-link-alt"></i></a> 是一款去中心化资源管理游戏。</p></li></ul><p>5、DAO和社区治理：</p><ul><li><p><a class="link"   href="https://daohaus.club/" >DAOhaus<i class="fas fa-external-link-alt"></i></a> 是一个无代码的DAO发布和运行平台。</p></li><li><p><a class="link"   href="https://www.daosquare.io/" >DAOSquare<i class="fas fa-external-link-alt"></i></a> 是Web3孵化器。</p></li><li><p>通过 <a class="link"   href="https://powerpool.finance/" >PowerPool<i class="fas fa-external-link-alt"></i></a>，代币持有者可以在基于以太坊的协议中借出、汇集、借用治理代币，以赚取收入，积累治理能力。</p></li><li><p><a class="link"   href="https://www.akropolis.io/" >Akropolis<i class="fas fa-external-link-alt"></i></a> 旨在创建一个由所有金融组织团体组成的分布式金融网络协议，并提供独立于政府、银行或其他传统金融机构的基本金融服务（储蓄、投资、社会保险）。</p></li><li><p><a class="link"   href="https://lexdao.github.io/HUB/" >LexDAO<i class="fas fa-external-link-alt"></i></a> 为法律组织提供了一个工作框架，让他们使用以太坊、区块链、智能合约和DAO，以一种无需信任的方式工作。</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;前些日子，Brightid对于前期使用者和捐助者发空投。我在deadline最后一天做完认证，也领到了一些代币。因为金额很小，所以最终我选择了 xDai链 作为 claim 的通道，而不是 ETH 。不然可能连以太坊的矿工费都不够付。&lt;/p&gt;
+&lt;p&gt;因为xDai由以太坊链上</summary>
+      
+    
+    
+    
+    <category term="⓺其他" scheme="http://www.nickyam.com/categories/other/"/>
+    
+    
+    <category term="区块链" scheme="http://www.nickyam.com/tags/Blockchain/"/>
+    
+    <category term="以太坊" scheme="http://www.nickyam.com/tags/Ethereum/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新手撸羊毛必备工具推荐</title>
+    <link href="http://www.nickyam.com/other/%E6%96%B0%E6%89%8B%E6%92%B8%E7%BE%8A%E6%AF%9B%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"/>
+    <id>http://www.nickyam.com/other/%E6%96%B0%E6%89%8B%E6%92%B8%E7%BE%8A%E6%AF%9B%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html</id>
+    <published>2021-09-18T04:09:00.000Z</published>
+    <updated>2021-09-18T06:33:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在国内越来越严格的出入金政策下，如果读者仍然想要参与币圈，其实不需要真金白银的投入，只需要你对区块链和币圈这样的新生事物保持长期好奇就可以了。</p><p>记住，<strong>请不要向币圈投入真金白银，量力而行，三思而行！</strong></p><p>以下工具是<a href="https://www.nickyam.com/">笔者</a>的一些小积累，仅供大家参考学习，帮助大家了解这一新生事物。如果在这个过程中，大家能够零撸到有价值的代币，那也是一件值得高兴的事。</p><h1 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h1><p>建议用 Google 邮箱，国内邮箱有时不支持。</p><p>注册 Gmail 邮箱：<a href="account.google.com">account.google.com</a></p><h1 id="聊天"><a href="#聊天" class="headerlink" title="聊天"></a>聊天</h1><ul><li><p><strong>discord</strong>： 一款英文社区聊天软件，很多项目的社区都用这个软件，这里可以获取最新消息<br>下载地址：<a class="link"   href="https://discord.com/" >https://discord.com/<i class="fas fa-external-link-alt"></i></a></p><p>下载注册好账号，绑定一个邮箱或者二次验证。因为有一些项目要求很严格。</p><p>安装dis翻译插件，安装好之后，可以很容易的翻译里面的文字。</p><p>插件链接请点击<a class="link"   href="https://discord.com/channels/813656283420688414/817018545299783690/881366303795998781" >此处<i class="fas fa-external-link-alt"></i></a></p></li><li><p><strong>telegram</strong> 一款英文社区聊天软件,很多外网空投都通过这个软件发放。<br>下载地址：<a class="link"   href="https://telegram.org/" >https://telegram.org/<i class="fas fa-external-link-alt"></i></a></p></li></ul><h1 id="twitter"><a href="#twitter" class="headerlink" title="twitter"></a>twitter</h1><p>注册越早越好，多加关注、多互动，因为很多项目有这方面的限制。</p><p>不需要专门下载APP，<a class="link"   href="https://twitter.com/home" >电脑网页<i class="fas fa-external-link-alt"></i></a> 登录就可以了。</p><p>注册好之后，关注下我的账号：<a class="link"   href="https://twitter.com/nickyam513" >https://twitter.com/nickyam513<i class="fas fa-external-link-alt"></i></a>  关注必回。</p><h1 id="币乎"><a href="#币乎" class="headerlink" title="币乎"></a>币乎</h1><p>币圈里面的知乎，增加撸功的一条捷径</p><p>注册地址：<a class="link"   href="https://m.bihu.com/signup?i=1d6yTe&c=4&s=4" >https://m.bihu.com/signup?i=1d6yTe&c=4&s=4<i class="fas fa-external-link-alt"></i></a></p><p>注册后，实名，可以领取12000枚 $Key ，逐步释放，可提现交易。</p><h1 id="小狐狸钱包（Metamask）"><a href="#小狐狸钱包（Metamask）" class="headerlink" title="小狐狸钱包（Metamask）"></a>小狐狸钱包（Metamask）</h1><p>这是目前用户量最大的网页插件钱包。当然如果是手机app，你选择 TokenPoket 也可以。</p><p>先安装好chrome浏览器，再安装metamask</p><p><a class="link"   href="https://www.google.com/chrome/fast-and-secure/" >chrome下载<i class="fas fa-external-link-alt"></i></a></p><p><a class="link"   href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn" >metamask下载<i class="fas fa-external-link-alt"></i></a></p><p>这个钱包不要随便下载，防止下到假的。</p><p><strong>PS.metamask 网络配置工具</strong></p><p>此工具用来自动配置metamask网络参数</p><p>网站：<a class="link"   href="https://chainlist.org/" >https://chainlist.org/<i class="fas fa-external-link-alt"></i></a></p><p>使用：链接钱包后，搜索你需要配置的网络，添加就自动完成配置。</p><h1 id="SOL生态钱包"><a href="#SOL生态钱包" class="headerlink" title="SOL生态钱包"></a>SOL生态钱包</h1><ul><li><p><a class="link"   href="https://chrome.google.com/webstore/detail/phantom/bfnaelmomeimhlpmgjnjophhpkkoljpa" >幻影钱包<i class="fas fa-external-link-alt"></i></a></p></li><li><p><a class="link"   href="https://chrome.google.com/webstore/detail/sollet/fhmfendgdocmcbmfikdcogofphimnkno" >Sollet钱包<i class="fas fa-external-link-alt"></i></a></p></li></ul><p>最近大火的 SOL 生态就靠这两个钱包里。</p><h1 id="去中心化市场看K线工具"><a href="#去中心化市场看K线工具" class="headerlink" title="去中心化市场看K线工具"></a>去中心化市场看K线工具</h1><ul><li><p>Bsc、eth、matic <a class="link"   href="https://www.dextools.io/app/" >https://www.dextools.io/app/<i class="fas fa-external-link-alt"></i></a></p></li><li><p>Heco <a class="link"   href="https://xfarmer.net/trade.html" >https://xfarmer.net/trade.html<i class="fas fa-external-link-alt"></i></a></p></li><li><p><a class="link"   href="https://dex.guru/" >https://dex.guru/<i class="fas fa-external-link-alt"></i></a></p></li><li><p><a class="link"   href="https://avedex.cc/" >https://avedex.cc/<i class="fas fa-external-link-alt"></i></a></p></li></ul><p>以上四个地址，各有各的好处，自己摸索。使用很简单，找到你需要查看K线的代币合约，搜索就OK。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在国内越来越严格的出入金政策下，如果读者仍然想要参与币圈，其实不需要真金白银的投入，只需要你对区块链和币圈这样的新生事物保持长期好奇就可以了。&lt;/p&gt;
+&lt;p&gt;记住，&lt;strong&gt;请不要向币圈投入真金白银，量力而行，三思而行！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以下工具是&lt;a</summary>
+      
+    
+    
+    
+    <category term="⓺其他" scheme="http://www.nickyam.com/categories/other/"/>
+    
+    
+    <category term="区块链" scheme="http://www.nickyam.com/tags/Blockchain/"/>
+    
+    <category term="以太坊" scheme="http://www.nickyam.com/tags/Ethereum/"/>
+    
+    <category term="NFT" scheme="http://www.nickyam.com/tags/NFT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>以太坊的NFT代币标准梳理</title>
+    <link href="http://www.nickyam.com/other/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%A3%E5%B8%81%E6%A0%87%E5%87%86%E7%9B%98%E7%82%B9.html"/>
+    <id>http://www.nickyam.com/other/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%A3%E5%B8%81%E6%A0%87%E5%87%86%E7%9B%98%E7%82%B9.html</id>
+    <published>2021-09-16T02:07:29.000Z</published>
+    <updated>2021-09-16T08:09:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>熟悉以太坊的用户一定经常看到 ERC-XXX 或是 EIP-XXX，究竟什么是 ERC 以及 EIP 呢？</p><p>EIP 的全称是 Ethereum Improvement Proposal，也就是以太坊优化提案。最初，比特币社区内成员为了优化比特币协议会提出 BIP（Bitcoin Improvement Proposal），而这种提案形式沿用到了以太坊网络中。EIP 提案一般包括含有技术规范的设计文档以及设计逻辑。前段时间最常被提起的 EIP 应该就是在伦敦升级中被实现的 EIP-1559。</p><p>而 ERC 的全称是 Ethereum Request for Comments，即以太坊意见征求。虽然 ERC 中的 RC 名为意见征求，但实意并非如此。Request for Comments 标准始于 1969 年，最初用来记录有关 ARPANET 开发的非正式文档，而最终演变为了用来记录互联网规范、协议、过程等的标准文件。ERC 与 EIP 相同，都是以太坊社区开发者为协议提出的优化提案，但当 EIP 被以太坊社区「认可」并最终得以被大规模应用后，EIP 就成为 ERC 标准。</p><p>我们可以将 EIP 分为 4 个状态：</p><p>-Draft：此时的 EIP 处于最初始阶段，社区可对提案进行公开讨论。<br>-Accepted：此类 EIP 已进入中期采纳阶段。<br>-Final：已被协议应用采纳的 EIP 就到达了最后的阶段，此时也被称为 ERC。<br>-Deferred：那些搁浅了的 EIP 处于 Deferred 状态。  </p><p>平时我们接触到最多的一定是同质化代币标准 ERC-20，该标准确保了每一枚代币之间的相同性。在 NFT 领域中也存在着很多独特的、有创意的代币标准，熟悉了这些标准之后我们就能更加清晰地认识各类 NFT 。</p><h1 id="ERC-721"><a href="#ERC-721" class="headerlink" title="ERC-721"></a>ERC-721</h1><p><strong>Non-Fungible Token Standard</strong></p><p>状态：Final</p><p>ERC-721 标准是最早诞生的 NFT 标准。在加密世界中，同质化代币代表着货币，NFT 代表着资产，而资产是具有独特性的。人们发现常用的 ERC-20 标准并不适用于这些独特的资产，于是发起提案推出了 ERC-721 标准。</p><p>如今，ERC-721 代币标准已经被广泛使用，人们可以用 ERC-721 标准的 NFT 代表具有「独特性」的数字或实物资产的所有权，比如房地产、艺术品、虚拟收藏品甚至是金融产品，如今爆火的 Bored Ape、Cool Cats 均使用了 ERC-721 标准。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-721" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p><h1 id="ERC-1155"><a href="#ERC-1155" class="headerlink" title="ERC-1155"></a>ERC-1155</h1><p><strong>Multi Token Standard</strong></p><p>状态：Final</p><p>并非所有资产都是「独特的」的。</p><p>ERC-1155 适用于这类并不「独特」的资产。这类资产的特点是它们都属于「某个品牌的某个型号」，但与 ERC-721 标准的 NFT 不同的是，它们不只有一个，它们可以是成千上万个。</p><p>另外，ERC-1155 代币标准允许每个代币 ID 代表一个新的可配置代币类型，它可能有自己的元数据、总量和其他属性。</p><p>游戏道具、会员卡等类型的 NFT 通常会使用 ERC-1155 代币标准，如著名 NFT 藏家 888 近日发行的「888 Genesis」会员卡、Bored Ape 此前空投的「变异药水」等。可以说，采用 ERC-1155 代币标准的 NFT 是「同质化的」非同质化代币。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-1155" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p><h1 id="EIP-998"><a href="#EIP-998" class="headerlink" title="EIP-998"></a>EIP-998</h1><p><strong>Composable Non-Fungible Token Standard</strong></p><p>状态：Draft</p><p>EIP-998 以 ERC-721 代币标准为基础进行扩展。</p><p>简言之，使用 EIP-998 的 NFT 是一个包裹，里面可以装着各种 NFT 及同质化代币。有了 EIP-998，游戏角色不再是永远不变的，而是可以随着获取到各种装备、道具甚至是和其他角色融合而产生更加新鲜的外观与属性，让链游中的各类虚拟资产变得更加丰富与灵活。</p><p>比如，Aavegotchi 是一款备受好评的链游，其中颇具创新的一点在于，每一只 Aavegotchi NFT 都可以通过穿戴不同的装备 NFT 获得不同的属性加成，这给玩法较为单一的 NFT 质押挖矿带来了更多的可玩性，而这便是通过 EIP-998 实现的。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-998" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p><h1 id="EIP-1523"><a href="#EIP-1523" class="headerlink" title="EIP-1523"></a>EIP-1523</h1><p><strong>Standard for Insurance Policies as ERC-721 Non Fungible Tokens</strong></p><p>状态：Draft</p><p>YFI 创始人 Andre Cronje 曾在 2020 年 8 月宣布推出去中心化保险服务 yinsure.finance，其保单便是一个 NFT。</p><p>关于 NFT 与保险的结合，早在 2018 年 10 月就有人提出过草案，这便是 EIP-1523。保险属于金融产品，不过从某些角度来说它们也具备「独特性」，比如保费、期限、承保人等等，也已经有很多应用开始交易、转让或以其它方式将保单作为一种资产来处理。</p><p>由于保单所具备的独特性，EIP-1523 需要以 ERC-721 标准为基础，并在此基础上提供了一套适用于各类保单的通用型模版来将保单以更准确的形式转换为一个 NFT。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-1523" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p><h1 id="EIP-1948"><a href="#EIP-1948" class="headerlink" title="EIP-1948"></a>EIP-1948</h1><p><strong>Non-fungible Data Token</strong></p><p>状态：Draft</p><p>对于许多 NFT 用例来说，其 NFT 的相关数据可能是动态的，会根据时间而变化。类似于被人 NFT 老玩家钟爱的加密猫可能会变色、或像是包含知识产权的代币的所有权转换，以及需要穿梭在不同链间储存元数据的代币。现今 NFT 标准并不具备在代币被铸造后的数据修改功能，而 EIP-1948 完善了这一点。</p><p>EIP-1948 在现存标准下扩展了动态数据存储功能，其添加了 32 字节的数据区，可通过读取函数进行访问，而写入函数让代币的拥有者可随时更新数据。</p><p>现在 EIP-1948 已被使用在像 xDAI 以及 Plasma 这类侧链的跨链桥中，实现了在 Plasma 链上进行对加密猫的配种繁衍。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-1948" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p><h1 id="ERC-2981"><a href="#ERC-2981" class="headerlink" title="ERC-2981"></a>ERC-2981</h1><p><strong>NFT Royalty Standard</strong></p><p>状态：Final</p><p>加密艺术市场与传统艺术市场的一大区别便是版税。在传统艺术市场，艺术家往往只能拿到第一次售出作品时的收入，原因在于人们很难准确、透明地追踪到艺术品的流通路径，即使艺术家想收版税也不知道应该去找谁收。而区块链和 NFT 的出现改变了这一点，这便是 NFT 版税标准 ERC-2981 所做的事情。</p><p>ERC-2981 代币标准让每一个加密艺术家、NFT 创作者都可以从作品每一次的销售中拿到应得的版税收入，有的艺术家甚至会以极低的价格发售艺术作品，主要收入为后续的版税，比如中国台湾的艺术家公羊创作的 Ghxst 系列作品，最初发售价仅为 0.003ETH，后续大部分作品通过空投免费发放，而截至发稿时，Ghxst 系列作品总成交额高达 4836.38ETH，公羊可以从每一笔交易中分到 10% 的版税收入，也就是说艺术家仅通过版税便赚到了 483.64ETH，约合 160 万美元。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-2981" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p><h1 id="EIP-3386"><a href="#EIP-3386" class="headerlink" title="EIP-3386"></a>EIP-3386</h1><p><strong>ERC-721 and ERC-1155 to ERC-20 Wrapper</strong></p><p>状态：Draft</p><p>ERC-20 标准的同质化代币以其无可替代的流动性在以太坊网络中获得了最广泛的应用。而 ERC-721 以及 ERC-1155 却只可根据其指定 ID 进行整体转移，这无疑大幅降低了其流动性、增添了交易阻力。EIP-3386 提案为整体僵硬的 ERC-721 及 ERC-1155 标准代币提供了碎片化流动性。</p><p>此提案可通过将池中的 ERC-721 及 ERC-1155 进行包装并印铸出 ERC-20 标准的衍生代币。衍生代币拥有者可通过销毁代币来赎回池中的 ERC-721 及 ERC-1155 代币。被印铸出的 ERC-20 衍生代币可像其他 ERC-20 标准代币一样在不同应用中进行使用。</p><p>比较具有代表性的 EIP-3386 应用协议有 NFT 碎片化应用 Unicly、Fractional, 以及 NFTX 等。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-3386" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p><h1 id="EIP-3440"><a href="#EIP-3440" class="headerlink" title="EIP-3440"></a>EIP-3440</h1><p><strong>ERC-721 Editions Standard</strong></p><p>状态：Draft</p><p>当前连接 NFT 与其真实作品是通过储存在合约内的 tokenURI 元数据实现的，这引发了许多的问题。首先，任何人都可以在链上部署合约。其次，合约中 tokenURI 的指向也是无许可的。最后，作品的线上上传也是无门槛的。也就是说，作品可能会在创作者不知情的情况下被上传至线上并被印铸成 NFT。</p><p>EIP-3440 以创作者签名的形式解决了这个问题。创作者通过使用私钥对自己发行的 NFT 作品进行签名以保证该作品的唯一性。作品购买者可直接通过应用查看签名以确定作品的各类属性真实性。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-3440" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p><h1 id="EIP-3569"><a href="#EIP-3569" class="headerlink" title="EIP-3569"></a>EIP-3569</h1><p><strong>Sealed NFT Metadata Standard</strong></p><p>状态：Draft</p><p>针对当前市场上被热炒的收藏品类 NFT，其图片的存储方式是否去中心化，购买后有没有被篡改的风险，是许多买家十分关心的问题。</p><p>许多 NFT 创作者在通过智能合约上传作品之后，为了保证作品元数据无法被更改，便会将元数据储存在去中心化服务器中以确保永久性。但是如果遇到上传的作品有缺陷时，因为去中心化服务器和智能合约之前数据并不相通，NFT 创作者无法修复错误，有可能导致项目的崩盘。</p><p>因此 EIP-3569（密封 NFT 元数据提案）在确保元数据能够永久储存的情况下为创作者提供了灵活性。该提案允许创作者在作品创建期间或创建之后的指定时间密封 NFT 元数据。对于创作者来说，当他认为作品已经完成且能够永久储存时，可以调用 EIP-3569 密封 NFT 元数据。对于收藏家来说，能在平台通过返回的 URI 来验证作品是不是被密封，从而判断 NFT 的收藏价值。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-3569" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p><h1 id="EIP-3589"><a href="#EIP-3589" class="headerlink" title="EIP-3589"></a>EIP-3589</h1><p><strong>Assemble assets into NFTs</strong></p><p>状态：Draft</p><p>随着 NFT 艺术品和收藏家迅速增加，收藏家们在转移资产或交易时，传统的 NFT 交易方式过于单一、低效并且会消耗 Gas。但是选择第三方平台打包交易同样存在交易风险。</p><p>EIP-3589（组合资产 NFT）提案旨在解决传统交易形式单一和第三方平台交易风险问题。EIP-3589 基本原理和 EIP-998 提案接近，区别在于能够同时兼容 ERC-1155 代币。EIP-3589 可以将 ERC-20 代币、ERC-721 代币和 ERC1155 代币组合成一个 ERC-721 代币，在传统市场中交易。在批量交易、批量交换或集合交换等场景中，EIP-3589 比批量资产更易于智能合约使用。</p><p><a class="link"   href="https://eips.ethereum.org/EIPS/eip-3589" >查看完整提案请点击本链接<i class="fas fa-external-link-alt"></i></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;熟悉以太坊的用户一定经常看到 ERC-XXX 或是 EIP-XXX，究竟什么是 ERC 以及 EIP 呢？&lt;/p&gt;
+&lt;p&gt;EIP 的全称是 Ethereum Improvement Proposal，也就是以太坊优化提案。最初，比特币社区内成员为了优化比特币协议会提出 BI</summary>
+      
+    
+    
+    
+    <category term="⓺其他" scheme="http://www.nickyam.com/categories/other/"/>
+    
+    
+    <category term="区块链" scheme="http://www.nickyam.com/tags/Blockchain/"/>
+    
+    <category term="以太坊" scheme="http://www.nickyam.com/tags/Ethereum/"/>
+    
+    <category term="NFT" scheme="http://www.nickyam.com/tags/NFT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>淫贼，小贼和反贼</title>
+    <link href="http://www.nickyam.com/other/%E6%B7%AB%E8%B4%BC%EF%BC%8C%E5%B0%8F%E8%B4%BC%E5%92%8C%E5%8F%8D%E8%B4%BC.html"/>
+    <id>http://www.nickyam.com/other/%E6%B7%AB%E8%B4%BC%EF%BC%8C%E5%B0%8F%E8%B4%BC%E5%92%8C%E5%8F%8D%E8%B4%BC.html</id>
+    <published>2021-08-09T13:06:15.000Z</published>
+    <updated>2021-08-09T15:47:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="反贼"><a href="#反贼" class="headerlink" title="反贼"></a>反贼</h1><p>宋江，在大宋集团下面的郓城分公司里做开发，算是一个 P7 级别的员工，级别不算高，但好歹也算管理岗，能管几个基层员工。</p><p>这样的宋江应该是相亲市场上非常吃香的存在，但实际上宋江并不热衷于此，三十好几了也不结婚，只是有个外宅（非婚同居对象）叫阎婆惜。</p><p>按理说，宋江 985 毕业，大宋集团 P7 员工，应该看不上阎婆惜的，毕竟在和宋江同居前，阎婆惜初中都没读完，靠在 KTV 陪唱过生活，认识宋江也是大宋公司在 KTV 搞团建，结果就莫名其妙在一起了。</p><p>宋江是个除了对姑娘不感兴趣，对什么都感兴趣的人，比如健身尤其是练自由器械，再比如在全球最大同性交友网站 GitHub 上和同性同行交流写代码。《水浒》里面是这么写的：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">原来宋江是个好汉，只爱学使枪棒，于女色上不十分要紧。这阎婆惜水也似后生，况兼十八九岁，正在妙龄之际，因此宋江不中那婆娘意。</span><br></pre></td></tr></table></figure><p>一来二去，宋江因为喜欢帮别人解决技术问题在圈子里有了名声，也结交了很多朋友，其中包括晁盖。晁盖自己带了几个人成立工作室，也算是创业了，和大宋集团算是竞争关系，甚至还用非法手段截取了大宋集团的生辰纲业务。</p><p>本来晁盖工作室都快要被绳之以法，可宋江在公司和兄弟之间毅然决然地选择了兄弟，助晁盖工作室逃脱了法律制裁。后来晁盖工作室还并入初创企业梁山泊，取得了新公司的实际控制权。</p><p>后来因为阎婆惜举报这事儿，又因为在 GitHub 上有一句「他日若遂凌云志，敢笑黄巢不丈夫」的代码被公司其他 P7 和 P8 解读为宋江想删库跑路自己创业，宋江没得 P7 做了。</p><p>好在晁盖这人讲义气，也搭救了宋江一把，毕竟宋江一直自认为自己是 P7 的职级，P9 的实力，所以来到新公司梁山泊之后，就做了二把手 CTO 兼 COO。</p><h1 id="淫贼"><a href="#淫贼" class="headerlink" title="淫贼"></a>淫贼</h1><p>先帝创业未半而中道崩殂，这事不仅发生在蜀汉，也发生在梁山泊，宋江刚刚适应 CTO 角色没多久，CEO 晁盖在一次抢客户出差中因公牺牲了。</p><p>于是宋江完成了从 P7 到中型创业公司 CEO 的职业生涯跃升。</p><p>为了新公司的长远发展，脱离晁盖时期的草莽创业，当上 CEO 的宋江做了两件事：一是树立起了「替天行道」的企业价值观；二是严抓组织架构，排定 108 将座次。</p><p>当然还有公司文化的建设，主要是饭桌酒文化和花名文化，在梁山泊公司，不管啥样的人，都有个响当当的花名，什么及时雨啊玉麒麟啊九纹龙啊……</p><p>花名矮脚虎的王英和宋江相反，是一个除了对姑娘感兴趣，对什么都不感兴趣的人。《水浒》是这么写王英的：</p><p>驼褐衲袄锦绣补，形貌峥嵘性粗卤。贪财好色最强梁，放火杀人王矮虎。</p><p>说白了，王英就是个淫贼，还长得丑，性格残暴，一度做出杀人夺妻的勾当。</p><p>按理说，一家有着「替天行道」企业价值观的公司，应该是容不下王英这样的淫贼的，毕竟有辱公司名声。但宋江偏偏就容下了，还委以重任，让王英参加了收购祝家庄的重要任务。</p><p>收购祝家庄是梁山泊公司壮大的重要节点，可实际上过程非常地难，先后谈判三次才艰难完成这次收购。</p><p>在其中一次谈判中，矮脚虎王英对上了祝家庄市场公关总监扈三娘，扈三娘这个人年轻貌美，能言善辩，性格泼辣，把王英谈了一次结结巴巴。虽然王英水平低，但是王英眼光高啊，这就看上了扈三娘，想跟人家困觉。</p><p>老大哥宋江对王英的想法自然是一看便知，收购祝家庄完成之后，便把扈三娘许配给了王英。</p><p>从组织的角度来看，扈三娘和王英的婚事非常有必要，一来收购了新公司，新旧公司高管联姻有助于顺利交接，促进业务融合，毕竟他们的工作模式能超越 996，达到 7×24×365；二来这是对王英的莫大恩惠，员工忠诚度大大提高。</p><p>从人性的角度来看，这事非常没必要，因为没人在乎扈三娘的感受。梁山泊酒文化盛行，没事就大口吃肉大碗喝酒，有一天在酒局上都喝得有点多，扈三娘吐了真言，说王英贪财好色杀人放火，只是馋自己的身子，不过其他好汉开始劝和不劝分，暗示扈三娘要识大体讲大局。</p><p>不过组织是不讲人性的。</p><h1 id="小贼"><a href="#小贼" class="headerlink" title="小贼"></a>小贼</h1><p>虽然梁山泊公司整天 PR「替天行道」的企业价值观，但某种程度上来说，也是一种心虚。</p><p>不光是他们在和大宋集团竞争中钻了监管的空子使了很多非法手段，也不光是容忍王英这样的淫贼，还表现在队伍里面还有鼓上蚤时迁这样偷鸡摸狗的小贼。</p><p>虽然时迁对梁山泊声誉的影响没有王英那么大，但这样的小贼在组织里总归是个负面典型，况且组织里其他的人，比如林冲呼延灼也看不惯，卢俊义这样完美主义的人更是和宋江争辩过几回，但也无疾而终。</p><p>宋江这么跟卢俊义说的：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">老卢你，还有林冲关胜秦明呼延灼，是梁山的面子，出去演讲，出去接受采访；李逵孙二娘张横时迁这种是梁山的里子，能做事，虽然大多是坏事。要是没有时迁，徐宁这么牛叉的人，能来我们公司吗？</span><br></pre></td></tr></table></figure><p>时迁虽然人品不行，但是在工作中，方法论差了点，不过目标感和执行力非常强，这就很可贵。</p><h1 id="反贼-2"><a href="#反贼-2" class="headerlink" title="反贼 2"></a>反贼 2</h1><p>宋江做了梁山泊 CEO 之后，公司发展壮大，几次收购虽然惊险但都完成了，在和大宋集团的几次业务交锋也都得了便宜。即便这样，宋江还是不安，他常常想起自己做 P7 的日子，大公司光环罩着，P8 头头也照顾自己。如今呢，自己背着大宋反贼的名声，梁山泊总归是个创业公司，而且现在政策卡得紧，上市遥遥无期，心累啊。</p><p>缓解不安，得靠招安。</p><p>大宋集团这边也很烦，一个小小 P7 出去，搞了这么大的动静，虽然对集团业务影响不太大，但也的想想能保业务灭反贼的法子。</p><p>于是，就有人献策，宋江之所以出走公司，什么兄弟情都是次要原因，主要还是他认为自己是 P9 实力，P7 职级，不如招安宋江，给他个 P9 当当，再派去什么本地生活这类和大辽集团竞争中处于弱势的业务当炮灰，这样便是一石二鸟了。</p><p>大宋集团对梁山泊公司的收购进展得很顺利，毕竟宋江在梁山泊集团的投票权有 66.7%，其他人反对也没用。</p><p>终于，宋江如愿以偿地当上了 P9，开始在本地生活战场和大辽集团竞争，依靠强补贴挽回部分市场之后，宋江又带着所剩无几的团队和另一家新晋创业公司竞争，最终却被自己的 P10 上司摘了桃子，自己则落得补贴过多人员冗杂的罪名，拿着 N+1 跑路，N&#x3D;0。</p><h1 id="小贼-2"><a href="#小贼-2" class="headerlink" title="小贼 2"></a>小贼 2</h1><p>宋江收到工资卡到账 N+1 的那一刻，想起了梁山泊的一件小事。</p><p>梁山泊说到底，还是贼窝，好汉真没几个。这里容得下各种贼，盗贼淫贼马贼飞贼大贼小贼，几乎就是贼类博物馆。</p><p>但有一种贼这里容不下，就是反贼。</p><p>北宋宣和二年，梁山泊大团建，分座次之后的第一个中秋节里，公司气氛融洽热烈，也准备了上好炊饼给众员工做福利，炊饼如有剩余，员工可以低价购买。</p><p>由于炊饼价廉物美，不少人想着多买几盒送亲友，其中就有几个做开发的就写了脚本自动抢了炊饼。</p><p>这事说大不大，不偷不抢正儿八经付钱买炊饼，方法或有不妥之处，至多算作弊行为，比起那些淫贼马贼作为来说，不算什么。</p><p>但是在这宣和二年，宋江刚树立「替天行道」企业价值观，又加强组织结构，这么个作弊的事儿该如何定性成了宋江卢俊义等人讨论的重点。卢俊义觉得，这事儿说破天，就是小贼行为，追回炊饼，处以警告就行了。可宋江不这么认为，宋江说：</p><p>炊饼事小，性质事大。公司既然要替天行道，那么写脚本作弊的行为，就反了公司价值观，并且损害了其他人的利益，不利于组织团结稳定。这种违反公司价值观，危害组织的行为，无论事情多么小，但性质是极其危险的，这不是小贼行为，是反贼行为。</p><p>于是，卢俊义眼睁睁看着小贼被打成反贼，连 N+1 都没拿，就被开除出公司了。</p><h1 id="淫贼-2"><a href="#淫贼-2" class="headerlink" title="淫贼 2"></a>淫贼 2</h1><p>其实，最让卢俊义失望的事情，不是宋江包庇时迁，也不是容忍王英，而是关于宋江弟弟宋清的一件事。</p><p>前文说到，宋江不近女色，只在乎健身和兄弟，因而没有子嗣，宋清是宋江在公司里唯一的亲人，因而私下里梁山泊基层员工称宋清为梁山太子，是要接宋江班的。</p><p>宋清在公司地位很高，但作用不大，主要管一个业务：团建。也就是公司的人去哪里吃饭，到哪里唱 K 的事儿。</p><p>虽然宋清作用不大，但手里预算不少，所以山东境内大大小小的饭庄酒楼还有 KTV，都得求着宋清。</p><p>有一阵梁山众多高管低管员工就很纳闷，为啥公司团建一连 10 次都在那家老板娘很漂亮的 KTV？大家唱歌唱得嗓子都哑了，最近开会像手语课一样。</p><p>大家还没纳闷完，宋清原配老婆就给大家揭示了真相，直接发微博警告那家 KTV 老板娘，要她离宋清远点。这下梁山泊上上下下都明白了为啥最近老唱 K 了。</p><p>宋江就很生气，心说老子因为一个 KTV 陪唱的没有 P7 做，你宋清因为一个 KTV 老板娘搞婚外恋和利益输送，全家都跟 KTV 有仇。</p><p>但生气归生气，问题还是要处理的，为此，宋江和卢俊义又开始争论了。卢俊义想着，这下我可以用魔法打败魔法了吧，说：</p><p>宋清这事儿，搞婚外恋，非常地违反公司价值观吧；搞利益输送，非常地损害他人利益，不利于组织团结稳定吧。不光是性质危险，影响还很大，不光是淫贼行为，还是反贼行为。</p><p>驰名双标宋江则缓缓说到：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">老卢你没必要这么上纲上线，婚外恋是不太对，不过终归是家事，是感情方面的事，他们自己处理得当就好。至于利益输送那也不好说，我看大家聚在一起多唱唱歌挺好的，气氛融洽，而且每次都唱公司的司歌《好汉歌》，也有利于组织凝聚力，除了费嗓子，嘿儿呀咿儿呀嘿唉嘿依儿呀那里高音唱不上去，没啥毛病……</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;反贼&quot;&gt;&lt;a href=&quot;#反贼&quot; class=&quot;headerlink&quot; title=&quot;反贼&quot;&gt;&lt;/a&gt;反贼&lt;/h1&gt;&lt;p&gt;宋江，在大宋集团下面的郓城分公司里做开发，算是一个 P7 级别的员工，级别不算高，但好歹也算管理岗，能管几个基层员工。&lt;/p&gt;
+&lt;p&gt;这样的</summary>
+      
+    
+    
+    
+    <category term="⓺其他" scheme="http://www.nickyam.com/categories/other/"/>
+    
+    
+    <category term="转载" scheme="http://www.nickyam.com/tags/reprint/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>虚拟货币挖矿空投资源（更新频繁，及时了解请加QQ群：862350118）</title>
+    <link href="http://www.nickyam.com/other/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E6%8C%96%E7%9F%BF%E7%A9%BA%E6%8A%95%E8%B5%84%E6%BA%90%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89.html"/>
+    <id>http://www.nickyam.com/other/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E6%8C%96%E7%9F%BF%E7%A9%BA%E6%8A%95%E8%B5%84%E6%BA%90%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89.html</id>
+    <published>2021-07-20T12:17:09.000Z</published>
+    <updated>2021-08-12T05:06:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>随着监管对虚拟货币政策的收紧，通过法币购买虚拟货币或存在政策风险，而虚拟货币的高波动性也会对投资小白产生较大影响。如果读者想要了解虚拟货币，参与虚拟货币，建议可以采用挖矿、接受空投等方式。以下是笔者收集的资源，供大家参考。</p><p>1、以太坊网页挖矿白嫖水龙头：<a class="link"   href="https://ethprominer.com/822311" >https://ethprominer.com/822311<i class="fas fa-external-link-alt"></i></a></p><p>2、以太坊老虎机：<a class="link"   href="http://ethcombo.com/?i=548896" >http://ethcombo.com/?i=548896<i class="fas fa-external-link-alt"></i></a>  （中奖率还可以，0.15可提现，三小时送三个机会。）</p><p>3、莱特币：<a class="link"   href="https://free-litecoin.com/login?referer=1777232" >https://free-litecoin.com/login?referer=1777232<i class="fas fa-external-link-alt"></i></a>   (0.004可提币)</p><p>4、Hi币：<a class="link"   href="https://hi.com/nickyam" >https://hi.com/nickyam<i class="fas fa-external-link-alt"></i></a>    阿里背景，目前网页可以白嫖，每天可以白嫖2.5个。</p><p>5、矿业在线水龙头，提现难度较低，挂着就能拿：<a class="link"   href="https://mining.online/?ref=674272" >https://mining.online/?ref=674272<i class="fas fa-external-link-alt"></i></a></p><p>6、Watt：邀请你参与WATT NETWORK #零撸挖矿#，登陆即可得100WATT,注册：<a class="link"   href="https://watt.beer/#/register2?code=Le1S4bqeyx" >https://watt.beer/#/register2?code=Le1S4bqeyx<i class="fas fa-external-link-alt"></i></a></p><p>7、空投宝：<a class="link"   href="http://www.ktb200.xyz/REGUFY6OIK7" >http://www.ktb200.xyz/REGUFY6OIK7<i class="fas fa-external-link-alt"></i></a></p><p>8、蚂蚁币：现在加入蚂蚁挖宝活动即可免费获取1蚂蚁币。<a class="link"   href="https://ijvcw.app.link/ant" >https://ijvcw.app.link/ant<i class="fas fa-external-link-alt"></i></a>   引荐码：thurn。</p><p>9、CryptoPlace云挖矿<br>简单邮箱注册获得2500Gh&#x2F;s算力，可挖各种主流币！<a class="link"   href="https://cryptoplace.cloud/?ref=renning.china" >https://cryptoplace.cloud/?ref=renning.china<i class="fas fa-external-link-alt"></i></a> </p><p>10、Yuumi<br>每24小时启动一次，币安NFT链钱包挖矿，是NFT收藏品数字币。<br>邀请码：0x057885D93a797eEC5A140e57706311057FA1b275<br>下载地址：<a class="link"   href="https://www.yuumi.io/download" >https://www.yuumi.io/download<i class="fas fa-external-link-alt"></i></a><br>注册教程: 创建币安钱包，也可以导入钱包，点击底部（游戏）栏目，输入下面邀请码，就可以开始挖矿啦。</p><p>11、赠送给您1π！ Pi是由斯坦福大学博士开发的一种新型数字货币，在全球拥有超过21百万成员。请点击此链接<a class="link"   href="https://minepi.com/NickYam" >https://minepi.com/NickYam<i class="fas fa-external-link-alt"></i></a> 安装应用程序，并使用我的用户名（NickYam）作为邀请码就能获得您的Pi。</p><p>12、邀请您加入VirturlGameCoin，共同参与建设VGC生态社群。进入官网<a class="link"   href="https://vgc.asia/" >https://vgc.asia/<i class="fas fa-external-link-alt"></i></a>下载安装应用程序，并使用我的矿区编号（583626935296）作为邀请码就能加入我的矿区联盟共同加速收益。</p><p>13、EPK币:<br>EPK币是“知识大陆”中的一个币种，现价13人民币一个，每日答题可获得255积分，积分用于“幸存者”探险花费的积分，“幸存者”每探索一次可能会探索出1个EPK,首码项目，撸起来！<br>注册链接:<a class="link"   href="https://www.epikg.com/app/invite?code=qUgJJy&inviter=2c0c2d14-******-9c10ebb9b8fc" >https://www.epikg.com/app/invite?code=qUgJJy&inviter=2c0c2d14-******-9c10ebb9b8fc<i class="fas fa-external-link-alt"></i></a><br>规则:先完成审核，审核是声音审核，不是实名认证审核！ 任务简单！  </p><p>14、外国项目，G$币：复制粘贴下面链接，简单注册即可<br><a class="link"   href="https://wallet.gooddollar.org/?inviteCode=3wfnYEWgba" >https://wallet.gooddollar.org?inviteCode=3wfnYEWgba<i class="fas fa-external-link-alt"></i></a><br>每24小时点击启动一次挖矿，每天能挖10枚！</p><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;分割线，以下废止不推荐&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p><p>1、PN(项目已跑路，最后卖了1刀):Polar Network为了建立自己的区块链浏览器和交易所，极地网络首次发布了PN币。PN币是基于火币生态链（heco）的区块链币。PN币将定位为极地交易所的平台币。总量860万枚. 火币链钱包PN币合约地址0x802Eb92dD5e5bcaB8970c8679FB2e2a3255C60f6<br>操作步骤：<br>(1)在TP钱包里添加火币生态链，在火币生态链钱包里添加PN币，复制PN币收款地址备用.<br>(2))点击空投挖矿链接:<a class="link"   href="https://www.pncoin.one/?ref=FXMO" >https://www.pncoin.one/?ref=FXMO<i class="fas fa-external-link-alt"></i></a><br>到浏览器打开，拉到底部，输入自己的TP钱包火币链钱包PN币收款地址，点右边Submit，然后点图形图标启动挖矿，24小时点击一次，记得收藏网页.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;随着监管对虚拟货币政策的收紧，通过法币购买虚拟货币或存在政策风险，而虚拟货币的高波动性也会对投资小白产生较大影响。如果读者想要了解虚拟货币，参与虚拟货币，建议可以采用挖矿、接受空投等方式。以下是笔者收集的资源，供大家参考。&lt;/p&gt;
+&lt;p&gt;1、以太坊网页挖矿白嫖水龙头：&lt;a </summary>
+      
+    
+    
+    
+    <category term="⓺其他" scheme="http://www.nickyam.com/categories/other/"/>
+    
+    
+    <category term="网络" scheme="http://www.nickyam.com/tags/net/"/>
+    
+    <category term="比特币" scheme="http://www.nickyam.com/tags/bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>投资银行部创新债券产品增信助力民企债券发行</title>
+    <link href="http://www.nickyam.com/work/%E6%8A%95%E8%B5%84%E9%93%B6%E8%A1%8C%E9%83%A8%E5%88%9B%E6%96%B0%E5%80%BA%E5%88%B8%E4%BA%A7%E5%93%81%E5%A2%9E%E4%BF%A1%E5%8A%A9%E5%8A%9B%E6%B0%91%E4%BC%81%E5%80%BA%E5%88%B8%E5%8F%91%E8%A1%8C.html"/>
+    <id>http://www.nickyam.com/work/%E6%8A%95%E8%B5%84%E9%93%B6%E8%A1%8C%E9%83%A8%E5%88%9B%E6%96%B0%E5%80%BA%E5%88%B8%E4%BA%A7%E5%93%81%E5%A2%9E%E4%BF%A1%E5%8A%A9%E5%8A%9B%E6%B0%91%E4%BC%81%E5%80%BA%E5%88%B8%E5%8F%91%E8%A1%8C.html</id>
+    <published>2021-07-13T11:31:20.000Z</published>
+    <updated>2021-07-15T05:10:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>为助力民营企业调整债务期限结构，促进中长期债券发行，降低债券融资成本，投资银行部联合中债信用增进投资股份有限公司，创新债券增信方式，以海亮集团有限公司2021年度第一期中期票据为载体，试点交易型增信方式，最终2年期中期票据以3.83%利率完成发行，发行结果远超企业预期，创2020年6月以来民营企业同期限同债项评级中期票据最低利率。本次发行带动募集资金5亿元全部归集我行。</p><p>从去年该债券项目启动以来，投行部在总行的指导下与发行人和中债信用增进公司保持密切沟通，了解中债增进公司增信业务的新动态，最终确定以创新的交易型信用增进方式发行债券。同时本债券在交易型增信结构下采用了抵押物反担保，属市场首创，比常规的债券发行增加了聘请受托管理人、房地产抵押等环节。在上述过程中，投资银行部充分发挥专业能力，迎难而上，确保项目高效推进。</p><p>在本只债券发行前夕，为进一步向潜在投资人充分传递信息，投行部与发行人组织了线上路演预热发行，与潜在投资人进行充分沟通，解答关于企业经营情况及债券增信结构的疑问。最终在总分行合力推动下债券成功实现发行，全场投资者认购倍数达到2倍。</p><p>本期债券发行充分展现了我行专业的债券承销能力和强大的市场号召力，得到了客户的高度认可，体现了我行对民营企业直接融资的支持。下一步，投资银行部将继续在债券交易结构和绿色债券、乡村振兴等债券品种方面践行创新，进一步提升我行在浙江债券市场的影响力。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;为助力民营企业调整债务期限结构，促进中长期债券发行，降低债券融资成本，投资银行部联合中债信用增进投资股份有限公司，创新债券增信方式，以海亮集团有限公司2021年度第一期中期票据为载体，试点交易型增信方式，最终2年期中期票据以3.83%利率完成发行，发行结果远超企业预期，创2</summary>
+      
+    
+    
+    
+    <category term="⓹工作" scheme="http://www.nickyam.com/categories/work/"/>
+    
+    
+    <category term="债券" scheme="http://www.nickyam.com/tags/Bonds/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>清华大学浙江校友会2021年会小记</title>
+    <link href="http://www.nickyam.com/essay/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%B5%99%E6%B1%9F%E6%A0%A1%E5%8F%8B%E4%BC%9A2021%E5%B9%B4%E4%BC%9A%E5%B0%8F%E8%AE%B0.html"/>
+    <id>http://www.nickyam.com/essay/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%B5%99%E6%B1%9F%E6%A0%A1%E5%8F%8B%E4%BC%9A2021%E5%B9%B4%E4%BC%9A%E5%B0%8F%E8%AE%B0.html</id>
+    <published>2021-06-20T12:41:40.000Z</published>
+    <updated>2021-07-06T09:19:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天大雨，我冒雨开车去云栖小镇参加清华校友会。会后官方出了报道，直接点击 <strong><a class="link"   href="https://open.work.weixin.qq.com/wwopen/mpnews?mixuin=h6rBDAAABwAu5LO3AAAUAA&mfid=WW0325-4cz94AAABwDRT6gBcXd9YQXteJA56&idx=0&sn=65e3f1f7b75b6c3f352b0cd02ac21fba" >庆祝清华大学建校110周年暨浙江校友会2021年会隆重举行<i class="fas fa-external-link-alt"></i></a></strong> 即可了解。</p><p>而我在这次校友会活动中感触良多，不一而足，做几点记录：</p><p>1、校歌旋律缓缓响起，我的鸡皮疙瘩就起来了，仿佛回到了那个青葱校园，不自觉地哼唱起来，集体的荣誉感油然而生。清华的四年有可能是我人生最高光的四年，但在未来的日子，我至少不会让母校丢脸。</p><p>2、校友总会秘书长唐杰分享了总书记4月19日考察清华大学的情况，讲到总书记收下了十八大以来第一份礼物，清华女篮的球衣；对男篮教练有点眼熟，当得知对方原来在首旅队打球，立马说起前一天的CBA比赛中，首旅一分之差负于广东103:104。这也算是趣事吧。</p><p>3、下午施一公的演讲就像拉家常一样，回顾了自己的求学经历和办西湖大学的初心，展现了一个清华人的风貌，得到了大家的认同和共鸣。初生牛犊不怕虎，他参加了清华竞走队的首秀，让人忍俊不禁；在美国怒怼吴弘达，成为当地小有名气的人物。这两点让人印象深刻，前者代表着无体育不清华，后者则是又红又专的体现。</p><p>今天没有遇到熟悉的同学，有些遗憾，但整个活动依然让我恋恋不舍。</p><p>下次再会！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天大雨，我冒雨开车去云栖小镇参加清华校友会。会后官方出了报道，直接点击 &lt;strong&gt;&lt;a class=&quot;link&quot;   href=&quot;https://open.work.weixin.qq.com/wwopen/mpnews?mixuin=h6rBDAAABwAu5LO</summary>
+      
+    
+    
+    
+    <category term="⓵随笔" scheme="http://www.nickyam.com/categories/essay/"/>
+    
+    
+    <category term="清华" scheme="http://www.nickyam.com/tags/thu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>亲历假冒币安客服电话诈骗</title>
+    <link href="http://www.nickyam.com/other/%E4%BA%B2%E5%8E%86%E5%81%87%E5%86%92%E5%B8%81%E5%AE%89%E5%AE%A2%E6%9C%8D%E7%94%B5%E8%AF%9D%E8%AF%88%E9%AA%97.html"/>
+    <id>http://www.nickyam.com/other/%E4%BA%B2%E5%8E%86%E5%81%87%E5%86%92%E5%B8%81%E5%AE%89%E5%AE%A2%E6%9C%8D%E7%94%B5%E8%AF%9D%E8%AF%88%E9%AA%97.html</id>
+    <published>2021-06-19T13:10:09.000Z</published>
+    <updated>2023-05-17T13:56:27.780Z</updated>
+    
+    <content type="html"><![CDATA[<p>这两天，我遭遇了虚拟货币诈骗，所幸没有上当受骗，记录之。</p><p>周四下班路上，寄到一个香港来的电话（+85266147640），介绍自己是币安的客服，他能够准确说出我在几月几号的某个订单号。</p><p>电话那头说，因为我有一笔C2C的交易对手是洗钱账户，所以我也有了洗钱风险。客服需要在后台帮我消除该标签，需要我提供注册币安的邮箱。我一开始是不相信的，挂了电话。</p><p>对方契而不舍，又打来电话。可能是因为比特币领域的确是灰色地带，也可能是最近政策变化的原因，我想提供了我的邮箱地址。在提供之前，我还提出疑问，你们后台能知道我的订单信息，还用我提供账户信息么。但是在提供过程中，对方几次听不明白我的邮箱，让我对对方的素质产生了怀疑。我第二次挂了电话。</p><p>或许对方觉得我已经进入了状态，所以换了一个人又打过来。终于他取得了我的邮箱。接下来，就是常规套路。他说，你不要挂电话，按照我的指令操作。这就是熟悉的诈骗环节。所以我果断挂了电话。</p><p>虽然我的币安账户钱不多，就是尝试了解下虚拟货币领域，但依然不希望被诈骗，也提醒大家提高警惕。</p><p>今天上午，熟悉的诈骗电话又进来了。对方提到了我另一个更早的订单，说涉及洗钱。这个电话号码是+85254281106。我直截了当指出他是诈骗，他无话可说。因为上次被诈骗后，我在币安App看到了下图，大家可以参考下。</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/e0f07debbb9896685aafc.jpg"                                     ></p><p>也收到了这样的短信：</p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/f3dbff941e903d2aac827.jpg"                                     ></p><p><strong>如果大家想要加入币安的话，可以使用我的推荐链接：<a class="link"   href="https://accounts.binancezh.sh/zh-CN/register?ref=154260268" >https://accounts.binancezh.sh/zh-CN/register?ref=154260268<i class="fas fa-external-link-alt"></i></a></strong></p><p><img                       lazyload                     alt="image"                     data-src="https://telegraph-image.pages.dev/file/346fee5efd16affddc05f.jpg"                                     ></p><p>希望大家投资有道，财务自由！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这两天，我遭遇了虚拟货币诈骗，所幸没有上当受骗，记录之。&lt;/p&gt;
+&lt;p&gt;周四下班路上，寄到一个香港来的电话（+85266147640），介绍自己是币安的客服，他能够准确说出我在几月几号的某个订单号。&lt;/p&gt;
+&lt;p&gt;电话那头说，因为我有一笔C2C的交易对手是洗钱账户，所以我也</summary>
+      
+    
+    
+    
+    <category term="⓺其他" scheme="http://www.nickyam.com/categories/other/"/>
+    
+    
+    <category term="网络" scheme="http://www.nickyam.com/tags/net/"/>
+    
+    <category term="比特币" scheme="http://www.nickyam.com/tags/bitcoin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>党史学习感悟（0605-0611）</title>
+    <link href="http://www.nickyam.com/essay/study-on-cpc-history.html"/>
+    <id>http://www.nickyam.com/essay/study-on-cpc-history.html</id>
+    <published>2021-06-11T12:27:23.000Z</published>
+    <updated>2021-06-13T14:15:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>有句话说的好，一切历史都是现时史。学习党史能更深刻理解把握我们所处的当下，推动现实朝着更有力的方向发展。对照历史上的今天，本周现时发生了三件我比较关注的事情，具体学习感悟如下:</p><p><strong>6月6日、7日，新华社连续发表《社会主义没有辜负中国》和《中国没有辜负社会主义》，前者重在论史，荡气回肠;后者重在论理，层层递进。</strong>文中指出，对共产主义的信仰，对中国特色社会主义的信念，是共产党人的政治灵魂，是共产党人经受住任何考验的精神支柱，强调党的百年奋斗历程和伟大成就，是我们增强道路自信、理论自信、制度自信、文化自信最坚持的基础。“什么是社会主义?怎样建设社会主义?”这个回荡在中国上空的历史之问，中国共产党人从未停止作答。从深刻揭示社会主义建设和社会主义改造的“十大关系”，到及时作出我国社会主要矛盾已经转变成“先进的社会主义制度同落后的社会生产力之间的矛盾”的重要论断，到鲜明提出正确处理人民内部矛盾，无不是宝贵的探索、艰难的行进。</p><p>1944年6月5日中共六届七中全会通过毛泽东起草的《中共中央关于城市工作的指示》。1980年6月5日邓小平在会见美国和加拿大社论撰写人访华团时，谈到中国现代化建设的目标，认为中国人口众多，基础薄弱，决定了四个现代化的目标要切合实际。2005年6月6日-7日温家宝在全国农村税费改革试点工作会议强调，农村税费改革将进入新的阶段，巩固农村税费改革成果，积极稳妥推进以乡镇机构、农村义务教育和县乡财政体制为主要内容的综合改革试点，次年废止《中华人民共和国农业税条例》。2008年6月8日中共中央、国务院印发《关于全面推进集体林权制度改革的意见》，规定林地的承包期为70年。2014年6月6日习近平主持召开中央全面深化改革领导小组第三次会议强调，改革要着眼于解决发展中存在的突出矛盾和问题，把有利于稳增长、调结构、防风险、惠民生的改革举措往前排。<strong>上述历史上的今天都是我党在各个历史阶段对社会主义的积极探索。</strong></p><p><strong>6月9日，人民银行发布关于印发《银行业金融机构绿色金融评价方案》。</strong> 方案规定，绿色金融评价指标包括定量和定性两类，其中定量指标权重80%，定性指标权重20%;绿色金融评价结果纳入央行金融机构评级等中国人民银行政策和审慎管理工具。2020年9月，习近平主席在第75届联合国大会提出我国2030年前碳达峰、2060年前碳中和目标。2021年初以来银行间交易商协会试点碳中和债，并于3月发布《关于明确碳中和相关机制的通知》进一步细化相关机制。这次《评价方案》的出台将进一步促进后续承销发行绿色债券及推荐绿色债券投资。<strong>作为“两山”理论的发源地，我们尤其要做好绿色金融服务配套。</strong></p><p>在本周的党史中，2007年6月8日胡锦涛就曾经在八国集团同发展中国家领导人对话会议上提出中国对气候变化问题的原则立场。2018年6月9日-10日习近平在上海合作组织青岛峰会上也强调要提倡创新、协调、<strong>绿色</strong>、开放、共享的发展观。</p><p><strong>6月10日，《中共中央国务院关于支持浙江高质量发展建设共同富裕示范区》发布，赋予了浙江重要示范改革任务。</strong> 21世纪以来，我省在对发展的探索上成绩斐然:青山绿水就是青山绿水就是金山银山;千村示范、万村整治;最多跑一次;特色小镇;山海协作工程等等，上述探索无一不着眼于人民群众的切身幸福。有些探索直接被复制到全国各地，有些则在国家层面获得了升华。本次中央专门出台文件支持浙江建设示范区也是前所未有的重大机遇，文件落款520也体现了中央对浙江深化改革寄予厚望。</p><p>在本次建设示范区，为全国人民实现共同富裕摸索出一条可实现的路径的过程中，我们可以重温1988年6月7日邓小平关于深化改革的论述:中国正在深化改革，为今后的发展创造更好的条件，要同人民一起商量着办事，决心要坚定，步骤要稳妥，还要及时总结经验，改正不妥当的方案和步骤，不使小的错误发展成为大的错误。在此过程中，作为有责任有担当的国有大行，我们也要利用好共同富裕示范区这块金字招牌，创新性地做好区域内的金融服务，通过投行手段更好地引导省外金融资源建设更加美好的浙江。</p><p>以上为本人基于本周党史学习和思考的内容，请各位领导同事批评指正!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;有句话说的好，一切历史都是现时史。学习党史能更深刻理解把握我们所处的当下，推动现实朝着更有力的方向发展。对照历史上的今天，本周现时发生了三件我比较关注的事情，具体学习感悟如下:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6月6日、7日，新华社连续发表《社会主义没有辜负中国》和《中国没有</summary>
+      
+    
+    
+    
+    <category term="⓵随笔" scheme="http://www.nickyam.com/categories/essay/"/>
+    
+    
+    <category term="思考" scheme="http://www.nickyam.com/tags/think/"/>
+    
+  </entry>
+  
+</feed>
