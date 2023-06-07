@@ -282,7 +282,7 @@
 <p>关于苹果手机的软件，如果本地应用商店找不到，极有可能是其他地区的。 </p>
 <p>本店提供“苹果商店ID”共享美区账号服务，供学习研究： </p>
 <blockquote>
-<p>账号：<a class="link"   href="mailto:&#121;&#x61;&#x6d;&#x73;&#116;&#x72;&#101;&#101;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;" >&#121;&#x61;&#x6d;&#x73;&#116;&#x72;&#101;&#101;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;<i class="fas fa-external-link-alt"></i></a></p>
+<p>账号：<a class="link"   href="mailto:&#121;&#x61;&#109;&#x73;&#x74;&#x72;&#x65;&#x65;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;" >&#121;&#x61;&#109;&#x73;&#x74;&#x72;&#x65;&#x65;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;<i class="fas fa-external-link-alt"></i></a></p>
 <p>密码：Mqzh123456</p>
 <p>验证码：请联系客服下单后获取。 </p>
 </blockquote>
@@ -537,38 +537,9 @@
 
     </div>
 
-    .zoom-in-image-mask {
-  position fixed
-  top 0
-  right 0
-  bottom 0
-  left 0
-  z-index $z-index-8
-  display flex
-  align-items center
-  justify-content center
-  box-sizing border-box
-  background rgba(0, 0, 0, 0)
-  visibility hidden
-  transition-t("visibility, background", "0, 0", "0.3, 0.3", "linear, linear")
-
-  &.show {
-    background rgba(0, 0, 0, 0.5)
-    visibility visible
-
-    .zoom-in-image {
-      cursor zoom-out
-    }
-  }
-
-  .zoom-in-image {
-    position absolute
-    z-index $z-index-9
-    transform-origin center center
-    will-change transform
-    transition-t("transform", "0", "0.3", "linear")
-  }
-}
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
 
 
     
