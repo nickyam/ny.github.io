@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.nickyam.com/work/%E5%8A%A8%E5%8A%9B%E7%94%B5%E6%B1%A0%E4%B9%8BPack&BMS%E7%AE%80%E4%BB%8B.html</loc>
+    <loc>http://www.nickyam.com/work/%E5%8A%A8%E5%8A%9B%E7%94%B5%E6%B1%A0%E4%B9%8BPack%E5%8F%8ABMS%E7%AE%80%E4%BB%8B.html</loc>
     
     <lastmod>2023-06-09</lastmod>
     
@@ -2306,7 +2306,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
+    <loc>http://www.nickyam.com/essay/Hair-Cut.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2315,7 +2315,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Hair-Cut.html</loc>
+    <loc>http://www.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2342,7 +2342,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Recommending-Master-2.html</loc>
+    <loc>http://www.nickyam.com/essay/Recommending-Master.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2351,7 +2351,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Recommending-Master.html</loc>
+    <loc>http://www.nickyam.com/essay/Recommending-Master-2.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2612,6 +2612,20 @@
 
   
   <url>
+    <loc>http://www.nickyam.com/tags/finance/</loc>
+    <lastmod>2023-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/Bonds/</loc>
+    <lastmod>2023-06-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tags/mark/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
@@ -2626,14 +2640,14 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/finance/</loc>
+    <loc>http://www.nickyam.com/tags/apple/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/Bonds/</loc>
+    <loc>http://www.nickyam.com/tags/Mac/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2655,20 +2669,6 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/think/</loc>
-    <lastmod>2023-06-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/apple/</loc>
-    <lastmod>2023-06-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/Mac/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2915,14 +2915,14 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/categories/essay/</loc>
+    <loc>http://www.nickyam.com/categories/work/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/categories/work/</loc>
+    <loc>http://www.nickyam.com/categories/essay/</loc>
     <lastmod>2023-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
