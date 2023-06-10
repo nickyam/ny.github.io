@@ -6,7 +6,7 @@
   <link href="http://www.nickyam.com/atom.xml" rel="self"/>
   
   <link href="http://www.nickyam.com/"/>
-  <updated>2023-06-07T04:18:57.943Z</updated>
+  <updated>2023-06-10T12:27:44.349Z</updated>
   <id>http://www.nickyam.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>零基础：一键成功部署私人ChatGPT网页服务</title>
+    <link href="http://www.nickyam.com/tech/chatgpt_next_web.html"/>
+    <id>http://www.nickyam.com/tech/chatgpt_next_web.html</id>
+    <published>2023-06-10T12:20:00.000Z</published>
+    <updated>2023-06-10T12:27:44.349Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于某些原因，直接在 ChatGPT 的官网上使用存在一些困难。但现在，我将向大家介绍一个简单而便捷的方法，通过在 Vercel 平台上免费搭建属于自己的 ChatGPT 网页服务，使用 ChatGPT-Next-Web 可以轻松使用ChatGPT的服务。</p><p>ChatGPT-Next-Web 是一个基于官方原生的 ChatGPT 模型的网络应用程序，提供了方便的自然语言对话界面。只需输入问题或对话，即可与 官方的ChatGPT 进行智能交互，获得智能回复。ChatGPT-Next-Web 简单易用且高度可定制，适用于构建聊天机器人、智能助手等应用。它的便捷性和灵活性使得用户能够快速部署并定制自己的对话系统，为用户提供个性化的交互体验。</p><p>同时，Vercel.com 是一个强大的静态网站托管和部署平台，为开发者提供了简单、快速和可靠的网站和应用程序托管解决方案。它支持多种前端框架和静态网站生成器，如 Next.js、React、Vue.js 等，让开发者能够以最佳的性能和安全性部署项目。Vercel.com 还提供自动化的持续集成和部署工具，简化了开发流程，让开发者更专注于构建卓越的用户体验。</p><p>将这两者结合起来，我们就可以部署自己的ChatGPT了。具体部署步骤在此不再赘述，网上有很多保姆级教程可供参考。</p><p>笔者将自己的ChatGPT部署在下面的网址：<a class="link"   href="https://chat.nickyam.com/" >https://chat.nickyam.com<i class="fas fa-external-link-alt"></i></a></p><p>首次使用该服务需要密码，密码为：nickyam 。有兴趣的同学可以去尝试下，看看效果。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;由于某些原因，直接在 ChatGPT 的官网上使用存在一些困难。但现在，我将向大家介绍一个简单而便捷的方法，通过在 Vercel 平台上免费搭建属于自己的 ChatGPT 网页服务，使用 ChatGPT-Next-Web 可以轻松使用ChatGPT的服务。&lt;/p&gt;
+&lt;p&gt;C</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="ChatGPT" scheme="http://www.nickyam.com/tags/ChatGPT/"/>
+    
+  </entry>
   
   <entry>
     <title>【2023·新高考1卷】自由之翼：探寻“不由自主”的边界</title>
@@ -512,30 +537,6 @@
     
     
     <category term="债券" scheme="http://www.nickyam.com/tags/Bonds/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>清华大学浙江校友会2021年会小记</title>
-    <link href="http://www.nickyam.com/essay/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%B5%99%E6%B1%9F%E6%A0%A1%E5%8F%8B%E4%BC%9A2021%E5%B9%B4%E4%BC%9A%E5%B0%8F%E8%AE%B0.html"/>
-    <id>http://www.nickyam.com/essay/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%B5%99%E6%B1%9F%E6%A0%A1%E5%8F%8B%E4%BC%9A2021%E5%B9%B4%E4%BC%9A%E5%B0%8F%E8%AE%B0.html</id>
-    <published>2021-06-20T12:41:40.000Z</published>
-    <updated>2021-07-06T09:19:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天大雨，我冒雨开车去云栖小镇参加清华校友会。会后官方出了报道，直接点击 <strong><a class="link"   href="https://open.work.weixin.qq.com/wwopen/mpnews?mixuin=h6rBDAAABwAu5LO3AAAUAA&mfid=WW0325-4cz94AAABwDRT6gBcXd9YQXteJA56&idx=0&sn=65e3f1f7b75b6c3f352b0cd02ac21fba" >庆祝清华大学建校110周年暨浙江校友会2021年会隆重举行<i class="fas fa-external-link-alt"></i></a></strong> 即可了解。</p><p>而我在这次校友会活动中感触良多，不一而足，做几点记录：</p><p>1、校歌旋律缓缓响起，我的鸡皮疙瘩就起来了，仿佛回到了那个青葱校园，不自觉地哼唱起来，集体的荣誉感油然而生。清华的四年有可能是我人生最高光的四年，但在未来的日子，我至少不会让母校丢脸。</p><p>2、校友总会秘书长唐杰分享了总书记4月19日考察清华大学的情况，讲到总书记收下了十八大以来第一份礼物，清华女篮的球衣；对男篮教练有点眼熟，当得知对方原来在首旅队打球，立马说起前一天的CBA比赛中，首旅一分之差负于广东103:104。这也算是趣事吧。</p><p>3、下午施一公的演讲就像拉家常一样，回顾了自己的求学经历和办西湖大学的初心，展现了一个清华人的风貌，得到了大家的认同和共鸣。初生牛犊不怕虎，他参加了清华竞走队的首秀，让人忍俊不禁；在美国怒怼吴弘达，成为当地小有名气的人物。这两点让人印象深刻，前者代表着无体育不清华，后者则是又红又专的体现。</p><p>今天没有遇到熟悉的同学，有些遗憾，但整个活动依然让我恋恋不舍。</p><p>下次再会！</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;今天大雨，我冒雨开车去云栖小镇参加清华校友会。会后官方出了报道，直接点击 &lt;strong&gt;&lt;a class=&quot;link&quot;   href=&quot;https://open.work.weixin.qq.com/wwopen/mpnews?mixuin=h6rBDAAABwAu5LO</summary>
-      
-    
-    
-    
-    <category term="⓵随笔" scheme="http://www.nickyam.com/categories/essay/"/>
-    
-    
-    <category term="清华" scheme="http://www.nickyam.com/tags/thu/"/>
     
   </entry>
   
