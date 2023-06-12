@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="涯木笔谈，是专注于科技IT、博客建站、工作生活和读书思考等领域的原创博客，作者虞侃。">
+    <meta name="description" content="专注于科技IT、博客建站、工作生活和读书思考等的原创博客">
     <meta name="author" content="Nick Yam">
     
     <title>
@@ -231,90 +231,343 @@
             <i class="fas fa-folder"></i>&nbsp;⓶科技
         </div>
         <div class="category-post-list">
-            $archive-year-font-size = 1.8rem
-$archive-year-count-font-size = 1.2rem
-$article-title-font-size = 1.2rem
-$article-date-font-size = 1rem
-
-.archive-list-container {
-
-  .archive-item {
-    margin-bottom $component-spacing-value
-
-    &:last-child {
-      margin-bottom 0
-    }
-
-    .archive-item-header {
-      margin-bottom 0.8rem
-
-      .archive-year {
-        margin-right 6px
-        color var(--text-color-2)
-        font-weight 600
-        font-size $archive-year-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-font-size - 0.2rem
-        }
-      }
-
-
-      .archive-year-post-count {
-        color var(--text-color-2)
-        font-weight 500
-        font-size $archive-year-count-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-count-font-size * 0.9
-        }
-      }
-    }
-
-
-    .article-list {
-
-      padding-left 0.8rem
-
-      +keep-tablet() {
-        padding-left 0
-      }
-
-      .article-item {
-        margin-top 1.2rem
-        font-size 1rem
-
-        +keep-tablet() {
-          margin-top 1.1rem
-        }
-
-        +keep-mobile() {
-          margin-top 1rem
-        }
-
-        &:hover {
-          a.article-title
-          .article-date {
-            color var(--primary-color)
-          }
-        }
-
-
-        a.article-title {
-          color var(--text-color-3)
-        }
-
-        .article-date {
-          float right
-          color var(--text-color-3)
-          font-size $article-date-font-size
-        }
-      }
-    }
-  }
-}
-
-
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2023</span>
+                <span class="archive-year-post-count">[5]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/chatgpt_next_web.html"
+                        >零基础：一键成功部署私人ChatGPT网页服务</a>
+                        <span class="article-date">06-10</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/good-dollar-project.html"
+                        >UBI项目 GoodDollar ：使用区块链对抗贫穷</a>
+                        <span class="article-date">05-27</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/download-picture-by-chrome.html"
+                        >有了这款chrome插件，就没有存不下来的图</a>
+                        <span class="article-date">05-26</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/add-html-code-into-pug.html"
+                        >Pug 文件如何添加 HTML 广告代码</a>
+                        <span class="article-date">05-25</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/%E8%AE%B0%E7%88%B1%E5%9B%9E%E6%94%B6%E4%B8%8A%E5%8D%96iphone.html"
+                        >记爱回收上卖iPhone XR</a>
+                        <span class="article-date">05-06</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2022</span>
+                <span class="archive-year-post-count">[3]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Apple%20ID.html"
+                        >店铺售前说明</a>
+                        <span class="article-date">12-31</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/%E7%BE%8E%E5%8C%BAApple%20ID%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B.html"
+                        >美区Apple ID保姆级注册教程</a>
+                        <span class="article-date">10-22</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Free-VPNs-on-Mac.html"
+                        >适用于Mac的最佳免费VPN推荐</a>
+                        <span class="article-date">05-13</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2021</span>
+                <span class="archive-year-post-count">[2]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/MacBook%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8BWI-FI%E5%AF%86%E7%A0%81.html"
+                        >MacBook苹果电脑如何查看WI-FI密码</a>
+                        <span class="article-date">12-06</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Google%20Play%E5%BA%94%E7%94%A8%E4%B8%8B%E8%BD%BD.html"
+                        >Google Play 应用下载</a>
+                        <span class="article-date">09-30</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2020</span>
+                <span class="archive-year-post-count">[14]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/google-voice-ban.html"
+                        >Google Voice防回收的常规操作</a>
+                        <span class="article-date">10-22</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/the-death-of-tencent-weibo.html"
+                        >腾讯微博之死</a>
+                        <span class="article-date">09-06</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/How-to-delete-MAC-system-update.html"
+                        >如何删除 Mac 的系统更新包？</a>
+                        <span class="article-date">08-08</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/QQ-mail-as-image-hosting.html"
+                        >QQ邮箱记事本-免费图床的完美替代</a>
+                        <span class="article-date">06-21</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/google-adsense-pin-received.html"
+                        >Google Adsense 收到纸质 pin 码</a>
+                        <span class="article-date">06-01</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/google-adsense-verified.html"
+                        >Google Adsense 账号验证成功</a>
+                        <span class="article-date">05-31</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/shortcuts-for-mac.html"
+                        >Mac OS 快捷键一览</a>
+                        <span class="article-date">04-06</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/the-solution-of-moving-to-bin-reminder.html"
+                        >解决Mac软件提示“将对您的电脑造成伤害，您应该将它移到废纸篓”的方法</a>
+                        <span class="article-date">03-11</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/google-pin-code-second-time.html"
+                        >Google Adsense 输错三次 Pin 码后的记录</a>
+                        <span class="article-date">02-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/add-blog-to-archive-org.html"
+                        >个人博客存入互联网博物馆Archive.org</a>
+                        <span class="article-date">02-15</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/how-to-add-google-sitemap.html"
+                        >怎样为blogspot博客添加sitemap功能</a>
+                        <span class="article-date">02-07</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/my-page-to-be-Reference-link.html"
+                        >记一次手动发现自己的页面被其他站长引用</a>
+                        <span class="article-date">02-07</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-add-music-and-movie.html"
+                        >Hexo博客中插入图片、音乐和视频的方法</a>
+                        <span class="article-date">02-02</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/adsense-pin-number.html"
+                        >Google Adsense提示Pin码验证地址之记录</a>
+                        <span class="article-date">01-29</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2019</span>
+                <span class="archive-year-post-count">[13]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/how-to-get-rid-of-any-search.html"
+                        >Mac劫持插件any search（TotalSearchToolbox）删除的处理方法</a>
+                        <span class="article-date">12-16</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/A-way-to-get-cleanmymac.html"
+                        >如何正确获取CleanMyMac 4.4.7</a>
+                        <span class="article-date">10-05</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Save-my-mac-from-update-failure.html"
+                        >macOS beta更新提示空间不足，无限循环重启问题解决</a>
+                        <span class="article-date">10-04</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/I-received-a-bitcoin-blackmail-scam.html"
+                        >我收到一封比特币勒索邮件</a>
+                        <span class="article-date">03-23</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Gitment-Setup-and-Debug.html"
+                        >Hexo博客 Maupassant 主题设置 Gitment 评论功能</a>
+                        <span class="article-date">03-12</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Hexo-Category-List.html"
+                        >Hexo博客设置分类顺序</a>
+                        <span class="article-date">03-11</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/lost-iphone-location.html"
+                        >苹果手机丢失后如何保证能够被定位</a>
+                        <span class="article-date">02-22</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Github-Page-Add-Shenma-Site-Verification.html"
+                        >Github Page 添加神马搜索网站验证</a>
+                        <span class="article-date">01-29</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-multi-tags.html"
+                        >Hexo 多标签及分级目录设置方法举例</a>
+                        <span class="article-date">01-27</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-maupassant-archives-show-all-in-one-page.html"
+                        >Hexo 博客 Maupassant 主题下归档页显示的高级设置</a>
+                        <span class="article-date">01-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-generate-rss-atom.html"
+                        >Hexo博客安装rss插件生成atom.xml文件</a>
+                        <span class="article-date">01-13</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-set-google-adsense.html"
+                        >Hexo博客maupassant主题添加Google Adsense广告</a>
+                        <span class="article-date">01-12</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-add-tencent-404-page.html"
+                        >Hexo博客添加腾讯404公益页面</a>
+                        <span class="article-date">01-01</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2018</span>
+                <span class="archive-year-post-count">[2]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-generate-sitemap.html"
+                        >Hexo生成sitemap步骤及duplicated mapping key 问题解决</a>
+                        <span class="article-date">12-31</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Appstore-Refund.html"
+                        >Appstore误点内购服务申请退款成功</a>
+                        <span class="article-date">12-29</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
 
         </div>
     </div>
