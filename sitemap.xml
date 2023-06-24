@@ -2216,15 +2216,6 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tech/hexo-multi-tags.html</loc>
-    
-    <lastmod>2019-03-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tech/hexo-set-google-adsense.html</loc>
     
     <lastmod>2019-03-12</lastmod>
@@ -2271,6 +2262,15 @@
   
   <url>
     <loc>http://www.nickyam.com/tech/vpn-on-ios.html</loc>
+    
+    <lastmod>2019-03-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tech/hexo-multi-tags.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2648,20 +2648,6 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/tags/finance/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/Bonds/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/mark/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -2670,13 +2656,6 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/emotion/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/ChatGPT/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2711,6 +2690,13 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/tags/finance/</loc>
+    <lastmod>2023-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tags/net/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -2719,6 +2705,13 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/reading/</loc>
+    <lastmod>2023-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/Bonds/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2754,6 +2747,13 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/experience/</loc>
+    <lastmod>2023-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/ChatGPT/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2958,13 +2958,6 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/categories/work/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/categories/essay/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -2980,6 +2973,13 @@
   
   <url>
     <loc>http://www.nickyam.com/categories/investment/</loc>
+    <lastmod>2023-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/categories/work/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
