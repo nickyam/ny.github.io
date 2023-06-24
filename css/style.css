@@ -1970,6 +1970,59 @@ pre .javascript .function {
 .post-toc-wrap .post-toc .nav .active-current > a .nav-text {
   color: var(--primary-color);
 }
+.waline-comment-container #waline-comment {
+  --waline-theme-color: var(--primary-color);
+  --waline-active-color: var(--primary-color-light-1);
+  --waline-color: var(--text-color-3);
+  --waline-bgcolor: var(--background-color-1);
+  --waline-border-color: var(--border-color);
+  --waline-disable-bgcolor: var(--background-color-2);
+  --waline-disable-color: var(--text-color-3);
+  --waline-code-bgcolor: rgba(40,44,52,0.9);
+  --waline-info-bgcolor: var(--background-color-3);
+  --waline-info-color: var(--text-color-3);
+  --waline-border: 1px solid var(--waline-border-color);
+}
+.waline-comment-container #waline-comment input,
+.waline-comment-container #waline-comment textarea {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0.6rem 1rem;
+  color: var(--text-color-3);
+  background: transparent;
+  border-radius: 0.4rem;
+  outline: none;
+}
+.waline-comment-container #waline-comment input:hover,
+.waline-comment-container #waline-comment textarea:hover {
+  background: var(--background-color-2);
+}
+.waline-comment-container #waline-comment .wl-header {
+  box-sizing: border-box;
+  padding: 0;
+}
+.waline-comment-container #waline-comment button {
+  transition-delay: 0s, 0s, 0s, 0s, 0s, 0s;
+  transition-timing-function: ease, ease, ease, ease, ease, ease;
+  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s, 0.2s, 0.2s;
+  transition-property: color, background, box-shadow, border-color, color, background;
+}
+.waline-comment-container #waline-comment .wl-logout-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+.waline-comment-container #waline-comment .wl-logout-btn svg path {
+  color: var(--background-color-3);
+}
+.waline-comment-container #waline-comment .wl-panel {
+  border-radius: 0.4rem;
+}
+.waline-comment-container #waline-comment .wl-count,
+.waline-comment-container #waline-comment .wl-num,
+.waline-comment-container #waline-comment .wl-preview h4,
+.waline-comment-container #waline-comment .wl-like span {
+  color: var(--text-color-4);
+}
 .comments-container {
   display: inline-block;
   width: 100%;
