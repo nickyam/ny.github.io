@@ -2297,6 +2297,15 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/essay/All-the-way-westward-to-Shaanxi.html</loc>
+    
+    <lastmod>2019-03-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/essay/China-Tennis-Open.html</loc>
     
     <lastmod>2019-03-12</lastmod>
@@ -2343,15 +2352,6 @@
   
   <url>
     <loc>http://www.nickyam.com/essay/Hair-Cut.html</loc>
-    
-    <lastmod>2019-03-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/essay/All-the-way-westward-to-Shaanxi.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2725,6 +2725,13 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/tags/travel/</loc>
+    <lastmod>2023-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tags/thu/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -2781,6 +2788,13 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/tags/iOS/</loc>
+    <lastmod>2023-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tags/music/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -2796,13 +2810,6 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/Google/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/travel/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2943,13 +2950,6 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/CreditCard/</loc>
-    <lastmod>2023-06-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/iOS/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -34,17 +34,75 @@
 
 
 <body>
-<div class="progress-bar-container">
-    
-        <span class="scroll-progress-bar"></span>
-    
+.progress-bar-container {
+  position fixed
+  top 0
+  left 0
+  z-index $z-index-9
+  width 100%
 
-    
-        <span class="pjax-progress-bar"></span>
-        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
-    
-</div>
+  if (hexo-config('pjax.enable') == true) {
 
+    .pjax-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-8
+      width 0
+      height 2px
+      background var(--pjax-progress-bar-color)
+      visibility hidden
+      opacity 0
+      transition-t("width, opacity", "0, 0", "0.1, 0.1", "linear")
+
+
+      &.show {
+        visibility visible
+        opacity 1
+      }
+    }
+
+
+    .pjax-progress-icon {
+      position absolute
+      top 0.4rem
+      right 0.3rem
+      z-index $z-index-8
+      color var(--text-color-3)
+      font-size 1.1rem
+      visibility hidden
+
+      +keep-tablet() {
+        top 0.3rem
+        right 0.2rem
+        font-size 1rem
+      }
+
+      &.show {
+        visibility visible
+      }
+    }
+  }
+
+  if (hexo-config('style.scroll.progress_bar') == true) {
+
+    .scroll-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-7
+      width 0
+      height $scroll-progress-bar-height
+      background var(--primary-color)
+      visibility hidden
+      transition-t("width", "0", "0.1", "linear")
+
+      &.hide {
+        display none !important
+      }
+    }
+  }
+}
 
 <main class="page-container">
 
@@ -243,90 +301,34 @@
         <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;NFT
         </div>
         <div class="tag-post-list">
-            $archive-year-font-size = 1.8rem
-$archive-year-count-font-size = 1.2rem
-$article-title-font-size = 1.2rem
-$article-date-font-size = 1rem
-
-.archive-list-container {
-
-  .archive-item {
-    margin-bottom $component-spacing-value
-
-    &:last-child {
-      margin-bottom 0
-    }
-
-    .archive-item-header {
-      margin-bottom 0.8rem
-
-      .archive-year {
-        margin-right 6px
-        color var(--text-color-2)
-        font-weight 600
-        font-size $archive-year-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-font-size - 0.2rem
-        }
-      }
-
-
-      .archive-year-post-count {
-        color var(--text-color-2)
-        font-weight 500
-        font-size $archive-year-count-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-count-font-size * 0.9
-        }
-      }
-    }
-
-
-    .article-list {
-
-      padding-left 0.8rem
-
-      +keep-tablet() {
-        padding-left 0
-      }
-
-      .article-item {
-        margin-top 1.2rem
-        font-size 1rem
-
-        +keep-tablet() {
-          margin-top 1.1rem
-        }
-
-        +keep-mobile() {
-          margin-top 1rem
-        }
-
-        &:hover {
-          a.article-title
-          .article-date {
-            color var(--primary-color)
-          }
-        }
-
-
-        a.article-title {
-          color var(--text-color-3)
-        }
-
-        .article-date {
-          float right
-          color var(--text-color-3)
-          font-size $article-date-font-size
-        }
-      }
-    }
-  }
-}
-
-
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2021</span>
+                <span class="archive-year-post-count">[2]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E6%96%B0%E6%89%8B%E6%92%B8%E7%BE%8A%E6%AF%9B%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
+                        >新手撸羊毛必备工具推荐</a>
+                        <span class="article-date">09-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%A3%E5%B8%81%E6%A0%87%E5%87%86%E7%9B%98%E7%82%B9.html"
+                        >以太坊的NFT代币标准梳理</a>
+                        <span class="article-date">09-16</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
 
         </div>
     </div>

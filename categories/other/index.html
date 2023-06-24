@@ -34,17 +34,75 @@
 
 
 <body>
-<div class="progress-bar-container">
-    
-        <span class="scroll-progress-bar"></span>
-    
+.progress-bar-container {
+  position fixed
+  top 0
+  left 0
+  z-index $z-index-9
+  width 100%
 
-    
-        <span class="pjax-progress-bar"></span>
-        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
-    
-</div>
+  if (hexo-config('pjax.enable') == true) {
 
+    .pjax-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-8
+      width 0
+      height 2px
+      background var(--pjax-progress-bar-color)
+      visibility hidden
+      opacity 0
+      transition-t("width, opacity", "0, 0", "0.1, 0.1", "linear")
+
+
+      &.show {
+        visibility visible
+        opacity 1
+      }
+    }
+
+
+    .pjax-progress-icon {
+      position absolute
+      top 0.4rem
+      right 0.3rem
+      z-index $z-index-8
+      color var(--text-color-3)
+      font-size 1.1rem
+      visibility hidden
+
+      +keep-tablet() {
+        top 0.3rem
+        right 0.2rem
+        font-size 1rem
+      }
+
+      &.show {
+        visibility visible
+      }
+    }
+  }
+
+  if (hexo-config('style.scroll.progress_bar') == true) {
+
+    .scroll-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-7
+      width 0
+      height $scroll-progress-bar-height
+      background var(--primary-color)
+      visibility hidden
+      transition-t("width", "0", "0.1", "linear")
+
+      &.hide {
+        display none !important
+      }
+    }
+  }
+}
 
 <main class="page-container">
 
@@ -244,90 +302,321 @@
             <i class="fas fa-folder"></i>&nbsp;⓺其他
         </div>
         <div class="category-post-list">
-            $archive-year-font-size = 1.8rem
-$archive-year-count-font-size = 1.2rem
-$article-title-font-size = 1.2rem
-$article-date-font-size = 1rem
-
-.archive-list-container {
-
-  .archive-item {
-    margin-bottom $component-spacing-value
-
-    &:last-child {
-      margin-bottom 0
-    }
-
-    .archive-item-header {
-      margin-bottom 0.8rem
-
-      .archive-year {
-        margin-right 6px
-        color var(--text-color-2)
-        font-weight 600
-        font-size $archive-year-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-font-size - 0.2rem
-        }
-      }
-
-
-      .archive-year-post-count {
-        color var(--text-color-2)
-        font-weight 500
-        font-size $archive-year-count-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-count-font-size * 0.9
-        }
-      }
-    }
-
-
-    .article-list {
-
-      padding-left 0.8rem
-
-      +keep-tablet() {
-        padding-left 0
-      }
-
-      .article-item {
-        margin-top 1.2rem
-        font-size 1rem
-
-        +keep-tablet() {
-          margin-top 1.1rem
-        }
-
-        +keep-mobile() {
-          margin-top 1rem
-        }
-
-        &:hover {
-          a.article-title
-          .article-date {
-            color var(--primary-color)
-          }
-        }
-
-
-        a.article-title {
-          color var(--text-color-3)
-        }
-
-        .article-date {
-          float right
-          color var(--text-color-3)
-          font-size $article-date-font-size
-        }
-      }
-    }
-  }
-}
-
-
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2023</span>
+                <span class="archive-year-post-count">[2]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E6%9D%AD%E5%B7%9E%E6%B5%A6%E5%8F%91%E9%93%B6%E8%A1%8C%E5%95%86%E4%BD%8F%E6%88%BF%E8%B4%B7%E6%AC%BE%E6%8F%90%E5%89%8D%E8%BF%98%E6%AC%BE.html"
+                        >杭州浦发银行商住房贷款提前还款</a>
+                        <span class="article-date">06-02</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/tesla-model-3-update-2023-12-09.html"
+                        >特斯拉车机召回更新记录(2023.12.09)</a>
+                        <span class="article-date">05-28</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2021</span>
+                <span class="archive-year-post-count">[12]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/xDAI%20Note.html"
+                        >xDAI 工具汇总</a>
+                        <span class="article-date">09-28</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E6%96%B0%E6%89%8B%E6%92%B8%E7%BE%8A%E6%AF%9B%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html"
+                        >新手撸羊毛必备工具推荐</a>
+                        <span class="article-date">09-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%A3%E5%B8%81%E6%A0%87%E5%87%86%E7%9B%98%E7%82%B9.html"
+                        >以太坊的NFT代币标准梳理</a>
+                        <span class="article-date">09-16</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E6%B7%AB%E8%B4%BC%EF%BC%8C%E5%B0%8F%E8%B4%BC%E5%92%8C%E5%8F%8D%E8%B4%BC.html"
+                        >淫贼，小贼和反贼</a>
+                        <span class="article-date">08-09</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E6%8C%96%E7%9F%BF%E7%A9%BA%E6%8A%95%E8%B5%84%E6%BA%90%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89.html"
+                        >虚拟货币挖矿空投资源（更新频繁，及时了解请加QQ群：862350118）</a>
+                        <span class="article-date">07-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E4%BA%B2%E5%8E%86%E5%81%87%E5%86%92%E5%B8%81%E5%AE%89%E5%AE%A2%E6%9C%8D%E7%94%B5%E8%AF%9D%E8%AF%88%E9%AA%97.html"
+                        >亲历假冒币安客服电话诈骗</a>
+                        <span class="article-date">06-19</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/Godaddy%E5%9F%9F%E5%90%8D%E8%BF%81%E7%A7%BB%E8%87%B3%E9%98%BF%E9%87%8C%E4%BA%91.html"
+                        >GoDaddy域名迁移至阿里云</a>
+                        <span class="article-date">03-26</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E5%B9%BF%E5%8F%91%E4%BF%A1%E7%94%A8%E5%8D%A1%E8%BF%98%E6%AC%BE%E6%9C%AA%E5%88%B0%E8%B4%A6%E4%B9%8B%E5%A7%8B%E6%9C%AB.html"
+                        >广发信用卡还款未到账之始末</a>
+                        <span class="article-date">03-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E7%89%B9%E6%96%AF%E6%8B%89-model-3-%E9%BB%91%E5%B1%8F.html"
+                        >特斯拉 Model 3 充电黑屏记录</a>
+                        <span class="article-date">02-06</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E7%89%B9%E6%96%AF%E6%8B%89-model-3-%E7%94%B5%E6%B1%A0%E5%AE%B9%E9%87%8F%E6%8F%90%E5%8D%873km%E5%8F%8A%E6%B8%B8%E6%88%8F%E5%AE%89%E8%A3%85%E9%97%AA%E5%B1%8F%E8%AE%B0%E5%BD%95.html"
+                        >特斯拉 Model 3 电池容量提升3km及游戏安装闪屏记录</a>
+                        <span class="article-date">01-31</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E4%BA%A4%E9%80%9A%E9%93%B6%E8%A1%8C%E4%BF%A1%E7%94%A8%E5%8D%A1%E6%BA%A2%E5%AD%98%E6%AC%BE%E4%B8%8E%E5%8D%A1%E7%89%87%E6%B3%A8%E9%94%80.html"
+                        >交通银行信用卡溢存款与卡片注销</a>
+                        <span class="article-date">01-29</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E7%89%B9%E6%96%AF%E6%8B%89-model-3-%E8%BD%A6%E4%B8%BB%E6%89%8B%E5%86%8C.html"
+                        >特斯拉 Model 3 车主手册</a>
+                        <span class="article-date">01-01</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2020</span>
+                <span class="archive-year-post-count">[8]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E6%9D%AD%E5%B7%9E%E5%B8%82%E8%A5%BF%E6%B9%96%E5%8C%BA%E5%AD%A6%E6%A0%A1%E5%81%A5%E8%BA%AB%E5%85%AC%E7%A4%BA%E7%89%8C.html"
+                        >杭州市西湖区学校健身公示牌</a>
+                        <span class="article-date">12-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E5%B0%8F%E8%AF%B4-%E6%97%A0%E7%9B%B8.html"
+                        >无相</a>
+                        <span class="article-date">12-15</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E5%B0%8F%E8%AF%B4-%E6%98%A5%E9%A3%8E%E8%AF%AF.html"
+                        >春风误</a>
+                        <span class="article-date">12-09</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E4%B9%8C%E9%B2%81%E6%9C%A8%E9%BD%90%E5%85%AC%E5%B8%83%E4%B9%A6%E8%AE%B0%E3%80%81%E5%B8%82%E9%95%BF%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81.html"
+                        >乌鲁木齐公布书记、市长手机号码</a>
+                        <span class="article-date">08-25</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E5%B0%8F%E8%AF%B4-%E5%85%B8%E5%A6%BB.html"
+                        >典妻</a>
+                        <span class="article-date">07-22</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E5%B0%8F%E8%AF%B4-%E6%97%A2%E6%B5%8E%E5%A3%B6.html"
+                        >既济壶</a>
+                        <span class="article-date">07-03</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/pingan-e-insurance-2020.html"
+                        >平安e生保2020·百万医疗的续保</a>
+                        <span class="article-date">02-29</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/plague-of-wuhan.html"
+                        >新型冠状病毒2019-nCoV相关信息汇总</a>
+                        <span class="article-date">01-22</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2019</span>
+                <span class="archive-year-post-count">[4]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/cmbc-creditcard-88vip.html"
+                        >民生88vip精英白金卡申请、开卡及使用记录</a>
+                        <span class="article-date">12-16</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/Overdue-mortgage-repayment-of-minsheng-bank.html"
+                        >民生银行房贷二次扣款避免逾期影响征信</a>
+                        <span class="article-date">02-21</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/WeChat-blessing-2019.html"
+                        >2019年微信祝福集锦</a>
+                        <span class="article-date">02-04</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/jd-service-bad.html"
+                        >京东到家订单bug及客服问题</a>
+                        <span class="article-date">01-12</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2018</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/Incantations-of-the-Great-Mercy.html"
+                        >大悲咒</a>
+                        <span class="article-date">05-12</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2017</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/spd-creditcard.html"
+                        >浦发AE白使用小记</a>
+                        <span class="article-date">02-03</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2011</span>
+                <span class="archive-year-post-count">[3]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/tsinghua-school-day-joke-collection.html"
+                        >清华校庆笑话集</a>
+                        <span class="article-date">04-25</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/Youth-digest-hurry-up-adopts-the-author's-article.html"
+                        >《青年文摘·快点》采用笔者文章之记录</a>
+                        <span class="article-date">03-23</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/The-shortlist-of-the-9th-activity-of-tsinghua-University.html"
+                        >清华大学第九届情系母校活动初选入围名单</a>
+                        <span class="article-date">03-06</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2008</span>
+                <span class="archive-year-post-count">[2]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/motto-me.html"
+                        >高中三年天天看的几句话</a>
+                        <span class="article-date">10-22</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/Participate-in-Beijing-International-Marathon.html"
+                        >第一次参加北京国际马拉松</a>
+                        <span class="article-date">10-19</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
 
         </div>
     </div>

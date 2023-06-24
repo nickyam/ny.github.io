@@ -34,17 +34,75 @@
 
 
 <body>
-<div class="progress-bar-container">
-    
-        <span class="scroll-progress-bar"></span>
-    
+.progress-bar-container {
+  position fixed
+  top 0
+  left 0
+  z-index $z-index-9
+  width 100%
 
-    
-        <span class="pjax-progress-bar"></span>
-        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
-    
-</div>
+  if (hexo-config('pjax.enable') == true) {
 
+    .pjax-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-8
+      width 0
+      height 2px
+      background var(--pjax-progress-bar-color)
+      visibility hidden
+      opacity 0
+      transition-t("width, opacity", "0, 0", "0.1, 0.1", "linear")
+
+
+      &.show {
+        visibility visible
+        opacity 1
+      }
+    }
+
+
+    .pjax-progress-icon {
+      position absolute
+      top 0.4rem
+      right 0.3rem
+      z-index $z-index-8
+      color var(--text-color-3)
+      font-size 1.1rem
+      visibility hidden
+
+      +keep-tablet() {
+        top 0.3rem
+        right 0.2rem
+        font-size 1rem
+      }
+
+      &.show {
+        visibility visible
+      }
+    }
+  }
+
+  if (hexo-config('style.scroll.progress_bar') == true) {
+
+    .scroll-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-7
+      width 0
+      height $scroll-progress-bar-height
+      background var(--primary-color)
+      visibility hidden
+      transition-t("width", "0", "0.1", "linear")
+
+      &.hide {
+        display none !important
+      }
+    }
+  }
+}
 
 <main class="page-container">
 
@@ -244,90 +302,175 @@
             <i class="fas fa-folder"></i>&nbsp;⓶科技
         </div>
         <div class="category-post-list">
-            $archive-year-font-size = 1.8rem
-$archive-year-count-font-size = 1.2rem
-$article-title-font-size = 1.2rem
-$article-date-font-size = 1rem
-
-.archive-list-container {
-
-  .archive-item {
-    margin-bottom $component-spacing-value
-
-    &:last-child {
-      margin-bottom 0
-    }
-
-    .archive-item-header {
-      margin-bottom 0.8rem
-
-      .archive-year {
-        margin-right 6px
-        color var(--text-color-2)
-        font-weight 600
-        font-size $archive-year-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-font-size - 0.2rem
-        }
-      }
-
-
-      .archive-year-post-count {
-        color var(--text-color-2)
-        font-weight 500
-        font-size $archive-year-count-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-count-font-size * 0.9
-        }
-      }
-    }
-
-
-    .article-list {
-
-      padding-left 0.8rem
-
-      +keep-tablet() {
-        padding-left 0
-      }
-
-      .article-item {
-        margin-top 1.2rem
-        font-size 1rem
-
-        +keep-tablet() {
-          margin-top 1.1rem
-        }
-
-        +keep-mobile() {
-          margin-top 1rem
-        }
-
-        &:hover {
-          a.article-title
-          .article-date {
-            color var(--primary-color)
-          }
-        }
-
-
-        a.article-title {
-          color var(--text-color-3)
-        }
-
-        .article-date {
-          float right
-          color var(--text-color-3)
-          font-size $article-date-font-size
-        }
-      }
-    }
-  }
-}
-
-
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2019</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-add-tencent-404-page.html"
+                        >Hexo博客添加腾讯404公益页面</a>
+                        <span class="article-date">01-01</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2018</span>
+                <span class="archive-year-post-count">[5]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-generate-sitemap.html"
+                        >Hexo生成sitemap步骤及duplicated mapping key 问题解决</a>
+                        <span class="article-date">12-31</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Appstore-Refund.html"
+                        >Appstore误点内购服务申请退款成功</a>
+                        <span class="article-date">12-29</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/WordPress-Exports-Fully-Static-Websites.html"
+                        >推荐WordPress插件导出静态网站</a>
+                        <span class="article-date">11-09</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/The-negative-evolution-of-information-on-Internet.html"
+                        >浅谈互联网信息的负面化演进</a>
+                        <span class="article-date">09-07</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Blog-Update-to-https.html"
+                        >博客域名升级 Https</a>
+                        <span class="article-date">05-14</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2017</span>
+                <span class="archive-year-post-count">[3]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/secd-on-mac.html"
+                        >secd进程导致Mac卡机的简单处理</a>
+                        <span class="article-date">07-23</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/vpn-on-ios.html"
+                        >VPN就和吃喝拉撒一样重要</a>
+                        <span class="article-date">07-06</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/mobike.html"
+                        >摩拜单车的LBS建议</a>
+                        <span class="article-date">03-05</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2015</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Awifi-on-PC.html"
+                        >awifi电脑登陆小技巧</a>
+                        <span class="article-date">01-11</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2014</span>
+                <span class="archive-year-post-count">[2]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Suggestions-on-the-function-expansion-of-the-Link-element-in-the-game-Ingress.html"
+                        >游戏Ingress中Link元素的功能拓展建议</a>
+                        <span class="article-date">09-15</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/next-step-of-duokan-reader.html"
+                        >多看阅读的下一步</a>
+                        <span class="article-date">01-04</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2011</span>
+                <span class="archive-year-post-count">[3]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Abuse-of-like-button.html"
+                        >“喜欢”按钮的滥用</a>
+                        <span class="article-date">05-22</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/the-end-of-browser.html"
+                        >浏览器的终结</a>
+                        <span class="article-date">05-21</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/just-a-web-page.html"
+                        >Just a web page</a>
+                        <span class="article-date">01-29</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
 
         </div>
     </div>

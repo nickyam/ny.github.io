@@ -34,17 +34,75 @@
 
 
 <body>
-<div class="progress-bar-container">
-    
-        <span class="scroll-progress-bar"></span>
-    
+.progress-bar-container {
+  position fixed
+  top 0
+  left 0
+  z-index $z-index-9
+  width 100%
 
-    
-        <span class="pjax-progress-bar"></span>
-        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
-    
-</div>
+  if (hexo-config('pjax.enable') == true) {
 
+    .pjax-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-8
+      width 0
+      height 2px
+      background var(--pjax-progress-bar-color)
+      visibility hidden
+      opacity 0
+      transition-t("width, opacity", "0, 0", "0.1, 0.1", "linear")
+
+
+      &.show {
+        visibility visible
+        opacity 1
+      }
+    }
+
+
+    .pjax-progress-icon {
+      position absolute
+      top 0.4rem
+      right 0.3rem
+      z-index $z-index-8
+      color var(--text-color-3)
+      font-size 1.1rem
+      visibility hidden
+
+      +keep-tablet() {
+        top 0.3rem
+        right 0.2rem
+        font-size 1rem
+      }
+
+      &.show {
+        visibility visible
+      }
+    }
+  }
+
+  if (hexo-config('style.scroll.progress_bar') == true) {
+
+    .scroll-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-7
+      width 0
+      height $scroll-progress-bar-height
+      background var(--primary-color)
+      visibility hidden
+      transition-t("width", "0", "0.1", "linear")
+
+      &.hide {
+        display none !important
+      }
+    }
+  }
+}
 
 <main class="page-container">
 
@@ -243,90 +301,333 @@
         <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;金融
         </div>
         <div class="tag-post-list">
-            $archive-year-font-size = 1.8rem
-$archive-year-count-font-size = 1.2rem
-$article-title-font-size = 1.2rem
-$article-date-font-size = 1rem
-
-.archive-list-container {
-
-  .archive-item {
-    margin-bottom $component-spacing-value
-
-    &:last-child {
-      margin-bottom 0
-    }
-
-    .archive-item-header {
-      margin-bottom 0.8rem
-
-      .archive-year {
-        margin-right 6px
-        color var(--text-color-2)
-        font-weight 600
-        font-size $archive-year-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-font-size - 0.2rem
-        }
-      }
-
-
-      .archive-year-post-count {
-        color var(--text-color-2)
-        font-weight 500
-        font-size $archive-year-count-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-count-font-size * 0.9
-        }
-      }
-    }
-
-
-    .article-list {
-
-      padding-left 0.8rem
-
-      +keep-tablet() {
-        padding-left 0
-      }
-
-      .article-item {
-        margin-top 1.2rem
-        font-size 1rem
-
-        +keep-tablet() {
-          margin-top 1.1rem
-        }
-
-        +keep-mobile() {
-          margin-top 1rem
-        }
-
-        &:hover {
-          a.article-title
-          .article-date {
-            color var(--primary-color)
-          }
-        }
-
-
-        a.article-title {
-          color var(--text-color-3)
-        }
-
-        .article-date {
-          float right
-          color var(--text-color-3)
-          font-size $article-date-font-size
-        }
-      }
-    }
-  }
-}
-
-
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2020</span>
+                <span class="archive-year-post-count">[24]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/20-Juhua-SCP001.html"
+                        >如何在永煤违约阴影下成功发行债券？</a>
+                        <span class="article-date">11-13</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/LPR-loan-interest-rate-conversion-of-minsheng-bank.html"
+                        >民生银行手机银行LPR利率转换失效</a>
+                        <span class="article-date">08-24</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/%E5%9F%8E%E6%8A%95%E5%85%AC%E5%8F%B8%E5%B0%BD%E8%B0%8351%E9%97%AE.html"
+                        >城投公司尽调51问</a>
+                        <span class="article-date">07-27</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/%E4%B8%AD%E5%9B%BD%E5%80%BA%E5%88%B8%E5%B8%82%E5%9C%BA%E9%87%91%E8%9E%8D%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%A4%A7%E5%85%A8.html"
+                        >中国债券市场金融基础设施大全</a>
+                        <span class="article-date">07-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-06-15.html"
+                        >2020债券市场一周概览（0615-0619）</a>
+                        <span class="article-date">06-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-06-08.html"
+                        >2020债券市场一周概览（0608-0612）</a>
+                        <span class="article-date">06-13</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-06-01.html"
+                        >2020债券市场一周概览（0601-0605）</a>
+                        <span class="article-date">06-06</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/An-analysis-of-urban-investment-enterprise-debt-in-Zhejiang-Province.html"
+                        >关于浙江地区城投债的调研分析</a>
+                        <span class="article-date">06-02</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-05-25.html"
+                        >2020债券市场一周概览（0525-0529）</a>
+                        <span class="article-date">05-30</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/ICBC-supports-Tongkun-to-issue-SCP-successfully-and-set-the%20lowest-coupon-rate.html"
+                        >浙江工行支持优质民企桐昆股份成功发行超短期融资券并创历史最低票面利率</a>
+                        <span class="article-date">05-28</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-05-19.html"
+                        >2020债券市场一周概览（0519-0522）</a>
+                        <span class="article-date">05-23</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-05-15.html"
+                        >2020债券市场一周概览（0511-0515）</a>
+                        <span class="article-date">05-16</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-05-09.html"
+                        >2020债券市场一周概览（0506-0509）</a>
+                        <span class="article-date">05-10</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-04-30.html"
+                        >2020债券市场一周概览（0425-0430）</a>
+                        <span class="article-date">05-01</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-04-24.html"
+                        >2020债券市场一周概览（0420-0424）</a>
+                        <span class="article-date">04-25</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-04-17.html"
+                        >2020债券市场一周概览（0413-0417）</a>
+                        <span class="article-date">04-18</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-04-10.html"
+                        >2020债券市场一周概览（0406-0410）</a>
+                        <span class="article-date">04-12</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-04-03.html"
+                        >2020债券市场一周概览（0330-0403）</a>
+                        <span class="article-date">04-05</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-03-27.html"
+                        >2020债券市场一周概览（0323-0327）</a>
+                        <span class="article-date">03-27</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/Large-caliber-platform-customer-bond-business-in-zhejiang.html"
+                        >浙江地区银监会大口径平台客户债券业务现状探微</a>
+                        <span class="article-date">03-24</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/week-overview-of-bond-market-2020-03-20.html"
+                        >2020债券市场一周概览（0316-0320）</a>
+                        <span class="article-date">03-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/talk-about-lpr-again.html"
+                        >再谈房贷利率选择</a>
+                        <span class="article-date">03-01</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/icbc-fangyi-fund.html"
+                        >浙江工行成功推荐省内抗疫客户参与总行疫情防控专项基金首批客户战略合作签约</a>
+                        <span class="article-date">02-28</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/Capitalization-of-borrowing-costs.html"
+                        >借款费用资本化辨析</a>
+                        <span class="article-date">01-06</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2019</span>
+                <span class="archive-year-post-count">[5]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/LPR-loan-interest-rate-conversion.html"
+                        >存量浮动利率贷款挂钩LPR政策及利率转换解读</a>
+                        <span class="article-date">12-28</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/zhongjieneng-debt-for-equity-swap.html"
+                        >浙江工行落地中节能实业债转股20亿元</a>
+                        <span class="article-date">12-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/icbc-chuanhua-group-zhaizhuangu-finish.html"
+                        >浙江工行落地民营企业传化集团债转股10亿元</a>
+                        <span class="article-date">10-12</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/Wanxiang-group's-debt-for-equity-swap.html"
+                        >工商银行牵手万向集团，浙江省单笔金额最大债转股项目落地</a>
+                        <span class="article-date">03-31</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/investment/About-the-dividend-difference-up-and-tax-exemption-etc.html"
+                        >关于债转股业务的分红、差补及免税等的问题</a>
+                        <span class="article-date">03-22</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2015</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/talk-about-huabei.html"
+                        >从“花呗”谈起</a>
+                        <span class="article-date">03-10</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2014</span>
+                <span class="archive-year-post-count">[7]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/The-Fed's-starting-point.html"
+                        >美联储的出发点：立足本国，无关其他——读《还原真实的美联储》</a>
+                        <span class="article-date">09-29</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/be-the-bank-of-people.html"
+                        >永远做人民的银行</a>
+                        <span class="article-date">05-17</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/service-things.html"
+                        >服务二三事</a>
+                        <span class="article-date">03-08</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/When-finance-meets-the-Internet.html"
+                        >当金融遇上互联网</a>
+                        <span class="article-date">02-15</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/My-opinion-on-how-retail-banks-go-iii.html"
+                        >零售银行怎么走之我见（三）</a>
+                        <span class="article-date">01-11</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/My-opinion-on-how-retail-banks-go-ii.html"
+                        >零售银行怎么走之我见（二）</a>
+                        <span class="article-date">01-10</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/My-opinion-on-how-retail-banks-go-i.html"
+                        >零售银行怎么走之我见（一）</a>
+                        <span class="article-date">01-09</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2013</span>
+                <span class="archive-year-post-count">[2]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/work/Sincere-service-to-maintain-customers.html"
+                        >真诚服务，维系客户</a>
+                        <span class="article-date">12-06</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/poetry/the-song-of-clerk.html"
+                        >柜员之歌</a>
+                        <span class="article-date">11-19</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
 
         </div>
     </div>

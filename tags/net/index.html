@@ -34,17 +34,75 @@
 
 
 <body>
-<div class="progress-bar-container">
-    
-        <span class="scroll-progress-bar"></span>
-    
+.progress-bar-container {
+  position fixed
+  top 0
+  left 0
+  z-index $z-index-9
+  width 100%
 
-    
-        <span class="pjax-progress-bar"></span>
-        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
-    
-</div>
+  if (hexo-config('pjax.enable') == true) {
 
+    .pjax-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-8
+      width 0
+      height 2px
+      background var(--pjax-progress-bar-color)
+      visibility hidden
+      opacity 0
+      transition-t("width, opacity", "0, 0", "0.1, 0.1", "linear")
+
+
+      &.show {
+        visibility visible
+        opacity 1
+      }
+    }
+
+
+    .pjax-progress-icon {
+      position absolute
+      top 0.4rem
+      right 0.3rem
+      z-index $z-index-8
+      color var(--text-color-3)
+      font-size 1.1rem
+      visibility hidden
+
+      +keep-tablet() {
+        top 0.3rem
+        right 0.2rem
+        font-size 1rem
+      }
+
+      &.show {
+        visibility visible
+      }
+    }
+  }
+
+  if (hexo-config('style.scroll.progress_bar') == true) {
+
+    .scroll-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-7
+      width 0
+      height $scroll-progress-bar-height
+      background var(--primary-color)
+      visibility hidden
+      transition-t("width", "0", "0.1", "linear")
+
+      &.hide {
+        display none !important
+      }
+    }
+  }
+}
 
 <main class="page-container">
 
@@ -243,90 +301,203 @@
         <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;网络
         </div>
         <div class="tag-post-list">
-            $archive-year-font-size = 1.8rem
-$archive-year-count-font-size = 1.2rem
-$article-title-font-size = 1.2rem
-$article-date-font-size = 1rem
-
-.archive-list-container {
-
-  .archive-item {
-    margin-bottom $component-spacing-value
-
-    &:last-child {
-      margin-bottom 0
-    }
-
-    .archive-item-header {
-      margin-bottom 0.8rem
-
-      .archive-year {
-        margin-right 6px
-        color var(--text-color-2)
-        font-weight 600
-        font-size $archive-year-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-font-size - 0.2rem
-        }
-      }
-
-
-      .archive-year-post-count {
-        color var(--text-color-2)
-        font-weight 500
-        font-size $archive-year-count-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-count-font-size * 0.9
-        }
-      }
-    }
-
-
-    .article-list {
-
-      padding-left 0.8rem
-
-      +keep-tablet() {
-        padding-left 0
-      }
-
-      .article-item {
-        margin-top 1.2rem
-        font-size 1rem
-
-        +keep-tablet() {
-          margin-top 1.1rem
-        }
-
-        +keep-mobile() {
-          margin-top 1rem
-        }
-
-        &:hover {
-          a.article-title
-          .article-date {
-            color var(--primary-color)
-          }
-        }
-
-
-        a.article-title {
-          color var(--text-color-3)
-        }
-
-        .article-date {
-          float right
-          color var(--text-color-3)
-          font-size $article-date-font-size
-        }
-      }
-    }
-  }
-}
-
-
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2021</span>
+                <span class="archive-year-post-count">[3]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E6%8C%96%E7%9F%BF%E7%A9%BA%E6%8A%95%E8%B5%84%E6%BA%90%EF%BC%88%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%EF%BC%89.html"
+                        >虚拟货币挖矿空投资源（更新频繁，及时了解请加QQ群：862350118）</a>
+                        <span class="article-date">07-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/%E4%BA%B2%E5%8E%86%E5%81%87%E5%86%92%E5%B8%81%E5%AE%89%E5%AE%A2%E6%9C%8D%E7%94%B5%E8%AF%9D%E8%AF%88%E9%AA%97.html"
+                        >亲历假冒币安客服电话诈骗</a>
+                        <span class="article-date">06-19</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/Godaddy%E5%9F%9F%E5%90%8D%E8%BF%81%E7%A7%BB%E8%87%B3%E9%98%BF%E9%87%8C%E4%BA%91.html"
+                        >GoDaddy域名迁移至阿里云</a>
+                        <span class="article-date">03-26</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2020</span>
+                <span class="archive-year-post-count">[10]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/zhouhongyi-talk-jackma.html"
+                        >周鸿祎谈跟任正非之间差了无数个马云之数学漫谈</a>
+                        <span class="article-date">08-30</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/QQ-mail-as-image-hosting.html"
+                        >QQ邮箱记事本-免费图床的完美替代</a>
+                        <span class="article-date">06-21</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/google-adsense-pin-received.html"
+                        >Google Adsense 收到纸质 pin 码</a>
+                        <span class="article-date">06-01</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/google-adsense-verified.html"
+                        >Google Adsense 账号验证成功</a>
+                        <span class="article-date">05-31</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/google-pin-code-second-time.html"
+                        >Google Adsense 输错三次 Pin 码后的记录</a>
+                        <span class="article-date">02-20</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/add-blog-to-archive-org.html"
+                        >个人博客存入互联网博物馆Archive.org</a>
+                        <span class="article-date">02-15</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/how-to-add-google-sitemap.html"
+                        >怎样为blogspot博客添加sitemap功能</a>
+                        <span class="article-date">02-07</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/my-page-to-be-Reference-link.html"
+                        >记一次手动发现自己的页面被其他站长引用</a>
+                        <span class="article-date">02-07</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/hexo-add-music-and-movie.html"
+                        >Hexo博客中插入图片、音乐和视频的方法</a>
+                        <span class="article-date">02-02</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/adsense-pin-number.html"
+                        >Google Adsense提示Pin码验证地址之记录</a>
+                        <span class="article-date">01-29</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2018</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/The-negative-evolution-of-information-on-Internet.html"
+                        >浅谈互联网信息的负面化演进</a>
+                        <span class="article-date">09-07</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2015</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Awifi-on-PC.html"
+                        >awifi电脑登陆小技巧</a>
+                        <span class="article-date">01-11</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2014</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Suggestions-on-the-function-expansion-of-the-Link-element-in-the-game-Ingress.html"
+                        >游戏Ingress中Link元素的功能拓展建议</a>
+                        <span class="article-date">09-15</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2011</span>
+                <span class="archive-year-post-count">[3]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/Abuse-of-like-button.html"
+                        >“喜欢”按钮的滥用</a>
+                        <span class="article-date">05-22</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/the-end-of-browser.html"
+                        >浏览器的终结</a>
+                        <span class="article-date">05-21</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/just-a-web-page.html"
+                        >Just a web page</a>
+                        <span class="article-date">01-29</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
 
         </div>
     </div>

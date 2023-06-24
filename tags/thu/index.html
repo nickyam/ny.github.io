@@ -34,17 +34,75 @@
 
 
 <body>
-<div class="progress-bar-container">
-    
-        <span class="scroll-progress-bar"></span>
-    
+.progress-bar-container {
+  position fixed
+  top 0
+  left 0
+  z-index $z-index-9
+  width 100%
 
-    
-        <span class="pjax-progress-bar"></span>
-        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
-    
-</div>
+  if (hexo-config('pjax.enable') == true) {
 
+    .pjax-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-8
+      width 0
+      height 2px
+      background var(--pjax-progress-bar-color)
+      visibility hidden
+      opacity 0
+      transition-t("width, opacity", "0, 0", "0.1, 0.1", "linear")
+
+
+      &.show {
+        visibility visible
+        opacity 1
+      }
+    }
+
+
+    .pjax-progress-icon {
+      position absolute
+      top 0.4rem
+      right 0.3rem
+      z-index $z-index-8
+      color var(--text-color-3)
+      font-size 1.1rem
+      visibility hidden
+
+      +keep-tablet() {
+        top 0.3rem
+        right 0.2rem
+        font-size 1rem
+      }
+
+      &.show {
+        visibility visible
+      }
+    }
+  }
+
+  if (hexo-config('style.scroll.progress_bar') == true) {
+
+    .scroll-progress-bar {
+      position absolute
+      top 0
+      left 0
+      z-index $z-index-7
+      width 0
+      height $scroll-progress-bar-height
+      background var(--primary-color)
+      visibility hidden
+      transition-t("width", "0", "0.1", "linear")
+
+      &.hide {
+        display none !important
+      }
+    }
+  }
+}
 
 <main class="page-container">
 
@@ -243,90 +301,231 @@
         <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;清华
         </div>
         <div class="tag-post-list">
-            $archive-year-font-size = 1.8rem
-$archive-year-count-font-size = 1.2rem
-$article-title-font-size = 1.2rem
-$article-date-font-size = 1rem
-
-.archive-list-container {
-
-  .archive-item {
-    margin-bottom $component-spacing-value
-
-    &:last-child {
-      margin-bottom 0
-    }
-
-    .archive-item-header {
-      margin-bottom 0.8rem
-
-      .archive-year {
-        margin-right 6px
-        color var(--text-color-2)
-        font-weight 600
-        font-size $archive-year-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-font-size - 0.2rem
-        }
-      }
-
-
-      .archive-year-post-count {
-        color var(--text-color-2)
-        font-weight 500
-        font-size $archive-year-count-font-size
-
-        +keep-tablet() {
-          font-size $archive-year-count-font-size * 0.9
-        }
-      }
-    }
-
-
-    .article-list {
-
-      padding-left 0.8rem
-
-      +keep-tablet() {
-        padding-left 0
-      }
-
-      .article-item {
-        margin-top 1.2rem
-        font-size 1rem
-
-        +keep-tablet() {
-          margin-top 1.1rem
-        }
-
-        +keep-mobile() {
-          margin-top 1rem
-        }
-
-        &:hover {
-          a.article-title
-          .article-date {
-            color var(--primary-color)
-          }
-        }
-
-
-        a.article-title {
-          color var(--text-color-3)
-        }
-
-        .article-date {
-          float right
-          color var(--text-color-3)
-          font-size $article-date-font-size
-        }
-      }
-    }
-  }
-}
-
-
+            
+<div class="archive-list-container">
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2021</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E6%B5%99%E6%B1%9F%E6%A0%A1%E5%8F%8B%E4%BC%9A2021%E5%B9%B4%E4%BC%9A%E5%B0%8F%E8%AE%B0.html"
+                        >清华大学浙江校友会2021年会小记</a>
+                        <span class="article-date">06-20</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2012</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Resignation-letter.html"
+                        >国际组组长辞职</a>
+                        <span class="article-date">04-26</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2011</span>
+                <span class="archive-year-post-count">[10]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/love-tsinghua-essay.html"
+                        >爱清华，故如是曰</a>
+                        <span class="article-date">10-22</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Recommending-Master-2.html"
+                        >推研时代（二）</a>
+                        <span class="article-date">09-23</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Recommending-Master.html"
+                        >推研时代（一）</a>
+                        <span class="article-date">09-21</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/This-is-a-billboard.html"
+                        >原来这是一块广告牌——坐在清华“真维斯”写评论</a>
+                        <span class="article-date">05-24</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/battle-in-ten-minutes.html"
+                        >十分钟的战斗</a>
+                        <span class="article-date">05-23</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Jingan-stele.html"
+                        >静安碑</a>
+                        <span class="article-date">04-28</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/tsinghua-school-day-joke-collection.html"
+                        >清华校庆笑话集</a>
+                        <span class="article-date">04-25</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Tsinghua-University-Digital-Museum-goes-online.html"
+                        >清华大学数字博物馆上线</a>
+                        <span class="article-date">04-17</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/poetry/bai-nian-fu.html"
+                        >百年赋</a>
+                        <span class="article-date">04-01</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/other/The-shortlist-of-the-9th-activity-of-tsinghua-University.html"
+                        >清华大学第九届情系母校活动初选入围名单</a>
+                        <span class="article-date">03-06</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2010</span>
+                <span class="archive-year-post-count">[3]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/The-experiment-in-the-university-is-like-this.html"
+                        >大学里的实验是这样的</a>
+                        <span class="article-date">07-13</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Tsinghua-School-Research-Institute.html"
+                        >清华学校研究院</a>
+                        <span class="article-date">04-25</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/poetry/Blather-in-dormitory.html"
+                        >宅了一天，胡言乱语</a>
+                        <span class="article-date">01-04</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2009</span>
+                <span class="archive-year-post-count">[6]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/The-First-Heavy-Snow-in-Beijing.html"
+                        >北京的首场大雪</a>
+                        <span class="article-date">11-01</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Hair-Cut-at-THU.html"
+                        >理发</a>
+                        <span class="article-date">10-23</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Metalworking-practice-in-thu.html"
+                        >金工实习</a>
+                        <span class="article-date">08-17</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/running-on-the-road.html"
+                        >奔跑在路上</a>
+                        <span class="article-date">06-02</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Beijing-snow-in-March.html"
+                        >三月的北京，三月的雪</a>
+                        <span class="article-date">03-29</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Farewell-to-the-beard-of-youth.html"
+                        >告别青春之须</a>
+                        <span class="article-date">03-25</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2008</span>
+                <span class="archive-year-post-count">[2]</span>
+            </div>
+            <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/Biomechanics-Exploration.html"
+                        >生物力学探微</a>
+                        <span class="article-date">12-09</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/essay/smiling-proud-of-youth.html"
+                        >笑傲青春</a>
+                        <span class="article-date">11-16</span>
+                    </li>
+                
+            </ul>
+        </section>
+    
+</div>
 
         </div>
     </div>
