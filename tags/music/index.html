@@ -243,68 +243,90 @@
         <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;音乐
         </div>
         <div class="tag-post-list">
-            
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2011</span>
-                <span class="archive-year-post-count">[2]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/From-Turkish-March.html"
-                        >从《土耳其进行曲》谈起</a>
-                        <span class="article-date">11-01</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/Random-thoughts-on-movie-songs.html"
-                        >影视歌曲的启示</a>
-                        <span class="article-date">06-03</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2010</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/Into-the-woods-not-only-musical.html"
-                        >Into the woods——not only musical</a>
-                        <span class="article-date">11-21</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2008</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/Mozart-and-Beethoven-music-spiritual-quest.html"
-                        >大师的对话——莫扎特与贝多芬音乐精神探寻</a>
-                        <span class="article-date">12-30</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-</div>
+            $archive-year-font-size = 1.8rem
+$archive-year-count-font-size = 1.2rem
+$article-title-font-size = 1.2rem
+$article-date-font-size = 1rem
+
+.archive-list-container {
+
+  .archive-item {
+    margin-bottom $component-spacing-value
+
+    &:last-child {
+      margin-bottom 0
+    }
+
+    .archive-item-header {
+      margin-bottom 0.8rem
+
+      .archive-year {
+        margin-right 6px
+        color var(--text-color-2)
+        font-weight 600
+        font-size $archive-year-font-size
+
+        +keep-tablet() {
+          font-size $archive-year-font-size - 0.2rem
+        }
+      }
+
+
+      .archive-year-post-count {
+        color var(--text-color-2)
+        font-weight 500
+        font-size $archive-year-count-font-size
+
+        +keep-tablet() {
+          font-size $archive-year-count-font-size * 0.9
+        }
+      }
+    }
+
+
+    .article-list {
+
+      padding-left 0.8rem
+
+      +keep-tablet() {
+        padding-left 0
+      }
+
+      .article-item {
+        margin-top 1.2rem
+        font-size 1rem
+
+        +keep-tablet() {
+          margin-top 1.1rem
+        }
+
+        +keep-mobile() {
+          margin-top 1rem
+        }
+
+        &:hover {
+          a.article-title
+          .article-date {
+            color var(--primary-color)
+          }
+        }
+
+
+        a.article-title {
+          color var(--text-color-3)
+        }
+
+        .article-date {
+          float right
+          color var(--text-color-3)
+          font-size $article-date-font-size
+        }
+      }
+    }
+  }
+}
+
+
 
         </div>
     </div>

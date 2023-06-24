@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.nickyam.com/tech/Free-VPNs-on-iOS.html</loc>
+    
+    <lastmod>2023-06-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tech/ChatGPT-4_Always_Available_for_Your_Convenience.html</loc>
     
     <lastmod>2023-06-24</lastmod>
@@ -2934,6 +2943,13 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/CreditCard/</loc>
+    <lastmod>2023-06-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/iOS/</loc>
     <lastmod>2023-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -243,120 +243,90 @@
         <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;Hexo
         </div>
         <div class="tag-post-list">
-            
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/add-html-code-into-pug.html"
-                        >Pug 文件如何添加 HTML 广告代码</a>
-                        <span class="article-date">05-25</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2020</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/hexo-add-music-and-movie.html"
-                        >Hexo博客中插入图片、音乐和视频的方法</a>
-                        <span class="article-date">02-02</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2019</span>
-                <span class="archive-year-post-count">[7]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/Gitment-Setup-and-Debug.html"
-                        >Hexo博客 Maupassant 主题设置 Gitment 评论功能</a>
-                        <span class="article-date">03-12</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/Hexo-Category-List.html"
-                        >Hexo博客设置分类顺序</a>
-                        <span class="article-date">03-11</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/hexo-multi-tags.html"
-                        >Hexo 多标签及分级目录设置方法举例</a>
-                        <span class="article-date">01-27</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/hexo-maupassant-archives-show-all-in-one-page.html"
-                        >Hexo 博客 Maupassant 主题下归档页显示的高级设置</a>
-                        <span class="article-date">01-18</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/hexo-generate-rss-atom.html"
-                        >Hexo博客安装rss插件生成atom.xml文件</a>
-                        <span class="article-date">01-13</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/hexo-set-google-adsense.html"
-                        >Hexo博客maupassant主题添加Google Adsense广告</a>
-                        <span class="article-date">01-12</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/hexo-add-tencent-404-page.html"
-                        >Hexo博客添加腾讯404公益页面</a>
-                        <span class="article-date">01-01</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2018</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/tech/hexo-generate-sitemap.html"
-                        >Hexo生成sitemap步骤及duplicated mapping key 问题解决</a>
-                        <span class="article-date">12-31</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-</div>
+            $archive-year-font-size = 1.8rem
+$archive-year-count-font-size = 1.2rem
+$article-title-font-size = 1.2rem
+$article-date-font-size = 1rem
+
+.archive-list-container {
+
+  .archive-item {
+    margin-bottom $component-spacing-value
+
+    &:last-child {
+      margin-bottom 0
+    }
+
+    .archive-item-header {
+      margin-bottom 0.8rem
+
+      .archive-year {
+        margin-right 6px
+        color var(--text-color-2)
+        font-weight 600
+        font-size $archive-year-font-size
+
+        +keep-tablet() {
+          font-size $archive-year-font-size - 0.2rem
+        }
+      }
+
+
+      .archive-year-post-count {
+        color var(--text-color-2)
+        font-weight 500
+        font-size $archive-year-count-font-size
+
+        +keep-tablet() {
+          font-size $archive-year-count-font-size * 0.9
+        }
+      }
+    }
+
+
+    .article-list {
+
+      padding-left 0.8rem
+
+      +keep-tablet() {
+        padding-left 0
+      }
+
+      .article-item {
+        margin-top 1.2rem
+        font-size 1rem
+
+        +keep-tablet() {
+          margin-top 1.1rem
+        }
+
+        +keep-mobile() {
+          margin-top 1rem
+        }
+
+        &:hover {
+          a.article-title
+          .article-date {
+            color var(--primary-color)
+          }
+        }
+
+
+        a.article-title {
+          color var(--text-color-3)
+        }
+
+        .article-date {
+          float right
+          color var(--text-color-3)
+          font-size $article-date-font-size
+        }
+      }
+    }
+  }
+}
+
+
 
         </div>
     </div>
