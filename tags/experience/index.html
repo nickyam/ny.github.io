@@ -241,103 +241,90 @@
         <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;经历
         </div>
         <div class="tag-post-list">
-            
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2017</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/Hair-Cut.html"
-                        >一次理发的经历</a>
-                        <span class="article-date">01-17</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2011</span>
-                <span class="archive-year-post-count">[4]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/work/Campus-Recruitment-360.html"
-                        >奇虎360校招产品面试</a>
-                        <span class="article-date">10-13</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/work/Campus-Recruitment-shengda.html"
-                        >盛大校园招聘清华宣讲会感想</a>
-                        <span class="article-date">10-12</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/Recommending-Master-2.html"
-                        >推研时代（二）</a>
-                        <span class="article-date">09-23</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/Recommending-Master.html"
-                        >推研时代（一）</a>
-                        <span class="article-date">09-21</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2009</span>
-                <span class="archive-year-post-count">[4]</span>
-            </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/China-Tennis-Open.html"
-                        >记中国网球公开赛志愿者经历</a>
-                        <span class="article-date">10-12</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/China-Tennis-Open-Log.html"
-                        >中网日志</a>
-                        <span class="article-date">10-06</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/Volunteer-Training-in-China-Tennis-Open.html"
-                        >中国网球公开赛志愿者培训记录</a>
-                        <span class="article-date">09-26</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/essay/Farewell-to-the-beard-of-youth.html"
-                        >告别青春之须</a>
-                        <span class="article-date">03-25</span>
-                    </li>
-                
-            </ul>
-        </section>
-    
-</div>
+            $archive-year-font-size = 1.8rem
+$archive-year-count-font-size = 1.2rem
+$article-title-font-size = 1.2rem
+$article-date-font-size = 1rem
+
+.archive-list-container {
+
+  .archive-item {
+    margin-bottom $component-spacing-value
+
+    &:last-child {
+      margin-bottom 0
+    }
+
+    .archive-item-header {
+      margin-bottom 0.8rem
+
+      .archive-year {
+        margin-right 6px
+        color var(--text-color-2)
+        font-weight 600
+        font-size $archive-year-font-size
+
+        +keep-tablet() {
+          font-size $archive-year-font-size - 0.2rem
+        }
+      }
+
+
+      .archive-year-post-count {
+        color var(--text-color-2)
+        font-weight 500
+        font-size $archive-year-count-font-size
+
+        +keep-tablet() {
+          font-size $archive-year-count-font-size * 0.9
+        }
+      }
+    }
+
+
+    .article-list {
+
+      padding-left 0.8rem
+
+      +keep-tablet() {
+        padding-left 0
+      }
+
+      .article-item {
+        margin-top 1.2rem
+        font-size 1rem
+
+        +keep-tablet() {
+          margin-top 1.1rem
+        }
+
+        +keep-mobile() {
+          margin-top 1rem
+        }
+
+        &:hover {
+          a.article-title
+          .article-date {
+            color var(--primary-color)
+          }
+        }
+
+
+        a.article-title {
+          color var(--text-color-3)
+        }
+
+        .article-date {
+          float right
+          color var(--text-color-3)
+          font-size $article-date-font-size
+        }
+      }
+    }
+  }
+}
+
+
 
         </div>
     </div>
