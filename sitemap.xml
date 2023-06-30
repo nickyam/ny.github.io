@@ -2171,7 +2171,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tech/Blog-Update-to-https.html</loc>
+    <loc>http://www.nickyam.com/tech/Awifi-on-PC.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2180,7 +2180,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tech/Awifi-on-PC.html</loc>
+    <loc>http://www.nickyam.com/tech/Blog-Update-to-https.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2216,7 +2216,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tech/hexo-generate-rss-atom.html</loc>
+    <loc>http://www.nickyam.com/tech/hexo-add-tencent-404-page.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2225,7 +2225,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tech/hexo-add-tencent-404-page.html</loc>
+    <loc>http://www.nickyam.com/tech/hexo-generate-rss-atom.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2378,7 +2378,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Hair-Cut.html</loc>
+    <loc>http://www.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2387,7 +2387,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
+    <loc>http://www.nickyam.com/essay/Hair-Cut.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2406,15 +2406,6 @@
   
   <url>
     <loc>http://www.nickyam.com/essay/Realhumans.html</loc>
-    
-    <lastmod>2019-03-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/essay/Recommending-Master.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2451,6 +2442,15 @@
   
   <url>
     <loc>http://www.nickyam.com/essay/Story-1910.html</loc>
+    
+    <lastmod>2019-03-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/essay/Recommending-Master.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2603,7 +2603,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/poetry/spark.html</loc>
+    <loc>http://www.nickyam.com/poetry/silent-thought.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2612,7 +2612,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/poetry/silent-thought.html</loc>
+    <loc>http://www.nickyam.com/poetry/spark.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2684,20 +2684,6 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/tags/finance/</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/Bonds/</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/mark/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -2706,6 +2692,27 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/emotion/</loc>
+    <lastmod>2023-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/ChatGPT/</loc>
+    <lastmod>2023-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/china/</loc>
+    <lastmod>2023-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/think/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2726,14 +2733,14 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/china/</loc>
+    <loc>http://www.nickyam.com/tags/finance/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/think/</loc>
+    <loc>http://www.nickyam.com/tags/Bonds/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2789,13 +2796,6 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/ChatGPT/</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/entertainment/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -2825,13 +2825,6 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/VPN/</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/iOS/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2880,6 +2873,13 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/tags/Google/</loc>
+    <lastmod>2023-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tags/rights/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -2894,13 +2894,6 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/Google/</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/Wordpress/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -2909,6 +2902,13 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/scenery/</loc>
+    <lastmod>2023-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/iOS/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2971,6 +2971,13 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/tags/tencent/</loc>
+    <lastmod>2023-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tags/Ethereum/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -2992,13 +2999,6 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/tencent/</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/CreditCard/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -3006,13 +3006,6 @@
   </url>
   
 
-  
-  <url>
-    <loc>http://www.nickyam.com/categories/work/</loc>
-    <lastmod>2023-06-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>http://www.nickyam.com/categories/essay/</loc>
@@ -3023,6 +3016,13 @@
   
   <url>
     <loc>http://www.nickyam.com/categories/tech/</loc>
+    <lastmod>2023-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/categories/work/</loc>
     <lastmod>2023-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
