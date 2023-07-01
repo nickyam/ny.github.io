@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.nickyam.com/tech/Free-VPNs-on-Mac.html</loc>
+    
+    <lastmod>2023-07-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tech/Free-VPNs-on-iOS.html</loc>
+    
+    <lastmod>2023-07-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tech/Free-VPN-on-Android.html</loc>
     
-    <lastmod>2023-06-30</lastmod>
+    <lastmod>2023-07-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -41,15 +59,6 @@
     <loc>http://www.nickyam.com/tech/free_image_hosting_based_on_telegraph.html</loc>
     
     <lastmod>2023-06-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tech/Free-VPNs-on-iOS.html</loc>
-    
-    <lastmod>2023-06-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -158,15 +167,6 @@
     <loc>http://www.nickyam.com/tech/add-html-code-into-pug.html</loc>
     
     <lastmod>2023-05-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tech/Free-VPNs-on-Mac.html</loc>
-    
-    <lastmod>2023-05-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
