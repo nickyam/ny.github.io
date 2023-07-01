@@ -2144,7 +2144,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/investment/stock-back.html</loc>
+    <loc>http://www.nickyam.com/investment/stock-201706.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2153,7 +2153,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/investment/stock-201706.html</loc>
+    <loc>http://www.nickyam.com/investment/stock-back.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2378,6 +2378,15 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
+    
+    <lastmod>2019-03-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/essay/Hair-Cut.html</loc>
     
     <lastmod>2019-03-12</lastmod>
@@ -2424,15 +2433,6 @@
   
   <url>
     <loc>http://www.nickyam.com/essay/Resignation-letter.html</loc>
-    
-    <lastmod>2019-03-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2719,20 +2719,6 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/apple/</loc>
-    <lastmod>2023-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/Mac/</loc>
-    <lastmod>2023-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/china/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -2741,6 +2727,20 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/think/</loc>
+    <lastmod>2023-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/apple/</loc>
+    <lastmod>2023-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/Mac/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
