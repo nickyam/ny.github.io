@@ -2719,20 +2719,6 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/china/</loc>
-    <lastmod>2023-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/think/</loc>
-    <lastmod>2023-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/apple/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -2741,6 +2727,20 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/Mac/</loc>
+    <lastmod>2023-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/china/</loc>
+    <lastmod>2023-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/think/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2817,14 +2817,14 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/Android/</loc>
+    <loc>http://www.nickyam.com/tags/VPN/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/VPN/</loc>
+    <loc>http://www.nickyam.com/tags/Android/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
