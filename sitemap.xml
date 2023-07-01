@@ -1991,7 +1991,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/near-changan-shandao-one.html</loc>
+    <loc>http://www.nickyam.com/essay/near-changan-shandao-three.html</loc>
     
     <lastmod>2019-03-13</lastmod>
     
@@ -2000,7 +2000,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/near-changan-shandao-three.html</loc>
+    <loc>http://www.nickyam.com/essay/near-changan-shandao-one.html</loc>
     
     <lastmod>2019-03-13</lastmod>
     
@@ -2423,7 +2423,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Recommending-Master.html</loc>
+    <loc>http://www.nickyam.com/essay/Resignation-letter.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2432,7 +2432,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Resignation-letter.html</loc>
+    <loc>http://www.nickyam.com/essay/Recommending-Master.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2698,13 +2698,6 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/ChatGPT/</loc>
-    <lastmod>2023-07-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/finance/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -2713,6 +2706,13 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/Bonds/</loc>
+    <lastmod>2023-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/ChatGPT/</loc>
     <lastmod>2023-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
