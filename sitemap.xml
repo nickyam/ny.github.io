@@ -2144,7 +2144,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/investment/stock-back.html</loc>
+    <loc>http://www.nickyam.com/investment/stock-201706.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2153,7 +2153,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/investment/stock-201706.html</loc>
+    <loc>http://www.nickyam.com/investment/stock-back.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2684,28 +2684,14 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/tags/finance/</loc>
+    <loc>http://www.nickyam.com/tags/china/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/Bonds/</loc>
-    <lastmod>2023-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/mark/</loc>
-    <lastmod>2023-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/emotion/</loc>
+    <loc>http://www.nickyam.com/tags/think/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2733,14 +2719,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/china/</loc>
-    <lastmod>2023-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/think/</loc>
+    <loc>http://www.nickyam.com/tags/finance/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2755,6 +2734,13 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/reading/</loc>
+    <lastmod>2023-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/mark/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2797,6 +2783,13 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/entertainment/</loc>
+    <lastmod>2023-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/emotion/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2908,6 +2901,13 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/tags/Bonds/</loc>
+    <lastmod>2023-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tags/scenery/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -2922,14 +2922,14 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/Blog/</loc>
+    <loc>http://www.nickyam.com/tags/Blockchain/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/Blockchain/</loc>
+    <loc>http://www.nickyam.com/tags/Blog/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3008,13 +3008,6 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/categories/work/</loc>
-    <lastmod>2023-07-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/categories/essay/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -3030,6 +3023,13 @@
   
   <url>
     <loc>http://www.nickyam.com/categories/investment/</loc>
+    <lastmod>2023-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/categories/work/</loc>
     <lastmod>2023-07-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
