@@ -6,7 +6,7 @@
   <link href="http://www.nickyam.com/atom.xml" rel="self"/>
   
   <link href="http://www.nickyam.com/"/>
-  <updated>2023-07-01T14:08:15.194Z</updated>
+  <updated>2023-07-03T16:21:08.127Z</updated>
   <id>http://www.nickyam.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>终极免费VPN之CloudflareWARP科学上网</title>
+    <link href="http://www.nickyam.com/tech/Cloudflare_WARP.html"/>
+    <id>http://www.nickyam.com/tech/Cloudflare_WARP.html</id>
+    <published>2023-07-03T13:16:00.000Z</published>
+    <updated>2023-07-03T16:21:08.127Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>提示： 想了解更多VPN相关资讯，请点击<a class="link"   href="https://i.nickyam.com/tag/VPN" >https://i.nickyam.com/tag/VPN<i class="fas fa-external-link-alt"></i></a>，持续更新ing。</strong></p><p>大名鼎鼎的Cloudflare成立于2009年，专注于提供各种网络服务，以增强网站的性能和安全性，现在已经是全球领先的内容分发网络（CDN）、云服务和网站安全解决方案提供商之一。</p><p>而本文的主角 WARP 是 Cloudflare 公司推出的可以用来保护使用者隐私的一款服务。WARP基于wireguard协议，使用UDP来传输数据，这也就意味着在公网中的高QOS，但是WARP的IP相对比较干净，对外访问网络的出口 IP 被很多网站视为真实用户，可以用来解锁流媒体、谷歌学术等。</p><p>Zero Trust，俗称team，是由Cloudflare推出的面向团队的VPN服务，由于其登录1.1.1.1可以获得无限流量，不需要再通过刷邀请流量的方式来获得WARP+流量。<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/775afbdfab71aac304654.png"                                     ></p><p><strong>优势</strong></p><ul><li>免费 且 无限流量</li><li>WARP 协议更加底层，兼容性强</li></ul><p><strong>劣势</strong></p><ul><li>无法选择节点（免费版）</li><li>速度不稳定</li></ul><h1 id="初级篇：安装1-1-1-1"><a href="#初级篇：安装1-1-1-1" class="headerlink" title="初级篇：安装1.1.1.1"></a>初级篇：安装1.1.1.1</h1><p>进入官网: <a class="link"   href="https://1.1.1.1/" >https://1.1.1.1/<i class="fas fa-external-link-alt"></i></a>，即可下载对应系统下的版本。</p><p><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/3bcb27cbf44f3e20dcaed.png"                                     ></p><p>苹果用户建议使用美区AppStore账号进行下载，直接搜索1.1.1.1。<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/b797fbf8fb3dc92d5e7e9.jpg"                                     ></p><p>如果没有美区账号，请查看<a href="https://www.nickyam.com/tech/%E7%BE%8E%E5%8C%BAApple%20ID%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B.html">苹果美区账号注册教程</a>花几分钟自己申请一个即可。</p><p>安卓、windows直接在官网下载。</p><p><strong>提示：1.1.1.1免费用户只有1GB流量。你可以先尝个鲜。</strong></p><h1 id="中级篇：升级为WARP"><a href="#中级篇：升级为WARP" class="headerlink" title="中级篇：升级为WARP+"></a>中级篇：升级为WARP+</h1><p><strong>一、如果你有 Telegram 账户，可通过电报机器人获取 warp+ 的key，立马拥有24PB+流量。</strong></p><p>WARP+BOT: <a class="link"   href="https://t.me/generatewarpplusbot" >https://t.me/generatewarpplusbot<i class="fas fa-external-link-alt"></i></a></p><p>根据机器人指令即可达成。</p><p>在获取到key后，打开1.1.1.1，右上角设置-&gt;账户-&gt;按键，再点击“更改密钥”，将key填入保存即可。</p><p><strong>二、如果你没有 Telegram 账户，也可以在网上搜寻key，填入密钥即可。</strong><br>本文提供密钥如下：<br>fZJ70D89-a0J895Bi-9WYP1h20<br>253hu6CP-Wf0g4H73-30c1v6qa<br>4709JFxY-r2is09Y1-9kRQ054r<br>678q5laO-b7g0e5I1-0372yeml<br>4i8Q0V7x-O2M910me-4hj0XB28<br>5I7KRs14-21c9s7eG-02pZHd64<br>7lgXj613-p503UsY1-gE75U6V3<br>0omQX694-h4b863Pd-6Yu2yk09<br>3j0M45wA-uo0B2t69-7aT3gA04<br>d27T1D6o-p9ML34r7-t3092Dla  </p><h1 id="高级篇：升级为Zero-Trust"><a href="#高级篇：升级为Zero-Trust" class="headerlink" title="高级篇：升级为Zero Trust"></a>高级篇：升级为Zero Trust</h1><h2 id="方案一：直接使用"><a href="#方案一：直接使用" class="headerlink" title="方案一：直接使用"></a>方案一：直接使用</h2><p>若只是想使用,可以直接跳过申请,安装软件后在设置中找到 Zero Truth ，按以下配置登录即可。<br>某公开team团队名称为ajiajs，邮箱验证的后缀为@163.com。(ps：团队人数最多允许50人)<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/977de96841c2fec3b7c8d.png"                                     ></p><h2 id="方案二：自己创建"><a href="#方案二：自己创建" class="headerlink" title="方案二：自己创建"></a>方案二：自己创建</h2><p>1、登录Cloudflare账号<br>官网：<a class="link"   href="https://dash.cloudflare.com/" >https://dash.cloudflare.com/<i class="fas fa-external-link-alt"></i></a><br> 登陆后看到主页如下：<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/21c9b7bc3fa4d6129e249.png"                                     ></p><p>2、打开Zero Trust<br>设置一个自己能记住的团队名称、点击Next<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/c09344ad43a73d1a27bd7.png"                                     ></p><p>跳转到下一界面之后，选择Free plan。<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/a4831244e51090f2ba214.png"                                     ></p><p>free计划最多支持50人同时使用，接下来会让你绑定付款方式，<strong>这里不需要绑定付款方式，弹出绑定付款方式时，团队已经创建成功</strong>，我们直接回到官网首页，访问Zero Trust即可。</p><p>3、设置认证方式<br>(1)依次点击My Team—Devices—connect a device<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/957030e21f9888d216a01.png"                                     ><br>(2)设置一个你常用邮箱的后缀，例如@163.com</p><p>(3)设置成功后即可在你们需要登录Team的设备上进行登录<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/440da321a896469065596.jpg"                                     ></p><p>4、如果你增加或者变更邮箱后缀<br>(1)点击设置和WARP client：<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/ab8b0833593b73777c8c1.jpg"                                     ><br>(2)点击蓝色的“Manage”按钮<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/563a157313e16a8710b62.jpg"                                     ><br>(3)点击“Add a rule”按钮<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/ee68da2f57e3c1a4b4c15.jpg"                                     ><br>(4)按照下图配置，Value处请填写你的邮箱后缀（例：<a class="link"   href="mailto:&#104;&#x69;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;" >&#104;&#x69;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#109;<i class="fas fa-external-link-alt"></i></a>，后缀为@gmail.com）。点击“Save”保存规则。<br><img                       lazyload                     alt="image"                     data-src="https://img.nickyam.com/file/e4d6b476bef82490c9a86.jpg"                                     ><br>(5)继续save即可。</p><p><strong>最后惯例，在“外面”请不要随意评论以及乱浏览。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;提示： 想了解更多VPN相关资讯，请点击&lt;a class=&quot;link&quot;   href=&quot;https://i.nickyam.com/tag/VPN&quot; &gt;https://i.nickyam.com/tag/VPN&lt;i class=&quot;fas fa-externa</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="VPN" scheme="http://www.nickyam.com/tags/VPN/"/>
+    
+  </entry>
   
   <entry>
     <title>超好用的安卓加速器，免费速度还快！</title>
@@ -509,31 +533,6 @@
     <category term="苹果" scheme="http://www.nickyam.com/tags/apple/"/>
     
     <category term="Mac" scheme="http://www.nickyam.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google Play 应用下载</title>
-    <link href="http://www.nickyam.com/tech/Google%20Play%E5%BA%94%E7%94%A8%E4%B8%8B%E8%BD%BD.html"/>
-    <id>http://www.nickyam.com/tech/Google%20Play%E5%BA%94%E7%94%A8%E4%B8%8B%E8%BD%BD.html</id>
-    <published>2021-09-30T06:09:00.000Z</published>
-    <updated>2021-09-30T06:34:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>近些年，国内外形势风云突变。反映在手机上，国产手机对 Google 的相关服务支持越来越严格，以前还能自己一键安装谷歌套装，现在的新手机出厂设置已经特意禁止了这样的行为。那么如何如何下载国产手机的内置商城没有的app呢？</p><p>经过长期积累，笔者整理出了国外几个自动生成Google Play应用直链地址，帮助我们轻松下载安装App，供大家交流学习。</p><p>1、<a class="link"   href="http://apkleecher.com/" >http://apkleecher.com/<i class="fas fa-external-link-alt"></i></a></p><p>2、<a class="link"   href="http://apk-dl.com/" >http://apk-dl.com/<i class="fas fa-external-link-alt"></i></a></p><p>3、<a class="link"   href="http://apps.evozi.com/apk-downloader/" >http://apps.evozi.com/apk-downloader/<i class="fas fa-external-link-alt"></i></a></p><p>4、<a class="link"   href="http://globalapk.com/" >http://globalapk.com/<i class="fas fa-external-link-alt"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;近些年，国内外形势风云突变。反映在手机上，国产手机对 Google 的相关服务支持越来越严格，以前还能自己一键安装谷歌套装，现在的新手机出厂设置已经特意禁止了这样的行为。那么如何如何下载国产手机的内置商城没有的app呢？&lt;/p&gt;
-&lt;p&gt;经过长期积累，笔者整理出了国外几个自动</summary>
-      
-    
-    
-    
-    <category term="⓶科技" scheme="http://www.nickyam.com/categories/tech/"/>
-    
-    
-    <category term="Google" scheme="http://www.nickyam.com/tags/Google/"/>
     
   </entry>
   
