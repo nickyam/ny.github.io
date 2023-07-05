@@ -24,7 +24,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"www.nickyam.com","root":"/","language":"zh-CN","path":"search.json"}
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":true},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"waline","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":"https://waline.nickyam.com","reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":true},"scroll":{"progress_bar":false,"percent":true}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"mac"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":false},"comment":{"enable":true,"use":"waline","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":"https://waline.nickyam.com","reaction":true,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
@@ -325,12 +325,7 @@
                 <p><strong>提示： 想了解更多VPN相关资讯，请点击<a class="link"   target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN" >https://i.nickyam.com/tag/VPN<i class="fas fa-external-link-alt"></i></a>，持续更新ing。</strong></p>
 <p>大名鼎鼎的Cloudflare成立于2009年，专注于提供各种网络服务，以增强网站的性能和安全性，现在已经是全球领先的内容分发网络（CDN）、云服务和网站安全解决方案提供商之一。</p>
 <p>而本文的主角 WARP 是 Cloudflare 公司推出的可以用来保护使用者隐私的一款服务。WARP基于wireguard协议，使用UDP来传输数据，这也就意味着在公网中的高QOS，但是WARP的IP相对比较干净，对外访问网络的出口 IP 被很多网站视为真实用户，可以用来解锁流媒体、谷歌学术等。</p>
-<p>Zero Trust，俗称team，是由Cloudflare推出的面向团队的VPN服务，由于其登录1.1.1.1可以获得无限流量，不需要再通过刷邀请流量的方式来获得WARP+流量。<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/775afbdfab71aac304654.png"
-                     
-                ></p>
+<p>Zero Trust，俗称team，是由Cloudflare推出的面向团队的VPN服务，由于其登录1.1.1.1可以获得无限流量，不需要再通过刷邀请流量的方式来获得WARP+流量。<br><img src="https://img.nickyam.com/file/775afbdfab71aac304654.png"></p>
 <p><strong>优势</strong></p>
 <ul>
 <li>免费 且 无限流量</li>
@@ -342,18 +337,8 @@
 <li>速度不稳定</li>
 </ul>
 <h1 id="初级篇：安装1-1-1-1"><a href="#初级篇：安装1-1-1-1" class="headerlink" title="初级篇：安装1.1.1.1"></a>初级篇：安装1.1.1.1</h1><p>进入官网: <a class="link"   target="_blank" rel="noopener" href="https://1.1.1.1/" >https://1.1.1.1/<i class="fas fa-external-link-alt"></i></a>，即可下载对应系统下的版本。</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/3bcb27cbf44f3e20dcaed.png"
-                     
-                ></p>
-<p>苹果用户建议使用美区AppStore账号进行下载，直接搜索1.1.1.1。<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/b797fbf8fb3dc92d5e7e9.jpg"
-                     
-                ></p>
+<p><img src="https://img.nickyam.com/file/3bcb27cbf44f3e20dcaed.png"></p>
+<p>苹果用户建议使用美区AppStore账号进行下载，直接搜索1.1.1.1。<br><img src="https://img.nickyam.com/file/b797fbf8fb3dc92d5e7e9.jpg"></p>
 <p>如果没有美区账号，请查看<a href="https://www.nickyam.com/tech/%E7%BE%8E%E5%8C%BAApple%20ID%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B.html">苹果美区账号注册教程</a>花几分钟自己申请一个即可。</p>
 <p>安卓、windows直接在官网下载。</p>
 <p><strong>提示：1.1.1.1免费用户只有1GB流量。你可以先尝个鲜。</strong></p>
@@ -362,64 +347,14 @@
 <p>根据机器人指令即可达成。</p>
 <p>在获取到key后，打开1.1.1.1，右上角设置-&gt;账户-&gt;按键，再点击“更改密钥”，将key填入保存即可。</p>
 <p><strong>二、如果你没有 Telegram 账户，也可以在网上搜寻key，填入密钥即可。</strong><br>本文提供密钥如下：<br>fZJ70D89-a0J895Bi-9WYP1h20<br>253hu6CP-Wf0g4H73-30c1v6qa<br>4709JFxY-r2is09Y1-9kRQ054r<br>678q5laO-b7g0e5I1-0372yeml<br>4i8Q0V7x-O2M910me-4hj0XB28<br>5I7KRs14-21c9s7eG-02pZHd64<br>7lgXj613-p503UsY1-gE75U6V3<br>0omQX694-h4b863Pd-6Yu2yk09<br>3j0M45wA-uo0B2t69-7aT3gA04<br>d27T1D6o-p9ML34r7-t3092Dla  </p>
-<h1 id="高级篇：升级为Zero-Trust"><a href="#高级篇：升级为Zero-Trust" class="headerlink" title="高级篇：升级为Zero Trust"></a>高级篇：升级为Zero Trust</h1><h2 id="方案一：直接使用"><a href="#方案一：直接使用" class="headerlink" title="方案一：直接使用"></a>方案一：直接使用</h2><p>若只是想使用,可以直接跳过申请,安装软件后在设置中找到 Zero Truth ，按以下配置登录即可。<br>某公开team团队名称为ajiajs，邮箱验证的后缀为@163.com。(ps：团队人数最多允许50人)<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/977de96841c2fec3b7c8d.png"
-                     
-                ></p>
-<h2 id="方案二：自己创建"><a href="#方案二：自己创建" class="headerlink" title="方案二：自己创建"></a>方案二：自己创建</h2><p>1、登录Cloudflare账号<br>官网：<a class="link"   target="_blank" rel="noopener" href="https://dash.cloudflare.com/" >https://dash.cloudflare.com/<i class="fas fa-external-link-alt"></i></a><br> 登陆后看到主页如下：<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/21c9b7bc3fa4d6129e249.png"
-                     
-                ></p>
-<p>2、打开Zero Trust<br>设置一个自己能记住的团队名称、点击Next<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/c09344ad43a73d1a27bd7.png"
-                     
-                ></p>
-<p>跳转到下一界面之后，选择Free plan。<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/a4831244e51090f2ba214.png"
-                     
-                ></p>
+<h1 id="高级篇：升级为Zero-Trust"><a href="#高级篇：升级为Zero-Trust" class="headerlink" title="高级篇：升级为Zero Trust"></a>高级篇：升级为Zero Trust</h1><h2 id="方案一：直接使用"><a href="#方案一：直接使用" class="headerlink" title="方案一：直接使用"></a>方案一：直接使用</h2><p>若只是想使用,可以直接跳过申请,安装软件后在设置中找到 Zero Truth ，按以下配置登录即可。<br>某公开team团队名称为ajiajs，邮箱验证的后缀为@163.com。(ps：团队人数最多允许50人)<br><img src="https://img.nickyam.com/file/977de96841c2fec3b7c8d.png"></p>
+<h2 id="方案二：自己创建"><a href="#方案二：自己创建" class="headerlink" title="方案二：自己创建"></a>方案二：自己创建</h2><p>1、登录Cloudflare账号<br>官网：<a class="link"   target="_blank" rel="noopener" href="https://dash.cloudflare.com/" >https://dash.cloudflare.com/<i class="fas fa-external-link-alt"></i></a><br> 登陆后看到主页如下：<br><img src="https://img.nickyam.com/file/21c9b7bc3fa4d6129e249.png"></p>
+<p>2、打开Zero Trust<br>设置一个自己能记住的团队名称、点击Next<br><img src="https://img.nickyam.com/file/c09344ad43a73d1a27bd7.png"></p>
+<p>跳转到下一界面之后，选择Free plan。<br><img src="https://img.nickyam.com/file/a4831244e51090f2ba214.png"></p>
 <p>free计划最多支持50人同时使用，接下来会让你绑定付款方式，<strong>这里不需要绑定付款方式，弹出绑定付款方式时，团队已经创建成功</strong>，我们直接回到官网首页，访问Zero Trust即可。</p>
-<p>3、设置认证方式<br>(1)依次点击My Team—Devices—connect a device<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/957030e21f9888d216a01.png"
-                     
-                ><br>(2)设置一个你常用邮箱的后缀，例如@163.com</p>
-<p>(3)设置成功后即可在你们需要登录Team的设备上进行登录<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/440da321a896469065596.jpg"
-                     
-                ></p>
-<p>4、如果你增加或者变更邮箱后缀<br>(1)点击设置和WARP client：<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/ab8b0833593b73777c8c1.jpg"
-                     
-                ><br>(2)点击蓝色的“Manage”按钮<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/563a157313e16a8710b62.jpg"
-                     
-                ><br>(3)点击“Add a rule”按钮<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/ee68da2f57e3c1a4b4c15.jpg"
-                     
-                ><br>(4)按照下图配置，Value处请填写你的邮箱后缀（例：<a class="link"   href="mailto:&#x68;&#x69;&#x40;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;" >&#x68;&#x69;&#x40;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;<i class="fas fa-external-link-alt"></i></a>，后缀为@gmail.com）。点击“Save”保存规则。<br><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://img.nickyam.com/file/e4d6b476bef82490c9a86.jpg"
-                     
-                ><br>(5)继续save即可。</p>
+<p>3、设置认证方式<br>(1)依次点击My Team—Devices—connect a device<br><img src="https://img.nickyam.com/file/957030e21f9888d216a01.png"><br>(2)设置一个你常用邮箱的后缀，例如@163.com</p>
+<p>(3)设置成功后即可在你们需要登录Team的设备上进行登录<br><img src="https://img.nickyam.com/file/440da321a896469065596.jpg"></p>
+<p>4、如果你增加或者变更邮箱后缀<br>(1)点击设置和WARP client：<br><img src="https://img.nickyam.com/file/ab8b0833593b73777c8c1.jpg"><br>(2)点击蓝色的“Manage”按钮<br><img src="https://img.nickyam.com/file/563a157313e16a8710b62.jpg"><br>(3)点击“Add a rule”按钮<br><img src="https://img.nickyam.com/file/ee68da2f57e3c1a4b4c15.jpg"><br>(4)按照下图配置，Value处请填写你的邮箱后缀（例：<a class="link"   href="mailto:&#x68;&#x69;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;" >&#x68;&#x69;&#64;&#x67;&#x6d;&#97;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a>，后缀为@gmail.com）。点击“Save”保存规则。<br><img src="https://img.nickyam.com/file/e4d6b476bef82490c9a86.jpg"><br>(5)继续save即可。</p>
 <p><strong>最后惯例，在“外面”请不要随意评论以及乱浏览。</strong></p>
 
             </div>
@@ -762,8 +697,6 @@
     <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
 
 
-
-    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/lazyload.js"></script>
 
 
 <div class="post-scripts pjax">
