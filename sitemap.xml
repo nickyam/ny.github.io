@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.nickyam.com/tech/QQ-Mobile-App-Extractor.html</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tech/hyperbeam.html</loc>
+    
+    <lastmod>2023-07-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tech/threads_apk.html</loc>
     
     <lastmod>2023-07-11</lastmod>
@@ -66,15 +84,6 @@
   
   <url>
     <loc>http://www.nickyam.com/essay/%E6%AF%95%E4%B8%9A%E5%AD%A3%E5%A4%A7%E5%AD%A6%E4%B8%93%E4%B8%9A%E9%80%89%E6%8B%A9%E4%B9%8B%E5%B7%A5%E7%A7%91%E4%B8%8E%E7%90%86%E7%A7%91%E5%93%AA%E5%AE%B6%E5%BC%BA.html</loc>
-    
-    <lastmod>2023-07-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tech/hyperbeam.html</loc>
     
     <lastmod>2023-07-07</lastmod>
     
@@ -2792,20 +2801,6 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/tags/finance/</loc>
-    <lastmod>2023-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/Bonds/</loc>
-    <lastmod>2023-07-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/mark/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -2814,6 +2809,20 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/emotion/</loc>
+    <lastmod>2023-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/finance/</loc>
+    <lastmod>2023-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/Bonds/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3016,6 +3025,13 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/tags/QQ/</loc>
+    <lastmod>2023-07-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tags/Wordpress/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -3123,14 +3139,14 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/categories/work/</loc>
+    <loc>http://www.nickyam.com/categories/essay/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/categories/essay/</loc>
+    <loc>http://www.nickyam.com/categories/work/</loc>
     <lastmod>2023-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
