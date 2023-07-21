@@ -242,6 +242,72 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/tech/How-to-delete-MAC-system-update.html">
+                        如何删除 Mac 的系统更新包？
+                    </a>
+                </h3>
+
+                <!-- 在适当的位置插入谷歌广告代码 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        昨天苹果终于放出了 macOS 11 Big Sur 的首个公测版，所以晚上第一时间准备更新。然而更新包很大，下载就需要12G，正常安装的话需要腾出至少 60G 的空间。这真的是一件很扯的事情，完全没有考虑到128G硬盘用户的感受。考虑到之前更新 C...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Wed May 17 2023 22:10:28 GMT+0800">
+                2023-05-17
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/tech/">⓶科技</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/apple/">苹果</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Mac/">Mac</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/tech/How-to-delete-MAC-system-update.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/work/%E5%9F%8E%E6%8A%95%E5%85%AC%E5%8F%B8%E5%B0%BD%E8%B0%8351%E9%97%AE.html">
                         城投公司尽调51问
                     </a>
@@ -818,70 +884,6 @@ http://p.qlogo.cn/bizmail/Hvk43r7vHegM9LphQaG9HnibfulwJYR...
 
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/work/week-overview-of-bond-market-2020-06-01.html">
-                        2020债券市场一周概览（0601-0605）
-                    </a>
-                </h3>
-
-                <!-- 在适当的位置插入谷歌广告代码 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
-
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        一、一周债市概况
-本周债市频繁大跌，短期债券跌幅更为明显，收益率曲线大幅熊平。市场情绪整体不稳定，主要原因可能有
-（1）央行严查资金空转及套利现象；
-（2）央行对资金面存在“隔岸观火”的态度，货币政策有边际收紧的迹象，市场预期出现一定变化，部分市场参...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jun 17 2020 11:18:08 GMT+0800">
-                2020-06-17
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/work/">⓹工作</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/finance/">金融</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/work/week-overview-of-bond-market-2020-06-01.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
     </ul>
 
     <div class="home-paginator">
@@ -1022,39 +1024,212 @@ http://p.qlogo.cn/bizmail/Hvk43r7vHegM9LphQaG9HnibfulwJYR...
 
     </div>
 
-    <div class="zoom-in-image-mask">
-    <img class="zoom-in-image">
-</div>
+    .zoom-in-image-mask {
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  z-index $z-index-8
+  display flex
+  align-items center
+  justify-content center
+  box-sizing border-box
+  background rgba(0, 0, 0, 0)
+  visibility hidden
+  transition-t("visibility, background", "0, 0", "0.3, 0.3", "linear, linear")
+
+  &.show {
+    background rgba(0, 0, 0, 0.5)
+    visibility visible
+
+    .zoom-in-image {
+      cursor zoom-out
+    }
+  }
+
+  .zoom-in-image {
+    position absolute
+    z-index $z-index-9
+    transform-origin center center
+    will-change transform
+    transition-t("transform", "0", "0.3", "linear")
+  }
+}
 
 
     
-        <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-          <span class="search-input-field-pre">
-            <i class="fas fa-keyboard"></i>
-          </span>
-            <div class="search-input-container">
-                <input autocomplete="off"
-                       autocorrect="off"
-                       autocapitalize="off"
-                       placeholder="搜索..."
-                       spellcheck="false"
-                       type="search"
-                       class="search-input"
-                >
-            </div>
-            <span class="close-popup-btn">
-                <i class="fas fa-times"></i>
-            </span>
-        </div>
-        <div id="search-result">
-            <div id="no-result">
-                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
-            </div>
-        </div>
-    </div>
-</div>
+        $icon-size = 1.2rem
+$search-header-height = 3rem
+
+.search-pop-overlay {
+  position fixed
+  top 0
+  left 0
+  z-index $z-index-8
+  display flex
+  width 100%
+  height 100%
+  background rgba(0, 0, 0, 0)
+  visibility hidden
+  transition-t("visibility, background", "0, 0", "0.3, 0.3", "ease, ease")
+
+  &.active {
+    background rgba(0, 0, 0, 0.35)
+    visibility visible
+
+    .search-popup {
+      transform scale(1)
+    }
+  }
+
+
+  .search-popup {
+    z-index $z-index-6
+    width 70%
+    height 80%
+    margin auto
+    background var(--background-color-1)
+    border-radius 0.4rem
+    transform scale(0)
+    transition-t("transform", "0", "0.3", "ease")
+
+    +keep-tablet() {
+      width 80%
+    }
+
+    +keep-mobile() {
+      width 90%
+    }
+
+    .search-header {
+      display flex
+      align-items center
+      height $search-header-height
+      padding 0 1rem
+      background var(--text-color-6)
+      border-top-left-radius 0.2rem
+      border-top-right-radius 0.2rem
+
+      .search-input-field-pre {
+        margin-right 0.2rem
+        color var(--text-color-3)
+        font-size 1.3rem
+        cursor pointer
+      }
+
+      .search-input-container {
+        flex-grow 1
+        padding 0.2rem
+
+        .search-input {
+          width 100%
+          color var(--text-color-3)
+          font-size 1.2rem
+          background transparent
+          border 0
+          outline 0
+
+          &::-webkit-search-cancel-button {
+            display none
+          }
+
+          &::-webkit-input-placeholder {
+            color var(--text-color-4)
+            font-size 1rem
+          }
+        }
+      }
+
+
+      .close-popup-btn {
+        color var(--text-color-3)
+        font-size $icon-size
+        cursor pointer
+
+        &:hover {
+          color var(--text-color-1)
+        }
+      }
+    }
+
+
+    #search-result {
+      position relative
+      display flex
+      box-sizing border-box
+      height 'calc(100% - %s)' % $search-header-height
+      padding 0.3rem 1.5rem
+      overflow auto
+
+      .search-result-list {
+        width 100%
+        height 100%
+        font-size 1rem
+
+        li {
+          box-sizing border-box
+          margin 0.8rem 0
+          padding 0.8rem 0
+          border-bottom 0.1rem dashed var(--border-color)
+
+          &:last-child {
+            border-bottom none
+          }
+
+
+          .search-result-title {
+            position relative
+            display flex
+            align-items center
+            margin-bottom 0.8rem
+            padding-left 1rem
+            font-weight bold
+
+            &::after {
+              position absolute
+              top 50%
+              left 0
+              width 0.4rem
+              height 0.4rem
+              background var(--text-color-3)
+              border-radius 50%
+              transform translateY(-50%)
+              content ''
+            }
+          }
+
+
+          .search-result {
+            margin 0
+            padding-left 1rem
+            line-height 2rem
+            word-wrap break-word
+          }
+
+          a {
+            &:hover {
+              color var(--text-color-3)
+            }
+          }
+
+          .search-keyword {
+            color var(--primary-color)
+            font-weight bold
+            border-bottom 0.1rem dashed var(--primary-color)
+          }
+        }
+      }
+
+
+      #no-result {
+        margin auto
+        color var(--text-color-4)
+      }
+    }
+  }
+}
+
 
     
 
