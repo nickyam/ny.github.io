@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.nickyam.com/tech/redeem_apple_giftcard.html</loc>
+    <loc>http://www.nickyam.com/tech/buy_apple_giftcard_in_alipay.html</loc>
     
     <lastmod>2023-07-21</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tech/buy_apple_giftcard_in_alipay.html</loc>
+    <loc>http://www.nickyam.com/tech/redeem_apple_giftcard.html</loc>
     
     <lastmod>2023-07-21</lastmod>
     
@@ -2603,7 +2603,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Spiritual-Light-from-the-Underground.html</loc>
+    <loc>http://www.nickyam.com/essay/Story-1910.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2612,7 +2612,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Story-1910.html</loc>
+    <loc>http://www.nickyam.com/essay/Spiritual-Light-from-the-Underground.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2860,6 +2860,13 @@
   </url>
   
   <url>
+    <loc>http://www.nickyam.com/tags/ChatGPT/</loc>
+    <lastmod>2023-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tags/finance/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -2868,13 +2875,6 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/Bonds/</loc>
-    <lastmod>2023-07-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/ChatGPT/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2930,14 +2930,14 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/thu/</loc>
+    <loc>http://www.nickyam.com/tags/reprint/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/reprint/</loc>
+    <loc>http://www.nickyam.com/tags/thu/</loc>
     <lastmod>2023-07-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
