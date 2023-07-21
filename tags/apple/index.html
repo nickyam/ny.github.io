@@ -247,9 +247,16 @@
         <section class="archive-item">
             <div class="archive-item-header">
                 <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[1]</span>
+                <span class="archive-year-post-count">[2]</span>
             </div>
             <ul class="article-list">
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/redeem_apple_giftcard.html"
+                        >美区App Store 礼品卡充值兑换步骤</a>
+                        <span class="article-date">07-21</span>
+                    </li>
                 
                     <li class="article-item">
                         <a class="article-title"
@@ -396,212 +403,242 @@
 
     </div>
 
-    .zoom-in-image-mask {
-  position fixed
-  top 0
-  right 0
-  bottom 0
-  left 0
-  z-index $z-index-8
-  display flex
-  align-items center
-  justify-content center
-  box-sizing border-box
-  background rgba(0, 0, 0, 0)
-  visibility hidden
-  transition-t("visibility, background", "0, 0", "0.3, 0.3", "linear, linear")
-
-  &.show {
-    background rgba(0, 0, 0, 0.5)
-    visibility visible
-
-    .zoom-in-image {
-      cursor zoom-out
-    }
-  }
-
-  .zoom-in-image {
-    position absolute
-    z-index $z-index-9
-    transform-origin center center
-    will-change transform
-    transition-t("transform", "0", "0.3", "linear")
-  }
-}
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
 
 
     
-        $icon-size = 1.2rem
-$search-header-height = 3rem
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
-.search-pop-overlay {
-  position fixed
-  top 0
-  left 0
-  z-index $z-index-8
-  display flex
-  width 100%
-  height 100%
-  background rgba(0, 0, 0, 0)
-  visibility hidden
-  transition-t("visibility, background", "0, 0", "0.3, 0.3", "ease, ease")
+    
 
-  &.active {
-    background rgba(0, 0, 0, 0.35)
-    visibility visible
-
-    .search-popup {
-      transform scale(1)
-    }
-  }
-
-
-  .search-popup {
-    z-index $z-index-6
-    width 70%
-    height 80%
-    margin auto
-    background var(--background-color-1)
-    border-radius 0.4rem
-    transform scale(0)
-    transition-t("transform", "0", "0.3", "ease")
-
-    +keep-tablet() {
-      width 80%
-    }
-
-    +keep-mobile() {
-      width 90%
-    }
-
-    .search-header {
-      display flex
-      align-items center
-      height $search-header-height
-      padding 0 1rem
-      background var(--text-color-6)
-      border-top-left-radius 0.2rem
-      border-top-right-radius 0.2rem
-
-      .search-input-field-pre {
-        margin-right 0.2rem
-        color var(--text-color-3)
-        font-size 1.3rem
-        cursor pointer
-      }
-
-      .search-input-container {
-        flex-grow 1
-        padding 0.2rem
-
-        .search-input {
-          width 100%
-          color var(--text-color-3)
-          font-size 1.2rem
-          background transparent
-          border 0
-          outline 0
-
-          &::-webkit-search-cancel-button {
-            display none
-          }
-
-          &::-webkit-input-placeholder {
-            color var(--text-color-4)
-            font-size 1rem
-          }
-        }
-      }
+</main>
 
 
-      .close-popup-btn {
-        color var(--text-color-3)
-        font-size $icon-size
-        cursor pointer
 
-        &:hover {
-          color var(--text-color-1)
-        }
-      }
-    }
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
 
 
-    #search-result {
-      position relative
-      display flex
-      box-sizing border-box
-      height 'calc(100% - %s)' % $search-header-height
-      padding 0.3rem 1.5rem
-      overflow auto
-
-      .search-result-list {
-        width 100%
-        height 100%
-        font-size 1rem
-
-        li {
-          box-sizing border-box
-          margin 0.8rem 0
-          padding 0.8rem 0
-          border-bottom 0.1rem dashed var(--border-color)
-
-          &:last-child {
-            border-bottom none
-          }
 
 
-          .search-result-title {
-            position relative
-            display flex
-            align-items center
-            margin-bottom 0.8rem
-            padding-left 1rem
-            font-weight bold
-
-            &::after {
-              position absolute
-              top 50%
-              left 0
-              width 0.4rem
-              height 0.4rem
-              background var(--text-color-3)
-              border-radius 50%
-              transform translateY(-50%)
-              content ''
-            }
-          }
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/local-search.js"></script>
 
 
-          .search-result {
-            margin 0
-            padding-left 1rem
-            line-height 2rem
-            word-wrap break-word
-          }
 
-          a {
-            &:hover {
-              color var(--text-color-3)
-            }
-          }
-
-          .search-keyword {
-            color var(--primary-color)
-            font-weight bold
-            border-bottom 0.1rem dashed var(--primary-color)
-          }
-        }
-      }
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
 
 
-      #no-result {
-        margin auto
-        color var(--text-color-4)
-      }
-    }
-  }
-}
 
+
+<div class="post-scripts pjax">
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>-aa='2218236' src='//acceptable.a-ads.com/2218236' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
+
+
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2006</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Nick Yam</a>
+            
+        </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+            <div class="deploy-info info-item">
+                
+                    <a target="_blank" rel="nofollow" href="git@github.com:nickyam/nickyam.github.io.git,main">
+                
+                    本站由 <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                
+                    </a>
+                
+            </div>
+        
+    </div>
+</footer>
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?927b2f1029f1257d38abe17078639c28";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+        </div>
+    </div>
+
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
     
 

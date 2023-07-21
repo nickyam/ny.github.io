@@ -236,19 +236,163 @@
             <div class="main-content">
 
                 
-                    
-<div class="fade-in-down-animation">
-    <div class="page-template-container">
-        
-        
-        <div class="page-template-content keep-markdown-body">
-            
-                <h1>Search</h1>
-            
-        </div>
-        
-    </div>
-</div>
+                    $friend-link-item-height = 82px
+$friend-link-item-height-tablet = 68px
+$friend-link-item-interval = 16px
+$friend-link-item-border-radius = 6px
+
+.page-template-container {
+
+  keep-container(false, 0, 0, 2rem, 2rem)
+
+  .page-template-content {
+    color var(--text-color-3)
+
+    h1
+    h2
+    h3
+    h4
+    h5
+    h6 {
+
+      &:first-child {
+        margin-top 0
+      }
+    }
+  }
+
+
+  if (hexo-config('menu.Links')) {
+    .friends-link-container {
+
+      .friends-link-list {
+        position relative
+
+        .friends-link-item {
+          position relative
+          float left
+          box-sizing border-box
+          width 50%
+          height $friend-link-item-height
+          padding-bottom $friend-link-item-interval
+          cursor pointer
+
+          +keep-tablet() {
+            height $friend-link-item-height-tablet
+          }
+
+          &:nth-child(odd) {
+            padding-right $friend-link-item-interval * 0.5
+          }
+
+          &:nth-child(even) {
+            padding-left $friend-link-item-interval * 0.5
+          }
+
+          .content {
+            position relative
+            box-sizing border-box
+            width 100%
+            height 100%
+            padding-left $friend-link-item-height - $friend-link-item-interval
+            border-radius $friend-link-item-border-radius
+            box-shadow 1px 1px 2px var(--shadow-color)
+
+
+            +keep-tablet() {
+              padding-left $friend-link-item-height-tablet - $friend-link-item-interval
+            }
+
+            &:hover {
+              box-shadow 1px 1px 6px var(--shadow-color)
+
+              .info .name {
+                color var(--primary-color)
+              }
+            }
+
+            .radius {
+              border-top-left-radius $friend-link-item-border-radius
+              border-bottom-left-radius $friend-link-item-border-radius
+            }
+
+            .avatar {
+              position absolute
+              top 0
+              left 0
+              display flex
+              align-items center
+              justify-content center
+              width $friend-link-item-height  - $friend-link-item-interval
+              height 100%
+              color var(--text-color-2)
+              font-size 2rem
+              background var(--background-color-2)
+
+
+              +keep-tablet() {
+                width $friend-link-item-height-tablet  - $friend-link-item-interval
+              }
+
+              img {
+                position relative
+                box-sizing border-box
+                width 100%
+                height 100%
+              }
+            }
+
+
+            .info {
+              position relative
+              display flex
+              flex-direction column
+              align-items center
+              justify-items flex-start
+              box-sizing border-box
+              width 100%
+              height 100%
+              padding 10px
+
+              +keep-tablet() {
+                padding 6px
+              }
+
+              .name {
+                width 100%
+                height 60%
+                color var(--text-color-2)
+                font-size 1.28rem
+
+                +keep-tablet() {
+                  font-size 1.08rem
+                }
+              }
+
+              .description {
+                width 100%
+                height 40%
+                color var(--text-color-4)
+                font-size 1rem
+
+
+                +keep-tablet() {
+                  font-size 0.98rem
+                }
+              }
+
+              .ellipsis {
+                overflow hidden
+                white-space nowrap
+                text-overflow ellipsis
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 
                 
@@ -370,212 +514,39 @@
 
     </div>
 
-    .zoom-in-image-mask {
-  position fixed
-  top 0
-  right 0
-  bottom 0
-  left 0
-  z-index $z-index-8
-  display flex
-  align-items center
-  justify-content center
-  box-sizing border-box
-  background rgba(0, 0, 0, 0)
-  visibility hidden
-  transition-t("visibility, background", "0, 0", "0.3, 0.3", "linear, linear")
-
-  &.show {
-    background rgba(0, 0, 0, 0.5)
-    visibility visible
-
-    .zoom-in-image {
-      cursor zoom-out
-    }
-  }
-
-  .zoom-in-image {
-    position absolute
-    z-index $z-index-9
-    transform-origin center center
-    will-change transform
-    transition-t("transform", "0", "0.3", "linear")
-  }
-}
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
 
 
     
-        $icon-size = 1.2rem
-$search-header-height = 3rem
-
-.search-pop-overlay {
-  position fixed
-  top 0
-  left 0
-  z-index $z-index-8
-  display flex
-  width 100%
-  height 100%
-  background rgba(0, 0, 0, 0)
-  visibility hidden
-  transition-t("visibility, background", "0, 0", "0.3, 0.3", "ease, ease")
-
-  &.active {
-    background rgba(0, 0, 0, 0.35)
-    visibility visible
-
-    .search-popup {
-      transform scale(1)
-    }
-  }
-
-
-  .search-popup {
-    z-index $z-index-6
-    width 70%
-    height 80%
-    margin auto
-    background var(--background-color-1)
-    border-radius 0.4rem
-    transform scale(0)
-    transition-t("transform", "0", "0.3", "ease")
-
-    +keep-tablet() {
-      width 80%
-    }
-
-    +keep-mobile() {
-      width 90%
-    }
-
-    .search-header {
-      display flex
-      align-items center
-      height $search-header-height
-      padding 0 1rem
-      background var(--text-color-6)
-      border-top-left-radius 0.2rem
-      border-top-right-radius 0.2rem
-
-      .search-input-field-pre {
-        margin-right 0.2rem
-        color var(--text-color-3)
-        font-size 1.3rem
-        cursor pointer
-      }
-
-      .search-input-container {
-        flex-grow 1
-        padding 0.2rem
-
-        .search-input {
-          width 100%
-          color var(--text-color-3)
-          font-size 1.2rem
-          background transparent
-          border 0
-          outline 0
-
-          &::-webkit-search-cancel-button {
-            display none
-          }
-
-          &::-webkit-input-placeholder {
-            color var(--text-color-4)
-            font-size 1rem
-          }
-        }
-      }
-
-
-      .close-popup-btn {
-        color var(--text-color-3)
-        font-size $icon-size
-        cursor pointer
-
-        &:hover {
-          color var(--text-color-1)
-        }
-      }
-    }
-
-
-    #search-result {
-      position relative
-      display flex
-      box-sizing border-box
-      height 'calc(100% - %s)' % $search-header-height
-      padding 0.3rem 1.5rem
-      overflow auto
-
-      .search-result-list {
-        width 100%
-        height 100%
-        font-size 1rem
-
-        li {
-          box-sizing border-box
-          margin 0.8rem 0
-          padding 0.8rem 0
-          border-bottom 0.1rem dashed var(--border-color)
-
-          &:last-child {
-            border-bottom none
-          }
-
-
-          .search-result-title {
-            position relative
-            display flex
-            align-items center
-            margin-bottom 0.8rem
-            padding-left 1rem
-            font-weight bold
-
-            &::after {
-              position absolute
-              top 50%
-              left 0
-              width 0.4rem
-              height 0.4rem
-              background var(--text-color-3)
-              border-radius 50%
-              transform translateY(-50%)
-              content ''
-            }
-          }
-
-
-          .search-result {
-            margin 0
-            padding-left 1rem
-            line-height 2rem
-            word-wrap break-word
-          }
-
-          a {
-            &:hover {
-              color var(--text-color-3)
-            }
-          }
-
-          .search-keyword {
-            color var(--primary-color)
-            font-weight bold
-            border-bottom 0.1rem dashed var(--primary-color)
-          }
-        }
-      }
-
-
-      #no-result {
-        margin auto
-        color var(--text-color-4)
-      }
-    }
-  }
-}
-
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
     
 
