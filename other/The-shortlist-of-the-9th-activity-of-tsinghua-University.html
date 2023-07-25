@@ -332,7 +332,7 @@
 <h1 id="华北："><a href="#华北：" class="headerlink" title="华北："></a>华北：</h1><p>北京四中  北京十一中学  山西临汾一中  山西康杰中学  河北衡水一中  北京171中学  天津南开中学天津宝坻一中  内蒙古通辽五中</p>
 <h1 id="东北："><a href="#东北：" class="headerlink" title="东北："></a>东北：</h1><p>黑龙江哈尔滨三中  辽宁大连育明中学  辽宁大连二十四中  辽宁葫芦岛第一高级中学  黑龙江大庆一中</p>
 <h1 id="西南西北："><a href="#西南西北：" class="headerlink" title="西南西北："></a>西南西北：</h1><p>四川成都七中  陕西西安铁一中  陕西高新一中  四川绵阳中学  青海湟川一分校  陕西西工大附中  贵州安顺一中</p>
-<p>进入初选名单的支队将进入我们的复选环节。如果有支队没有出现在初选名单上，但是希望通过复议（即申请情系母校部对其支队材料二审）进入复选环节的，请发复议申请邮件到<a class="link"   href="mailto:&#99;&#x68;&#97;&#x72;&#x6c;&#105;&#101;&#53;&#x31;&#51;&#64;&#49;&#54;&#x33;&#x2e;&#x63;&#x6f;&#109;" >&#99;&#x68;&#97;&#x72;&#x6c;&#105;&#101;&#53;&#x31;&#51;&#64;&#49;&#54;&#x33;&#x2e;&#x63;&#x6f;&#109;<i class="fas fa-external-link-alt"></i></a>.</p>
+<p>进入初选名单的支队将进入我们的复选环节。如果有支队没有出现在初选名单上，但是希望通过复议（即申请情系母校部对其支队材料二审）进入复选环节的，请发复议申请邮件到<a class="link"   href="mailto:&#x63;&#104;&#x61;&#x72;&#108;&#x69;&#x65;&#x35;&#x31;&#x33;&#64;&#49;&#54;&#x33;&#x2e;&#99;&#x6f;&#x6d;" >&#x63;&#104;&#x61;&#x72;&#108;&#x69;&#x65;&#x35;&#x31;&#x33;&#64;&#49;&#54;&#x33;&#x2e;&#99;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a>.</p>
 <p>注意：直接联系地区负责人或者其他方式寻求复议的，情系母校部门一概不予受理。复议时间从即日起到3月12日。情系母校部若接受复议，会在三个工作日内受理。</p>
 <p>感谢您对情系母校活动一如既往的关心和支持！</p>
 
@@ -343,31 +343,87 @@
             
             
                 <div class="post-copyright-info">
-                    <iframe data-aa='2218236' src='//acceptable.a-ads.com/2218236' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
+                    .article-copyright-info-container {
+  position relative
+  box-sizing border-box
+  width 100%
+  padding 0.8rem 0.8rem 0.8rem 1.3rem
+  font-size 1rem
+  background var(--background-color-2)
+
+  &::after {
+    position absolute
+    top 0
+    left 0
+    width 0.5rem
+    height 100%
+    background var(--copyright-info-color)
+    content ''
+  }
 
 
-<div class="article-copyright-info-container">
-    <ul class="copyright-info-content">
-        <li class="post-title">
-            <span class="type">本文标题</span>：<span class="content">清华大学第九届情系母校活动初选入围名单</span>
-        </li>
-        <li class="post-author">
-            <span class="type">本文作者</span>：<span class="content">Nick Yam</span>
-        </li>
-        <li class="post-time">
-            <span class="type">创建时间</span>：<span class="content">2011-03-06 13:11:47</span>
-        </li>
-        <li class="post-link">
-            <span class="type">本文链接</span>：<span class="content">other/The-shortlist-of-the-9th-activity-of-tsinghua-University.html</span>
-        </li>
-        <li class="post-license">
-            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
-        </li>
-    </ul>
-    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
-        <i class="fa-solid fa-copy"></i>
-    </div>
-</div>
+  &:hover {
+    .copy-copyright-info {
+      visibility visible
+    }
+  }
+
+
+  .copyright-info-content {
+    position relative
+    box-sizing border-box
+    overflow-x auto
+
+    &::-webkit-scrollbar {
+      width 0.3rem
+      height 0.3rem
+      transition all 0.2s ease
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background var(--text-color-4)
+    }
+
+    &::-webkit-scrollbar-track {
+      background transparent
+    }
+
+    li {
+      margin-bottom 0.4rem
+      color var(--text-color-3)
+      white-space nowrap
+
+      .type
+      .content {
+        color var(--text-color-3)
+      }
+
+      .license {
+        font-weight bold
+      }
+
+      &:last-child {
+        margin-bottom 0
+      }
+    }
+  }
+
+
+  .copy-copyright-info {
+    position absolute
+    top 0.4rem
+    right 0.4rem
+    box-sizing border-box
+    padding 0.3rem
+    visibility hidden
+    cursor pointer
+    transition-t("visibility", "0", "0.2", "ease-in-out")
+
+    i {
+      color var(--text-color-3)
+    }
+  }
+}
 
                 </div>
             
