@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.nickyam.com/tech/apkpure_apk.html</loc>
+    
+    <lastmod>2023-07-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.nickyam.com/tech/How_to_register_for_a_free_OpenAI_account.html</loc>
     
     <lastmod>2023-07-25</lastmod>
@@ -2549,7 +2558,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
+    <loc>http://www.nickyam.com/essay/Hair-Cut.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2558,7 +2567,7 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/essay/Hair-Cut.html</loc>
+    <loc>http://www.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2855,20 +2864,6 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/tags/finance/</loc>
-    <lastmod>2023-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.nickyam.com/tags/Bonds/</loc>
-    <lastmod>2023-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.nickyam.com/tags/mark/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -2877,6 +2872,20 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/emotion/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/finance/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/Bonds/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2974,14 +2983,14 @@
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/entertainment/</loc>
+    <loc>http://www.nickyam.com/tags/VPN/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/tags/VPN/</loc>
+    <loc>http://www.nickyam.com/tags/entertainment/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3094,6 +3103,20 @@
   
   <url>
     <loc>http://www.nickyam.com/tags/Wordpress/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/Goggle/</loc>
+    <lastmod>2023-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.nickyam.com/tags/APK/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3228,14 +3251,14 @@
 
   
   <url>
-    <loc>http://www.nickyam.com/categories/work/</loc>
+    <loc>http://www.nickyam.com/categories/essay/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.nickyam.com/categories/essay/</loc>
+    <loc>http://www.nickyam.com/categories/work/</loc>
     <lastmod>2023-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
