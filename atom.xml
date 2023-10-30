@@ -40,6 +40,31 @@
   </entry>
   
   <entry>
+    <title>如何使用.onion域名创建匿名网站</title>
+    <link href="http://blog.nickyam.com/tech/how-to-use-onion-to-setup-website.html"/>
+    <id>http://blog.nickyam.com/tech/how-to-use-onion-to-setup-website.html</id>
+    <published>2023-10-27T00:03:00.000Z</published>
+    <updated>2023-10-30T03:26:56.142Z</updated>
+    
+    <content type="html"><![CDATA[<p>零点君很早对暗网有所了解，但也没有进一步的去搞事情。同时，我觉得还是有必要把一些资料记录下来，方便查阅。</p><p>想使用.onion域名需要用到Tor，也就是洋葱头。根据公开资料，洋葱头（The Onion Router）是一种软件，是第二代洋葱路由（onion routing）的一种实现，用户通过它可以在internet上匿名交流。</p><p><img src="https://img.nickyam.com/file/fcc549d33dfd18521174f.jpg"></p><p>如果你在国内，一般来说不要轻易去尝试，这行为在国内和作死的区别不是很大。</p><p>在主要操作前，准备如下：</p><ol><li>准备一台服务器，注意不能是国内的，也不能是国内服务商的。</li><li>使用CentOS，一般版本6以上就好。</li><li>给服务器安装nginx，并监听8080端口，防火墙也要开8080端口。</li></ol><p>正式教程开始：</p><p>1.首先扩展yum源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br><span class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</span><br></pre></td></tr></table></figure><p>2.执行指令安装Tor</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y tor</span><br></pre></td></tr></table></figure><p>3.写入配置文件，Tor源服务端口是8080</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo “HiddenServiceDir /var/lib/tor/hidden_service/” &gt;&gt; /etc/tor/torrc</span><br><span class="line">echo “HiddenServicePort 80 127.0.0.1:8080” &gt;&gt; /etc/tor/torrc</span><br></pre></td></tr></table></figure><p>4.重启Tor，然后查询自己的.onion域名</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service tor start</span><br><span class="line">cat /var/lib/tor/hidden_service/hostname</span><br></pre></td></tr></table></figure><p>5.在nginx新建一个网站，将查询出的.onion域名绑定上去，和正常的不同，端口需要8080。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将网站配置文件里的listen 80;改为listen 8080;</span><br></pre></td></tr></table></figure><p>经过以上步骤，.onion匿名网站搭建完成。当然，直接用普通浏览器是访问不了的，还需要下载一个Tor浏览器才能访问。</p><p>如果想进一般的暗网网站，Tor浏览器是不够的，因为它无法阻止你被宽带运营商发现，从而查水表，需要额外带一个代理，也就是某个大家都懂的东西。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;零点君很早对暗网有所了解，但也没有进一步的去搞事情。同时，我觉得还是有必要把一些资料记录下来，方便查阅。&lt;/p&gt;
+&lt;p&gt;想使用.onion域名需要用到Tor，也就是洋葱头。根据公开资料，洋葱头（The Onion Router）是一种软件，是第二代洋葱路由（onion ro</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="Onion" scheme="http://blog.nickyam.com/tags/Onion/"/>
+    
+  </entry>
+  
+  <entry>
     <title>时光机｜如何查看一个网站10年前的样子</title>
     <link href="http://blog.nickyam.com/tech/archive-Wayback-Machine.html"/>
     <id>http://blog.nickyam.com/tech/archive-Wayback-Machine.html</id>
@@ -492,27 +517,6 @@
     <category term="网络" scheme="http://blog.nickyam.com/tags/net/"/>
     
     <category term="Blog" scheme="http://blog.nickyam.com/tags/Blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Monica：免费而强大的ChatGPT助手</title>
-    <link href="http://blog.nickyam.com/tech/Monica%EF%BC%9A%E5%85%8D%E8%B4%B9%E8%80%8C%E5%BC%BA%E5%A4%A7%E7%9A%84ChatGPT%E5%8A%A9%E6%89%8B.html"/>
-    <id>http://blog.nickyam.com/tech/Monica%EF%BC%9A%E5%85%8D%E8%B4%B9%E8%80%8C%E5%BC%BA%E5%A4%A7%E7%9A%84ChatGPT%E5%8A%A9%E6%89%8B.html</id>
-    <published>2023-06-25T09:18:56.000Z</published>
-    <updated>2023-07-06T15:42:32.226Z</updated>
-    
-    <content type="html"><![CDATA[<p>Monica 能通过增强Chatgpt模型，提高您的工作效率，让您第一时间体验最核心、最前沿的AI技术。只需在任意网页上按下Cmd+M或Ctrl+M，即可与Chatgpt聊天。</p><span id="more"></span><p>提起Monica，你会想到什么？是老友记里的主角之一Monica·Geller，一个热心肠的女主人形象吗？今天我们要介绍的是一款基于Google浏览器的Chrome扩展插件。</p><p><img src="https://img.nickyam.com/file/5c92f6c671e1b70e9678d.png" alt="图片"></p><p>Monica 能通过增强Chatgpt模型，提高您的工作效率，让您第一时间体验最核心、最前沿的AI技术。只需在任意网页上按下Cmd+M或Ctrl+M，即可与Chatgpt聊天。目前，在MacOS也有单独的官方独立APP可供使用。</p><p>如果你没有注册ChatGPT，没有付费Plus权限，或者没有🪜，Monica 智能 AI 助手都可以解决，她在国内能直连使用，日常使用无需特殊网络。 当然首次安装插件和登录谷歌账号时需要想办法（也可以在后台回复莫妮卡获取谷歌chrome插件）。</p><p>与 Monica 随意交谈与讨论，畅所欲言，它几乎能解答一切问题利用 Monica 基于 ChatGPT 的 AI 能力，轻松写作可从 80 多个模板中快速选择，生成各种营销文案；在网页上选中一段文本，让 Monica 为您解释、翻译、总结，或帮你改写能让你在任何网站上使用 Monica 的功能。Monica可以生成各种文案，具体可以定制到长度、格式、语气和语言等等。</p><p>你可以免费使用 Monica 浏览器扩展，但免费用户有每日使用次数限制 (目前每天 30 次请求)，轻度使用够用，或者权当试用一下 ChatGPT 的 AI 能力。毕竟这类工具都有成本，如果想提高使用权限，就需要付费了。  </p><p><img src="https://img.nickyam.com/file/74e13eb32fee2e32b39de.png" alt="图片"></p><p><strong>Monica 是由 GPT-4 驱动的人工智能助手，现在注册赠送你 100 个免费 GPT 次数，包括 GPT-4，GPT-3.5，AI 画图。</strong> </p><p><a class="link"   href="https://monica.im/?c=WR0LOEP4" >https://monica.im/?c=WR0LOEP4<i class="fas fa-external-link-alt"></i></a></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;Monica 能通过增强Chatgpt模型，提高您的工作效率，让您第一时间体验最核心、最前沿的AI技术。只需在任意网页上按下Cmd+M或Ctrl+M，即可与Chatgpt聊天。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
-    
-    
-    <category term="ChatGPT" scheme="http://blog.nickyam.com/tags/ChatGPT/"/>
     
   </entry>
   
