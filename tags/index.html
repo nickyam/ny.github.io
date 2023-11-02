@@ -51,144 +51,311 @@
     <div class="page-main-content">
 
         <div class="page-main-content-top">
-            
-<header class="header-wrapper">
+            $logo-title-font-size = 2rem
+$pc-search-icon-font-size = 1.5rem
+$menu-bar-line-height = 2.5px
+$logo-image-box-width = 46px
 
-    <div class="header-content">
-        <div class="left">
-            
-                <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
-                </a>
-            
-            <a class="logo-title" href="/">
-               涯木
-            </a>
-        </div>
+.header-wrapper {
+  display flex
+  align-items center
+  justify-content center
+  box-sizing border-box
+  width 100%
+  height 100%
+  padding-top $scroll-progress-bar-height
+  background var(--background-color-1)
 
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/"
-                            >
-                                首页
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN"
-                            >
-                                VPN
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                归档
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class="active"
-                               href="/tags"
-                            >
-                                标签
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://book.nickyam.com/"
-                            >
-                                藏书
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/links"
-                            >
-                                友链
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/about"
-                            >
-                                关于
-                            </a>
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="fas fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+  hover-style(false, 0, 0)
 
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/">首页</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN">VPN</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">归档</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class="active"
-                       href="/tags">标签</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://book.nickyam.com/">藏书</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/links">友链</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/about">关于</a>
-                </li>
-            
-        </ul>
-    </div>
+  .header-content {
+    position relative
+    z-index $z-index-5
+    display flex
+    flex-direction row
+    align-items center
+    justify-content space-between
+    width $main-content-width
+    max-width $content-max-width
+    height 100%
+    transition-t("max-width, width", "0, 0", "0.1, 0.1", "ease, ease")
 
-    <div class="window-mask"></div>
 
-</header>
+    &.has-first-screen {
+      max-width $has-fs-content-max-width
+    }
 
+    .has-toc & {
+      max-width $has-toc-content-max-width
+    }
+
+    +keep-tablet() {
+      width $main-content-width-tablet
+    }
+
+    +keep-mobile() {
+      width $main-content-width-mobile
+    }
+
+    .left {
+      display flex
+      align-items center
+      transition-t("transform", "0", "0.2", "linear")
+
+      .header-shrink & {
+        transform scale(0.72)
+        transform-origin left
+      }
+
+
+      if (hexo-config('base_info.logo_img') || hexo-config('style.logo')) {
+        .logo-image {
+          width $logo-image-box-width
+          height $logo-image-box-width
+          margin-right 8px
+
+
+          +keep-tablet() {
+            width $logo-image-box-width * 0.9
+            height $logo-image-box-width * 0.9
+          }
+
+          +keep-mobile() {
+            width $logo-image-box-width * 0.8
+            height $logo-image-box-width * 0.8
+          }
+
+          img {
+            width 100%
+            border-radius 6px
+          }
+        }
+      }
+
+      .logo-title {
+        color var(--text-color-1)
+        font-weight bold
+        font-size $logo-title-font-size
+        line-height 1
+        letter-spacing 1px
+
+        +keep-tablet() {
+          font-size $logo-title-font-size * 0.9
+        }
+
+        +keep-mobile() {
+          font-size $logo-title-font-size * 0.8
+        }
+      }
+    }
+
+
+    .right {
+
+      .pc {
+
+        .menu-list {
+          display flex
+          align-items center
+
+          +keep-tablet() {
+            display none
+          }
+
+
+          .menu-item {
+            position relative
+            float left
+            margin-left 2rem
+            color var(--text-color-3)
+            font-size 1rem
+            cursor pointer
+
+            &:first-child {
+              margin-left 0
+            }
+
+
+            a:hover
+            .active {
+
+              &::after {
+                position absolute
+                bottom -10px
+                left 50%
+                width 100%
+                height 2px
+                background var(--primary-color)
+                transform translateX(-50%)
+                content ''
+                transition-t("transform, bottom", "0, 0", "0.2, 0.2", "linear, linear")
+
+                .header-shrink & {
+                  bottom -($header-shrink-height / 2 - 12)
+                }
+              }
+            }
+
+            &.search {
+              margin-left 26px
+              font-size $pc-search-icon-font-size
+
+              i {
+                color var(--text-color-3)
+              }
+            }
+          }
+        }
+      }
+
+
+      .mobile {
+        display flex
+        align-items center
+        justify-content space-between
+
+        .icon-item {
+          position relative
+          display none
+          width 20px
+          height 20px
+          margin-left 12px
+          color var(--text-color-3)
+          font-size 18px
+          cursor pointer
+
+          i {
+            color var(--text-color-3)
+          }
+
+          &:first-child {
+            margin-left 0
+          }
+
+          +keep-tablet() {
+            display flex
+            align-items center
+            justify-content center
+          }
+        }
+
+        .menu-bar {
+
+          .menu-bar-middle {
+            position relative
+            width 18px
+            height $menu-bar-line-height
+            background var(--text-color-3)
+
+            .header-drawer-show & {
+              background transparent
+            }
+
+
+            &::before
+            &::after {
+              position absolute
+              left 0
+              width 100%
+              height $menu-bar-line-height
+              background var(--text-color-3)
+              content ''
+              transition-t("transform", "0", "0.38", "ease")
+            }
+
+
+            &::before {
+              top -6px
+
+              .header-drawer-show & {
+                transform translateY(6px) rotate(45deg)
+              }
+            }
+
+
+            &::after {
+              bottom -6px
+
+              .header-drawer-show & {
+                transform translateY(-6px) rotate(-45deg)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .header-drawer {
+    position absolute
+    top 0
+    left 0
+    z-index $z-index-2
+    width 100%
+    padding $header-height 0 20px 0
+    background var(--background-color-1)
+    transform scaleY(0)
+    transform-origin top
+    transition-t("transform", "0", "0.38", "ease")
+
+    .header-drawer-show & {
+      transform scaleY(1)
+    }
+
+    .drawer-menu-list {
+      display flex
+      flex-direction column
+      align-items center
+      justify-content flex-start
+
+      .drawer-menu-item {
+        height 38px
+        margin 6px 0
+        font-size 1rem
+
+        a {
+          padding 6px 20px
+          color var(--text-color-3)
+          border-radius 20px
+
+          &:hover {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+
+
+          &.active {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+        }
+      }
+    }
+  }
+
+
+  .window-mask {
+    position absolute
+    top 0
+    z-index $z-index-1
+    width 100%
+    height 100vh
+    background rgba(0, 0, 0, 0.4)
+    visibility hidden
+    opacity 0
+    transition-t("transform, opacity", "0, 0", "0.38, 0.38", "ease, ease")
+
+    .header-drawer-show & {
+      visibility visible
+      opacity 1
+    }
+  }
+}
+
+.header-drawer-show {
+  overflow hidden
+}
 
         </div>
 
@@ -201,7 +368,7 @@
     <div class="fade-in-down-animation">
         <div class="tagcloud-container">
             <div class="tagcloud-content">
-                <a href="/tags/AI/" style="font-size: 1.04rem;">AI</a> <a href="/tags/APK/" style="font-size: 1rem;">APK</a> <a href="/tags/Adsense/" style="font-size: 1rem;">Adsense</a> <a href="/tags/Apple/" style="font-size: 1.04rem;">Apple</a> <a href="/tags/Blog/" style="font-size: 1rem;">Blog</a> <a href="/tags/ChatGPT/" style="font-size: 1.39rem;">ChatGPT</a> <a href="/tags/GitHub/" style="font-size: 1.07rem;">GitHub</a> <a href="/tags/Github/" style="font-size: 1rem;">Github</a> <a href="/tags/Goggle/" style="font-size: 1rem;">Goggle</a> <a href="/tags/Google/" style="font-size: 1.07rem;">Google</a> <a href="/tags/Hexo/" style="font-size: 1.25rem;">Hexo</a> <a href="/tags/Mac/" style="font-size: 1.25rem;">Mac</a> <a href="/tags/NFT/" style="font-size: 1.04rem;">NFT</a> <a href="/tags/OPenAI/" style="font-size: 1rem;">OPenAI</a> <a href="/tags/Onion/" style="font-size: 1rem;">Onion</a> <a href="/tags/QQ/" style="font-size: 1rem;">QQ</a> <a href="/tags/VPN/" style="font-size: 1.14rem;">VPN</a> <a href="/tags/Web/" style="font-size: 1rem;">Web</a> <a href="/tags/Wordpress/" style="font-size: 1rem;">Wordpress</a> <a href="/tags/apk/" style="font-size: 1rem;">apk</a> <a href="/tags/chatgpt/" style="font-size: 1.04rem;">chatgpt</a> <a href="/tags/iOS/" style="font-size: 1rem;">iOS</a> <a href="/tags/iPhone/" style="font-size: 1.07rem;">iPhone</a> <a href="/tags/onekey/" style="font-size: 1rem;">onekey</a> <a href="/tags/china/" style="font-size: 1.25rem;">中国</a> <a href="/tags/Ethereum/" style="font-size: 1.07rem;">以太坊</a> <a href="/tags/sport/" style="font-size: 1.04rem;">体育</a> <a href="/tags/CreditCard/" style="font-size: 1rem;">信用卡</a> <a href="/tags/Bonds/" style="font-size: 1.21rem;">债券</a> <a href="/tags/health/" style="font-size: 1.11rem;">健康</a> <a href="/tags/Blockchain/" style="font-size: 1.11rem;">区块链</a> <a href="/tags/history/" style="font-size: 1.18rem;">历史</a> <a href="/tags/entertainment/" style="font-size: 1.21rem;">娱乐</a> <a href="/tags/Android/" style="font-size: 1rem;">安卓</a> <a href="/tags/novel/" style="font-size: 1.32rem;">小说</a> <a href="/tags/think/" style="font-size: 1.6rem;">思考</a> <a href="/tags/emotion/" style="font-size: 1.49rem;">情感</a> <a href="/tags/Alipay/" style="font-size: 1rem;">支付宝</a> <a href="/tags/literature/" style="font-size: 1.11rem;">文学</a> <a href="/tags/travel/" style="font-size: 1.07rem;">旅游</a> <a href="/tags/constellation/" style="font-size: 1rem;">星座</a> <a href="/tags/bitcoin/" style="font-size: 1.11rem;">比特币</a> <a href="/tags/thu/" style="font-size: 1.46rem;">清华</a> <a href="/tags/tesla/" style="font-size: 1.11rem;">特斯拉</a> <a href="/tags/keep/" style="font-size: 1.28rem;">留存</a> <a href="/tags/experience/" style="font-size: 1.21rem;">经历</a> <a href="/tags/rights/" style="font-size: 1.04rem;">维权</a> <a href="/tags/net/" style="font-size: 1.42rem;">网络</a> <a href="/tags/stock/" style="font-size: 1.11rem;">股票</a> <a href="/tags/tencent/" style="font-size: 1rem;">腾讯</a> <a href="/tags/apple/" style="font-size: 1.32rem;">苹果</a> <a href="/tags/westlake/" style="font-size: 1rem;">西湖</a> <a href="/tags/mark/" style="font-size: 1.53rem;">记录</a> <a href="/tags/Google/" style="font-size: 1rem;">谷歌</a> <a href="/tags/reprint/" style="font-size: 1.25rem;">转载</a> <a href="/tags/sports/" style="font-size: 1.11rem;">运动</a> <a href="/tags/finance/" style="font-size: 1.56rem;">金融</a> <a href="/tags/reading/" style="font-size: 1.35rem;">阅读</a> <a href="/tags/music/" style="font-size: 1.11rem;">音乐</a> <a href="/tags/scenery/" style="font-size: 1rem;">风景</a>
+                <a href="/tags/AI/" style="font-size: 1.07rem;">AI</a> <a href="/tags/APK/" style="font-size: 1rem;">APK</a> <a href="/tags/Adsense/" style="font-size: 1rem;">Adsense</a> <a href="/tags/Apple/" style="font-size: 1.04rem;">Apple</a> <a href="/tags/Blog/" style="font-size: 1rem;">Blog</a> <a href="/tags/ChatGPT/" style="font-size: 1.39rem;">ChatGPT</a> <a href="/tags/GitHub/" style="font-size: 1.07rem;">GitHub</a> <a href="/tags/Github/" style="font-size: 1rem;">Github</a> <a href="/tags/Goggle/" style="font-size: 1rem;">Goggle</a> <a href="/tags/Google/" style="font-size: 1.11rem;">Google</a> <a href="/tags/Hexo/" style="font-size: 1.25rem;">Hexo</a> <a href="/tags/Mac/" style="font-size: 1.25rem;">Mac</a> <a href="/tags/NFT/" style="font-size: 1.04rem;">NFT</a> <a href="/tags/OPenAI/" style="font-size: 1rem;">OPenAI</a> <a href="/tags/Onion/" style="font-size: 1rem;">Onion</a> <a href="/tags/QQ/" style="font-size: 1rem;">QQ</a> <a href="/tags/VPN/" style="font-size: 1.14rem;">VPN</a> <a href="/tags/Web/" style="font-size: 1rem;">Web</a> <a href="/tags/Wordpress/" style="font-size: 1rem;">Wordpress</a> <a href="/tags/apk/" style="font-size: 1rem;">apk</a> <a href="/tags/chatgpt/" style="font-size: 1.04rem;">chatgpt</a> <a href="/tags/iOS/" style="font-size: 1rem;">iOS</a> <a href="/tags/iPhone/" style="font-size: 1.07rem;">iPhone</a> <a href="/tags/onekey/" style="font-size: 1rem;">onekey</a> <a href="/tags/wordpress/" style="font-size: 1rem;">wordpress</a> <a href="/tags/china/" style="font-size: 1.25rem;">中国</a> <a href="/tags/Ethereum/" style="font-size: 1.07rem;">以太坊</a> <a href="/tags/sport/" style="font-size: 1.04rem;">体育</a> <a href="/tags/CreditCard/" style="font-size: 1rem;">信用卡</a> <a href="/tags/Bonds/" style="font-size: 1.21rem;">债券</a> <a href="/tags/health/" style="font-size: 1.11rem;">健康</a> <a href="/tags/Blockchain/" style="font-size: 1.11rem;">区块链</a> <a href="/tags/history/" style="font-size: 1.18rem;">历史</a> <a href="/tags/entertainment/" style="font-size: 1.21rem;">娱乐</a> <a href="/tags/Android/" style="font-size: 1rem;">安卓</a> <a href="/tags/novel/" style="font-size: 1.32rem;">小说</a> <a href="/tags/think/" style="font-size: 1.6rem;">思考</a> <a href="/tags/emotion/" style="font-size: 1.49rem;">情感</a> <a href="/tags/Alipay/" style="font-size: 1rem;">支付宝</a> <a href="/tags/literature/" style="font-size: 1.11rem;">文学</a> <a href="/tags/travel/" style="font-size: 1.07rem;">旅游</a> <a href="/tags/constellation/" style="font-size: 1rem;">星座</a> <a href="/tags/bitcoin/" style="font-size: 1.11rem;">比特币</a> <a href="/tags/thu/" style="font-size: 1.46rem;">清华</a> <a href="/tags/tesla/" style="font-size: 1.11rem;">特斯拉</a> <a href="/tags/keep/" style="font-size: 1.28rem;">留存</a> <a href="/tags/experience/" style="font-size: 1.21rem;">经历</a> <a href="/tags/rights/" style="font-size: 1.04rem;">维权</a> <a href="/tags/net/" style="font-size: 1.42rem;">网络</a> <a href="/tags/stock/" style="font-size: 1.11rem;">股票</a> <a href="/tags/tencent/" style="font-size: 1rem;">腾讯</a> <a href="/tags/apple/" style="font-size: 1.32rem;">苹果</a> <a href="/tags/westlake/" style="font-size: 1rem;">西湖</a> <a href="/tags/mark/" style="font-size: 1.53rem;">记录</a> <a href="/tags/Google/" style="font-size: 1rem;">谷歌</a> <a href="/tags/reprint/" style="font-size: 1.25rem;">转载</a> <a href="/tags/sports/" style="font-size: 1.11rem;">运动</a> <a href="/tags/finance/" style="font-size: 1.56rem;">金融</a> <a href="/tags/reading/" style="font-size: 1.35rem;">阅读</a> <a href="/tags/music/" style="font-size: 1.11rem;">音乐</a> <a href="/tags/scenery/" style="font-size: 1rem;">风景</a>
             </div>
         </div>
     </div>

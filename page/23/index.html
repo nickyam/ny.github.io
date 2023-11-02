@@ -49,144 +49,311 @@
     <div class="page-main-content is-home">
 
         <div class="page-main-content-top">
-            
-<header class="header-wrapper">
+            $logo-title-font-size = 2rem
+$pc-search-icon-font-size = 1.5rem
+$menu-bar-line-height = 2.5px
+$logo-image-box-width = 46px
 
-    <div class="header-content">
-        <div class="left">
-            
-                <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
-                </a>
-            
-            <a class="logo-title" href="/">
-               涯木
-            </a>
-        </div>
+.header-wrapper {
+  display flex
+  align-items center
+  justify-content center
+  box-sizing border-box
+  width 100%
+  height 100%
+  padding-top $scroll-progress-bar-height
+  background var(--background-color-1)
 
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class="active"
-                               href="/"
-                            >
-                                首页
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN"
-                            >
-                                VPN
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                归档
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/tags"
-                            >
-                                标签
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://book.nickyam.com/"
-                            >
-                                藏书
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/links"
-                            >
-                                友链
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/about"
-                            >
-                                关于
-                            </a>
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="fas fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+  hover-style(false, 0, 0)
 
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class="active"
-                       href="/">首页</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN">VPN</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">归档</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/tags">标签</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://book.nickyam.com/">藏书</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/links">友链</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/about">关于</a>
-                </li>
-            
-        </ul>
-    </div>
+  .header-content {
+    position relative
+    z-index $z-index-5
+    display flex
+    flex-direction row
+    align-items center
+    justify-content space-between
+    width $main-content-width
+    max-width $content-max-width
+    height 100%
+    transition-t("max-width, width", "0, 0", "0.1, 0.1", "ease, ease")
 
-    <div class="window-mask"></div>
 
-</header>
+    &.has-first-screen {
+      max-width $has-fs-content-max-width
+    }
 
+    .has-toc & {
+      max-width $has-toc-content-max-width
+    }
+
+    +keep-tablet() {
+      width $main-content-width-tablet
+    }
+
+    +keep-mobile() {
+      width $main-content-width-mobile
+    }
+
+    .left {
+      display flex
+      align-items center
+      transition-t("transform", "0", "0.2", "linear")
+
+      .header-shrink & {
+        transform scale(0.72)
+        transform-origin left
+      }
+
+
+      if (hexo-config('base_info.logo_img') || hexo-config('style.logo')) {
+        .logo-image {
+          width $logo-image-box-width
+          height $logo-image-box-width
+          margin-right 8px
+
+
+          +keep-tablet() {
+            width $logo-image-box-width * 0.9
+            height $logo-image-box-width * 0.9
+          }
+
+          +keep-mobile() {
+            width $logo-image-box-width * 0.8
+            height $logo-image-box-width * 0.8
+          }
+
+          img {
+            width 100%
+            border-radius 6px
+          }
+        }
+      }
+
+      .logo-title {
+        color var(--text-color-1)
+        font-weight bold
+        font-size $logo-title-font-size
+        line-height 1
+        letter-spacing 1px
+
+        +keep-tablet() {
+          font-size $logo-title-font-size * 0.9
+        }
+
+        +keep-mobile() {
+          font-size $logo-title-font-size * 0.8
+        }
+      }
+    }
+
+
+    .right {
+
+      .pc {
+
+        .menu-list {
+          display flex
+          align-items center
+
+          +keep-tablet() {
+            display none
+          }
+
+
+          .menu-item {
+            position relative
+            float left
+            margin-left 2rem
+            color var(--text-color-3)
+            font-size 1rem
+            cursor pointer
+
+            &:first-child {
+              margin-left 0
+            }
+
+
+            a:hover
+            .active {
+
+              &::after {
+                position absolute
+                bottom -10px
+                left 50%
+                width 100%
+                height 2px
+                background var(--primary-color)
+                transform translateX(-50%)
+                content ''
+                transition-t("transform, bottom", "0, 0", "0.2, 0.2", "linear, linear")
+
+                .header-shrink & {
+                  bottom -($header-shrink-height / 2 - 12)
+                }
+              }
+            }
+
+            &.search {
+              margin-left 26px
+              font-size $pc-search-icon-font-size
+
+              i {
+                color var(--text-color-3)
+              }
+            }
+          }
+        }
+      }
+
+
+      .mobile {
+        display flex
+        align-items center
+        justify-content space-between
+
+        .icon-item {
+          position relative
+          display none
+          width 20px
+          height 20px
+          margin-left 12px
+          color var(--text-color-3)
+          font-size 18px
+          cursor pointer
+
+          i {
+            color var(--text-color-3)
+          }
+
+          &:first-child {
+            margin-left 0
+          }
+
+          +keep-tablet() {
+            display flex
+            align-items center
+            justify-content center
+          }
+        }
+
+        .menu-bar {
+
+          .menu-bar-middle {
+            position relative
+            width 18px
+            height $menu-bar-line-height
+            background var(--text-color-3)
+
+            .header-drawer-show & {
+              background transparent
+            }
+
+
+            &::before
+            &::after {
+              position absolute
+              left 0
+              width 100%
+              height $menu-bar-line-height
+              background var(--text-color-3)
+              content ''
+              transition-t("transform", "0", "0.38", "ease")
+            }
+
+
+            &::before {
+              top -6px
+
+              .header-drawer-show & {
+                transform translateY(6px) rotate(45deg)
+              }
+            }
+
+
+            &::after {
+              bottom -6px
+
+              .header-drawer-show & {
+                transform translateY(-6px) rotate(-45deg)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .header-drawer {
+    position absolute
+    top 0
+    left 0
+    z-index $z-index-2
+    width 100%
+    padding $header-height 0 20px 0
+    background var(--background-color-1)
+    transform scaleY(0)
+    transform-origin top
+    transition-t("transform", "0", "0.38", "ease")
+
+    .header-drawer-show & {
+      transform scaleY(1)
+    }
+
+    .drawer-menu-list {
+      display flex
+      flex-direction column
+      align-items center
+      justify-content flex-start
+
+      .drawer-menu-item {
+        height 38px
+        margin 6px 0
+        font-size 1rem
+
+        a {
+          padding 6px 20px
+          color var(--text-color-3)
+          border-radius 20px
+
+          &:hover {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+
+
+          &.active {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+        }
+      }
+    }
+  }
+
+
+  .window-mask {
+    position absolute
+    top 0
+    z-index $z-index-1
+    width 100%
+    height 100vh
+    background rgba(0, 0, 0, 0.4)
+    visibility hidden
+    opacity 0
+    transition-t("transform, opacity", "0, 0", "0.38, 0.38", "ease, ease")
+
+    .header-drawer-show & {
+      visibility visible
+      opacity 1
+    }
+  }
+}
+
+.header-drawer-show {
+  overflow hidden
+}
 
         </div>
 
@@ -197,6 +364,133 @@
                 
                     <div class="home-content-container fade-in-down-animation">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/essay/Sailing-against-the-water-retreating-if-you-do-not-advance.html">
+                        逆水行舟，不进则退
+                    </a>
+                </h3>
+
+                <!-- 在适当的位置插入谷歌广告代码 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        2013年的第一天，心情不能平静。度过了所谓的世界末日，迎来新的玛雅纪元，我想说些什么，却无从说起。是的，我的文笔日渐枯竭，因为真正的阅读越来越少。也因为如此，我与人交流的言辞也十分贫乏，进而我的整个精神状态都不是特别正常。自己对自己不满意，但是又无...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Sun Mar 15 2020 15:10:40 GMT+0800">
+                2020-03-15
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/essay/">⓵随笔</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/mark/">记录</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/essay/Sailing-against-the-water-retreating-if-you-do-not-advance.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/work/%E4%B8%AD%E5%9B%BD%E9%93%B6%E7%9B%91%E4%BC%9A%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%BC%BA%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E5%80%BA%E5%88%B8%E6%89%BF%E9%94%80%E4%B8%9A%E5%8A%A1%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%E7%9A%84%E9%80%9A%E7%9F%A5.html">
+                        中国银监会关于加强商业银行债券承销业务风险管理的通知
+                    </a>
+                </h3>
+
+                <!-- 在适当的位置插入谷歌广告代码 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        银监发 [2012] 16号
+
+
+各银监局，各政策性银行、国有商业银行、股份制商业银行，邮政储蓄银行：  
+为加强商业银行债券承销业务风险管理，现就有关事项通知如下：
+一、本通知适用于除人民币国债（含财政部代为还本付息的地方债）、央票及政策性金融债以...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Apr 25 2023 10:54:23 GMT+0800">
+                2023-04-25
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/work/">⓹工作</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Bonds/">债券</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/work/%E4%B8%AD%E5%9B%BD%E9%93%B6%E7%9B%91%E4%BC%9A%E5%85%B3%E4%BA%8E%E5%8A%A0%E5%BC%BA%E5%95%86%E4%B8%9A%E9%93%B6%E8%A1%8C%E5%80%BA%E5%88%B8%E6%89%BF%E9%94%80%E4%B8%9A%E5%8A%A1%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%E7%9A%84%E9%80%9A%E7%9F%A5.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
         
             <li class="home-article-item">
 
@@ -718,134 +1012,6 @@
     </div>
 
     <a class="read-more" href="/essay/The-Second-Ethics-of-Marriage.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/essay/From-Turkish-March.html">
-                        从《土耳其进行曲》谈起
-                    </a>
-                </h3>
-
-                <!-- 在适当的位置插入谷歌广告代码 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
-
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        一直都很喜欢《土耳其进行曲》，喜欢它那活泼的节奏、喜欢它那幽默的曲调。遗憾的是在很多场合听到时都不知道这就是莫扎特的《土耳其进行曲》。麦兜故事、同事三分亲、周杰伦和李云迪的合作里都有出现，当时只觉得好听而已。
-对我而言，《土耳其进行曲》让人感到快乐！...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Apr 15 2020 14:02:06 GMT+0800">
-                2020-04-15
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/essay/">⓵随笔</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/music/">音乐</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/essay/From-Turkish-March.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/essay/love-tsinghua-essay.html">
-                        爱清华，故如是曰
-                    </a>
-                </h3>
-
-                <!-- 在适当的位置插入谷歌广告代码 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
-
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        在大多数国人眼中，“钟灵毓秀”的清华大学是中国近现代高等教育的典范。熟悉清华历史的人都知道，新中国成立以前“清华”就已经声名鹊起，光耀中华，一大批震古烁今的大师是这个园子永远的骄傲。在印象中那时候的清华人不论文理都学贯中西，博古通今。新中国成立以后，...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sun Mar 01 2020 14:26:37 GMT+0800">
-                2020-03-01
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/essay/">⓵随笔</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/think/">思考</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/thu/">清华</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/essay/love-tsinghua-essay.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

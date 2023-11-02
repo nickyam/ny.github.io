@@ -6,7 +6,7 @@
   <link href="http://blog.nickyam.com/atom.xml" rel="self"/>
   
   <link href="http://blog.nickyam.com/"/>
-  <updated>2023-10-27T00:26:47.299Z</updated>
+  <updated>2023-11-02T08:11:00.710Z</updated>
   <id>http://blog.nickyam.com/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wordpress网站出现死链的处理神器</title>
+    <link href="http://blog.nickyam.com/tech/deadlinks-wordpress-handle.html"/>
+    <id>http://blog.nickyam.com/tech/deadlinks-wordpress-handle.html</id>
+    <published>2023-11-02T03:15:00.000Z</published>
+    <updated>2023-11-02T08:11:00.710Z</updated>
+    
+    <content type="html"><![CDATA[<p>网站死链（Dead link）是什么，一般指因为某些原因导致我们网站内的某些链接、图片、css、js打不开，网站返回状态码为404的链接。死链对于网站的用户体验和SEO优化都会产生负面影响。站长们应该定期检查网站的链接，避免自己的网站出现死链。</p><p>那么死链一般是怎么产生的呢？</p><ol><li>动态链接在数据库不再支持的条件下，变成死链。</li><li>某个文件或网页移动了位置，导致指向它的链接变成死链。</li><li>网页内容更新并换成其他的链接，原来的链接变成死链。</li><li>网站服务器设置错误.</li><li>网站还没有完全做好，就上传到服务器上去了，这样也很多死链的。</li><li>某文件夹名称修改，路径错误链接变成死链。</li></ol><p>所以在日常运维当中，我们要避免以上这些情况。</p><p>如果死链已经产生了，怎么处理？</p><p>在wordpress下可以使用一些插件。这里我推荐的是一款国外的免费插件，功能比一些收费的更加强大，集检测与处理于一体。</p><p><img src="https://img.nickyam.com/file/52d70c6baa56ab842343c.png"></p><p><img src="https://img.nickyam.com/file/c5992882cf672e611cffa.png"></p><p>具体下载资源请点击 <a href="https://0xlib.com/redirection-wordpress-tool.html"><strong>这里</strong></a> 获取。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;网站死链（Dead link）是什么，一般指因为某些原因导致我们网站内的某些链接、图片、css、js打不开，网站返回状态码为404的链接。死链对于网站的用户体验和SEO优化都会产生负面影响。站长们应该定期检查网站的链接，避免自己的网站出现死链。&lt;/p&gt;
+&lt;p&gt;那么死链一般是</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="wordpress" scheme="http://blog.nickyam.com/tags/wordpress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何看待 Google 搜索关于 AI 生成内容的指南</title>
+    <link href="http://blog.nickyam.com/tech/googlesview-about-ai-generate-contents.html"/>
+    <id>http://blog.nickyam.com/tech/googlesview-about-ai-generate-contents.html</id>
+    <published>2023-11-01T04:15:00.000Z</published>
+    <updated>2023-11-01T04:33:10.723Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近看到很多站长都在让<a class="link"   href="https://limzero.com/tag/ai" >AI<i class="fas fa-external-link-alt"></i></a>帮忙生成网站内容，但 <a class="link"   href="https://limzero.com/tag/google" >Google<i class="fas fa-external-link-alt"></i></a>搜索对<a class="link"   href="https://limzero.com/tag/ai" >AI<i class="fas fa-external-link-alt"></i></a>生成的内容的态度是需要明确的。毕竟对于广大站长而言，谷歌是我们的衣食父母。</p><p>2023年2月份，谷歌发布了一个文档，表明了谷歌对于AI生成内容的态度。</p><p><img src="https://img.nickyam.com/file/28b6fab49215750b19ca0.png"></p><p>具体链接：<a class="link"   href="https://developers.google.com/search/blog/2023/02/google-search-and-ai-content?hl=zh" >https://developers.google.com/search/blog/2023/02/google-search-and-ai-content?hl=zh<i class="fas fa-external-link-alt"></i></a></p><p>由此可见：</p><blockquote><p>对于如何处理网页上AI生成的内容，谷歌的做法是积极拥抱，“奖励高质量的内容，无论它是如何生产的”。<br>谷歌还告诉我们如何用AI生产高质量的内容，去“创造有用、可靠、以人为本的内容”，而不是随意生成垃圾内容。<br>关于AI生成内容是否会得到更高排名或者是否会被故意降低排名，谷歌的意思是不管你的内容生成方式，只看内容质量。</p></blockquote><p>因此，我们不能100%依赖AI，在使用AI之前要思考，在过程中要引导，在使用后要微调，这样才能达到既节省人和时间的成本，把最繁重的任务交给AI。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近看到很多站长都在让&lt;a class=&quot;link&quot;   href=&quot;https://limzero.com/tag/ai&quot; &gt;AI&lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;帮忙生成网站内容，但 &lt;a class=&quot;link&quot; </summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="AI" scheme="http://blog.nickyam.com/tags/AI/"/>
+    
+    <category term="Google" scheme="http://blog.nickyam.com/tags/Google/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用.onion域名创建匿名网站</title>
+    <link href="http://blog.nickyam.com/tech/how-to-use-onion-to-setup-website.html"/>
+    <id>http://blog.nickyam.com/tech/how-to-use-onion-to-setup-website.html</id>
+    <published>2023-10-27T00:10:00.000Z</published>
+    <updated>2023-11-01T04:13:17.944Z</updated>
+    
+    <content type="html"><![CDATA[<p>零点君很早对暗网有所了解，但也没有进一步的去搞事情。同时，我觉得还是有必要把一些资料记录下来，方便查阅。</p><p>想使用.onion域名需要用到Tor，也就是洋葱头。根据公开资料，洋葱头（The Onion Router）是一种软件，是第二代洋葱路由（onion routing）的一种实现，用户通过它可以在internet上匿名交流。</p><p><img src="https://img.nickyam.com/file/fcc549d33dfd18521174f.jpg"></p><p>如果你在国内，一般来说不要轻易去尝试，这行为在国内和作死的区别不是很大。</p><p>在主要操作前，准备如下：</p><ol><li>准备一台服务器，注意不能是国内的，也不能是国内服务商的。</li><li>使用CentOS，一般版本6以上就好。</li><li>给服务器安装nginx，并监听8080端口，防火墙也要开8080端口。</li></ol><p>正式教程开始：</p><p>1.首先扩展yum源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br><span class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</span><br></pre></td></tr></table></figure><p>2.执行指令安装Tor</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y tor</span><br></pre></td></tr></table></figure><p>3.写入配置文件，Tor源服务端口是8080</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo “HiddenServiceDir /var/lib/tor/hidden_service/” &gt;&gt; /etc/tor/torrc</span><br><span class="line">echo “HiddenServicePort 80 127.0.0.1:8080” &gt;&gt; /etc/tor/torrc</span><br></pre></td></tr></table></figure><p>4.重启Tor，然后查询自己的.onion域名</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service tor start</span><br><span class="line">cat /var/lib/tor/hidden_service/hostname</span><br></pre></td></tr></table></figure><p>5.在nginx新建一个网站，将查询出的.onion域名绑定上去，和正常的不同，端口需要8080。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将网站配置文件里的listen 80;改为listen 8080;</span><br></pre></td></tr></table></figure><p>经过以上步骤，.onion匿名网站搭建完成。当然，直接用普通浏览器是访问不了的，还需要下载一个Tor浏览器才能访问。</p><p>如果想进一般的暗网网站，Tor浏览器是不够的，因为它无法阻止你被宽带运营商发现，从而查水表，需要额外带一个代理，也就是某个大家都懂的东西。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;零点君很早对暗网有所了解，但也没有进一步的去搞事情。同时，我觉得还是有必要把一些资料记录下来，方便查阅。&lt;/p&gt;
+&lt;p&gt;想使用.onion域名需要用到Tor，也就是洋葱头。根据公开资料，洋葱头（The Onion Router）是一种软件，是第二代洋葱路由（onion ro</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="Onion" scheme="http://blog.nickyam.com/tags/Onion/"/>
+    
+  </entry>
   
   <entry>
     <title>23号语雀宕机的赔偿，赶紧领取</title>
@@ -36,31 +112,6 @@
     
     <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>如何使用.onion域名创建匿名网站</title>
-    <link href="http://blog.nickyam.com/tech/how-to-use-onion-to-setup-website.html"/>
-    <id>http://blog.nickyam.com/tech/how-to-use-onion-to-setup-website.html</id>
-    <published>2023-10-27T00:03:00.000Z</published>
-    <updated>2023-10-30T03:26:56.142Z</updated>
-    
-    <content type="html"><![CDATA[<p>零点君很早对暗网有所了解，但也没有进一步的去搞事情。同时，我觉得还是有必要把一些资料记录下来，方便查阅。</p><p>想使用.onion域名需要用到Tor，也就是洋葱头。根据公开资料，洋葱头（The Onion Router）是一种软件，是第二代洋葱路由（onion routing）的一种实现，用户通过它可以在internet上匿名交流。</p><p><img src="https://img.nickyam.com/file/fcc549d33dfd18521174f.jpg"></p><p>如果你在国内，一般来说不要轻易去尝试，这行为在国内和作死的区别不是很大。</p><p>在主要操作前，准备如下：</p><ol><li>准备一台服务器，注意不能是国内的，也不能是国内服务商的。</li><li>使用CentOS，一般版本6以上就好。</li><li>给服务器安装nginx，并监听8080端口，防火墙也要开8080端口。</li></ol><p>正式教程开始：</p><p>1.首先扩展yum源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br><span class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</span><br></pre></td></tr></table></figure><p>2.执行指令安装Tor</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y tor</span><br></pre></td></tr></table></figure><p>3.写入配置文件，Tor源服务端口是8080</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo “HiddenServiceDir /var/lib/tor/hidden_service/” &gt;&gt; /etc/tor/torrc</span><br><span class="line">echo “HiddenServicePort 80 127.0.0.1:8080” &gt;&gt; /etc/tor/torrc</span><br></pre></td></tr></table></figure><p>4.重启Tor，然后查询自己的.onion域名</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service tor start</span><br><span class="line">cat /var/lib/tor/hidden_service/hostname</span><br></pre></td></tr></table></figure><p>5.在nginx新建一个网站，将查询出的.onion域名绑定上去，和正常的不同，端口需要8080。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将网站配置文件里的listen 80;改为listen 8080;</span><br></pre></td></tr></table></figure><p>经过以上步骤，.onion匿名网站搭建完成。当然，直接用普通浏览器是访问不了的，还需要下载一个Tor浏览器才能访问。</p><p>如果想进一般的暗网网站，Tor浏览器是不够的，因为它无法阻止你被宽带运营商发现，从而查水表，需要额外带一个代理，也就是某个大家都懂的东西。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;零点君很早对暗网有所了解，但也没有进一步的去搞事情。同时，我觉得还是有必要把一些资料记录下来，方便查阅。&lt;/p&gt;
-&lt;p&gt;想使用.onion域名需要用到Tor，也就是洋葱头。根据公开资料，洋葱头（The Onion Router）是一种软件，是第二代洋葱路由（onion ro</summary>
-      
-    
-    
-    
-    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
-    
-    
-    <category term="Onion" scheme="http://blog.nickyam.com/tags/Onion/"/>
     
   </entry>
   
@@ -467,56 +518,6 @@
     <category term="VPN" scheme="http://blog.nickyam.com/tags/VPN/"/>
     
     <category term="安卓" scheme="http://blog.nickyam.com/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>连麦连不上张雪峰的！问问ChatGPT吧！</title>
-    <link href="http://blog.nickyam.com/essay/ask_chatgpt_for_gaokao.html"/>
-    <id>http://blog.nickyam.com/essay/ask_chatgpt_for_gaokao.html</id>
-    <published>2023-06-26T11:30:00.000Z</published>
-    <updated>2023-06-27T08:07:35.861Z</updated>
-    
-    <content type="html"><![CDATA[<p>随着全国各地高考分数线陆续公布，现在正是学子们挖空心思填写高考志愿的时候。我们都知道选对专业非常重要，就像俗话说的“女怕嫁错郎，男怕入错行”。除了专业选择，学校和地域也对每个人的未来有相当大的影响。对于大多数高中生而言，通常对如何选择专业知之甚少，更别说全面了解自己的兴趣。他们常常只根据专业名称的表面意义来进行选择，结果可能是一头雾水。</p><p>对于专业选择，张雪峰的建议既现实又真实，提供了很有参考价值的建议。如果有机会，最好能和他直播连麦并向他提问。然而，大多数人可能没有这个机会。</p><p>对于高考志愿，那么火了大半年的ChatGPT会怎么说呢？以下是我随口向ChatGPT提出的几个问题。大家也可以试试，也许能给你一些帮助。</p><p><strong>一、普通人应该避开哪些专业</strong></p><p><img src="https://img.nickyam.com/file/8097e949ee0d639d888d6.png" alt="https://img.nickyam.com/file/8097e949ee0d639d888d6.png"></p><p><img src="https://img.nickyam.com/file/3959963220abd13ae79da.png" alt="https://img.nickyam.com/file/3959963220abd13ae79da.png"></p><p><img src="https://img.nickyam.com/file/8db0396a21278b30bf283.png" alt="https://img.nickyam.com/file/8db0396a21278b30bf283.png"></p><p><img src="https://img.nickyam.com/file/fbb6489f496f61d31024c.png" alt="https://img.nickyam.com/file/fbb6489f496f61d31024c.png"></p><p><strong>二、整理一下计算机专业的一些具体就业方向，具体职位和平均新资。不过这里给出的薪资是美元计价，不知道背后的原始数据是不是美国的职场数据。</strong></p><p><img src="https://img.nickyam.com/file/88f50c69df754adbdf114.png" alt="https://img.nickyam.com/file/88f50c69df754adbdf114.png"></p><p><img src="https://img.nickyam.com/file/9350d45a8e5c529947e78.png" alt="https://img.nickyam.com/file/9350d45a8e5c529947e78.png"></p><p><strong>三、我是一名老家在浙江绍兴的理科生，高考672分，想去北京、上海或者杭州上学，毕业以后想做计算机或金融相关领域的工作，能给我推荐几个志愿吗？</strong></p><p><img src="https://img.nickyam.com/file/2a40e99f656da2713537f.png" alt="https://img.nickyam.com/file/2a40e99f656da2713537f.png"></p><p><strong>四、我是江苏考生，高考602分，想去985大学，喜欢研究军事和科幻，有没有什么推荐志愿，以及以后的就业方向。</strong></p><p><img src="https://img.nickyam.com/file/d596a1a1ded4dea297bde.png" alt="https://img.nickyam.com/file/d596a1a1ded4dea297bde.png"></p><p><img src="https://img.nickyam.com/file/5fea68d23fe665defcdfd.png" alt="https://img.nickyam.com/file/5fea68d23fe665defcdfd.png"></p><p><strong>五、我有一个朋友系列</strong></p><p><img src="https://img.nickyam.com/file/20b6dbcdbba82f80c20e2.png" alt="https://img.nickyam.com/file/20b6dbcdbba82f80c20e2.png"></p><p><strong>六、浙江大学最好的专业</strong></p><p><img src="https://img.nickyam.com/file/b9bb262322783312a850c.png" alt="https://img.nickyam.com/file/b9bb262322783312a850c.png"></p><p><strong>七、关于野鸡大学</strong></p><p><img src="https://img.nickyam.com/file/b551bc3b792c8f439eb7c.png" alt="https://img.nickyam.com/file/b551bc3b792c8f439eb7c.png"></p><p><img src="https://img.nickyam.com/file/285a04918b2ab828aca5c.png" alt="https://img.nickyam.com/file/285a04918b2ab828aca5c.png"></p><p>粗粗看了下ChatGPT的回答，还算可以，至少比某度要强不少。大家也可以试试。</p><p>如果暂时没有ChatGPT账号的，可用下面的服务和指南。</p><p><a class="link"   href="https://www.nickyam.com/tech/ChatGPT-4_Always_Available_for_Your_Convenience.html" >福利！可以随时使用的ChatGPT-4 |涯木笔谈<i class="fas fa-external-link-alt"></i></a></p><p><a class="link"   href="https://www.nickyam.com/tech/chatgpt_next_web.html" >零基础：一键成功部署私人ChatGPT网页服务 |涯木笔谈<i class="fas fa-external-link-alt"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;随着全国各地高考分数线陆续公布，现在正是学子们挖空心思填写高考志愿的时候。我们都知道选对专业非常重要，就像俗话说的“女怕嫁错郎，男怕入错行”。除了专业选择，学校和地域也对每个人的未来有相当大的影响。对于大多数高中生而言，通常对如何选择专业知之甚少，更别说全面了解自己的兴趣。</summary>
-      
-    
-    
-    
-    <category term="⓵随笔" scheme="http://blog.nickyam.com/categories/essay/"/>
-    
-    
-    <category term="ChatGPT" scheme="http://blog.nickyam.com/tags/ChatGPT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无需注册登陆、无容量限制、可上传视频的免费图床推荐</title>
-    <link href="http://blog.nickyam.com/tech/free_image_hosting_based_on_telegraph.html"/>
-    <id>http://blog.nickyam.com/tech/free_image_hosting_based_on_telegraph.html</id>
-    <published>2023-06-25T13:09:12.000Z</published>
-    <updated>2023-06-26T01:23:42.097Z</updated>
-    
-    <content type="html"><![CDATA[<p>近日，笔者依托 Cloudflare Pages 和 Telegraph 的开源图片托管解决方案，部署了一个免费图床。一方面是自用，另一方面也是分享出来给同好。<br><img src="https://img.nickyam.com/file/d93a9d5501def4cb102a0.png"></p><p>图床是什么？说白了就是专门用来存放图片的服务器，也是提供图片外链的服务。你可以上传图片并获取一个链接，将链接嵌入到论坛帖子、博客文章等平台上，从而实现在网页上显示图片的功能。使用图床可以避免在自己的服务器上存储大量的图片，节省服务器空间和带宽资源，并且能够提高网页加载速度。</p><p>如果你并没有运营自己的网站，图床也可以作为你临时上传图片，把链接分享给朋友的工具。朋友点开链接即可查看或下载。</p><p>值得注意的是，由于图片文件实际存储于Telegraph，Telegraph虽然没有限制上传图片的数量，但限制上传的单张图片大小最大为5MB。对于一般的图片，这个大小基本也够用了。</p><p><strong>开源地址</strong><br><a class="link"   href="https://github.com/cf-pages/Telegraph-Image" >https://github.com/cf-pages/Telegraph-Image<i class="fas fa-external-link-alt"></i></a></p><p><strong>技术分析</strong><br>调用TG上传存储图片</p><p><strong>欢迎使用</strong><br><a class="link"   href="https://img.nickyam.com/" >https://img.nickyam.com<i class="fas fa-external-link-alt"></i></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;近日，笔者依托 Cloudflare Pages 和 Telegraph 的开源图片托管解决方案，部署了一个免费图床。一方面是自用，另一方面也是分享出来给同好。&lt;br&gt;&lt;img src=&quot;https://img.nickyam.com/file/d93a9d5501def4</summary>
-      
-    
-    
-    
-    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
-    
-    
-    <category term="网络" scheme="http://blog.nickyam.com/tags/net/"/>
-    
-    <category term="Blog" scheme="http://blog.nickyam.com/tags/Blog/"/>
     
   </entry>
   

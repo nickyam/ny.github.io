@@ -49,144 +49,311 @@
     <div class="page-main-content is-home">
 
         <div class="page-main-content-top">
-            
-<header class="header-wrapper">
+            $logo-title-font-size = 2rem
+$pc-search-icon-font-size = 1.5rem
+$menu-bar-line-height = 2.5px
+$logo-image-box-width = 46px
 
-    <div class="header-content">
-        <div class="left">
-            
-                <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
-                </a>
-            
-            <a class="logo-title" href="/">
-               涯木
-            </a>
-        </div>
+.header-wrapper {
+  display flex
+  align-items center
+  justify-content center
+  box-sizing border-box
+  width 100%
+  height 100%
+  padding-top $scroll-progress-bar-height
+  background var(--background-color-1)
 
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class="active"
-                               href="/"
-                            >
-                                首页
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN"
-                            >
-                                VPN
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                归档
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/tags"
-                            >
-                                标签
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://book.nickyam.com/"
-                            >
-                                藏书
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/links"
-                            >
-                                友链
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/about"
-                            >
-                                关于
-                            </a>
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="fas fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+  hover-style(false, 0, 0)
 
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class="active"
-                       href="/">首页</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN">VPN</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">归档</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/tags">标签</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://book.nickyam.com/">藏书</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/links">友链</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/about">关于</a>
-                </li>
-            
-        </ul>
-    </div>
+  .header-content {
+    position relative
+    z-index $z-index-5
+    display flex
+    flex-direction row
+    align-items center
+    justify-content space-between
+    width $main-content-width
+    max-width $content-max-width
+    height 100%
+    transition-t("max-width, width", "0, 0", "0.1, 0.1", "ease, ease")
 
-    <div class="window-mask"></div>
 
-</header>
+    &.has-first-screen {
+      max-width $has-fs-content-max-width
+    }
 
+    .has-toc & {
+      max-width $has-toc-content-max-width
+    }
+
+    +keep-tablet() {
+      width $main-content-width-tablet
+    }
+
+    +keep-mobile() {
+      width $main-content-width-mobile
+    }
+
+    .left {
+      display flex
+      align-items center
+      transition-t("transform", "0", "0.2", "linear")
+
+      .header-shrink & {
+        transform scale(0.72)
+        transform-origin left
+      }
+
+
+      if (hexo-config('base_info.logo_img') || hexo-config('style.logo')) {
+        .logo-image {
+          width $logo-image-box-width
+          height $logo-image-box-width
+          margin-right 8px
+
+
+          +keep-tablet() {
+            width $logo-image-box-width * 0.9
+            height $logo-image-box-width * 0.9
+          }
+
+          +keep-mobile() {
+            width $logo-image-box-width * 0.8
+            height $logo-image-box-width * 0.8
+          }
+
+          img {
+            width 100%
+            border-radius 6px
+          }
+        }
+      }
+
+      .logo-title {
+        color var(--text-color-1)
+        font-weight bold
+        font-size $logo-title-font-size
+        line-height 1
+        letter-spacing 1px
+
+        +keep-tablet() {
+          font-size $logo-title-font-size * 0.9
+        }
+
+        +keep-mobile() {
+          font-size $logo-title-font-size * 0.8
+        }
+      }
+    }
+
+
+    .right {
+
+      .pc {
+
+        .menu-list {
+          display flex
+          align-items center
+
+          +keep-tablet() {
+            display none
+          }
+
+
+          .menu-item {
+            position relative
+            float left
+            margin-left 2rem
+            color var(--text-color-3)
+            font-size 1rem
+            cursor pointer
+
+            &:first-child {
+              margin-left 0
+            }
+
+
+            a:hover
+            .active {
+
+              &::after {
+                position absolute
+                bottom -10px
+                left 50%
+                width 100%
+                height 2px
+                background var(--primary-color)
+                transform translateX(-50%)
+                content ''
+                transition-t("transform, bottom", "0, 0", "0.2, 0.2", "linear, linear")
+
+                .header-shrink & {
+                  bottom -($header-shrink-height / 2 - 12)
+                }
+              }
+            }
+
+            &.search {
+              margin-left 26px
+              font-size $pc-search-icon-font-size
+
+              i {
+                color var(--text-color-3)
+              }
+            }
+          }
+        }
+      }
+
+
+      .mobile {
+        display flex
+        align-items center
+        justify-content space-between
+
+        .icon-item {
+          position relative
+          display none
+          width 20px
+          height 20px
+          margin-left 12px
+          color var(--text-color-3)
+          font-size 18px
+          cursor pointer
+
+          i {
+            color var(--text-color-3)
+          }
+
+          &:first-child {
+            margin-left 0
+          }
+
+          +keep-tablet() {
+            display flex
+            align-items center
+            justify-content center
+          }
+        }
+
+        .menu-bar {
+
+          .menu-bar-middle {
+            position relative
+            width 18px
+            height $menu-bar-line-height
+            background var(--text-color-3)
+
+            .header-drawer-show & {
+              background transparent
+            }
+
+
+            &::before
+            &::after {
+              position absolute
+              left 0
+              width 100%
+              height $menu-bar-line-height
+              background var(--text-color-3)
+              content ''
+              transition-t("transform", "0", "0.38", "ease")
+            }
+
+
+            &::before {
+              top -6px
+
+              .header-drawer-show & {
+                transform translateY(6px) rotate(45deg)
+              }
+            }
+
+
+            &::after {
+              bottom -6px
+
+              .header-drawer-show & {
+                transform translateY(-6px) rotate(-45deg)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .header-drawer {
+    position absolute
+    top 0
+    left 0
+    z-index $z-index-2
+    width 100%
+    padding $header-height 0 20px 0
+    background var(--background-color-1)
+    transform scaleY(0)
+    transform-origin top
+    transition-t("transform", "0", "0.38", "ease")
+
+    .header-drawer-show & {
+      transform scaleY(1)
+    }
+
+    .drawer-menu-list {
+      display flex
+      flex-direction column
+      align-items center
+      justify-content flex-start
+
+      .drawer-menu-item {
+        height 38px
+        margin 6px 0
+        font-size 1rem
+
+        a {
+          padding 6px 20px
+          color var(--text-color-3)
+          border-radius 20px
+
+          &:hover {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+
+
+          &.active {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+        }
+      }
+    }
+  }
+
+
+  .window-mask {
+    position absolute
+    top 0
+    z-index $z-index-1
+    width 100%
+    height 100vh
+    background rgba(0, 0, 0, 0.4)
+    visibility hidden
+    opacity 0
+    transition-t("transform, opacity", "0, 0", "0.38, 0.38", "ease, ease")
+
+    .header-drawer-show & {
+      visibility visible
+      opacity 1
+    }
+  }
+}
+
+.header-drawer-show {
+  overflow hidden
+}
 
         </div>
 
@@ -197,6 +364,130 @@
                 
                     <div class="home-content-container fade-in-down-animation">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/poetry/Man-is-a-straightline-with-arrows.html">
+                        人是一条带有箭头的直线
+                    </a>
+                </h3>
+
+                <!-- 在适当的位置插入谷歌广告代码 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        人是一条带有箭头的直线人是一条带有箭头的直线从生到死一列直达火车中途不论晕车还是呕吐都无法下车可以选择欣赏沿途的风景可以浑浑噩噩呼呼大睡
+人生活在笔挺的笛卡尔坐标上时间是x轴，空间是y轴这宣纸一样脆弱的棋盘上每个人演绎着自己的阴晴圆缺，悲欢离合你始终...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Wed Apr 15 2020 13:56:23 GMT+0800">
+                2020-04-15
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/poetry/">⓸诗歌</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/think/">思考</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/poetry/Man-is-a-straightline-with-arrows.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/essay/if-zhilaizhiwang-change.html">
+                        如果职来职往改版……
+                    </a>
+                </h3>
+
+                <!-- 在适当的位置插入谷歌广告代码 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        最近一直看中国教育频道李响主持的职来职往节目。
+再过几天就大四了，在清华园脚踩自行车，闭着眼睛也不会迷路了。我不愿意继续读自己本科的研究生，虽然推免很容易。如果不能推研到自己喜欢的专业或者连考研也不幸名落孙山的话，我可能也会选择离开象牙塔到职场拼杀。...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Sun Sep 29 2019 13:55:33 GMT+0800">
+                2019-09-29
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/essay/">⓵随笔</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/think/">思考</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/essay/if-zhilaizhiwang-change.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
         
             <li class="home-article-item">
 
@@ -702,134 +993,6 @@
     </div>
 
     <a class="read-more" href="/essay/On-the-independence-of-works-from-reading-questions-in-college-entrance-examination.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/essay/Random-thoughts-on-movie-songs.html">
-                        影视歌曲的启示
-                    </a>
-                </h3>
-
-                <!-- 在适当的位置插入谷歌广告代码 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
-
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        好久没有写博客了，一则是因为太忙，二则是因为关于互联网的文章放在了另一个网站：http://os.kilu.de/  所以这个辍耕录真的就辍了几天。今天辍出一点时间，和大家分享一些东西。
-笔者几乎每天都会听一些歌曲或者音乐。笔者格调不是很高，古典音乐...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Jun 23 2020 13:43:33 GMT+0800">
-                2020-06-23
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/essay/">⓵随笔</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/music/">音乐</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/essay/Random-thoughts-on-movie-songs.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/essay/This-is-a-billboard.html">
-                        原来这是一块广告牌——坐在清华“真维斯”写评论
-                    </a>
-                </h3>
-
-                <!-- 在适当的位置插入谷歌广告代码 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
-
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        一直在人文图书馆自习，这周没有去过四教。惊闻我永远都不可能在清华四教上课了。因为清华已经没有了第四教学楼。而矗立在原址的是真维斯楼。尽管校方事后说四教的称谓将会得到保留。但是无论如何，这栋教学楼的官方名字是“真维斯”，四教仅仅是曾用名而已。于是趁着改...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Apr 06 2020 14:40:32 GMT+0800">
-                2020-04-06
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/essay/">⓵随笔</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/think/">思考</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/thu/">清华</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/essay/This-is-a-billboard.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

@@ -49,144 +49,311 @@
     <div class="page-main-content is-home">
 
         <div class="page-main-content-top">
-            
-<header class="header-wrapper">
+            $logo-title-font-size = 2rem
+$pc-search-icon-font-size = 1.5rem
+$menu-bar-line-height = 2.5px
+$logo-image-box-width = 46px
 
-    <div class="header-content">
-        <div class="left">
-            
-                <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
-                </a>
-            
-            <a class="logo-title" href="/">
-               涯木
-            </a>
-        </div>
+.header-wrapper {
+  display flex
+  align-items center
+  justify-content center
+  box-sizing border-box
+  width 100%
+  height 100%
+  padding-top $scroll-progress-bar-height
+  background var(--background-color-1)
 
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class="active"
-                               href="/"
-                            >
-                                首页
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN"
-                            >
-                                VPN
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                归档
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/tags"
-                            >
-                                标签
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://book.nickyam.com/"
-                            >
-                                藏书
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/links"
-                            >
-                                友链
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/about"
-                            >
-                                关于
-                            </a>
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="fas fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+  hover-style(false, 0, 0)
 
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class="active"
-                       href="/">首页</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN">VPN</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">归档</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/tags">标签</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://book.nickyam.com/">藏书</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/links">友链</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/about">关于</a>
-                </li>
-            
-        </ul>
-    </div>
+  .header-content {
+    position relative
+    z-index $z-index-5
+    display flex
+    flex-direction row
+    align-items center
+    justify-content space-between
+    width $main-content-width
+    max-width $content-max-width
+    height 100%
+    transition-t("max-width, width", "0, 0", "0.1, 0.1", "ease, ease")
 
-    <div class="window-mask"></div>
 
-</header>
+    &.has-first-screen {
+      max-width $has-fs-content-max-width
+    }
 
+    .has-toc & {
+      max-width $has-toc-content-max-width
+    }
+
+    +keep-tablet() {
+      width $main-content-width-tablet
+    }
+
+    +keep-mobile() {
+      width $main-content-width-mobile
+    }
+
+    .left {
+      display flex
+      align-items center
+      transition-t("transform", "0", "0.2", "linear")
+
+      .header-shrink & {
+        transform scale(0.72)
+        transform-origin left
+      }
+
+
+      if (hexo-config('base_info.logo_img') || hexo-config('style.logo')) {
+        .logo-image {
+          width $logo-image-box-width
+          height $logo-image-box-width
+          margin-right 8px
+
+
+          +keep-tablet() {
+            width $logo-image-box-width * 0.9
+            height $logo-image-box-width * 0.9
+          }
+
+          +keep-mobile() {
+            width $logo-image-box-width * 0.8
+            height $logo-image-box-width * 0.8
+          }
+
+          img {
+            width 100%
+            border-radius 6px
+          }
+        }
+      }
+
+      .logo-title {
+        color var(--text-color-1)
+        font-weight bold
+        font-size $logo-title-font-size
+        line-height 1
+        letter-spacing 1px
+
+        +keep-tablet() {
+          font-size $logo-title-font-size * 0.9
+        }
+
+        +keep-mobile() {
+          font-size $logo-title-font-size * 0.8
+        }
+      }
+    }
+
+
+    .right {
+
+      .pc {
+
+        .menu-list {
+          display flex
+          align-items center
+
+          +keep-tablet() {
+            display none
+          }
+
+
+          .menu-item {
+            position relative
+            float left
+            margin-left 2rem
+            color var(--text-color-3)
+            font-size 1rem
+            cursor pointer
+
+            &:first-child {
+              margin-left 0
+            }
+
+
+            a:hover
+            .active {
+
+              &::after {
+                position absolute
+                bottom -10px
+                left 50%
+                width 100%
+                height 2px
+                background var(--primary-color)
+                transform translateX(-50%)
+                content ''
+                transition-t("transform, bottom", "0, 0", "0.2, 0.2", "linear, linear")
+
+                .header-shrink & {
+                  bottom -($header-shrink-height / 2 - 12)
+                }
+              }
+            }
+
+            &.search {
+              margin-left 26px
+              font-size $pc-search-icon-font-size
+
+              i {
+                color var(--text-color-3)
+              }
+            }
+          }
+        }
+      }
+
+
+      .mobile {
+        display flex
+        align-items center
+        justify-content space-between
+
+        .icon-item {
+          position relative
+          display none
+          width 20px
+          height 20px
+          margin-left 12px
+          color var(--text-color-3)
+          font-size 18px
+          cursor pointer
+
+          i {
+            color var(--text-color-3)
+          }
+
+          &:first-child {
+            margin-left 0
+          }
+
+          +keep-tablet() {
+            display flex
+            align-items center
+            justify-content center
+          }
+        }
+
+        .menu-bar {
+
+          .menu-bar-middle {
+            position relative
+            width 18px
+            height $menu-bar-line-height
+            background var(--text-color-3)
+
+            .header-drawer-show & {
+              background transparent
+            }
+
+
+            &::before
+            &::after {
+              position absolute
+              left 0
+              width 100%
+              height $menu-bar-line-height
+              background var(--text-color-3)
+              content ''
+              transition-t("transform", "0", "0.38", "ease")
+            }
+
+
+            &::before {
+              top -6px
+
+              .header-drawer-show & {
+                transform translateY(6px) rotate(45deg)
+              }
+            }
+
+
+            &::after {
+              bottom -6px
+
+              .header-drawer-show & {
+                transform translateY(-6px) rotate(-45deg)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .header-drawer {
+    position absolute
+    top 0
+    left 0
+    z-index $z-index-2
+    width 100%
+    padding $header-height 0 20px 0
+    background var(--background-color-1)
+    transform scaleY(0)
+    transform-origin top
+    transition-t("transform", "0", "0.38", "ease")
+
+    .header-drawer-show & {
+      transform scaleY(1)
+    }
+
+    .drawer-menu-list {
+      display flex
+      flex-direction column
+      align-items center
+      justify-content flex-start
+
+      .drawer-menu-item {
+        height 38px
+        margin 6px 0
+        font-size 1rem
+
+        a {
+          padding 6px 20px
+          color var(--text-color-3)
+          border-radius 20px
+
+          &:hover {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+
+
+          &.active {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+        }
+      }
+    }
+  }
+
+
+  .window-mask {
+    position absolute
+    top 0
+    z-index $z-index-1
+    width 100%
+    height 100vh
+    background rgba(0, 0, 0, 0.4)
+    visibility hidden
+    opacity 0
+    transition-t("transform, opacity", "0, 0", "0.38, 0.38", "ease, ease")
+
+    .header-drawer-show & {
+      visibility visible
+      opacity 1
+    }
+  }
+}
+
+.header-drawer-show {
+  overflow hidden
+}
 
         </div>
 
@@ -197,6 +364,132 @@
                 
                     <div class="home-content-container fade-in-down-animation">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/work/week-overview-of-bond-market-2020-06-15.html">
+                        2020债券市场一周概览（0615-0619）
+                    </a>
+                </h3>
+
+                <!-- 在适当的位置插入谷歌广告代码 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        一、一周债市概况
+央行本周开展1200亿7天期逆回购操作，1800亿14天期逆回购操作，2000亿MLF操作，共有4200亿逆回购和2400亿MLF到期，实现净回笼1600亿元。
+本周信用债总发行3007.90亿，净融资1054.79亿，环比上升38...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Jun 23 2020 13:28:21 GMT+0800">
+                2020-06-23
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/work/">⓹工作</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/finance/">金融</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/work/week-overview-of-bond-market-2020-06-15.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/work/week-overview-of-bond-market-2020-06-08.html">
+                        2020债券市场一周概览（0608-0612）
+                    </a>
+                </h3>
+
+                <!-- 在适当的位置插入谷歌广告代码 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        一、一周债市概况
+本周开展4200亿元逆回购操作，因本周有2200亿元逆回购和5000亿元MLF到期，从全口径看，央行本周实现净回笼3000亿元。市场资金总体水平较为均衡。
+上周一级市场，短融中票共计发行规模1487.1亿，较上周发行量844.6亿大...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Wed Jun 17 2020 11:28:15 GMT+0800">
+                2020-06-17
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/work/">⓹工作</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/finance/">金融</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/work/week-overview-of-bond-market-2020-06-08.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
         
             <li class="home-article-item">
 
@@ -704,130 +997,6 @@
     </div>
 
     <a class="read-more" href="/work/week-overview-of-bond-market-2020-05-15.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/essay/Driving-license-change-in-Hangzhou.html">
-                        在杭州更换到期的异地驾驶证
-                    </a>
-                </h3>
-
-                <!-- 在适当的位置插入谷歌广告代码 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
-
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        今年七月下旬，我的驾驶证就要到期了。按照规定，在驾驶证有效期满前90天内可以换证。
-我的驾驶证比较特殊。考驾照那会儿，我在常州挂职锻炼，报考的是江苏常州的驾照，而身份证户口在南京。所以驾驶证上的户籍地址是南京，而大红印章事常州车管所。几年过去了，我从...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sun May 24 2020 22:21:10 GMT+0800">
-                2020-05-24
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/essay/">⓵随笔</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/mark/">记录</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/essay/Driving-license-change-in-Hangzhou.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/work/week-overview-of-bond-market-2020-05-09.html">
-                        2020债券市场一周概览（0506-0509）
-                    </a>
-                </h3>
-
-                <!-- 在适当的位置插入谷歌广告代码 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
-
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        一、一周债市概况
-本周为节后第一周，央行零操作，跨月后资金面仍偏紧，加剧市场脆弱情绪。4月利多因素充分消化，供给压力、资金价格走高、市场风险偏好回升及市场对两会可能出台超预期政策的担忧等利空因素开始驱动收益率明显上行。投资者止盈带来的抛压也加大了市场...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sat May 23 2020 16:36:12 GMT+0800">
-                2020-05-23
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/work/">⓹工作</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/finance/">金融</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/work/week-overview-of-bond-market-2020-05-09.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

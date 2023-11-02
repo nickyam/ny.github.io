@@ -49,144 +49,311 @@
     <div class="page-main-content is-home">
 
         <div class="page-main-content-top">
-            
-<header class="header-wrapper">
+            $logo-title-font-size = 2rem
+$pc-search-icon-font-size = 1.5rem
+$menu-bar-line-height = 2.5px
+$logo-image-box-width = 46px
 
-    <div class="header-content">
-        <div class="left">
-            
-                <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
-                </a>
-            
-            <a class="logo-title" href="/">
-               涯木
-            </a>
-        </div>
+.header-wrapper {
+  display flex
+  align-items center
+  justify-content center
+  box-sizing border-box
+  width 100%
+  height 100%
+  padding-top $scroll-progress-bar-height
+  background var(--background-color-1)
 
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class="active"
-                               href="/"
-                            >
-                                首页
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN"
-                            >
-                                VPN
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                归档
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/tags"
-                            >
-                                标签
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               target="_blank" rel="noopener" href="https://book.nickyam.com/"
-                            >
-                                藏书
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/links"
-                            >
-                                友链
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/about"
-                            >
-                                关于
-                            </a>
-                        </li>
-                    
-                    
-                        <li class="menu-item search search-popup-trigger">
-                            <i class="fas fa-search"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+  hover-style(false, 0, 0)
 
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class="active"
-                       href="/">首页</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://i.nickyam.com/tag/VPN">VPN</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">归档</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/tags">标签</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       target="_blank" rel="noopener" href="https://book.nickyam.com/">藏书</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/links">友链</a>
-                </li>
-            
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/about">关于</a>
-                </li>
-            
-        </ul>
-    </div>
+  .header-content {
+    position relative
+    z-index $z-index-5
+    display flex
+    flex-direction row
+    align-items center
+    justify-content space-between
+    width $main-content-width
+    max-width $content-max-width
+    height 100%
+    transition-t("max-width, width", "0, 0", "0.1, 0.1", "ease, ease")
 
-    <div class="window-mask"></div>
 
-</header>
+    &.has-first-screen {
+      max-width $has-fs-content-max-width
+    }
 
+    .has-toc & {
+      max-width $has-toc-content-max-width
+    }
+
+    +keep-tablet() {
+      width $main-content-width-tablet
+    }
+
+    +keep-mobile() {
+      width $main-content-width-mobile
+    }
+
+    .left {
+      display flex
+      align-items center
+      transition-t("transform", "0", "0.2", "linear")
+
+      .header-shrink & {
+        transform scale(0.72)
+        transform-origin left
+      }
+
+
+      if (hexo-config('base_info.logo_img') || hexo-config('style.logo')) {
+        .logo-image {
+          width $logo-image-box-width
+          height $logo-image-box-width
+          margin-right 8px
+
+
+          +keep-tablet() {
+            width $logo-image-box-width * 0.9
+            height $logo-image-box-width * 0.9
+          }
+
+          +keep-mobile() {
+            width $logo-image-box-width * 0.8
+            height $logo-image-box-width * 0.8
+          }
+
+          img {
+            width 100%
+            border-radius 6px
+          }
+        }
+      }
+
+      .logo-title {
+        color var(--text-color-1)
+        font-weight bold
+        font-size $logo-title-font-size
+        line-height 1
+        letter-spacing 1px
+
+        +keep-tablet() {
+          font-size $logo-title-font-size * 0.9
+        }
+
+        +keep-mobile() {
+          font-size $logo-title-font-size * 0.8
+        }
+      }
+    }
+
+
+    .right {
+
+      .pc {
+
+        .menu-list {
+          display flex
+          align-items center
+
+          +keep-tablet() {
+            display none
+          }
+
+
+          .menu-item {
+            position relative
+            float left
+            margin-left 2rem
+            color var(--text-color-3)
+            font-size 1rem
+            cursor pointer
+
+            &:first-child {
+              margin-left 0
+            }
+
+
+            a:hover
+            .active {
+
+              &::after {
+                position absolute
+                bottom -10px
+                left 50%
+                width 100%
+                height 2px
+                background var(--primary-color)
+                transform translateX(-50%)
+                content ''
+                transition-t("transform, bottom", "0, 0", "0.2, 0.2", "linear, linear")
+
+                .header-shrink & {
+                  bottom -($header-shrink-height / 2 - 12)
+                }
+              }
+            }
+
+            &.search {
+              margin-left 26px
+              font-size $pc-search-icon-font-size
+
+              i {
+                color var(--text-color-3)
+              }
+            }
+          }
+        }
+      }
+
+
+      .mobile {
+        display flex
+        align-items center
+        justify-content space-between
+
+        .icon-item {
+          position relative
+          display none
+          width 20px
+          height 20px
+          margin-left 12px
+          color var(--text-color-3)
+          font-size 18px
+          cursor pointer
+
+          i {
+            color var(--text-color-3)
+          }
+
+          &:first-child {
+            margin-left 0
+          }
+
+          +keep-tablet() {
+            display flex
+            align-items center
+            justify-content center
+          }
+        }
+
+        .menu-bar {
+
+          .menu-bar-middle {
+            position relative
+            width 18px
+            height $menu-bar-line-height
+            background var(--text-color-3)
+
+            .header-drawer-show & {
+              background transparent
+            }
+
+
+            &::before
+            &::after {
+              position absolute
+              left 0
+              width 100%
+              height $menu-bar-line-height
+              background var(--text-color-3)
+              content ''
+              transition-t("transform", "0", "0.38", "ease")
+            }
+
+
+            &::before {
+              top -6px
+
+              .header-drawer-show & {
+                transform translateY(6px) rotate(45deg)
+              }
+            }
+
+
+            &::after {
+              bottom -6px
+
+              .header-drawer-show & {
+                transform translateY(-6px) rotate(-45deg)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .header-drawer {
+    position absolute
+    top 0
+    left 0
+    z-index $z-index-2
+    width 100%
+    padding $header-height 0 20px 0
+    background var(--background-color-1)
+    transform scaleY(0)
+    transform-origin top
+    transition-t("transform", "0", "0.38", "ease")
+
+    .header-drawer-show & {
+      transform scaleY(1)
+    }
+
+    .drawer-menu-list {
+      display flex
+      flex-direction column
+      align-items center
+      justify-content flex-start
+
+      .drawer-menu-item {
+        height 38px
+        margin 6px 0
+        font-size 1rem
+
+        a {
+          padding 6px 20px
+          color var(--text-color-3)
+          border-radius 20px
+
+          &:hover {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+
+
+          &.active {
+            color var(--text-color-2)
+            border 1px solid var(--text-color-3)
+          }
+        }
+      }
+    }
+  }
+
+
+  .window-mask {
+    position absolute
+    top 0
+    z-index $z-index-1
+    width 100%
+    height 100vh
+    background rgba(0, 0, 0, 0.4)
+    visibility hidden
+    opacity 0
+    transition-t("transform, opacity", "0, 0", "0.38, 0.38", "ease, ease")
+
+    .header-drawer-show & {
+      visibility visible
+      opacity 1
+    }
+  }
+}
+
+.header-drawer-show {
+  overflow hidden
+}
 
         </div>
 
@@ -197,6 +364,151 @@
                 
                     <div class="home-content-container fade-in-down-animation">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/other/%E6%96%B0%E6%89%8B%E6%92%B8%E7%BE%8A%E6%AF%9B%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html">
+                        新手撸羊毛必备工具推荐
+                    </a>
+                </h3>
+
+                <!-- 在适当的位置插入谷歌广告代码 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        在国内越来越严格的出入金政策下，如果读者仍然想要参与币圈，其实不需要真金白银的投入，只需要你对区块链和币圈这样的新生事物保持长期好奇就可以了。
+记住，请不要向币圈投入真金白银，量力而行，三思而行！
+以下工具是笔者的一些小积累，仅供大家参考学习，帮助大...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Sat Sep 18 2021 14:33:36 GMT+0800">
+                2021-09-18
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/other/">⓺其他</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Blockchain/">区块链</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Ethereum/">以太坊</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/NFT/">NFT</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/other/%E6%96%B0%E6%89%8B%E6%92%B8%E7%BE%8A%E6%AF%9B%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/other/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%A3%E5%B8%81%E6%A0%87%E5%87%86%E7%9B%98%E7%82%B9.html">
+                        以太坊的NFT代币标准梳理
+                    </a>
+                </h3>
+
+                <!-- 在适当的位置插入谷歌广告代码 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
+
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        熟悉以太坊的用户一定经常看到 ERC-XXX 或是 EIP-XXX，究竟什么是 ERC 以及 EIP 呢？
+EIP 的全称是 Ethereum Improvement Proposal，也就是以太坊优化提案。最初，比特币社区内成员为了优化比特币协议会...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Thu Sep 16 2021 16:09:03 GMT+0800">
+                2021-09-16
+            </span>
+        </span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/other/">⓺其他</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Blockchain/">区块链</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Ethereum/">以太坊</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/NFT/">NFT</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a class="read-more" href="/other/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E4%BB%A3%E5%B8%81%E6%A0%87%E5%87%86%E7%9B%98%E7%82%B9.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
         
             <li class="home-article-item">
 
@@ -707,129 +1019,6 @@
     </div>
 
     <a class="read-more" href="/essay/20-school-anniversary-of-shiyan.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/other/Godaddy%E5%9F%9F%E5%90%8D%E8%BF%81%E7%A7%BB%E8%87%B3%E9%98%BF%E9%87%8C%E4%BA%91.html">
-                        GoDaddy域名迁移至阿里云
-                    </a>
-                </h3>
-
-                <!-- 在适当的位置插入谷歌广告代码 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
-
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        最近网站的点击量和转化率竟然有点抬头，导致我对网站运营又产生了一定的兴趣。因为对于现有域名的喜欢，以及对长期运营网站的坚守，我准备去GoDaddy为我的域名 www.nickyam.com 续费，结果发现续费一年需要115元，而且没有优惠折扣。而国内...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Mar 29 2021 12:41:49 GMT+0800">
-                2021-03-29
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/other/">⓺其他</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/net/">网络</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/other/Godaddy%E5%9F%9F%E5%90%8D%E8%BF%81%E7%A7%BB%E8%87%B3%E9%98%BF%E9%87%8C%E4%BA%91.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/other/%E5%B9%BF%E5%8F%91%E4%BF%A1%E7%94%A8%E5%8D%A1%E8%BF%98%E6%AC%BE%E6%9C%AA%E5%88%B0%E8%B4%A6%E4%B9%8B%E5%A7%8B%E6%9C%AB.html">
-                        广发信用卡还款未到账之始末
-                    </a>
-                </h3>
-
-                <!-- 在适当的位置插入谷歌广告代码 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7114121088728794" crossorigin="anonymous"></script>
-
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        今天偶然间刷到广发银行信用卡的APP，查看里面的账单，发现我前一天还款的额度没有恢复。我明明通过支付宝还款了，微信公众号昨天也显示了还款成功，额度恢复。结果今天一早发现，竟然倒退回去了。
-我打电话给信用卡中心，得知因为之前信用卡新卡营销，我误开通了发...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Mar 19 2021 08:14:10 GMT+0800">
-                2021-03-19
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/other/">⓺其他</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/CreditCard/">信用卡</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a class="read-more" href="/other/%E5%B9%BF%E5%8F%91%E4%BF%A1%E7%94%A8%E5%8D%A1%E8%BF%98%E6%AC%BE%E6%9C%AA%E5%88%B0%E8%B4%A6%E4%B9%8B%E5%A7%8B%E6%9C%AB.html">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
