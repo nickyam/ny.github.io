@@ -1613,7 +1613,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/essay/Piark-v.html</loc>
+    <loc>http://blog.nickyam.com/essay/Piark-iv.html</loc>
     
     <lastmod>2020-01-14</lastmod>
     
@@ -1622,7 +1622,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/essay/Piark-iv.html</loc>
+    <loc>http://blog.nickyam.com/essay/Piark-v.html</loc>
     
     <lastmod>2020-01-14</lastmod>
     
@@ -3004,13 +3004,6 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/ChatGPT/</loc>
-    <lastmod>2023-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.nickyam.com/tags/finance/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -3019,6 +3012,13 @@
   
   <url>
     <loc>http://blog.nickyam.com/tags/Bonds/</loc>
+    <lastmod>2023-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.nickyam.com/tags/ChatGPT/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3158,14 +3158,14 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/iOS/</loc>
+    <loc>http://blog.nickyam.com/tags/music/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/music/</loc>
+    <loc>http://blog.nickyam.com/tags/iOS/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
