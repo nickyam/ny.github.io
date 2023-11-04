@@ -2567,7 +2567,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tech/hexo-multi-tags.html</loc>
+    <loc>http://blog.nickyam.com/tech/hexo-set-google-adsense.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2576,7 +2576,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tech/hexo-set-google-adsense.html</loc>
+    <loc>http://blog.nickyam.com/tech/hexo-multi-tags.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2693,7 +2693,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/essay/Hair-Cut.html</loc>
+    <loc>http://blog.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2702,7 +2702,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/essay/Hair-Cut-at-THU.html</loc>
+    <loc>http://blog.nickyam.com/essay/Hair-Cut.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -3095,14 +3095,14 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/GitHub/</loc>
+    <loc>http://blog.nickyam.com/tags/bitcoin/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/bitcoin/</loc>
+    <loc>http://blog.nickyam.com/tags/GitHub/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3256,6 +3256,13 @@
   </url>
   
   <url>
+    <loc>http://blog.nickyam.com/tags/Web/</loc>
+    <lastmod>2023-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.nickyam.com/tags/Goggle/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -3264,13 +3271,6 @@
   
   <url>
     <loc>http://blog.nickyam.com/tags/APK/</loc>
-    <lastmod>2023-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.nickyam.com/tags/Web/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
