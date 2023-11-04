@@ -9,7 +9,7 @@
     
     <title>
         
-            标签: Wordpress |
+            标签: wordpress |
         
         涯木
     </title>
@@ -199,7 +199,7 @@
                 
                     <div class="fade-in-down-animation">
     <div class="tag-container">
-        <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;Wordpress
+        <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;wordpress
         </div>
         <div class="tag-post-list">
             
@@ -207,16 +207,23 @@
     
         <section class="archive-item">
             <div class="archive-item-header">
-                <span class="archive-year">2018</span>
-                <span class="archive-year-post-count">[1]</span>
+                <span class="archive-year">2023</span>
+                <span class="archive-year-post-count">[2]</span>
             </div>
             <ul class="article-list">
                 
                     <li class="article-item">
                         <a class="article-title"
-                           href="/tech/WordPress-Exports-Fully-Static-Websites.html"
-                        >推荐WordPress插件导出静态网站</a>
-                        <span class="article-date">11-09</span>
+                           href="/tech/WP-Super-Cache.html"
+                        >WordPress优化缓存插件WP Super Cache</a>
+                        <span class="article-date">11-02</span>
+                    </li>
+                
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/tech/deadlinks-wordpress-handle.html"
+                        >Wordpress网站出现死链的处理神器</a>
+                        <span class="article-date">11-02</span>
                     </li>
                 
             </ul>
@@ -437,20 +444,6 @@
 
         document.addEventListener('pjax:send', () => {
             KEEP.utils.pjaxProgressBarStart();
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            KEEP.utils.pjaxProgressBarEnd();
-            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-            KEEP.refresh();
-        });
-    });
-</script>
-
-
-
-</body>
-</html>ils.pjaxProgressBarStart();
         });
 
         document.addEventListener('pjax:complete', () => {
