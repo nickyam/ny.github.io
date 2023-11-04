@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://blog.nickyam.com/tech/Recommended-Markdown-Editor-for-Best-Use.html</loc>
+    <loc>http://blog.nickyam.com/essay/Recommended-Markdown-Editor-for-Best-Use.html</loc>
     
     <lastmod>2023-11-04</lastmod>
     
@@ -1613,7 +1613,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/essay/Piark-iv.html</loc>
+    <loc>http://blog.nickyam.com/essay/Piark-v.html</loc>
     
     <lastmod>2020-01-14</lastmod>
     
@@ -1622,7 +1622,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/essay/Piark-v.html</loc>
+    <loc>http://blog.nickyam.com/essay/Piark-iv.html</loc>
     
     <lastmod>2020-01-14</lastmod>
     
@@ -3123,14 +3123,14 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/VPN/</loc>
+    <loc>http://blog.nickyam.com/tags/entertainment/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/entertainment/</loc>
+    <loc>http://blog.nickyam.com/tags/VPN/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3236,13 +3236,6 @@
   
   <url>
     <loc>http://blog.nickyam.com/tags/QQ/</loc>
-    <lastmod>2023-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.nickyam.com/tags/Markdown/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

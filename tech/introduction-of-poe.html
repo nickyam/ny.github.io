@@ -329,7 +329,7 @@
 <p>与社交媒体平台类似，如果您喜欢另一个用户的帖子，则其他用户将能够看到您喜欢它。类似于其他社交媒体平台上的“故事”产品，如果您正在关注帖子的创建者，则他们将能够看到您已经查看了它。您可以通过访问左侧菜单中的个人资料来查看您正在关注的人，该菜单可访问顶部左侧的按钮。</p>
 <p><strong>如果我在写关于Poe的内容，我应该如何大写它？</strong></p>
 <p>您应该像任何专有名词一样将其大写为“Poe”。我们不会将其大写为“POE”或“PoE”。</p>
-<p>如果您有任何上述未涉及的问题或想分享任何其他反馈，请通过<a class="link"   href="mailto:&#x66;&#101;&#x65;&#100;&#98;&#x61;&#x63;&#x6b;&#64;&#112;&#111;&#x65;&#x2e;&#99;&#111;&#109;" >&#x66;&#101;&#x65;&#100;&#98;&#x61;&#x63;&#x6b;&#64;&#112;&#111;&#x65;&#x2e;&#99;&#111;&#109;<i class="fas fa-external-link-alt"></i></a>与我们联系。</p>
+<p>如果您有任何上述未涉及的问题或想分享任何其他反馈，请通过<a class="link"   href="mailto:&#102;&#101;&#x65;&#100;&#x62;&#x61;&#x63;&#x6b;&#64;&#112;&#111;&#101;&#x2e;&#x63;&#111;&#109;" >&#102;&#101;&#x65;&#100;&#x62;&#x61;&#x63;&#x6b;&#64;&#112;&#111;&#101;&#x2e;&#x63;&#111;&#109;<i class="fas fa-external-link-alt"></i></a>与我们联系。</p>
 <p>您可以在此处找到Poe的隐私政策：<a class="link"   target="_blank" rel="noopener" href="https://poe.com/privacy" >Poe隐私政策<i class="fas fa-external-link-alt"></i></a>。</p>
 </blockquote>
 
@@ -340,31 +340,87 @@
             
             
                 <div class="post-copyright-info">
-                    <iframe data-aa='2218236' src='//acceptable.a-ads.com/2218236' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
+                    .article-copyright-info-container {
+  position relative
+  box-sizing border-box
+  width 100%
+  padding 0.8rem 0.8rem 0.8rem 1.3rem
+  font-size 1rem
+  background var(--background-color-2)
+
+  &::after {
+    position absolute
+    top 0
+    left 0
+    width 0.5rem
+    height 100%
+    background var(--copyright-info-color)
+    content ''
+  }
 
 
-<div class="article-copyright-info-container">
-    <ul class="copyright-info-content">
-        <li class="post-title">
-            <span class="type">本文标题</span>：<span class="content">平替ChatGPT工具新手指南：如何注册和使用</span>
-        </li>
-        <li class="post-author">
-            <span class="type">本文作者</span>：<span class="content">Nick Yam</span>
-        </li>
-        <li class="post-time">
-            <span class="type">创建时间</span>：<span class="content">2023-07-15 20:32:00</span>
-        </li>
-        <li class="post-link">
-            <span class="type">本文链接</span>：<span class="content">tech/introduction-of-poe.html</span>
-        </li>
-        <li class="post-license">
-            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
-        </li>
-    </ul>
-    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
-        <i class="fa-solid fa-copy"></i>
-    </div>
-</div>
+  &:hover {
+    .copy-copyright-info {
+      visibility visible
+    }
+  }
+
+
+  .copyright-info-content {
+    position relative
+    box-sizing border-box
+    overflow-x auto
+
+    &::-webkit-scrollbar {
+      width 0.3rem
+      height 0.3rem
+      transition all 0.2s ease
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background var(--text-color-4)
+    }
+
+    &::-webkit-scrollbar-track {
+      background transparent
+    }
+
+    li {
+      margin-bottom 0.4rem
+      color var(--text-color-3)
+      white-space nowrap
+
+      .type
+      .content {
+        color var(--text-color-3)
+      }
+
+      .license {
+        font-weight bold
+      }
+
+      &:last-child {
+        margin-bottom 0
+      }
+    }
+  }
+
+
+  .copy-copyright-info {
+    position absolute
+    top 0.4rem
+    right 0.4rem
+    box-sizing border-box
+    padding 0.3rem
+    visibility hidden
+    cursor pointer
+    transition-t("visibility", "0", "0.2", "ease-in-out")
+
+    i {
+      color var(--text-color-3)
+    }
+  }
+}
 
                 </div>
             
@@ -426,68 +482,34 @@
     </div>
     
         
-            .waline-comment-container {
-  #waline-comment {
-    --waline-theme-color var(--primary-color)
-    --waline-active-color var(--primary-color-light-1)
-    --waline-color var(--text-color-3)
-    --waline-bgcolor var(--background-color-1)
-    --waline-border-color var(--border-color)
-    --waline-disable-bgcolor var(--background-color-2)
-    --waline-disable-color var(--text-color-3)
-    --waline-code-bgcolor rgba(40, 44, 52, 0.9)
-    --waline-info-bgcolor var(--background-color-3)
-    --waline-info-color var(--text-color-3)
-    --waline-border 1px solid var(--waline-border-color)
+            
 
-    input
-    textarea {
-      position relative
-      box-sizing border-box
-      padding 0.6rem 1rem
-      color var(--text-color-3)
-      background transparent
-      border-radius 0.4rem
-      outline none
+    <div class="waline-comment-container">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.css"/>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline-meta.css"/>
+        <script data-pjax src="//cdn.jsdelivr.net/npm/@waline/client@v2/dist/waline.js"></script>
+        <div id="waline-comment"></div>
+        <script data-pjax>
+          function loadWaline() {
+            Waline.init({
+              el: '#waline-comment',
+              serverURL: 'https://waline.nickyam.com',
+              lang: 'zh-CN' || 'zh-CN',
+              comment: '.post-comments-count',
+              reaction: 'true' === 'true'
+            })
+          }
 
-      &:hover {
-        background var(--background-color-2)
-      }
-    }
+          if ('true' === 'true') {
+            setTimeout(() => {
+              loadWaline()
+            }, 1000)
+          } else {
+            window.addEventListener('DOMContentLoaded', loadWaline)
+          }
+        </script>
+    </div>
 
-
-    .wl-header {
-      box-sizing border-box
-      padding 0
-    }
-
-
-    button {
-      transition-t("color, background", "0, 0", "0.2, 0.2", "ease, ease")
-    }
-
-    .wl-logout-btn {
-      svg {
-        width 1rem
-        height 1rem
-        path {
-          color var(--background-color-3)
-        }
-      }
-    }
-
-    .wl-panel {
-      border-radius 0.4rem
-    }
-
-    .wl-count
-    .wl-num
-    .wl-preview h4
-    .wl-like span {
-      color var(--text-color-4)
-    }
-  }
-}
 
 
         
