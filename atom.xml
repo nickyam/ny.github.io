@@ -350,6 +350,27 @@
   </entry>
   
   <entry>
+    <title></title>
+    <link href="http://blog.nickyam.com/essay/Recommended-Markdown-Editor-for-Best-Use.html"/>
+    <id>http://blog.nickyam.com/essay/Recommended-Markdown-Editor-for-Best-Use.html</id>
+    <published>2023-07-21T02:05:09.000Z</published>
+    <updated>2023-11-04T12:31:50.621Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h2 id="title-两款最好用的Markdown编辑器推荐date-2023-11-04-16-25-00-UTC-08-00-tags-Markdownsource-author-NickYamcopyright-truecategories-⓶科技toc-true"><a href="#title-两款最好用的Markdown编辑器推荐date-2023-11-04-16-25-00-UTC-08-00-tags-Markdownsource-author-NickYamcopyright-truecategories-⓶科技toc-true" class="headerlink" title="title: 两款最好用的Markdown编辑器推荐date: 2023-11-04 16:25:00 (UTC +08:00)tags:- Markdownsource:author: NickYamcopyright: truecategories: ⓶科技toc: true"></a>title: 两款最好用的Markdown编辑器推荐<br>date: 2023-11-04 16:25:00 (UTC +08:00)<br>tags:<br>- Markdown<br>source:<br>author: NickYam<br>copyright: true<br>categories: ⓶科技<br>toc: true</h2><p>今天又看到有小伙伴在争论 Markdown 到底好不好用。</p><p>私以为，如果觉得不好用，那你本身就不是 Markdown 的受众。Markdown从设计之初就无法满足譬如页眉页脚页码，水印目录居中、标宋仿宋红头等等的功能需求。</p><p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。它本质上就是个写Blog的语言，不是用来写公文搞排版的。Markdown可以使用网页编写的语言html的语法进行99%格式渲染。可以使用txt编辑器自己编写，最后进行渲染。它的优点就是极简主义，并且是博客网站的通用标记语言。</p><p>当然，这不是今天讨论的重点。</p><p>自从用 GitHub Page 搭建<a href="www.nickyam.com">个人博客</a>开始，笔者就一直在用各种编辑器，有免费的、付费的、在线的、破解的。</p><p>一通使用下来，反复对比下挑选了两款最好用的，今天推荐给大家！</p><h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><p><img src="https://img.nickyam.com/file/7fdc2308384d71755f582.png" alt="Typora"></p><p>下载地址：<a class="link"   href="https://typora.io/" >https://typora.io<i class="fas fa-external-link-alt"></i></a></p><ul><li>推荐指数：☆☆☆☆</li><li>支持 Windows、OS X 和 Linux三种系统</li><li>支持<strong>即时渲染技术</strong>，所见即所得，这也是与其他 Markdown 编辑器最显著的区别</li><li>支持数学编辑，可与 Word 直接格式转换</li><li>在 Pandoc 的支持下进行多种文档格式转换</li></ul><p>但是它有一个缺点，收费（所以才给了四星）。所以请各位小伙伴自行考虑。</p><p><strong>所以我要推荐第二款，也是我认为的神器，也是我现在每天在用的工具。</strong></p><h1 id="VScode"><a href="#VScode" class="headerlink" title="VScode"></a>VScode</h1><p>推荐指数：☆☆☆☆☆</p><p>程序猿一族们最常用的编辑器，而且它原生支持 Markdown 语法，非常丝滑，不过需要安装以下几个插件。</p><h2 id="markdown-all-in-one"><a href="#markdown-all-in-one" class="headerlink" title="markdown all in one"></a>markdown all in one</h2><p><img src="https://img.nickyam.com/file/237f82db6b5672a0e9f28.png" alt="markdown all in one"></p><h2 id="将原生markdown预览的黑色背景改为白色"><a href="#将原生markdown预览的黑色背景改为白色" class="headerlink" title="将原生markdown预览的黑色背景改为白色"></a>将原生markdown预览的黑色背景改为白色</h2><p><img src="https://img.nickyam.com/file/12be9b81afa2d2e289f17.png" alt="Markdown Preview Enhanced"></p><p>最后的效果图如下：</p><p><img src="https://img.nickyam.com/file/2dfb651291e0b1eecf755.png"></p><p>下载地址：<a class="link"   href="https://code.visualstudio.com/" >https://code.visualstudio.com<i class="fas fa-external-link-alt"></i></a></p><p>另外，还有 notion 和 obsidian 这两款新秀。不过他们的特色不在于 Markdown，而在于其笔记组织形式，大家也可以尝试。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;h2 id=&quot;title-两款最好用的Markdown编辑器推荐date-2023-11-04-16-25-00-UTC-08-00-tags-Markdownsource-author-NickYamcopyright-truecategories-⓶科技toc-t</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>美区App Store 礼品卡充值兑换步骤</title>
     <link href="http://blog.nickyam.com/tech/redeem_apple_giftcard.html"/>
     <id>http://blog.nickyam.com/tech/redeem_apple_giftcard.html</id>
@@ -491,30 +512,6 @@
     
     
     <category term="apk" scheme="http://blog.nickyam.com/tags/apk/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>好用到超纲！黑科技之免魔法畅游全球的神站工具，建议偷偷收藏！</title>
-    <link href="http://blog.nickyam.com/tech/hyperbeam.html"/>
-    <id>http://blog.nickyam.com/tech/hyperbeam.html</id>
-    <published>2023-07-07T04:55:00.000Z</published>
-    <updated>2023-07-11T13:38:20.204Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>提示： 想了解更多VPN相关资讯，请点击<a class="link"   href="https://i.nickyam.com/tag/VPN" >https://i.nickyam.com/tag/VPN<i class="fas fa-external-link-alt"></i></a>，持续更新ing。信息仅供学习交流研究使用，利用该途径做超出合理的行为，所导致的后果自己负责。</strong></p><p>之前，笔者和读者们科普了<a class="link"   href="https://www.nickyam.com/tech/Free-VPNs-on-Mac.html" >《适用于Mac的最佳免费VPN推荐》<i class="fas fa-external-link-alt"></i></a>、<a class="link"   href="https://www.nickyam.com/tech/Free-VPNs-on-iOS.html" >《适用于iOS的最佳免费加速器推荐》<i class="fas fa-external-link-alt"></i></a>、<a class="link"   href="https://www.nickyam.com/tech/Free-VPN-on-Android.html" >《超好用的安卓加速器，免费速度还快！》<i class="fas fa-external-link-alt"></i></a>和<a class="link"   href="https://www.nickyam.com/tech/Cloudflare_WARP.html" >《终极免费VPN之CloudflareWARP科学上网》<i class="fas fa-external-link-alt"></i></a>。需要注意的是，本系列都是科普文章，仅供大家学习研究。</p><p>有时候我们设备暂时没有魔法软件，想要访问海外的互联网几乎是不可能的。因为即使去找免费的软件或者免费的节点，我们几乎都是在海外去进行寻找的。</p><p>现在各种云服务炒的异常火热，包括：云手机、云电脑、云存储等。今天要介绍的是一个神奇的工具。这个平台无需魔法就能打开进行使用。<br><img src="https://img.nickyam.com/file/28d949beb31c54de6ada8.png"></p><p>这个叫 hyperbeam 的网站，其最初目的是给异地恋的情侣提供个共同上网冲浪的机会。</p><p>注册好账号登录后，需要你创建一个房间，然后把房间链接分享出去就能和远在异地的女朋友交流了，支持文字、GIF、视频、语音通话。</p><p><strong>可以一起看视频：</strong><br><img src="https://img.nickyam.com/file/a42c2b4e67d6b8678980c.gif"></p><p><strong>可以一起搜东西：</strong><br><img src="https://img.nickyam.com/file/767b184f271334402a9e0.gif"></p><p><strong>可以一起看“抖音”</strong><br><img src="https://img.nickyam.com/file/200f25ae950db316f28dd.png"></p><p><strong>注册链接：<a class="link"   href="https://hyperbeam.com/app/register" >https://hyperbeam.com/app/register<i class="fas fa-external-link-alt"></i></a></strong></p><p>步骤一：直接打开官网即可免费进行注册。随便填写生日、输入邮箱、通过人机验证，再确认邮箱验证码之后即可完成注册（看不到验证码的可以去垃圾箱找找）。<br><img src="https://img.nickyam.com/file/ef420c23daa2a7ec4295c.png"></p><p>步骤二：注册登录之后，需要创建一个房间才能使用。是否公开房间也可以根据自己需求来勾选。之后我们就可以点击Start Browsing来开始浏览了。<br><img src="https://img.nickyam.com/file/399f75b86a5218d7939b5.png"></p><p>步骤三：把开关打开，你会看到一个浏览器中的浏览器，创建的房间左侧为浏览窗口，右侧为聊天部分，在Hyperbeam的房间中，你可以访问任意网站！支持浏览器全屏，支持弹出框浏览，支持延迟播放，选择传输协议等等。功能大家自行探索～<br><img src="https://img.nickyam.com/file/a12a7ea40e7a2cc81fb53.gif"></p><p>步骤四：在左侧还可以通过创建链接邀请朋友共同访问这个云浏览器，而且对方不需要注册即可看到画面，但要操作的话需要注册登录并且授权。<br><img src="https://img.nickyam.com/file/9d2290cbd5444ad81748b.png"></p><p>最后要提醒大家，这种方式有安全隐患，碰到需要登录个人账号的情况，千万不要手动输入！！只能扫码登录，不能扫码登陆的话就麻烦点建个小号吧。剩下的请自行探索哦！</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;提示： 想了解更多VPN相关资讯，请点击&lt;a class=&quot;link&quot;   href=&quot;https://i.nickyam.com/tag/VPN&quot; &gt;https://i.nickyam.com/tag/VPN&lt;i class=&quot;fas fa-externa</summary>
-      
-    
-    
-    
-    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
-    
-    
-    <category term="VPN" scheme="http://blog.nickyam.com/tags/VPN/"/>
     
   </entry>
   
