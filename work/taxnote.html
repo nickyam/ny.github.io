@@ -398,87 +398,31 @@
             
             
                 <div class="post-copyright-info">
-                    .article-copyright-info-container {
-  position relative
-  box-sizing border-box
-  width 100%
-  padding 0.8rem 0.8rem 0.8rem 1.3rem
-  font-size 1rem
-  background var(--background-color-2)
-
-  &::after {
-    position absolute
-    top 0
-    left 0
-    width 0.5rem
-    height 100%
-    background var(--copyright-info-color)
-    content ''
-  }
+                    <iframe data-aa='2218236' src='//acceptable.a-ads.com/2218236' style='border:0px; padding:0; width:100%; height:100%; overflow:hidden; background-color: transparent;'></iframe>
 
 
-  &:hover {
-    .copy-copyright-info {
-      visibility visible
-    }
-  }
-
-
-  .copyright-info-content {
-    position relative
-    box-sizing border-box
-    overflow-x auto
-
-    &::-webkit-scrollbar {
-      width 0.3rem
-      height 0.3rem
-      transition all 0.2s ease
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background var(--text-color-4)
-    }
-
-    &::-webkit-scrollbar-track {
-      background transparent
-    }
-
-    li {
-      margin-bottom 0.4rem
-      color var(--text-color-3)
-      white-space nowrap
-
-      .type
-      .content {
-        color var(--text-color-3)
-      }
-
-      .license {
-        font-weight bold
-      }
-
-      &:last-child {
-        margin-bottom 0
-      }
-    }
-  }
-
-
-  .copy-copyright-info {
-    position absolute
-    top 0.4rem
-    right 0.4rem
-    box-sizing border-box
-    padding 0.3rem
-    visibility hidden
-    cursor pointer
-    transition-t("visibility", "0", "0.2", "ease-in-out")
-
-    i {
-      color var(--text-color-3)
-    }
-  }
-}
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">本文标题</span>：<span class="content">关于“出口免抵退”的实务笔记</span>
+        </li>
+        <li class="post-author">
+            <span class="type">本文作者</span>：<span class="content">Nick Yam</span>
+        </li>
+        <li class="post-time">
+            <span class="type">创建时间</span>：<span class="content">2017-03-12 22:22:20</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">work/taxnote.html</span>
+        </li>
+        <li class="post-license">
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
 
                 </div>
             

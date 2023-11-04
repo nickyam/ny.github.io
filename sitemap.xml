@@ -2531,7 +2531,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tech/hexo-add-tencent-404-page.html</loc>
+    <loc>http://blog.nickyam.com/tech/hexo-generate-rss-atom.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2540,7 +2540,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tech/hexo-generate-rss-atom.html</loc>
+    <loc>http://blog.nickyam.com/tech/hexo-add-tencent-404-page.html</loc>
     
     <lastmod>2019-03-12</lastmod>
     
@@ -2990,20 +2990,6 @@
 
   
   <url>
-    <loc>http://blog.nickyam.com/tags/mark/</loc>
-    <lastmod>2023-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://blog.nickyam.com/tags/emotion/</loc>
-    <lastmod>2023-11-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://blog.nickyam.com/tags/finance/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
@@ -3012,6 +2998,20 @@
   
   <url>
     <loc>http://blog.nickyam.com/tags/Bonds/</loc>
+    <lastmod>2023-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.nickyam.com/tags/mark/</loc>
+    <lastmod>2023-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://blog.nickyam.com/tags/emotion/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3081,14 +3081,14 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/reprint/</loc>
+    <loc>http://blog.nickyam.com/tags/thu/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/thu/</loc>
+    <loc>http://blog.nickyam.com/tags/reprint/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3158,14 +3158,14 @@
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/music/</loc>
+    <loc>http://blog.nickyam.com/tags/iOS/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/tags/iOS/</loc>
+    <loc>http://blog.nickyam.com/tags/music/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3433,14 +3433,14 @@
 
   
   <url>
-    <loc>http://blog.nickyam.com/categories/essay/</loc>
+    <loc>http://blog.nickyam.com/categories/work/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://blog.nickyam.com/categories/work/</loc>
+    <loc>http://blog.nickyam.com/categories/essay/</loc>
     <lastmod>2023-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
