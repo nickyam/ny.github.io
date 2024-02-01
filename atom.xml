@@ -6,7 +6,7 @@
   <link href="http://blog.nickyam.com/atom.xml" rel="self"/>
   
   <link href="http://blog.nickyam.com/"/>
-  <updated>2023-11-04T13:08:57.723Z</updated>
+  <updated>2024-02-01T04:31:32.996Z</updated>
   <id>http://blog.nickyam.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Mac终端主机名不正常显示192的解决方法</title>
+    <link href="http://blog.nickyam.com/tech/how-to-resolve-abnormal-display-of-192-in-mac-terminal-hostname.html"/>
+    <id>http://blog.nickyam.com/tech/how-to-resolve-abnormal-display-of-192-in-mac-terminal-hostname.html</id>
+    <published>2024-01-05T11:25:00.000Z</published>
+    <updated>2024-02-01T04:31:32.996Z</updated>
+    
+    <content type="html"><![CDATA[<p>一般来说，Mac终端正常情况下是显示用户名的。终端的主机名实际上是和“系统偏好设置-通用-关于本机”中的电脑名称是一致的。</p><p>不过，有时候会出现打开终端后，主机名变为“192”的异常现象。</p><p><img src="https://img.nickyam.com/file/0a10201db3c5a254e0a29.png"></p><p>该问题出现的原因主要是当路由器的DNS使用默认的192.168.1.1或192.168.0.1的时候，Terminal里的计算机名会变成localhost。</p><p>解决办法很简单，只需要修改DNS配置:</p><ul><li><p>打开“系统偏好设置-网络-高级-DNS”，可以看到DNS服务器中有192.168.1.1和192.168.0.1地址，点击减号删除。</p></li><li><p>点击加号增加8.8.8.8地址，点击“好”按钮，再点击应用按钮，退出即可。</p></li></ul><p><img src="https://img.nickyam.com/file/88e32439cc5e7f9aabe47.png"></p><p>重启终端，恢复正常。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一般来说，Mac终端正常情况下是显示用户名的。终端的主机名实际上是和“系统偏好设置-通用-关于本机”中的电脑名称是一致的。&lt;/p&gt;
+&lt;p&gt;不过，有时候会出现打开终端后，主机名变为“192”的异常现象。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://img.nickyam</summary>
+      
+    
+    
+    
+    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
+    
+    
+    <category term="Mac" scheme="http://blog.nickyam.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
     <title>两款最好用的Markdown编辑器推荐</title>
     <link href="http://blog.nickyam.com/tech/Recommended-Markdown-Editor-for-Best-Use.html"/>
     <id>http://blog.nickyam.com/tech/Recommended-Markdown-Editor-for-Best-Use.html</id>
     <published>2023-11-04T06:25:00.000Z</published>
-    <updated>2023-11-04T13:08:57.723Z</updated>
+    <updated>2023-11-04T13:08:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>今天又看到有小伙伴在争论 Markdown 到底好不好用。</p><p>私以为，如果觉得不好用，那你本身就不是 Markdown 的受众。Markdown从设计之初就无法满足譬如页眉页脚页码，水印目录居中、标宋仿宋红头等等的功能需求。</p><p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。它本质上就是个写Blog的语言，不是用来写公文搞排版的。Markdown可以使用网页编写的语言html的语法进行99%格式渲染。可以使用txt编辑器自己编写，最后进行渲染。它的优点就是极简主义，并且是博客网站的通用标记语言。</p><p>当然，这不是今天讨论的重点。自从用 GitHub Page 搭建<a href="www.nickyam.com">个人博客</a>开始，笔者就一直在用各种编辑器，有免费的、付费的、在线的、破解的。一通使用下来，反复对比下挑选了两款最好用的，今天推荐给大家！</p><h1 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h1><p><img src="https://img.nickyam.com/file/7fdc2308384d71755f582.png" alt="Typora"></p><p>下载地址：<a class="link"   href="https://typora.io/" >https://typora.io<i class="fas fa-external-link-alt"></i></a></p><ul><li>推荐指数：☆☆☆☆</li><li>支持 Windows、OS X 和 Linux三种系统</li><li>支持<strong>即时渲染技术</strong>，所见即所得，这也是与其他 Markdown 编辑器最显著的区别</li><li>支持数学编辑，可与 Word 直接格式转换</li><li>在 Pandoc 的支持下进行多种文档格式转换</li></ul><p>但是它有一个缺点，收费（所以才给了四星）。所以请各位小伙伴自行考虑。</p><p><strong>所以我要推荐第二款，也是我认为的神器，也是我现在每天在用的工具。</strong></p><h1 id="VScode"><a href="#VScode" class="headerlink" title="VScode"></a>VScode</h1><p>推荐指数：☆☆☆☆☆</p><p>程序猿一族们最常用的编辑器，而且它原生支持 Markdown 语法，非常丝滑，不过需要安装以下几个插件。</p><h2 id="markdown-all-in-one"><a href="#markdown-all-in-one" class="headerlink" title="markdown all in one"></a>markdown all in one</h2><p><img src="https://img.nickyam.com/file/237f82db6b5672a0e9f28.png" alt="markdown all in one"></p><h2 id="将原生markdown预览的黑色背景改为白色"><a href="#将原生markdown预览的黑色背景改为白色" class="headerlink" title="将原生markdown预览的黑色背景改为白色"></a>将原生markdown预览的黑色背景改为白色</h2><p><img src="https://img.nickyam.com/file/12be9b81afa2d2e289f17.png" alt="Markdown Preview Enhanced"></p><p>最后的效果图如下：</p><p><img src="https://img.nickyam.com/file/2dfb651291e0b1eecf755.png"></p><p>下载地址：<a class="link"   href="https://code.visualstudio.com/" >https://code.visualstudio.com<i class="fas fa-external-link-alt"></i></a></p><p>另外，还有 notion 和 obsidian 这两款新秀。不过他们的特色不在于 Markdown，而在于其笔记组织形式，大家也可以尝试。</p>]]></content>
     
@@ -47,7 +73,7 @@
     <link href="http://blog.nickyam.com/tech/suggest-of-four-digits-com-domain.html"/>
     <id>http://blog.nickyam.com/tech/suggest-of-four-digits-com-domain.html</id>
     <published>2023-11-03T03:25:00.000Z</published>
-    <updated>2023-11-03T15:07:15.995Z</updated>
+    <updated>2023-11-03T15:07:14.000Z</updated>
     
     <content type="html"><![CDATA[<p>之前，零点君发布了《<a class="link"   href="https://limzero.com/four-digits-com-domain-suggest.html"  title="四位数com后缀域名全新注册推荐·第一弹">四位数com后缀域名全新注册推荐·第一弹<i class="fas fa-external-link-alt"></i></a>》，介绍了域名的重要性和怎么样的域名是有价值的。</p><p>今天我要介绍第二弹。</p><p>ID类：32&#x2F;41&#x2F;60&#x2F;70&#x2F;73&#x2F;79&#x2F;83id.com</p><p>QA类：37&#x2F;40&#x2F;53&#x2F;54&#x2F;60&#x2F;63&#x2F;93&#x2F;95&#x2F;96&#x2F;97qa.com</p><p>DR类：47&#x2F;61dr.com</p><p>以上可供选择。</p>]]></content>
     
@@ -71,7 +97,7 @@
     <link href="http://blog.nickyam.com/tech/nice-url-for-google-seo.html"/>
     <id>http://blog.nickyam.com/tech/nice-url-for-google-seo.html</id>
     <published>2023-11-03T03:17:00.000Z</published>
-    <updated>2023-11-03T15:06:03.267Z</updated>
+    <updated>2023-11-03T15:06:02.000Z</updated>
     
     <content type="html"><![CDATA[<p>我们建站的时候，每一篇文章都是我们的心血，总是希望让更多的小伙伴能够看到，对小伙伴有用。</p><p>如何让小伙伴能够看到我们的文章，一个很大的要素就是被搜索引擎收录。这就涉及到SEO。而最基础的SEO就是为每一篇文章命名地对SEO友好。</p><p>下面，我们一步一步来做。</p><ol><li><p>从页面标题开始<br>首先用页面标题作为原始url，在这基础上进行修改成为完美的url。</p></li><li><p>删除特殊字符<br>删除标题里的冒号、问好、逗号、句号、（）括号、 []中括号、分号等等。</p></li><li><p>删除数字<br>删除标题中的数字，例如文章写了最好的5个旅游目的地，三个月后发现SEO排名很好，我们想要新增2个景点，标题能修改，URL却不能改。又如我们写了2023年最好的XXX，第二年标题改成了2024年最好的XXX，但是URL也不能修改。修改了就要做301调整，会影响排名流量。因此最开始的URL里就不要加数字了。</p></li><li><p>删除多余的信息<br>一是避免访客被超长的URL吓到，二是URL太长会导致超出的部分被谷歌结果截取掉而显示不出来，进而影响URL所要传递的信息。所以删除URL中不必要的信息，能使其保持简洁。</p></li><li><p>把它缩短为关键字<br>经过上述步骤，可以得到一个简短的，丰富的关键词。</p></li><li><p>使用小写<br>URL 使用小写字母，Wordpress 可以将URL自动从大写字母变成小写字母，只需要了解这一点，不必单独设置。而如果你是用hexo或者其他静态部署的话，可能需要自行设置。</p></li><li><p>用连字符替换空格<br>URL 不能包含空格，谷歌会将空格识别成 %20。一般来说，我们把标题里的空格替换成 -。谷歌也建议不要用下划线_。</p></li><li><p>采用HTTPS<br>现在绝大多数网站都是使用https，这是一个排名因素，保护访客隐私。</p></li><li><p>非必需不使用子域名<br>一般建主站使用主域名，除非必要，不要使用子域名。因为子域名会被搜索引擎当做一个新网站。选择一个容易记住的域名，方便访客记住你，慢慢形成品牌。</p></li><li><p>选择合适的顶级域名<br>一般使用com顶级<a class="link"   href="https://limzero.com/tag/domain"  title="域名">域名<i class="fas fa-external-link-alt"></i></a>，尽量不要使用其他后缀。如果你是小语种，那么可以使用这个小语种国家的国别域名。除此以外，其他<a class="link"   href="https://limzero.com/tag/domain"  title="域名">域名<i class="fas fa-external-link-alt"></i></a>在谷歌眼中和垃圾站点联系在一起。</p></li><li><p>避免出现日期<br>和第三点类似，URL链接避免出现日期，如果是新站点，在开始发布内容之前设置文章名字的URL永久链接设置。</p></li><li><p>尽可能避免使用特殊网址参数<br>URL参数的问号（？）通常会出现的URL的后面。这些参数在电子商务产品页面上很常见，可能是产品的不同尺寸和不同颜色，形成了重复页面，可以使用权威内容标签，告诉搜索引擎哪个页面最重要。</p></li></ol><p>权威页面标签，放置在网页的 <head> 部分中：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;canonical&quot; href=&quot;https://example.com/sample-page/&quot; &gt;</span><br></pre></td></tr></table></figure><p>注释：</p><ol><li>link rel&#x3D;canonical：带有此标记的链接是此网页的主（权威）版本。</li><li>href&#x3D;<a class="link"   href="https://example.com/sample-page/%EF%BC%9A%E5%8F%AF%E4%BB%A5%E5%9C%A8%E8%BF%99%E4%B8%AA%E7%BD%91%E5%9D%80%E6%89%BE%E5%88%B0%E6%9D%83%E5%A8%81%E7%89%88%E6%9C%AC%E3%80%82" >https://example.com/sample-page/：可以在这个网址找到权威版本。<i class="fas fa-external-link-alt"></i></a></li></ol><p>以上供参考。</p>]]></content>
     
@@ -97,7 +123,7 @@
     <link href="http://blog.nickyam.com/tech/WP-Super-Cache.html"/>
     <id>http://blog.nickyam.com/tech/WP-Super-Cache.html</id>
     <published>2023-11-02T06:17:00.000Z</published>
-    <updated>2023-11-02T08:16:33.341Z</updated>
+    <updated>2023-11-02T08:16:32.000Z</updated>
     
     <content type="html"><![CDATA[<p>与 WP-Cache 相同，WP Super Cache也是一款 WordPress “静态化”插件，可以通过缓存来提高大负载下 WP 的性能。</p><p>相比 WP-Cache 最大的改进，WP Super Cache 的优点在于加入了 Super Cache 这一环节。部分页面会根据一定的规则被缓存为 SuperCache，而这个 SuperCache 实质上就是页面本身。通过 Apache mod_rewrite 重定向直接访问这些静态文件，理论上可以获得更好的性能。</p><p>如果之前已经安装了WP-Cache ，在安装WP Super Cache需要卸载原来的WP-Cache 。你需要先在后台插件控制面板里面禁用WP-Cache，再登入FTP空间删除文件wp-content&#x2F;wp-cache-config.php和wp-content&#x2F;advanced-cache.php，编辑文件wp-config.php，删除以下代码</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">define(’WP_CACHE’, ‘true’); //Added by WP-Cache Manager )</span><br></pre></td></tr></table></figure><p>这里软件链接就不放了，大家直接在插件应用商店搜索下载即可。</p><p>效果如何呢？我这个网站（<a class="link"   href="https://limzero.com/" >https://limzero.com<i class="fas fa-external-link-alt"></i></a> ）原来的访问速度有点卡顿，但现在已经比较流畅了。</p><p>大家不妨一试。</p>]]></content>
     
@@ -122,7 +148,7 @@
     <link href="http://blog.nickyam.com/tech/deadlinks-wordpress-handle.html"/>
     <id>http://blog.nickyam.com/tech/deadlinks-wordpress-handle.html</id>
     <published>2023-11-02T03:15:00.000Z</published>
-    <updated>2023-11-02T08:11:00.710Z</updated>
+    <updated>2023-11-02T08:11:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>网站死链（Dead link）是什么，一般指因为某些原因导致我们网站内的某些链接、图片、css、js打不开，网站返回状态码为404的链接。死链对于网站的用户体验和SEO优化都会产生负面影响。站长们应该定期检查网站的链接，避免自己的网站出现死链。</p><p>那么死链一般是怎么产生的呢？</p><ol><li>动态链接在数据库不再支持的条件下，变成死链。</li><li>某个文件或网页移动了位置，导致指向它的链接变成死链。</li><li>网页内容更新并换成其他的链接，原来的链接变成死链。</li><li>网站服务器设置错误.</li><li>网站还没有完全做好，就上传到服务器上去了，这样也很多死链的。</li><li>某文件夹名称修改，路径错误链接变成死链。</li></ol><p>所以在日常运维当中，我们要避免以上这些情况。</p><p>如果死链已经产生了，怎么处理？</p><p>在wordpress下可以使用一些插件。这里我推荐的是一款国外的免费插件，功能比一些收费的更加强大，集检测与处理于一体。</p><p><img src="https://img.nickyam.com/file/52d70c6baa56ab842343c.png"></p><p><img src="https://img.nickyam.com/file/c5992882cf672e611cffa.png"></p><p>具体下载资源请点击 <a href="https://0xlib.com/redirection-wordpress-tool.html"><strong>这里</strong></a> 获取。</p>]]></content>
     
@@ -147,7 +173,7 @@
     <link href="http://blog.nickyam.com/tech/googlesview-about-ai-generate-contents.html"/>
     <id>http://blog.nickyam.com/tech/googlesview-about-ai-generate-contents.html</id>
     <published>2023-11-01T04:15:00.000Z</published>
-    <updated>2023-11-01T04:33:10.723Z</updated>
+    <updated>2023-11-01T04:33:10.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近看到很多站长都在让<a class="link"   href="https://limzero.com/tag/ai" >AI<i class="fas fa-external-link-alt"></i></a>帮忙生成网站内容，但 <a class="link"   href="https://limzero.com/tag/google" >Google<i class="fas fa-external-link-alt"></i></a>搜索对<a class="link"   href="https://limzero.com/tag/ai" >AI<i class="fas fa-external-link-alt"></i></a>生成的内容的态度是需要明确的。毕竟对于广大站长而言，谷歌是我们的衣食父母。</p><p>2023年2月份，谷歌发布了一个文档，表明了谷歌对于AI生成内容的态度。</p><p><img src="https://img.nickyam.com/file/28b6fab49215750b19ca0.png"></p><p>具体链接：<a class="link"   href="https://developers.google.com/search/blog/2023/02/google-search-and-ai-content?hl=zh" >https://developers.google.com/search/blog/2023/02/google-search-and-ai-content?hl=zh<i class="fas fa-external-link-alt"></i></a></p><p>由此可见：</p><blockquote><p>对于如何处理网页上AI生成的内容，谷歌的做法是积极拥抱，“奖励高质量的内容，无论它是如何生产的”。<br>谷歌还告诉我们如何用AI生产高质量的内容，去“创造有用、可靠、以人为本的内容”，而不是随意生成垃圾内容。<br>关于AI生成内容是否会得到更高排名或者是否会被故意降低排名，谷歌的意思是不管你的内容生成方式，只看内容质量。</p></blockquote><p>因此，我们不能100%依赖AI，在使用AI之前要思考，在过程中要引导，在使用后要微调，这样才能达到既节省人和时间的成本，把最繁重的任务交给AI。</p>]]></content>
     
@@ -173,7 +199,7 @@
     <link href="http://blog.nickyam.com/tech/how-to-use-onion-to-setup-website.html"/>
     <id>http://blog.nickyam.com/tech/how-to-use-onion-to-setup-website.html</id>
     <published>2023-10-27T00:10:00.000Z</published>
-    <updated>2023-11-01T04:13:17.944Z</updated>
+    <updated>2023-11-01T04:13:16.000Z</updated>
     
     <content type="html"><![CDATA[<p>零点君很早对暗网有所了解，但也没有进一步的去搞事情。同时，我觉得还是有必要把一些资料记录下来，方便查阅。</p><p>想使用.onion域名需要用到Tor，也就是洋葱头。根据公开资料，洋葱头（The Onion Router）是一种软件，是第二代洋葱路由（onion routing）的一种实现，用户通过它可以在internet上匿名交流。</p><p><img src="https://img.nickyam.com/file/fcc549d33dfd18521174f.jpg"></p><p>如果你在国内，一般来说不要轻易去尝试，这行为在国内和作死的区别不是很大。</p><p>在主要操作前，准备如下：</p><ol><li>准备一台服务器，注意不能是国内的，也不能是国内服务商的。</li><li>使用CentOS，一般版本6以上就好。</li><li>给服务器安装nginx，并监听8080端口，防火墙也要开8080端口。</li></ol><p>正式教程开始：</p><p>1.首先扩展yum源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br><span class="line">rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm</span><br></pre></td></tr></table></figure><p>2.执行指令安装Tor</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y tor</span><br></pre></td></tr></table></figure><p>3.写入配置文件，Tor源服务端口是8080</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo “HiddenServiceDir /var/lib/tor/hidden_service/” &gt;&gt; /etc/tor/torrc</span><br><span class="line">echo “HiddenServicePort 80 127.0.0.1:8080” &gt;&gt; /etc/tor/torrc</span><br></pre></td></tr></table></figure><p>4.重启Tor，然后查询自己的.onion域名</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service tor start</span><br><span class="line">cat /var/lib/tor/hidden_service/hostname</span><br></pre></td></tr></table></figure><p>5.在nginx新建一个网站，将查询出的.onion域名绑定上去，和正常的不同，端口需要8080。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将网站配置文件里的listen 80;改为listen 8080;</span><br></pre></td></tr></table></figure><p>经过以上步骤，.onion匿名网站搭建完成。当然，直接用普通浏览器是访问不了的，还需要下载一个Tor浏览器才能访问。</p><p>如果想进一般的暗网网站，Tor浏览器是不够的，因为它无法阻止你被宽带运营商发现，从而查水表，需要额外带一个代理，也就是某个大家都懂的东西。</p>]]></content>
     
@@ -198,7 +224,7 @@
     <link href="http://blog.nickyam.com/tech/yuque-claim-membership.html"/>
     <id>http://blog.nickyam.com/tech/yuque-claim-membership.html</id>
     <published>2023-10-27T00:03:00.000Z</published>
-    <updated>2023-10-27T00:26:47.299Z</updated>
+    <updated>2023-10-27T00:26:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>10月23日14时左右，蚂蚁集团旗下的在线文档编辑与协同工具语雀发生服务器故障，在线文档和官网均无法打开，宕机 8 小时被网友怒喷，史称语雀突发 P0 级事故。</p><p>事后，语雀声称，将向所有受到故障影响的用户提供赔偿，针对语雀个人用户将赠送6个月的会员服务，针对语雀空间用户会单独制定赔偿方案。语雀方面强调，用户所有数据均未丢失。</p><p>具体领取路径：</p><ul><li><p>在【网页版】语雀，点击左上角的头像，进入工作台「账户设置」</p></li><li><p>点击左侧「会员信息」在会员信息页面找到黑金色的“语雀会员福利领取”，点击「立即领取」。</p></li></ul><p>笔者其实很久没有用语雀了，早就转向到 Notion 。但是这样的羊毛也必薅，万一用的到呢？</p><p><img src="https://img.nickyam.com/file/e38f531716aaeba576735.png" alt="yuque-claim-membership"></p>]]></content>
     
@@ -221,7 +247,7 @@
     <link href="http://blog.nickyam.com/tech/archive-Wayback-Machine.html"/>
     <id>http://blog.nickyam.com/tech/archive-Wayback-Machine.html</id>
     <published>2023-08-22T14:08:00.000Z</published>
-    <updated>2023-08-22T16:28:30.063Z</updated>
+    <updated>2023-08-22T16:28:30.000Z</updated>
     
     <content type="html"><![CDATA[<p>有小伙伴问我，如何查看一个网站10年前的样子。这是一个有意思的话题。互联网发展30多年，回过头去看以前网站的UI，真的有一种考古的感觉。</p><p>一般而言，大家会使用百度快照等快照服务来查询历史网页，但这种办法无法回溯太早，也没有条理性可言。</p><p>今天小编推荐大家一个国外的服务—Archive 的 Wayback Machine。翻译成中文就是「时光机」。网址是 <a class="link"   href="https://web.archive.org/" >https://web.archive.org/<i class="fas fa-external-link-alt"></i></a> ，也可以用<a class="link"   href="https://archive.org/" >https://archive.org/<i class="fas fa-external-link-alt"></i></a> 。从不同的入口进去，搜索框界面不太一样，但是功能是相同的。</p><p>用法也很简单，你可以在输入框中粘贴任意网址进去，点击按钮或者敲下回车键，就可以开启时光机，回到过去，查看这个网页的任意时刻。</p><p><img src="https://img.nickyam.com/file/59db8c771700f39d687e0.png" alt="Wayback Machine"></p><p>注意搜索框上面这句话，Archive 已经收录了8330亿个网页了，是名副其实的互联网档案馆。</p><p>接下来，我用本博客「<a href="www.nickyam.com">涯木说</a>」来做一个简单的演示。</p><p>输入网址并提交搜索后，打开了下面这个界面，这是 Archive 最经典的界面之一，上半部分是导航、数据汇总和时间轴。</p><p><img src="https://img.nickyam.com/file/f021b02229e6b34133991.png" alt="Wayback Machine"></p><p>我们一般只关注导航中的 Calendar 就好了，其它的大家可以自己点开看一下。</p><p>大家可以看到，本博客「<a href="www.nickyam.com">涯木说</a>」第一次被收录是在2018年。但其实我的网站域名启用是在2016年。中间的两年是因为我还没有使用这个时光机服务，而网站的流量也很小，相当于小透明。</p><p>把鼠标放在有颜色的日期上面，或者点击也行，会弹出一个小窗口，显示这一天收录的次数。</p><p>点击时间，此时 archive 就会带我们回到那时那刻。</p><p>我们来看一下2022年1月7日的情况。那时候我的网站布局和现在是完全不一样的。</p><p><img src="https://img.nickyam.com/file/3c164ea38689ff99d2044.png"></p><p>点击页面右上角的三角形▶️按钮，看下一次收录。</p><p>而每一次收录的内页，其实也可以点击的，不是只能看首页。这是非常有意义的一个功能。</p><p>Archive 的基础用法就是这些了，你可以放进任何网页地址进去体验一下时光机。甚至被删掉的网页，说不定也可以在这里看到。</p>]]></content>
     
@@ -247,7 +273,7 @@
     <link href="http://blog.nickyam.com/tech/fisrt-revenue-from-google-adsense.html"/>
     <id>http://blog.nickyam.com/tech/fisrt-revenue-from-google-adsense.html</id>
     <published>2023-08-22T08:33:00.000Z</published>
-    <updated>2023-09-04T13:53:27.348Z</updated>
+    <updated>2023-09-04T13:53:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>今天Google Adsense的付款到账了。算是来自大洋彼岸的七夕节礼物了。</p><p>其实，早在上大学的时候，我就开始用Wordpress搭建网络写东西，一个是自己的个人博客；另一个是叫做「小R网络」的科技小站。而且早早就通过了Adsesne的认证。可是大学毕业以后，有了本职工作，这一块就放弃了。那时候我的虚拟主机不定、域名用的还是tk免费域名。</p><p>2016年，我启动了 <a href="www.nickyam.com">www.nickyam.com</a> 这个域名，之后只是规整了自己的个人博客。疫情第一年，我在自己的博客里更新了一些关于疫情的整理材料，流量还可以，一方面帮助了网友朋友，另一方面也收获了自己的Google Adsense 十几美元。</p><p>接下来又是一个沉寂期。</p><p>今年以来，我又开始启动了科技小文章的想法，把自己的一些小软件小技巧分享给广大网友朋友。当然，我的网站上依旧挂着Google Adsense。</p><p>截止7月末，Adsesne的账户达到了153.80刀，终于可以提取了。</p><p>Google Adsesne是在每个月的21日付款，如果是节假日就会顺延，我使用招商银行接收电汇。昨天邮件通知，今天就收到了，非常方便。</p><p><img src="https://img.nickyam.com/file/1b5308f9dff7f47ef8dd8.jpg"></p><p><img src="https://img.nickyam.com/file/e5f5c108d4c489daf6ba1.png"></p><p>大家可以看到，资金是从新加坡发来的。</p><p>总体体验非常不错。虽然没有多少钱，但也是对我的鼓励，所以我的网站还会继续下去！</p><p>回顾我和Google Adsense的故事，有两个时间节点可以参考。曾经我也写过小短文，大家有兴趣的话可以点击看看:</p><p><a class="link"   href="https://www.nickyam.com/tech/google-pin-code-second-time.html" >Google Adsense 输错三次 Pin 码后的记录<i class="fas fa-external-link-alt"></i></a></p><p><a class="link"   href="https://www.nickyam.com/tech/adsense-pin-number.html" >Google Adsense提示Pin码验证地址之记录<i class="fas fa-external-link-alt"></i></a></p><p>昨天我收到谷歌的通知，如下：</p>]]></content>
     
@@ -274,7 +300,7 @@
     <link href="http://blog.nickyam.com/tech/ChatGPT-nickyam-com.html"/>
     <id>http://blog.nickyam.com/tech/ChatGPT-nickyam-com.html</id>
     <published>2023-08-07T13:21:06.000Z</published>
-    <updated>2023-08-08T15:40:11.120Z</updated>
+    <updated>2023-08-08T15:40:10.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近有小伙伴问我，ChatGPT需要魔法太麻烦，有没有好用的​直连方法。</p><p>​不要说，还真的有。Pandora​！</p><p>​小编用潘多拉自己部署了一个服务，可以登录账号使用ChatGPT，里面的历史记录和官方的​服务是同步的。也可以使用​Token登录。</p><p><img src="https://img.nickyam.com/file/8b791afc7ff40ef5048d7.png" alt="Pandora"><br>最主要是无需魔法​！无需魔法！无需魔法​！</p><p>具体登录链接为：</p><p><a class="link"   href="https://chatgpt.nickyam.com/" >https://chatgpt.nickyam.com/<i class="fas fa-external-link-alt"></i></a></p>]]></content>
     
@@ -302,7 +328,7 @@
     <link href="http://blog.nickyam.com/tech/Pollinations_ai.html"/>
     <id>http://blog.nickyam.com/tech/Pollinations_ai.html</id>
     <published>2023-08-03T12:11:06.000Z</published>
-    <updated>2023-08-05T00:24:05.404Z</updated>
+    <updated>2023-08-05T00:24:04.000Z</updated>
     
     <content type="html"><![CDATA[<p>今年以来，随着ChatGPT的爆火，Midjourney等AI绘图也​乘风而起。但是AI付费​也是一笔不小的开支。</p><p>今天小编要介绍的就是怎么利用Pollinations.ai来让​ChatGPT突破文字层，进入图像层。</p><p>本文的主角 Pollinations.ai 是一个利用 AI 生成媒体的平台。</p><p><img src="https://img.nickyam.com/file/6a61bfd1afcc8bdf516c1.png"></p><p>在这里，你可以创建定制的、免版税的音频、图像、3D 对象，甚至是即时的全方位 3D 环境。</p><p>你可以通过链接 <a class="link"   href="https://image.pollinations.ai/prompt/[prompt]" >https://image.pollinations.ai/prompt/[prompt]<i class="fas fa-external-link-alt"></i></a> 创建自己的作品，也可以与 ChatGPT、Reddit、Youtube 等平台一起使用。</p><p>该平台给出了一个用ChatGPT生成图片的分享对话地址：</p><p><a class="link"   href="https://chat.openai.com/share/d24ce24f-283a-4f76-bacb-6e0740c234a1" >https://chat.openai.com/share/d24ce24f-283a-4f76-bacb-6e0740c234a1<i class="fas fa-external-link-alt"></i></a></p><p>我们在登陆自己的ChatGPT账号以后，进入👆这个对话地址，输入你希望生成的提示词即可。</p><p>重要的是，这个不需要Plus会员功能。</p>]]></content>
     
@@ -330,7 +356,7 @@
     <link href="http://blog.nickyam.com/tech/apkpure_apk.html"/>
     <id>http://blog.nickyam.com/tech/apkpure_apk.html</id>
     <published>2023-07-27T04:15:06.000Z</published>
-    <updated>2023-07-27T00:20:18.821Z</updated>
+    <updated>2023-07-27T00:20:18.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>APKpure又被称为apkpure商店。</p><p>Apkpure安卓版是一款用的谷歌商店软件下载助手，Google Play商店有的软件他基本都有，还可以自己选择地区下载。</p><p>Google Play是国外比较有名的安卓应用商店，而APKpure 里面的应用源来自Google Play。来源可以放心。</p><h2 id="软件介绍"><a href="#软件介绍" class="headerlink" title="软件介绍"></a>软件介绍</h2><p>相比Google Play，APKpure市场有几大优势。</p><ul><li><p>一是没有地域限制，而Google Play用不同的梯子IP有些地区特有的app是搜不出来的，有些地区能搜出来，但是无法下载。</p></li><li><p>APKpure它的应用文件源自Google Play。无论是免费应用还是用于科学上网的应用，它都拥有。不需要登录、不需要谷歌账号，对于国内用户而言是一大福音，特别是对于在乎应用质量的用户。</p></li></ul><p><img src="https://img.nickyam.com/file/a47dace9e9aeba37b8c83.png"></p><h2 id="资源下载"><a href="#资源下载" class="headerlink" title="资源下载"></a>资源下载</h2><p>链接：<a class="link"   href="https://pan.quark.cn/s/c35c718411f7" >夸克网盘<i class="fas fa-external-link-alt"></i></a></p><p>提取码：qiBt</p>]]></content>
     
@@ -357,7 +383,7 @@
     <link href="http://blog.nickyam.com/tech/How_to_register_for_a_free_OpenAI_account.html"/>
     <id>http://blog.nickyam.com/tech/How_to_register_for_a_free_OpenAI_account.html</id>
     <published>2023-07-25T04:05:06.000Z</published>
-    <updated>2023-07-25T16:50:24.391Z</updated>
+    <updated>2023-07-25T16:50:24.000Z</updated>
     
     <content type="html"><![CDATA[<p>自发布以来，人们每天乐此不疲地研究 ChatGPT 的新玩法，让它扮演翻译官翻译文件、扮演老师教外语，或者扮演佛祖指点迷津，聊天机器人变成了「有求必应屋」。对于我来说，ChatGPT 已经是我每天必须打开的工具之一，不管是学习、写代码、写文章，它都能帮到我，实在是爱不释手。</p><span id="more"></span><p>对于国内用户，想要使用 ChatGPT，面临三个难题：</p><ol><li>无法注册 ChatGPT 账号</li><li>无法访问 OpenAI 官网</li><li>使用起来会有无响应等诸多问题</li></ol><p>接下来我将用三篇文章来讲述如何解决上面的问题。</p><p>今天我先来教大家如何注册一个 ChatGPT 账号。</p><h1 id="申请OpenAI账号"><a href="#申请OpenAI账号" class="headerlink" title="申请OpenAI账号"></a>申请OpenAI账号</h1><p>首先打开 <a class="link"   href="https://platform.openai.com/signup" >OpenAI<i class="fas fa-external-link-alt"></i></a> 的账户注册页面，建议单独用邮箱注册，而非选择Google&#x2F;Microsoft 登录。<br><img src="https://img.nickyam.com/file/6faffe63706b388f16b0d.png"></p><p>这里，提供你的用户名和姓，并点击继续</p><p><img src="https://img.nickyam.com/file/65347f5badb3bd449c3bf.png"></p><p>下一步 OpenAI 会要求你输入手机号码。</p><p>注意，因为不支持国内的手机号码，所以，我们才需要去其他接码平台，利用接码平台购买一个临时的国外手机号来接收验证码。</p><h1 id="购买验证码"><a href="#购买验证码" class="headerlink" title="购买验证码"></a>购买验证码</h1><h2 id="注册账户"><a href="#注册账户" class="headerlink" title="注册账户"></a>注册账户</h2><p>打开官方接码平台 <a class="link"   href="https://sms-activate.org/" >https://sms-activate.org<i class="fas fa-external-link-alt"></i></a>，用邮箱注册一个账号，激活账号并登录，此时可以看到右上角余额为 0。</p><p><img src="https://img.nickyam.com/file/176d7d40cb94c5749593a.png"></p><h2 id="充值余额"><a href="#充值余额" class="headerlink" title="充值余额"></a>充值余额</h2><p>接收1次OpenAI的验证码费用是大概11卢布，折合人民币大约是1块钱，不过sms-active平台最低要求充值1美元。</p><p>点击右上角——充值——直接选择支付宝支付完成充值：</p><p><img src="https://img.nickyam.com/file/523f1814672aeb06c8aa5.png"></p><p>充值完毕，稍后刷新页面，右上角账户余额就会更新(如果没更新，多等一会儿)。</p><p>然后在左侧搜索“OpenAi”，然后点击印度——点击购物车购买。</p><p>选择印度的原因是当前印度的号码成功率最高。</p><p><img src="https://img.nickyam.com/file/cef5e60bc02be092770ff.png"></p><p><img src="https://img.nickyam.com/file/be028dbbbfde804024464.png"></p><p>复制你购买的这个印度号码。</p><p><img src="https://img.nickyam.com/file/78de37b07bf4e96d8ae37.png"></p><h1 id="验证手机号完成注册"><a href="#验证手机号完成注册" class="headerlink" title="验证手机号完成注册"></a>验证手机号完成注册</h1><p>将号码粘贴到OpenAI的注册页面输入框里，点击下方的“<strong>发送验证码</strong>”按钮，</p><p><img src="https://img.nickyam.com/file/5f7488e1ad9559f23b98a.png"></p><p>在接码平台页面，点击右侧的刷新按钮，看到6位数验证码已经显示在网页上了，复制然后回到 OpenAI 填写，就可以完成OpenAI注册过程。</p><p><strong>如果没收到验证码，就多买几个印度号码，一般3个号码能稳定收到至少1个验证码。</strong></p><p><img src="https://img.nickyam.com/file/d7d173dfe932e5e8ec8f3.png"></p><p>这里，当你看到这个页面，就可以确定你的OpenAI账号已经注册成功了。</p><p><img src="https://img.nickyam.com/file/ae050a6c070e6c58ee6d5.png"></p>]]></content>
     
@@ -380,7 +406,7 @@
     <link href="http://blog.nickyam.com/tech/redeem_apple_giftcard.html"/>
     <id>http://blog.nickyam.com/tech/redeem_apple_giftcard.html</id>
     <published>2023-07-20T07:05:06.000Z</published>
-    <updated>2023-07-21T02:54:20.868Z</updated>
+    <updated>2023-07-21T02:54:20.000Z</updated>
     
     <content type="html"><![CDATA[<p>上一篇，我讲解了<a class="link"   href="https://www.nickyam.com/tech/buy_apple_giftcard_in_alipay.html" >《无信用卡？无妨！国内支付方式购买美区礼品卡指南（美区苹果APPLE充值教程）》<i class="fas fa-external-link-alt"></i></a>。有粉丝问我，买了礼品卡以后怎么兑换。所以又有了这一篇教程。</p><span id="more"></span><p>1、打开 App Store，点击右上角头像进入帐户。帐户页面，点击兑换礼品卡或代码。</p><p><img src="https://img.nickyam.com/file/36bcc4a7e4bdb28e9c623.jpg"></p><p><img src="https://img.nickyam.com/file/87041e19fa3c2bbbe9448.jpg"></p><p>2、进入兑换礼品卡界面，点击底部的“Enter Code Manually” 就可以输入礼品卡号码，粘贴刚刚购买的礼品卡号码，然后点击右上角“Redeem” 兑换即可。</p><p><img src="https://img.nickyam.com/file/bda699278b980b2d35cc6.jpg"><br><img src="https://img.nickyam.com/file/4f7c2ad71729e505474bb.jpg"></p><p>3、输入指纹、面容或密码确认后，礼品卡就兑换成功了，显示兑换的金额，目前剩余金额。</p><p><img src="https://img.nickyam.com/file/e54b0bd428d4689f6d5a3.jpg"><br><img src="https://img.nickyam.com/file/07454e7211364fac6905b.jpg"></p><p>4、这样，就可以在美区 App Store 购买你心仪的收费 App 了。</p>]]></content>
     
@@ -401,7 +427,7 @@
     <link href="http://blog.nickyam.com/tech/buy_apple_giftcard_in_alipay.html"/>
     <id>http://blog.nickyam.com/tech/buy_apple_giftcard_in_alipay.html</id>
     <published>2023-07-20T04:05:06.000Z</published>
-    <updated>2023-07-21T02:58:44.887Z</updated>
+    <updated>2023-07-21T02:58:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>之前，我出过一期<a class="link"   href="https://www.nickyam.com/tech/%E7%BE%8E%E5%8C%BAApple%20ID%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%B3%A8%E5%86%8C%E6%95%99%E7%A8%8B.html" >《美区Apple ID保姆级注册教程》<i class="fas fa-external-link-alt"></i></a>。有粉丝私信我说，支付方式没有“无”这个选项了。解决办法我已经在原来的教程底下留言更新。</p><p>也有粉丝告诉我自己注册成功了，但是只能购买免费的App，无法下载付费应用。今天小编就来和大家说道说道如何最大程度发挥美区账号的作用。</p><span id="more"></span><p>Apple 礼品卡可用于从 App Store、iTunes、Apple Music、Apple TV、Apple Books 和其他 Apple 资产购买商品和服务，享受更加丰富的Apple服务。小编不建议你去TB购买，因为TB卖家参差不齐，如果买的卡出了问题，很容易影响到你辛苦注册的美区ID。</p><p>现在，无需信用卡，更无需外币信用卡！使用国内任意支付方式购买美区礼品卡已经成为可能！这一解决方案完美地满足了学生党和境内人士的痛点，并且没有中间商赚取差价的问题。</p><p>要购买美区礼品卡，只需按照以下步骤进行操作：</p><p>打开支付宝首页，点击左上角的城市。</p><p><img src="https://img.nickyam.com/file/a54e6b1f7c2c42798ba95.png"></p><p>在弹出的选项中选择”国际港澳台”，然后选择”美国”的城市，比如纽约。可以自行选择，也可以直接输入，免去查找了。  </p><p><img src="https://img.nickyam.com/file/6dd153fd170f631bbcf60.png"></p><p>更换完城市之后，可以在上方的搜索栏输入“惠出境”</p><p><img src="https://img.nickyam.com/file/ebb6d56b134a656ace345.png"></p><p><img src="https://img.nickyam.com/file/5a6de3de368f7a9438af3.png"></p><p>在惠出境中，点击”折扣礼卡”。  </p><p><img src="https://img.nickyam.com/file/90c6617e6a3a4745f4863.png"></p><p>向下滑动页面，拉到最底部，点击”点击查看”以查看更多选项。</p><p><img src="https://img.nickyam.com/file/9500438322bec90dd5300.png"></p><p>然后进入到了这个页面：</p><p><img src="https://img.nickyam.com/file/8d9a2b28d84fe86cc2453.png"></p><p>在搜索框中输入”app”，然后进行搜索。 请确保选择的是第一个选项，切勿购买错误。 请注意，不要购买下面的”applebee’s”礼品卡，务必避免混淆。</p><p>一定要认清图标，是下面这个图标</p><p><img src="https://img.nickyam.com/file/ee6c45bbea2d7fc7bc1c9.png"></p><p>在相应的界面中填写您的姓、名和邮箱。这里的账号和密码是新的，不是苹果账号的账号和密码，只要购买了，后面会给出一个兑换码，那兑换码就可以充值到苹果账户了。</p><p><img src="https://img.nickyam.com/file/1a24bb4df8e69e823978f.png"></p><p>填写所需的金额，然后点击下方的提交订单按钮。这里可以用花呗付款。</p><p><img src="https://img.nickyam.com/file/a8775a0d8a2cfaaf278d5.png"></p><p>您可以实时查看汇率，并使用任意支付方式进行付款。</p><p>支付完成后，礼品卡将直接发送到您的邮箱中。</p><p><img src="https://img.nickyam.com/file/d99c576ad5af95dfa20a7.png"></p><p>如果需要在支付宝内查看订单，请点击上图中的”done”，即可直接跳转到相应页。</p><p>通过以上简单的步骤，您就能够方便地购买美区礼品卡，并使用国内支付方式进行付款。这一解决方案使得没有信用卡的学生党和境内用户能够畅享美区应用和服务的便利。不再受限于信用卡的问题，让购买和支付变得更加简单和灵活。</p>]]></content>
     
@@ -425,7 +451,7 @@
     <link href="http://blog.nickyam.com/tech/onekey-card.html"/>
     <id>http://blog.nickyam.com/tech/onekey-card.html</id>
     <published>2023-07-19T14:25:00.000Z</published>
-    <updated>2023-07-19T15:18:42.883Z</updated>
+    <updated>2023-07-19T15:18:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近，有粉丝找我说怎么开通ChatGPT Plus，毕竟Plus可以用的代码解释器（Code Interpreter）的功能吊炸天，为用户带来了更好的交互式编程体验和强大的数据可视化功能。借助此功能，即使不是程序员，只需要用自然语言向ChatGPT下达指令，也可以完成需要复杂编程技术的任务，可以用于分析数据、创建图表、编辑文件、执行数学运算等。</p><p>然而，我们也知道，ChatGPT是不支持国内信用卡或借记卡直接付款，如果通过别人的一些非常规的渠道又容易封号。我们只能对着Plus的福利望洋兴叹。</p><p>这时候，我们今天介绍的主角 OneKey虚拟卡就高光出场了。它可以生成虚拟的美国信用卡，用于支付ChatGPT PLus(下图中的第一张优选卡)。</p><p><img src="https://img.nickyam.com/file/4a623fe37ecce0b1c682f.png"></p><p>币圈的小伙伴也可以用它到国内线下消费加密货币，因为它是可以直接绑定支付宝和微信的。如果你仅仅想拥有一张外币卡，它也是一个不错的选择。</p><p><img src="https://img.nickyam.com/file/2811e6376839fce282910.png"></p><p>那么OneKey是什么呢？它是一个多链钱包，支持比特币、以太坊、波卡、稳定币USDT等上千种加密货币。除了软件钱包外，它还是著名的硬件钱包，全开源软硬件架构，软件代码开源，固件代码开源，私钥自己掌控，在币圈有很多拥趸。</p><p>曾几何时，中心化加密金融设施迎来一波严重的信任危机。比特币开源区块链专家Andreas Antonopoulos的那句「Not your Keys,Not your crypto」（没有私钥就没有加密所有权）也再次被奉为圭臬。OneKey也是在这样的背景下诞生的。</p><p><img src="https://img.nickyam.com/file/d67e8bdb523d8c719ae93.png"></p><p>所以这次的虚拟信用卡也是非常不错的。那么接下来，我就简单介绍下注册方法。</p><ol><li><p>使用测试码 “9ZTMKZ” 注册一个OneKey账户，或直接点击链接 <a class="link"   href="https://card.onekey.so/?i=9ZTMKZ" >https://card.onekey.so/?i=9ZTMKZ<i class="fas fa-external-link-alt"></i></a> 即可注册，或者识别下下图中的二维码进入注册界面。<br><img src="https://img.nickyam.com/file/0b1c618d1e7d4319dfe9b.png"></p></li><li><p>在注册完成后，需要进行实名认证（KYC），按照平台要求提供所需的身份验证信息，并进行人脸识别。</p><p><img src="https://img.nickyam.com/file/9b05785b6591d5ef9900a.png"></p></li><li><p>充值USDT或者USDC至您的OneKey平台账户，可以根据平台指南选择适合您的充值方式。</p><p><img src="https://img.nickyam.com/file/8210f6ad2264bdb9b7879.png"><br><img src="https://img.nickyam.com/file/36f687d2248620569e9b0.png"></p></li><li><p>开通OneKey虚拟卡，按照平台提供的指引进行操作，以获取虚拟卡的使用权限。</p></li><li><p>最后，前往ChatGPT Plus付款页面，选择一个美国免税州（如阿拉斯加）作为账单地址。这将以更优惠的方式进行付款。</p><p><img src="https://img.nickyam.com/file/1fd4b2ba1abe54203ef60.png"></p></li></ol>]]></content>
     
@@ -451,7 +477,7 @@
     <link href="http://blog.nickyam.com/tech/no-free-chatgpt.html"/>
     <id>http://blog.nickyam.com/tech/no-free-chatgpt.html</id>
     <published>2023-07-18T04:25:00.000Z</published>
-    <updated>2023-07-18T04:56:43.047Z</updated>
+    <updated>2023-07-18T04:56:42.000Z</updated>
     
     <content type="html"><![CDATA[<p>之前，小编为广大小伙伴们准备了 <a class="link"   href="http://chat.nickyam.com/" >http://chat.nickyam.com<i class="fas fa-external-link-alt"></i></a> 的镜像网站，使得大家能够偶尔调戏下原生的 ChatGPT，而不用担心账号被封的问题。</p><p><img src="https://img.nickyam.com/file/edebafe34c29fb0609bdc.png"><br><img src="https://img.nickyam.com/file/e0daeec92754904bada13.png"><br><img src="https://img.nickyam.com/file/ce85ab402d659ce3c9d92.png"></p><p>因为大家的使用热情很高，也因为这项服务真的好用，所以我的API额度已经告罄了，免费的ChatGPT终究还是要停了，我已经把登陆密码重新设置了。如果小伙伴们还想继续使用的话，请通过微信联系我获取新的登陆密码，友情价10元。</p><p>过渡期，您也可以继续使用我的另一个镜像网站：<a class="link"   href="http://bing.nickyam.com/" >http://bing.nickyam.com<i class="fas fa-external-link-alt"></i></a> ，这项服务被戏称为割了前额叶的ChatGPT。</p><p><img src="https://img.nickyam.com/file/fdd339d438abc3c186e2a.png"></p><p>而有需要频繁使用ChatGPT的朋友，建议准备自己的账号，本公众号也可以提供有偿注册服务。</p><p>当然，前几天我也推荐了 Poe（<a class="link"   href="https://www.nickyam.com/tech/introduction-of-poe.html" >《平替ChatGPT工具新手指南：如何注册和使用》<i class="fas fa-external-link-alt"></i></a>）。</p><p>另外，还有 Google Bard 和 Claude 可以尝试。</p><p>我的微信账号：</p><p><img src="https://img.nickyam.com/file/19860883e3c683fec2794.png"></p>]]></content>
     
@@ -475,9 +501,9 @@
     <link href="http://blog.nickyam.com/tech/introduction-of-poe.html"/>
     <id>http://blog.nickyam.com/tech/introduction-of-poe.html</id>
     <published>2023-07-15T12:32:00.000Z</published>
-    <updated>2023-07-16T07:05:27.616Z</updated>
+    <updated>2023-07-16T07:05:26.000Z</updated>
     
-    <content type="html"><![CDATA[<p>不得不说，ChatGPT官方真够狠的，不定时封账号，让人心累！最近帮一个粉丝朋友注册，结果他通过iOS上的APP却无法登陆。在我建议他换做网页登陆后，勉强可用，但体验不佳。</p><p>如果你只是为了了解下ChatGPT，并不是在工作中有大用，你可以尝试我搭建的 <a class="link"   href="https://chat.nickyam.com/" >https://chat.nickyam.com<i class="fas fa-external-link-alt"></i></a> 和 <a class="link"   href="https://bing.nickyam.com/" >https://bing.nickyam.com<i class="fas fa-external-link-alt"></i></a>。前者是ChatGPT 3.5 的镜像网站，后者是联网的必应AI（套壳的ChatGPT 4.0）。如果你在使用 bing.nickyam.com 时看到页面上的广告，请动动发财的小手帮忙点一点，支持小编的辛勤劳动和网站维护。</p><p>而今天，我要向大家推荐的是平替ChatGPT的工具，美版知乎Quora 旗下的 Poe 。目前只需要一个邮箱即可注册，门槛较低，也可以直接使用Google或者苹果账号登陆。<br><img src="https://img.nickyam.com/file/837f5de864a3089c25810.png"></p><p>虽然依然需要使用魔法，但对网络节点的要求不高，不像OpenAI那么调皮.不同于其他AI聊天机器人，Poe可以同时访问多个不同公司的AI系统，包括Sage、Claude和OpenAI的ChatGPT（支持3.5和4.0版本）的聊天机器人等。<br><img src="https://img.nickyam.com/file/5dfa3024976b03270890c.jpg"></p><p>当然，如果你要想用GPT4，那就要充值了，16.67美金&#x2F;月，或者199.99美金&#x2F;月，可以同时使用GPT-4（600次）和Claude-2-100k（1000次）。建议在网页上订阅充值，这样就可以绕开苹果AppStore需要外卡的限制了。</p><p>要是充值，说句实话，我宁愿充openai官方的GPT4.0，毕竟官方的还可以用各种插件。</p><p>另外，看到图片上的 create bot 没？你可以把自己有创意的 prompt 输入后做成一个个性化机器人，方便使用和分享。</p><p><strong>官方网址：<a class="link"   href="https://poe.com/" >https://poe.com/<i class="fas fa-external-link-alt"></i></a></strong></p><p>接下来的这篇文章是Poe官方的About（关于）页面的内容。原版是英文，这里我翻译成中文了，便于大家查阅了解。</p><blockquote><p>感谢您使用Poe！我们正在建立一个平台，让人们可以提问、获得即时答案，并与AI进行双向对话。以下是一些常见问题的列表：</p><p><strong>不同的机器人有什么区别？</strong></p><p>目前，</p><ul><li>Claude-instant在许多创意写作任务上表现更出色，往往给出更长、更深入的答案。与以前可用的Claude相比，Claude-instant更快，并且在非英语语言方面显著更好。</li><li>Claude+在复杂和困难的任务上比Claude-instant更出色。与Claude-Instant类似，它特别擅长创意写作和提供详细的回答。</li><li>Sage和ChatGPT往往在英语以外的语言方面表现更好，并且在编程相关任务上更擅长。</li><li>GPT-4相对于ChatGPT是一个重大进步，是目前全球最强大的语言模型。它特别擅长创意写作、问题解决（例如数学和物理）和指令跟随。</li></ul><p>每个机器人都有独特的个性，您可以随着时间的推移了解它们，因此如果您感兴趣，可以尝试它们并决定哪个最适合您。</p><p><strong>机器人是如何工作的？</strong></p><p>Poe上的机器人由第三方公司提供支持，这些公司使用大型语言模型（LLMs）。 LLM是机器学习系统，它们已经接受了大量的文本数据的训练，以处理和生成文本。</p><p><strong>我可以用机器人做什么？</strong></p><p>您可以使用机器人进行学习、写作帮助、翻译、编程帮助、摘要、娱乐或其他许多事情。我们鼓励您探索和发现Poe对您最有帮助的功能。</p><p><strong>我应该相信机器人所说的话吗？</strong></p><p>机器人通常是正确的，但可能会做出不正确的陈述，因此如果您根据机器人提供的信息做出重要决策，您需要在其他地方验证信息。机器人也不应仅仅依靠于医学、法律或投资建议-请咨询专业人士。机器人可能没有关于当前事件的知识，因此一些信息可能已经过时。随着AI研究的持续，我们预计所有这些问题都会在未来六个月内得到显着改善。</p><p><strong>使用Poe的其他人可以看到我与机器人的对话吗？</strong></p><p>不可以。与机器人的对话是私密的，其他Poe用户无法看到。如果您点击分享按钮，将提示您选择要与他人分享的任何消息，然后所选的消息将被复制到一个新的共享对象中，该对象将对与之分享的任何人可见。如果在分享流程中选择“在Poe上分享”，则您选择分享的消息将被复制到一个帖子中，该帖子将对其他Poe用户可见。您可以在Poe上的个人资料中查看所有帖子，可以通过位于左侧菜单中的按钮（从机器人对话视图中的屏幕左上角访问）访问。您可以从帖子视图的“…”菜单中访问的顶部右侧删除任何帖子。</p><p><strong>哪家公司的技术支持机器人？</strong></p><ul><li>您可以点击聊天视图顶部的每个机器人的名称以了解更多信息。</li><li>Sage、GPT-4和ChatGPT由OpenAI提供支持。使用这些机器人受OpenAI政策的约束，这些政策可在此处找到。Sage和ChatGPT使用gpt-3.5-turbo模型。</li><li>Claude-instant和Claude+由Anthropic提供支持。使用这些机器人受Anthropic政策的约束，这些政策可在此处找到。</li><li>PaLM由Google提供支持。使用这个机器人受Google政策的约束，这些政策可在<a class="link"   href="https://policies.google.com/terms/generative-ai/use-policy" >此处<i class="fas fa-external-link-alt"></i></a>找到。</li></ul><p><strong>我如何创建机器人？</strong></p><ul><li>要创建带有提示的机器人（也称为提示机器人），您可以在Web浏览器中转到<a class="link"   href="https://poe.com/create_bot" >https://poe.com/create_bot<i class="fas fa-external-link-alt"></i></a> ↗，或者在iOS应用程序的侧边栏中单击“创建机器人”按钮。</li><li>要创建API机器人（如果您有一个使用LLM或代码的LLM），您可以在桌面计算机上转到<a class="link"   href="https://poe.com/create_bot" >https://poe.com/create_bot<i class="fas fa-external-link-alt"></i></a> ↗？api&#x3D;1。</li></ul><p><strong>机器人的AI是在Quora答案上训练的吗？</strong></p><p>目前不是。如果将来我们这样做，我们将允许Quora作者选择退出。有关更多详细信息，请参见此<a class="link"   href="https://quorablog.quora.com/Poe-1" >博客文章<i class="fas fa-external-link-alt"></i></a>。</p><p><strong>谁可以看到我已经喜欢或查看了其他Poe用户分享的帖子？</strong></p><p>与社交媒体平台类似，如果您喜欢另一个用户的帖子，则其他用户将能够看到您喜欢它。类似于其他社交媒体平台上的“故事”产品，如果您正在关注帖子的创建者，则他们将能够看到您已经查看了它。您可以通过访问左侧菜单中的个人资料来查看您正在关注的人，该菜单可访问顶部左侧的按钮。</p><p><strong>如果我在写关于Poe的内容，我应该如何大写它？</strong></p><p>您应该像任何专有名词一样将其大写为“Poe”。我们不会将其大写为“POE”或“PoE”。</p><p>如果您有任何上述未涉及的问题或想分享任何其他反馈，请通过<a class="link"   href="mailto:&#x66;&#x65;&#x65;&#x64;&#x62;&#97;&#99;&#107;&#x40;&#x70;&#x6f;&#101;&#46;&#x63;&#x6f;&#x6d;" >&#x66;&#x65;&#x65;&#x64;&#x62;&#97;&#99;&#107;&#x40;&#x70;&#x6f;&#101;&#46;&#x63;&#x6f;&#x6d;<i class="fas fa-external-link-alt"></i></a>与我们联系。</p><p>您可以在此处找到Poe的隐私政策：<a class="link"   href="https://poe.com/privacy" >Poe隐私政策<i class="fas fa-external-link-alt"></i></a>。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p>不得不说，ChatGPT官方真够狠的，不定时封账号，让人心累！最近帮一个粉丝朋友注册，结果他通过iOS上的APP却无法登陆。在我建议他换做网页登陆后，勉强可用，但体验不佳。</p><p>如果你只是为了了解下ChatGPT，并不是在工作中有大用，你可以尝试我搭建的 <a class="link"   href="https://chat.nickyam.com/" >https://chat.nickyam.com<i class="fas fa-external-link-alt"></i></a> 和 <a class="link"   href="https://bing.nickyam.com/" >https://bing.nickyam.com<i class="fas fa-external-link-alt"></i></a>。前者是ChatGPT 3.5 的镜像网站，后者是联网的必应AI（套壳的ChatGPT 4.0）。如果你在使用 bing.nickyam.com 时看到页面上的广告，请动动发财的小手帮忙点一点，支持小编的辛勤劳动和网站维护。</p><p>而今天，我要向大家推荐的是平替ChatGPT的工具，美版知乎Quora 旗下的 Poe 。目前只需要一个邮箱即可注册，门槛较低，也可以直接使用Google或者苹果账号登陆。<br><img src="https://img.nickyam.com/file/837f5de864a3089c25810.png"></p><p>虽然依然需要使用魔法，但对网络节点的要求不高，不像OpenAI那么调皮.不同于其他AI聊天机器人，Poe可以同时访问多个不同公司的AI系统，包括Sage、Claude和OpenAI的ChatGPT（支持3.5和4.0版本）的聊天机器人等。<br><img src="https://img.nickyam.com/file/5dfa3024976b03270890c.jpg"></p><p>当然，如果你要想用GPT4，那就要充值了，16.67美金&#x2F;月，或者199.99美金&#x2F;月，可以同时使用GPT-4（600次）和Claude-2-100k（1000次）。建议在网页上订阅充值，这样就可以绕开苹果AppStore需要外卡的限制了。</p><p>要是充值，说句实话，我宁愿充openai官方的GPT4.0，毕竟官方的还可以用各种插件。</p><p>另外，看到图片上的 create bot 没？你可以把自己有创意的 prompt 输入后做成一个个性化机器人，方便使用和分享。</p><p><strong>官方网址：<a class="link"   href="https://poe.com/" >https://poe.com/<i class="fas fa-external-link-alt"></i></a></strong></p><p>接下来的这篇文章是Poe官方的About（关于）页面的内容。原版是英文，这里我翻译成中文了，便于大家查阅了解。</p><blockquote><p>感谢您使用Poe！我们正在建立一个平台，让人们可以提问、获得即时答案，并与AI进行双向对话。以下是一些常见问题的列表：</p><p><strong>不同的机器人有什么区别？</strong></p><p>目前，</p><ul><li>Claude-instant在许多创意写作任务上表现更出色，往往给出更长、更深入的答案。与以前可用的Claude相比，Claude-instant更快，并且在非英语语言方面显著更好。</li><li>Claude+在复杂和困难的任务上比Claude-instant更出色。与Claude-Instant类似，它特别擅长创意写作和提供详细的回答。</li><li>Sage和ChatGPT往往在英语以外的语言方面表现更好，并且在编程相关任务上更擅长。</li><li>GPT-4相对于ChatGPT是一个重大进步，是目前全球最强大的语言模型。它特别擅长创意写作、问题解决（例如数学和物理）和指令跟随。</li></ul><p>每个机器人都有独特的个性，您可以随着时间的推移了解它们，因此如果您感兴趣，可以尝试它们并决定哪个最适合您。</p><p><strong>机器人是如何工作的？</strong></p><p>Poe上的机器人由第三方公司提供支持，这些公司使用大型语言模型（LLMs）。 LLM是机器学习系统，它们已经接受了大量的文本数据的训练，以处理和生成文本。</p><p><strong>我可以用机器人做什么？</strong></p><p>您可以使用机器人进行学习、写作帮助、翻译、编程帮助、摘要、娱乐或其他许多事情。我们鼓励您探索和发现Poe对您最有帮助的功能。</p><p><strong>我应该相信机器人所说的话吗？</strong></p><p>机器人通常是正确的，但可能会做出不正确的陈述，因此如果您根据机器人提供的信息做出重要决策，您需要在其他地方验证信息。机器人也不应仅仅依靠于医学、法律或投资建议-请咨询专业人士。机器人可能没有关于当前事件的知识，因此一些信息可能已经过时。随着AI研究的持续，我们预计所有这些问题都会在未来六个月内得到显着改善。</p><p><strong>使用Poe的其他人可以看到我与机器人的对话吗？</strong></p><p>不可以。与机器人的对话是私密的，其他Poe用户无法看到。如果您点击分享按钮，将提示您选择要与他人分享的任何消息，然后所选的消息将被复制到一个新的共享对象中，该对象将对与之分享的任何人可见。如果在分享流程中选择“在Poe上分享”，则您选择分享的消息将被复制到一个帖子中，该帖子将对其他Poe用户可见。您可以在Poe上的个人资料中查看所有帖子，可以通过位于左侧菜单中的按钮（从机器人对话视图中的屏幕左上角访问）访问。您可以从帖子视图的“…”菜单中访问的顶部右侧删除任何帖子。</p><p><strong>哪家公司的技术支持机器人？</strong></p><ul><li>您可以点击聊天视图顶部的每个机器人的名称以了解更多信息。</li><li>Sage、GPT-4和ChatGPT由OpenAI提供支持。使用这些机器人受OpenAI政策的约束，这些政策可在此处找到。Sage和ChatGPT使用gpt-3.5-turbo模型。</li><li>Claude-instant和Claude+由Anthropic提供支持。使用这些机器人受Anthropic政策的约束，这些政策可在此处找到。</li><li>PaLM由Google提供支持。使用这个机器人受Google政策的约束，这些政策可在<a class="link"   href="https://policies.google.com/terms/generative-ai/use-policy" >此处<i class="fas fa-external-link-alt"></i></a>找到。</li></ul><p><strong>我如何创建机器人？</strong></p><ul><li>要创建带有提示的机器人（也称为提示机器人），您可以在Web浏览器中转到<a class="link"   href="https://poe.com/create_bot" >https://poe.com/create_bot<i class="fas fa-external-link-alt"></i></a> ↗，或者在iOS应用程序的侧边栏中单击“创建机器人”按钮。</li><li>要创建API机器人（如果您有一个使用LLM或代码的LLM），您可以在桌面计算机上转到<a class="link"   href="https://poe.com/create_bot" >https://poe.com/create_bot<i class="fas fa-external-link-alt"></i></a> ↗？api&#x3D;1。</li></ul><p><strong>机器人的AI是在Quora答案上训练的吗？</strong></p><p>目前不是。如果将来我们这样做，我们将允许Quora作者选择退出。有关更多详细信息，请参见此<a class="link"   href="https://quorablog.quora.com/Poe-1" >博客文章<i class="fas fa-external-link-alt"></i></a>。</p><p><strong>谁可以看到我已经喜欢或查看了其他Poe用户分享的帖子？</strong></p><p>与社交媒体平台类似，如果您喜欢另一个用户的帖子，则其他用户将能够看到您喜欢它。类似于其他社交媒体平台上的“故事”产品，如果您正在关注帖子的创建者，则他们将能够看到您已经查看了它。您可以通过访问左侧菜单中的个人资料来查看您正在关注的人，该菜单可访问顶部左侧的按钮。</p><p><strong>如果我在写关于Poe的内容，我应该如何大写它？</strong></p><p>您应该像任何专有名词一样将其大写为“Poe”。我们不会将其大写为“POE”或“PoE”。</p><p>如果您有任何上述未涉及的问题或想分享任何其他反馈，请通过<a class="link"   href="mailto:&#x66;&#101;&#x65;&#x64;&#x62;&#x61;&#99;&#107;&#x40;&#x70;&#x6f;&#101;&#x2e;&#99;&#111;&#109;" >&#x66;&#101;&#x65;&#x64;&#x62;&#x61;&#99;&#107;&#x40;&#x70;&#x6f;&#101;&#x2e;&#99;&#111;&#109;<i class="fas fa-external-link-alt"></i></a>与我们联系。</p><p>您可以在此处找到Poe的隐私政策：<a class="link"   href="https://poe.com/privacy" >Poe隐私政策<i class="fas fa-external-link-alt"></i></a>。</p></blockquote>]]></content>
     
     
       
@@ -492,31 +518,6 @@
     
     
     <category term="ChatGPT" scheme="http://blog.nickyam.com/tags/ChatGPT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>让马斯克和扎克伯格决斗的threads究竟是何方神圣？（附安卓安装包）</title>
-    <link href="http://blog.nickyam.com/tech/threads_apk.html"/>
-    <id>http://blog.nickyam.com/tech/threads_apk.html</id>
-    <published>2023-07-11T03:35:00.000Z</published>
-    <updated>2023-07-11T04:59:08.740Z</updated>
-    
-    <content type="html"><![CDATA[<p>昨天，“钢铁侠”Elon Musk在twitter上发了一条信息，引起了大几百万人围观。具体小编就不翻译，大家可以自行围观。</p><p><img src="https://img.nickyam.com/file/a377e9233e65a4a181cc3.jpg"></p><p>而当大家去探究事情原委的时候，也让这几天的另一个主角Threads达到了一个新的高潮。</p><p>据了解，虽然在Threads推出后，马斯克几乎没有做出评价。但是推特的慌张似乎已经显露出一角：马斯克的律师向扎克伯格发出了一封停止函，威胁要起诉Meta“系统性、故意和非法地盗用”推特的商业秘密和知识产权，以及窃取推特的数据。这封信函当中提到，Meta过去一年雇佣了几十位推特的前员工，他们手中掌握推特的商业机密：“Meta的模仿品（Copycat）Threads应用程序意图利用推特的商业机密和其他商业资产来加速Meta竞争应用程序的开发。”</p><h1 id="Threads是什么？"><a href="#Threads是什么？" class="headerlink" title="Threads是什么？"></a>Threads是什么？</h1><p>Threads是Meta旗下的图片社交应用Instagram于7月5日推出的一款“文本共享类”社交媒体应用，也就是一款以分享文字为主，但又不限于文字的社交媒体应用，图片、视频类的内容都可以正常发布。如果要类比的话，那就是一款类twitter的应用。threads的本意是什么呢？大概意思是<strong>线索;思路;脉络;线状物;思绪;贯穿的主线</strong>，和这款应用是比较搭的。</p><p><img src="https://img.nickyam.com/file/66708c5f5debe840419fb.png"></p><p>由于Threads和Instagram共用一个账户体系，因此只要你有Instagram账号就可以直接登录Threads，并且所有你关注的Instagram账号也可以自东关注。（如果对方账号还没有注册Threads，则可以进行“预关注”，待该账号注册Threads之后就可自动关注了。）</p><p>在Threads的注册中还有一个值得一提的“彩蛋”：如果一个Instagram账号注册了Threads，在该Instagram主页上就会显示一个Threads的徽章，而这个徽章的编码则表示你是第几位注册该平台的用户。Threads的“头号玩家”是Meta的所有者扎克伯格，而二号人物则是Instagram的负责人Adam Mosseri。目前用户数已经破亿。</p><p><img src="https://img.nickyam.com/file/4221041c1bedaacca7200.png"></p><p>在用户数破亿这件事上，TikTok用了九个月，ChatGPT用了两个月、而Threads的基础平台Instagram则用了两年半。而凭借着Instagram的大用户基数以及天下苦twitter久矣的背景下，Threads用5天的时间就超越了ChatGPT，成为用户数最快破亿的应用。</p><h1 id="怎么使用threads"><a href="#怎么使用threads" class="headerlink" title="怎么使用threads"></a>怎么使用threads</h1><p>在主界面只要点击底部工具栏中间的icon就可以发文。目前Threads支持发布的内容有：</p><ul><li>纯文字帖文：最多500字</li><li>照片：最多10张</li><li>视频：最长5分钟</li></ul><p>当然，发帖规则目前与Twitter一致，发出后不可修改。如果发布错误了只能删除重发。</p><p>那么问题来了，threads想取代twitter吗？</p><p>据Instagram负责人Adam Mosseri（目前也是Threads的负责人）的公开表示，Threads的目标不是取代Twitter，而是“为Instagram上的社区创建一个公共广场”。在设立之初Threads就被定位成一个包含体育、音乐、时尚等流行元素的讨论社区，而明确拒绝“硬性新闻”。他的原话是这样的。</p><p><img src="https://img.nickyam.com/file/67cf2a434c8cdd2929ee0.png"></p><p>所以大家在threads上的氛围会更加自由随性一点。另外，就像Instagram一样，sex相关的内容估计会被严格审查。</p><p>但是，作为一个已经有1亿用户的社交平台，Threads相比twitter，还有不少关键功能的缺失。如没有翻译按钮、不能搜索内容（只能搜索用户）、没有话题标签功能、不能私信等，要想留住过亿用户，更新迭代要快且准。</p><h1 id="怎么下载Threads"><a href="#怎么下载Threads" class="headerlink" title="怎么下载Threads"></a>怎么下载Threads</h1><p>如果你是安卓用户，请点击链接：<a class="link"   href="https://pan.baidu.com/s/1i9bQ3JwDeUozlakB5CxLpw" >百度网盘<i class="fas fa-external-link-alt"></i></a> 下载，提取码: nick</p><p>如果你是苹果用户，请使用<a class="link"   href="https://i.nickyam.com/article/AppleID_us" >美区账号<i class="fas fa-external-link-alt"></i></a>登陆应用商店下载。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;昨天，“钢铁侠”Elon Musk在twitter上发了一条信息，引起了大几百万人围观。具体小编就不翻译，大家可以自行围观。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://img.nickyam.com/file/a377e9233e65a4a181cc3.jpg&quot;&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="⓶科技" scheme="http://blog.nickyam.com/categories/tech/"/>
-    
-    
-    <category term="apk" scheme="http://blog.nickyam.com/tags/apk/"/>
     
   </entry>
   
